@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.twitter.TwitterPublisher_-DescriptorImpl>
+  <token></token>
+  <tokenSecret></tokenSecret>
+  <hudsonUrl>http://hudson.eea.europa.eu/</hudsonUrl>
+  <onlyOnFailureOrRecovery>false</onlyOnFailureOrRecovery>
+  <includeUrl>false</includeUrl>
+</hudson.plugins.twitter.TwitterPublisher_-DescriptorImpl>

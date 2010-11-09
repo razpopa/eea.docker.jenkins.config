@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl>
+  <enabled>false</enabled>
+  <port>194</port>
+  <useNotice>false</useNotice>
+</hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl>

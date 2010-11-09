@@ -1,0 +1,15 @@
+*.tmp
+\.*
+*.log
+plugins
+monitoring
+war
+updates
+*.key
+builds                                                                                                                                                                             
+lastSuccessful                                                                                                                                                                     
+scm-polling.log                                                                                                                                                                    
+nextBuildNumber                                                                                                                                                                    
+svnexternals.txt                                                                                                                                                                   
+lastStable                                                                                                                                                                         
+workspace

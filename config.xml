@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <version>1.383</version>
+  <numExecutors>3</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Computer.Configure:demarant</permission>
+    <permission>hudson.model.Computer.Configure:ghicaale</permission>
+    <permission>hudson.model.Computer.Configure:tiberich</permission>
+    <permission>hudson.model.Computer.Configure:voineali</permission>
+    <permission>hudson.model.Computer.Delete:demarant</permission>
+    <permission>hudson.model.Computer.Delete:ghicaale</permission>
+    <permission>hudson.model.Computer.Delete:tiberich</permission>
+    <permission>hudson.model.Computer.Delete:voineali</permission>
+    <permission>hudson.model.Hudson.Administer:demarant</permission>
+    <permission>hudson.model.Hudson.Administer:ghicaale</permission>
+    <permission>hudson.model.Hudson.Administer:tiberich</permission>
+    <permission>hudson.model.Hudson.Administer:voineali</permission>
+    <permission>hudson.model.Hudson.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Read:demarant</permission>
+    <permission>hudson.model.Hudson.Read:ghicaale</permission>
+    <permission>hudson.model.Hudson.Read:tiberich</permission>
+    <permission>hudson.model.Hudson.Read:voineali</permission>
+    <permission>hudson.model.Item.Build:demarant</permission>
+    <permission>hudson.model.Item.Build:ghicaale</permission>
+    <permission>hudson.model.Item.Build:tiberich</permission>
+    <permission>hudson.model.Item.Build:voineali</permission>
+    <permission>hudson.model.Item.Configure:demarant</permission>
+    <permission>hudson.model.Item.Configure:ghicaale</permission>
+    <permission>hudson.model.Item.Configure:tiberich</permission>
+    <permission>hudson.model.Item.Configure:voineali</permission>
+    <permission>hudson.model.Item.Create:demarant</permission>
+    <permission>hudson.model.Item.Create:ghicaale</permission>
+    <permission>hudson.model.Item.Create:tiberich</permission>
+    <permission>hudson.model.Item.Create:voineali</permission>
+    <permission>hudson.model.Item.Delete:demarant</permission>
+    <permission>hudson.model.Item.Delete:ghicaale</permission>
+    <permission>hudson.model.Item.Delete:tiberich</permission>
+    <permission>hudson.model.Item.Delete:voineali</permission>
+    <permission>hudson.model.Item.Read:anonymous</permission>
+    <permission>hudson.model.Item.Read:demarant</permission>
+    <permission>hudson.model.Item.Read:ghicaale</permission>
+    <permission>hudson.model.Item.Read:tiberich</permission>
+    <permission>hudson.model.Item.Read:voineali</permission>
+    <permission>hudson.model.Item.Workspace:demarant</permission>
+    <permission>hudson.model.Item.Workspace:ghicaale</permission>
+    <permission>hudson.model.Item.Workspace:tiberich</permission>
+    <permission>hudson.model.Item.Workspace:voineali</permission>
+    <permission>hudson.model.Run.Delete:demarant</permission>
+    <permission>hudson.model.Run.Delete:ghicaale</permission>
+    <permission>hudson.model.Run.Delete:tiberich</permission>
+    <permission>hudson.model.Run.Delete:voineali</permission>
+    <permission>hudson.model.Run.Update:demarant</permission>
+    <permission>hudson.model.Run.Update:ghicaale</permission>
+    <permission>hudson.model.Run.Update:tiberich</permission>
+    <permission>hudson.model.Run.Update:voineali</permission>
+    <permission>hudson.model.View.Configure:demarant</permission>
+    <permission>hudson.model.View.Configure:ghicaale</permission>
+    <permission>hudson.model.View.Configure:tiberich</permission>
+    <permission>hudson.model.View.Configure:voineali</permission>
+    <permission>hudson.model.View.Create:demarant</permission>
+    <permission>hudson.model.View.Create:ghicaale</permission>
+    <permission>hudson.model.View.Create:tiberich</permission>
+    <permission>hudson.model.View.Create:voineali</permission>
+    <permission>hudson.model.View.Delete:demarant</permission>
+    <permission>hudson.model.View.Delete:ghicaale</permission>
+    <permission>hudson.model.View.Delete:tiberich</permission>
+    <permission>hudson.model.View.Delete:voineali</permission>
+    <permission>hudson.scm.SCM.Tag:demarant</permission>
+    <permission>hudson.scm.SCM.Tag:ghicaale</permission>
+    <permission>hudson.scm.SCM.Tag:tiberich</permission>
+    <permission>hudson.scm.SCM.Tag:voineali</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>false</disableSignup>
+  </securityRealm>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <slaves/>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+    </hudson.model.AllView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone 3 clean</name>
+      <description>Builds on a clean Plone 3 installation</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>eea.facetednavigation-plone3</string>
+        <string>eea.geotags-plone3</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone 4 clean</name>
+      <description>Builds on a clean Plone 4  installation</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea.facetednavigation-plone4</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone 2 clean</name>
+      <description>Builds on a clean Plone 2 installation</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea.facetednavigation-plone2</string>
+        <string>eea.geotags-plone2</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone 2 EEA</name>
+      <description>EEA Plone 2 builds</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea-buildout-devel</string>
+        <string>eea-buildout-hudson-trigger</string>
+        <string>eea-buildout-pre-production</string>
+        <string>eea.cache</string>
+        <string>eea.dataservice</string>
+        <string>eea.daviz</string>
+        <string>eea.design</string>
+        <string>eea.faceted.inheritance</string>
+        <string>eea.faceted.tool</string>
+        <string>eea.faceted.vocabularies</string>
+        <string>eea.facetednavigation</string>
+        <string>eea.geotags</string>
+        <string>eea.google</string>
+        <string>eea.indicators</string>
+        <string>eea.pagedesign</string>
+        <string>eea.promotion</string>
+        <string>eea.rdfmarshaller</string>
+        <string>eea.relations</string>
+        <string>eea.reports</string>
+        <string>eea.socialmedia</string>
+        <string>eea.soer</string>
+        <string>eea.themecentre</string>
+        <string>eea.versions</string>
+        <string>Products.EEATemplatesService</string>
+        <string>valentines</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+  </views>
+  <primaryView>All</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label></label>
+  <nodeProperties/>
+  <globalNodeProperties/>
+  <disabledAdministrativeMonitors/>
+</hudson>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>Alexandru Ghica</fullName>
+  <description>Software engineer @ Eau de Web, Romania</description>
+  <properties>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>zOvFWD:01a0cd1305d83fc2f3856e592a1685ef7d6bf7a9082867526431082499bc9ba3</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.model.MyViewsProperty>
+      <primaryViewName>All</primaryViewName>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>All</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>alec.ghica@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty>
+      <jid>alec@jabber.eaudeweb.ro</jid>
+    </hudson.plugins.jabber.user.JabberUserProperty>
+    <hudson.plugins.ircbot.IrcUserProperty>
+      <nick>alecghica</nick>
+    </hudson.plugins.ircbot.IrcUserProperty>
+  </properties>
+</user>

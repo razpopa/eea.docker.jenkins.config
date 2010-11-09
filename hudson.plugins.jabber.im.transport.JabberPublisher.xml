@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.jabber.im.transport.JabberPublisherDescriptor>
+  <enabled>true</enabled>
+  <port>5222</port>
+  <hudsonNickname>hudson@jabber.eea.europa.eu</hudsonNickname>
+  <hudsonPassword>Cat987Dog</hudsonPassword>
+  <exposePresence>true</exposePresence>
+  <enableSASL>false</enableSASL>
+  <initialGroupChats>web3.0development@conference.jabber.eea.europa.eu</initialGroupChats>
+  <commandPrefix>!</commandPrefix>
+  <defaultIdSuffix></defaultIdSuffix>
+  <subscriptionMode>accept_all</subscriptionMode>
+</hudson.plugins.jabber.im.transport.JabberPublisherDescriptor>
