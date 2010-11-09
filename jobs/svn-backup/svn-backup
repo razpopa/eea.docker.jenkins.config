@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /var/lib/hudson
+svn add -q --parents *.xml jobs/*/config.xml users/*/config.xml userContent/
+svn status | grep '!' | awk '{print $2;}' | xargs -r svn rm
+svn st
+svn ci -m "Automated commit of Hudson configuration"
+chown hudson.hudson -R /var/lib/hudson
