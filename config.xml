@@ -91,7 +91,7 @@
     </hudson.model.AllView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plone 3 clean</name>
+      <name>Plone 3.x clean</name>
       <description>Builds on a clean Plone 3 installation</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
@@ -113,7 +113,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plone 4 clean</name>
+      <name>Plone 4.x clean</name>
       <description>Builds on a clean Plone 4  installation</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
@@ -134,7 +134,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plone 2 clean</name>
+      <name>Plone 2.5 clean</name>
       <description>Builds on a clean Plone 2 installation</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
@@ -156,7 +156,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plone 2 EEA</name>
+      <name>Plone 2.5 EEA</name>
       <description>EEA Plone 2 builds</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>

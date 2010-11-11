@@ -3,19 +3,26 @@
   <actions/>
   <description>Nightly commit hudson changes in order to backup hudson configuration</description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <hudson.plugins.disk__usage.DiskUsageProperty/>
+  </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector"/>
+  <triggers class="vector">
+    <hudson.triggers.TimerTrigger>
+      <spec>@midnight</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/lib/hudson
 svn add -q --parents *.xml jobs/*/config.xml users/*/config.xml userContent/                                                                                                       
 svn status | grep &apos;!&apos; | awk &apos;{print $2;}&apos; | xargs -r svn rm                                                                                                                        
-svn st </command>
+svn st
+echo &quot;You have to manually run svn-hudson-backup on server side if &apos;svn st&apos; returned something.&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -23,7 +30,7 @@ svn st </command>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
-      <recipients>alin@eaudeweb.ro</recipients>
+      <recipients>alin.voinea@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>true</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>

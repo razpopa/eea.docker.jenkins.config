@@ -3,7 +3,9 @@
   <actions/>
   <description>Run EEA Buildout on SVN change. Use this job to trigger eea-buildout job tests</description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <hudson.plugins.disk__usage.DiskUsageProperty/>
+  </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
@@ -30,13 +32,14 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>python2.4 bootstrap.py -c hudson.cfg
+      <command>cd ${WORKSPACE}
+python2.4 bootstrap.py -c hudson.cfg
 bin/buildout -c hudson.cfg</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>eea.facetednavigation, eea.dataservice, eea.cache, eea.design, eea.geotags, eea.google, eea.indicators, eea.pagedesign, eea.promotion, eea.rdfmarshaller, eea.relations, eea.reports, eea.socialmedia, eea.soer, eea.themecentre, eea.versions, valentines, eea.daviz, eea.faceted.inheritance, eea.faceted.tool, eea.faceted.vocabularies</childProjects>
+      <childProjects>eea.facetednavigation, eea.dataservice, eea.cache, eea.design, eea.geotags, eea.google, eea.indicators, eea.pagedesign, eea.promotion, eea.rdfmarshaller, eea.relations, eea.reports, eea.socialmedia, eea.soer, eea.themecentre, eea.versions, valentines, eea.daviz, eea.faceted.inheritance, eea.faceted.tool, eea.faceted.vocabularies, Products.EEATemplatesService, Products.EEAContentTypes</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -63,7 +66,7 @@ bin/buildout -c hudson.cfg</command>
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier"/>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
@@ -72,4 +75,5 @@ bin/buildout -c hudson.cfg</command>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson</customWorkspace>
 </project>
