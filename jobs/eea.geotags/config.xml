@@ -9,16 +9,21 @@
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /opt/hudson/buildouts/eea-buildout-hudson
-bin/instance test -v -vv --nowarning -s eea.geotags</command>
+bin/xmltestreport -v -vv --nowarning -s eea.geotags</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>*eea-geotags*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.geotags-plone2, eea.geotags-plone3</childProjects>
       <threshold>
@@ -59,4 +64,5 @@ bin/instance test -v -vv --nowarning -s eea.geotags</command>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/parts/xmltestreport/testreports</customWorkspace>
 </project>

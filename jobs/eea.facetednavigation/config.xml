@@ -9,16 +9,21 @@
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /opt/hudson/buildouts/eea-buildout-hudson
-bin/instance test -v -vv --nowarning -s eea.facetednavigation</command>
+bin/xmltestreport -v -vv --nowarning -s eea.facetednavigation</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>*eea-facetednavigation*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.facetednavigation-plone2, eea.facetednavigation-plone3, eea.facetednavigation-plone4</childProjects>
       <threshold>
@@ -42,4 +47,5 @@ bin/instance test -v -vv --nowarning -s eea.facetednavigation</command>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/parts/xmltestreport/testreports</customWorkspace>
 </project>

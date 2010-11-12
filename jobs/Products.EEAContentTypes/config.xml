@@ -15,7 +15,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /opt/hudson/buildouts/eea-buildout-hudson
-bin/instance test -v -vv --nowarning --package=Products.EEAContentTypes</command>
+bin/xmltestreport -v -vv --nowarning --package=Products.EEAContentTypes</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

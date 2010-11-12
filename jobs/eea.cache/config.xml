@@ -15,7 +15,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /opt/hudson/buildouts/eea-buildout-hudson
-bin/instance test -v -vv --nowarning -s eea.cache</command>
+bin/xmltestreport -v -vv --nowarning -s eea.cache</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -48,4 +48,5 @@ bin/instance test -v -vv --nowarning -s eea.cache</command>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/parts/xmltestreport/testreports</customWorkspace>
 </project>
