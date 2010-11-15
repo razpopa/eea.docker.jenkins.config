@@ -28,12 +28,17 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>python2.6 bootstrap.py
-bin/buildout
-bin/test -v -vv -s eea.facetednavigation</command>
+      <command>python2.6 bootstrap.py -c hudson.cfg
+bin/buildout -c hudson.cfg
+bin/xmltestrunner -v -vv -s eea.facetednavigation</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/parts/xmltestrunner/testreports/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>

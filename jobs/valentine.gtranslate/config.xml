@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run EEA Promotion tests</description>
+  <description>- Run Valentine gTranslate tests</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
@@ -15,18 +15,17 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s eea.promotion
-</command>
+../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s valentine.gtranslate</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*eea/promotion*
+../../bin/report xml --include=*valentine/gtranslate*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*eea-promotion*.xml xmltestreport/</command>
+cp ../../parts/xmltestreport/testreports/*valentine.gtranslate*.xml xmltestreport/</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -92,5 +91,5 @@ cp ../../parts/xmltestreport/testreports/*eea-promotion*.xml xmltestreport/</com
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.promotion</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/valentine.gtranslate</customWorkspace>
 </project>
