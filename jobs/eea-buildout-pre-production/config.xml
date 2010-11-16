@@ -66,7 +66,7 @@ bin/buildout -c unicorn.cfg</command>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
-      <timeoutMinutes>20</timeoutMinutes>
+      <timeoutMinutes>60</timeoutMinutes>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>

@@ -28,8 +28,42 @@
 mkdir -p xmltestreport
 cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestreport/</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/zptlint-test</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <hudson.plugins.warnings.WarningsPublisher>
+      <healthy>0</healthy>
+      <unHealthy>5</unHealthy>
+      <thresholdLimit>low</thresholdLimit>
+      <pluginName>[WARNINGS] </pluginName>
+      <defaultEncoding></defaultEncoding>
+      <canRunOnFailed>false</canRunOnFailed>
+      <useDeltaValues>false</useDeltaValues>
+      <thresholds>
+        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalHigh>0</unstableTotalHigh>
+        <unstableTotalNormal>0</unstableTotalNormal>
+        <unstableTotalLow>0</unstableTotalLow>
+        <unstableNewAll></unstableNewAll>
+        <unstableNewHigh></unstableNewHigh>
+        <unstableNewNormal></unstableNewNormal>
+        <unstableNewLow></unstableNewLow>
+        <failedTotalAll></failedTotalAll>
+        <failedTotalHigh></failedTotalHigh>
+        <failedTotalNormal></failedTotalNormal>
+        <failedTotalLow></failedTotalLow>
+        <failedNewAll></failedNewAll>
+        <failedNewHigh></failedNewHigh>
+        <failedNewNormal></failedNewNormal>
+        <failedNewLow></failedNewLow>
+      </thresholds>
+      <pattern>**/zptlint.log</pattern>
+      <parserNames/>
+      <ignoreConsole>true</ignoreConsole>
+    </hudson.plugins.warnings.WarningsPublisher>
     <hudson.tasks.junit.JUnitResultArchiver>
       <testResults>**/xmltestreport/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>

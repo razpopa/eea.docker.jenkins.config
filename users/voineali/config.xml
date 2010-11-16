@@ -22,7 +22,6 @@
           <filterQueue>false</filterQueue>
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
-            <string>eea-buildout</string>
             <string>eea.daviz</string>
             <string>eea.design</string>
             <string>eea.faceted.inheritance</string>
@@ -38,6 +37,7 @@
             <string>eea.google</string>
             <string>eea.relations</string>
             <string>eea.reports</string>
+            <string>svn-backup</string>
           </jobNames>
           <jobFilters/>
           <columns>
@@ -53,20 +53,30 @@
           <includeStdJobList>false</includeStdJobList>
           <leftPortletWidth>50%</leftPortletWidth>
           <rightPortletWidth>50%</rightPortletWidth>
-          <leftPortlets/>
-          <rightPortlets/>
-          <topPortlets>
-            <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-              <id>dashboard_portlet_34</id>
-              <name>Unstable Jobs</name>
-            </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-          </topPortlets>
-          <bottomPortlets>
+          <leftPortlets>
             <hudson.plugins.view.dashboard.core.HudsonStdJobsPortlet>
-              <id>dashboard_portlet_35</id>
+              <id>dashboard_portlet_14</id>
               <name>Hudson jobs list</name>
             </hudson.plugins.view.dashboard.core.HudsonStdJobsPortlet>
-          </bottomPortlets>
+          </leftPortlets>
+          <rightPortlets>
+            <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
+              <id>dashboard_portlet_15</id>
+              <name>Code Coverages</name>
+            </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
+            <hudson.plugins.view.dashboard.test.TestTrendChart>
+              <id>dashboard_portlet_16</id>
+              <name>Test Trend Chart</name>
+              <graphWidth>300</graphWidth>
+              <graphHeight>220</graphHeight>
+            </hudson.plugins.view.dashboard.test.TestTrendChart>
+            <hudson.plugins.view.dashboard.test.TestStatisticsChart>
+              <id>dashboard_portlet_17</id>
+              <name>Test Statistics Chart</name>
+            </hudson.plugins.view.dashboard.test.TestStatisticsChart>
+          </rightPortlets>
+          <topPortlets/>
+          <bottomPortlets/>
         </hudson.plugins.view.dashboard.Dashboard>
       </views>
     </hudson.model.MyViewsProperty>

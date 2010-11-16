@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.warnings.WarningsDescriptor>
+  <groovyParsers>
+    <hudson.plugins.warnings.GroovyParser>
+      <name>zptlint</name>
+      <regexp>^.*in:\s(\S*)\s*(?:\&lt;class\s&apos;)?(\S*)(?:&apos;\&gt;)?:\s(.*)\s*,.*line\s*([0-9]*).*$</regexp>
+      <script>import hudson.plugins.warnings.parser.Warning
+import hudson.plugins.analysis.util.model.Priority
+
+String fileName = matcher.group(1)
+String category = matcher.group(2)
+String message = matcher.group(3)
+String lineNumber = matcher.group(4)
+
+return new Warning(fileName, Integer.parseInt(lineNumber), category, &quot;ZPTLint Parser&quot;, message, Priority.HIGH)</script>
+    </hudson.plugins.warnings.GroovyParser>
+  </groovyParsers>
+</hudson.plugins.warnings.WarningsDescriptor>

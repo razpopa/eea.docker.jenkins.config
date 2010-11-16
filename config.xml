@@ -185,7 +185,10 @@
         <string>eea.soer</string>
         <string>eea.themecentre</string>
         <string>eea.versions</string>
+        <string>Products.EEAContentTypes</string>
         <string>Products.EEATemplatesService</string>
+        <string>valentine.gtranslate</string>
+        <string>valentine.imagescales</string>
       </jobNames>
       <jobFilters/>
       <columns>
