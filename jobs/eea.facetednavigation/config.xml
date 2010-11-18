@@ -32,21 +32,25 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
       <command>cd ${WORKSPACE}
 ../../bin/zptlint-test</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/pyflakes-test</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
-      <thresholdLimit>low</thresholdLimit>
+      <thresholdLimit>high</thresholdLimit>
       <pluginName>[WARNINGS] </pluginName>
       <defaultEncoding></defaultEncoding>
-      <canRunOnFailed>false</canRunOnFailed>
+      <canRunOnFailed>true</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds>
-        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh>0</unstableTotalHigh>
-        <unstableTotalNormal>0</unstableTotalNormal>
-        <unstableTotalLow>0</unstableTotalLow>
+        <unstableTotalNormal></unstableTotalNormal>
+        <unstableTotalLow></unstableTotalLow>
         <unstableNewAll></unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
@@ -60,8 +64,11 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
-      <pattern>**/zptlint.log</pattern>
-      <parserNames/>
+      <pattern>**/zptlint.log, **/pyflakes.log</pattern>
+      <parserNames>
+        <string>zptlint</string>
+        <string>pyflakes</string>
+      </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
     <hudson.tasks.junit.JUnitResultArchiver>
