@@ -55,23 +55,30 @@
           <rightPortletWidth>50%</rightPortletWidth>
           <leftPortlets>
             <hudson.plugins.view.dashboard.core.HudsonStdJobsPortlet>
-              <id>dashboard_portlet_14</id>
+              <id>dashboard_portlet_18</id>
               <name>Hudson jobs list</name>
             </hudson.plugins.view.dashboard.core.HudsonStdJobsPortlet>
+            <hudson.plugins.warnings.dashboard.WarningsNewVersusFixedGraphPortlet>
+              <id>dashboard_portlet_19</id>
+              <name>Compiler warnings trend graph (new vs. fixed)</name>
+              <width>500</width>
+              <height>200</height>
+              <dayCountString>30</dayCountString>
+            </hudson.plugins.warnings.dashboard.WarningsNewVersusFixedGraphPortlet>
           </leftPortlets>
           <rightPortlets>
             <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
-              <id>dashboard_portlet_15</id>
+              <id>dashboard_portlet_20</id>
               <name>Code Coverages</name>
             </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
             <hudson.plugins.view.dashboard.test.TestTrendChart>
-              <id>dashboard_portlet_16</id>
+              <id>dashboard_portlet_21</id>
               <name>Test Trend Chart</name>
               <graphWidth>300</graphWidth>
               <graphHeight>220</graphHeight>
             </hudson.plugins.view.dashboard.test.TestTrendChart>
             <hudson.plugins.view.dashboard.test.TestStatisticsChart>
-              <id>dashboard_portlet_17</id>
+              <id>dashboard_portlet_22</id>
               <name>Test Statistics Chart</name>
             </hudson.plugins.view.dashboard.test.TestStatisticsChart>
           </rightPortlets>

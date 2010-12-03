@@ -18,11 +18,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/lib/hudson
-svn add -q --parents *.xml jobs/*/config.xml users/*/config.xml userContent/                                                                                                       
-svn status | grep &apos;!&apos; | awk &apos;{print $2;}&apos; | xargs -r svn rm                                                                                                                        
-svn st
-echo &quot;You have to manually run svn-hudson-backup on server side if &apos;svn st&apos; returned something.&quot;</command>
+      <command>cd /opt/hudson/buildouts/eea-buildout-hudson
+bin/svn-test /var/lib/hudson</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -40,7 +37,7 @@ echo &quot;You have to manually run svn-hudson-backup on server side if &apos;sv
           <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
-      <strategy>ALL</strategy>
+      <strategy>FAILURE_AND_FIXED</strategy>
       <notifyOnBuildStart>false</notifyOnBuildStart>
       <notifySuspects>false</notifySuspects>
       <notifyCulprits>false</notifyCulprits>

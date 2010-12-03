@@ -75,6 +75,7 @@
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>false</disableSignup>
   </securityRealm>
+  <systemMessage>Welcome to Continuous Integration Testing site for European Environment Agency (EEA, www.eea.europa.eu)</systemMessage>
   <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
