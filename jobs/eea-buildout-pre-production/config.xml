@@ -36,8 +36,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-python2.4 bootstrap.py -c unicorn.cfg
-bin/buildout -c unicorn.cfg</command>
+python2.4 bootstrap.py -c unicorn-hudson.cfg
+bin/buildout -c unicorn-hudson.cfg</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+bin/www1-uptest</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
