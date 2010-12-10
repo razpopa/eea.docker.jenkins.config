@@ -93,8 +93,5 @@
     <hudson.plugins.jabber.user.JabberUserProperty>
       <jid>alin@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty>
-      <nick>voineali</nick>
-    </hudson.plugins.ircbot.IrcUserProperty>
   </properties>
 </user>

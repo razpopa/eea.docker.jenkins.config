@@ -41,6 +41,10 @@ cp ../../parts/xmltestreport/testreports/*eea-themecentre*.xml xmltestreport/</c
 ../../bin/pylint-test
 </command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/jslint-test eea</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>
@@ -176,7 +180,7 @@ cp ../../parts/xmltestreport/testreports/*eea-themecentre*.xml xmltestreport/</c
               <max>999</max>
               <unstable>999</unstable>
               <usePattern>false</usePattern>
-              <pattern></pattern>
+              <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>

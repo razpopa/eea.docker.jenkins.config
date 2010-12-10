@@ -14,7 +14,6 @@
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty/>
-    <hudson.plugins.ircbot.IrcUserProperty/>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>wAUpox:0b8dfb4cda8c21b2a270a995534ac9793e9426e5ee96c0fe89edc40bbbb050c4</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>

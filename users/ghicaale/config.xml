@@ -23,8 +23,5 @@
     <hudson.plugins.jabber.user.JabberUserProperty>
       <jid>alec@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty>
-      <nick>alecghica</nick>
-    </hudson.plugins.ircbot.IrcUserProperty>
   </properties>
 </user>

@@ -39,6 +39,10 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/</command
       <command>cd ${WORKSPACE}
 ../../bin/pylint-test</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/jslint-test eea</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>
@@ -170,11 +174,11 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/</command
             <string>jslint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>999</unstable>
+              <min>0</min>
+              <max>5</max>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
-              <pattern></pattern>
+              <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
