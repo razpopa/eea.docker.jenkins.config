@@ -5,6 +5,9 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
+    <hudson.plugins.trac.TracProjectProperty>
+      <tracWebsite>http://dev.plone.org/collective/</tracWebsite>
+    </hudson.plugins.trac.TracProjectProperty>
   </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>
@@ -12,9 +15,14 @@
         <remote>http://svn.plone.org/svn/collective/eea.facetednavigation/buildout</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
+      <hudson.scm.SubversionSCM_-ModuleLocation>
+        <remote>https://svn.plone.org/svn/collective/eea.facetednavigation/trunk</remote>
+        <local>src/eea.facetednavigation</local>
+      </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <useUpdate>true</useUpdate>
     <doRevert>false</doRevert>
+    <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
     <excludedRegions></excludedRegions>
     <includedRegions></includedRegions>
     <excludedUsers></excludedUsers>
@@ -24,7 +32,11 @@
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector"/>
+  <triggers class="vector">
+    <hudson.triggers.SCMTrigger>
+      <spec>30 * * * *</spec>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>

@@ -5,8 +5,25 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
+    <hudson.plugins.trac.TracProjectProperty>
+      <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
+    </hudson.plugins.trac.TracProjectProperty>
   </properties>
-  <scm class="hudson.scm.NullSCM"/>
+  <scm class="hudson.scm.SubversionSCM">
+    <locations>
+      <hudson.scm.SubversionSCM_-ModuleLocation>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/EEATemplatesService</remote>
+        <local>,</local>
+      </hudson.scm.SubversionSCM_-ModuleLocation>
+    </locations>
+    <useUpdate>true</useUpdate>
+    <doRevert>false</doRevert>
+    <excludedRegions></excludedRegions>
+    <includedRegions></includedRegions>
+    <excludedUsers></excludedUsers>
+    <excludedRevprop></excludedRevprop>
+    <excludedCommitMessages></excludedCommitMessages>
+  </scm>
   <canRoam>true</canRoam>
   <disabled>true</disabled>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
@@ -34,4 +51,5 @@ bin/xmltestreport -v -vv --nowarning --package=Products.EEATemplatesService</com
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/products/EEATemplatesService</customWorkspace>
 </project>
