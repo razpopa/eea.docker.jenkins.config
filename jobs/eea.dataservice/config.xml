@@ -220,7 +220,7 @@ cp ../../parts/xmltestreport/testreports/*eea-dataservice*.xml xmltestreport/</c
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>999</unstable>
+              <unstable>1999</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
