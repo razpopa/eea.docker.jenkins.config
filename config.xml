@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
-  <version>1.383</version>
+  <version>1.388</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -163,9 +163,6 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
-        <string>eea-buildout-devel</string>
-        <string>eea-buildout-hudson-trigger</string>
-        <string>eea-buildout-pre-production</string>
         <string>eea.cache</string>
         <string>eea.dataservice</string>
         <string>eea.daviz</string>
@@ -186,8 +183,6 @@
         <string>eea.soer</string>
         <string>eea.themecentre</string>
         <string>eea.versions</string>
-        <string>Products.EEAContentTypes</string>
-        <string>Products.EEATemplatesService</string>
         <string>valentine.gtranslate</string>
         <string>valentine.imagescales</string>
       </jobNames>
@@ -202,8 +197,70 @@
         <hudson.views.BuildButtonColumn/>
       </columns>
     </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone Disabled</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Products.EEAContentTypes</string>
+        <string>Products.EEATemplatesService</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>EEA Buildouts</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[5]/jobNames/comparator"/>
+        <string>eea-buildout-devel</string>
+        <string>eea-buildout-hudson-trigger</string>
+        <string>eea-buildout-pre-production</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Windmill</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[5]/jobNames/comparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
   </views>
-  <primaryView>All</primaryView>
+  <primaryView>Plone 2.5 EEA</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
   <label></label>
   <nodeProperties/>
