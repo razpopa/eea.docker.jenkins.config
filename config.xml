@@ -163,6 +163,7 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea.alchemy</string>
         <string>eea.cache</string>
         <string>eea.dataservice</string>
         <string>eea.daviz</string>

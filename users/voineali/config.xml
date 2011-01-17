@@ -22,6 +22,7 @@
           <filterQueue>false</filterQueue>
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
+            <string>eea.alchemy</string>
             <string>eea.daviz</string>
             <string>eea.design</string>
             <string>eea.faceted.inheritance</string>
