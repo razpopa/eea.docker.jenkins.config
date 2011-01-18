@@ -284,7 +284,7 @@ cp ../../parts/xmltestreport/testreports/*eea-alchemy*.xml xmltestreport/</comma
       </failingTarget>
     </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.tasks.Mailer>
-      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro sasha.vincic@eea.europa.eu</recipients>
+      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>

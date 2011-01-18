@@ -48,7 +48,7 @@ bin/xmltestreport -v -vv --nowarning --package=Products.EEAContentTypes</command
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>vincic@jabber.eea.europa.eu</value>
+          <value>tiberiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

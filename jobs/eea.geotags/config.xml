@@ -101,11 +101,6 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
       </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
-    <hudson.tasks.junit.JUnitResultArchiver>
-      <testResults>**/xmltestreport/*.xml</testResults>
-      <keepLongStdio>false</keepLongStdio>
-      <testDataPublishers/>
-    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.geotags-plone2, eea.geotags-plone3</childProjects>
       <threshold>
@@ -114,6 +109,11 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/xmltestreport/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
@@ -292,7 +292,7 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
       </failingTarget>
     </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.tasks.Mailer>
-      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro sasha.vincic@eea.europa.eu</recipients>
+      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>

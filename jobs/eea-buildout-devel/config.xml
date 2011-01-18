@@ -29,12 +29,12 @@
   <disabled>false</disabled>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers class="vector">
-    <hudson.triggers.TimerTrigger>
-      <spec>1 3,12,16 * * 1-5</spec>
-    </hudson.triggers.TimerTrigger>
     <hudson.triggers.SCMTrigger>
       <spec>30 * * * *</spec>
     </hudson.triggers.SCMTrigger>
+    <hudson.triggers.TimerTrigger>
+      <spec>1 3,12,16 * * 1-5</spec>
+    </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
@@ -49,7 +49,7 @@ bin/buildout -c devel.cfg</command>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
-      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro sasha.vincic@eea.europa.eu</recipients>
+      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
