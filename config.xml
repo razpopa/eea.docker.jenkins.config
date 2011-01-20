@@ -164,10 +164,14 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>eea.alchemy</string>
+        <string>eea.bounce</string>
         <string>eea.cache</string>
         <string>eea.dataservice</string>
         <string>eea.daviz</string>
         <string>eea.design</string>
+        <string>eea.eggmonkey</string>
+        <string>eea.epub</string>
+        <string>eea.exhibit</string>
         <string>eea.faceted.inheritance</string>
         <string>eea.faceted.tool</string>
         <string>eea.faceted.vocabularies</string>
@@ -175,17 +179,36 @@
         <string>eea.geotags</string>
         <string>eea.google</string>
         <string>eea.indicators</string>
+        <string>eea.jquery</string>
+        <string>eea.locationwidget</string>
+        <string>eea.mediacentre</string>
         <string>eea.pagedesign</string>
+        <string>eea.plone3compat</string>
+        <string>eea.policy.dev</string>
         <string>eea.promotion</string>
         <string>eea.rdfmarshaller</string>
+        <string>eea.rdfrepository</string>
         <string>eea.relations</string>
         <string>eea.reports</string>
+        <string>eea.signals</string>
+        <string>eea.sitestructurediff</string>
         <string>eea.socialmedia</string>
         <string>eea.soer</string>
+        <string>eea.testcase</string>
         <string>eea.themecentre</string>
+        <string>eea.translations</string>
         <string>eea.versions</string>
+        <string>eea.vocab</string>
+        <string>eea.workflow</string>
+        <string>Products.EEAContentTypes</string>
+        <string>Products.EEADesign2006</string>
+        <string>Products.EEAEnquiry</string>
+        <string>Products.EEAPloneAdmin</string>
+        <string>Products.EEATemplatesService</string>
+        <string>Products.PloneGazette</string>
         <string>valentine.gtranslate</string>
         <string>valentine.imagescales</string>
+        <string>valentine.linguaflow</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -205,8 +228,6 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>Products.EEAContentTypes</string>
-        <string>Products.EEATemplatesService</string>
       </jobNames>
       <jobFilters/>
       <columns>

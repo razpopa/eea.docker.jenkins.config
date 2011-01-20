@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run Products.EEAContentTypes tests</description>
+  <description>- Run Products.EEAEnquiry tests</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
@@ -12,7 +12,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/EEAContentTypes/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/EEAEnquiry</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -36,20 +36,20 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;WARNING: Tests are disabled&quot;
+      <command>echo &quot;WARNING: tests are disabled !!!&quot;
 #cd ${WORKSPACE}
-#../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.EEAContentTypes
+#../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.EEAEnquiry
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>#cd ${WORKSPACE}
-#../../bin/report xml --include=*Products/EEAContentTypes*
+#../../bin/report xml --include=*Products/EEAEnquiry*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>#cd ${WORKSPACE}
 #mkdir -p xmltestreport
-#cp ../../parts/xmltestreport/testreports/*Products-EEAContentTypes*.xml xmltestreport/</command>
+#cp ../../parts/xmltestreport/testreports/*Products-EEAEnquiry*.xml xmltestreport/</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -79,7 +79,7 @@
       <useDeltaValues>false</useDeltaValues>
       <thresholds>
         <unstableTotalAll></unstableTotalAll>
-        <unstableTotalHigh>2</unstableTotalHigh>
+        <unstableTotalHigh>0</unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
         <unstableNewAll></unstableNewAll>
@@ -217,7 +217,7 @@
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>2000</unstable>
+              <unstable>999</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -277,5 +277,5 @@
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.EEAContentTypes</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/products/EEAEnquiry</customWorkspace>
 </project>

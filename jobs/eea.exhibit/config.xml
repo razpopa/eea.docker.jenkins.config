@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run Products.EEAContentTypes tests</description>
+  <description>- Run eea.exhibit tests</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
@@ -12,7 +12,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/EEAContentTypes/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.exhibit/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -36,20 +36,19 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;WARNING: Tests are disabled&quot;
-#cd ${WORKSPACE}
-#../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.EEAContentTypes
+      <command>cd ${WORKSPACE}
+../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s eea.exhibit
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#../../bin/report xml --include=*Products/EEAContentTypes*
+      <command>cd ${WORKSPACE}
+../../bin/report xml --include=*eea/exhibit*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#mkdir -p xmltestreport
-#cp ../../parts/xmltestreport/testreports/*Products-EEAContentTypes*.xml xmltestreport/</command>
+      <command>cd ${WORKSPACE}
+mkdir -p xmltestreport
+cp ../../parts/xmltestreport/testreports/*eea-exhibit*.xml xmltestreport/</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -65,7 +64,9 @@
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/jslint-test eea</command>
+#../../bin/jslint-test eea
+echo &quot;WARNING: jslint is disabled !!!&quot;
+echo &quot;&lt;jslint&gt;&lt;/jslint&gt;&quot; &gt; jslint.log</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -79,7 +80,7 @@
       <useDeltaValues>false</useDeltaValues>
       <thresholds>
         <unstableTotalAll></unstableTotalAll>
-        <unstableTotalHigh>2</unstableTotalHigh>
+        <unstableTotalHigh>0</unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
         <unstableNewAll></unstableNewAll>
@@ -102,6 +103,11 @@
       </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/xmltestreport/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
@@ -217,7 +223,7 @@
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>2000</unstable>
+              <unstable>999</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -251,6 +257,34 @@
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
+    <hudson.plugins.cobertura.CoberturaPublisher>
+      <coberturaReportFile>coverage.xml</coberturaReportFile>
+      <onlyStable>false</onlyStable>
+      <healthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+        </targets>
+      </healthyTarget>
+      <unhealthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </unhealthyTarget>
+      <failingTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </failingTarget>
+    </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.tasks.Mailer>
       <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
@@ -277,5 +311,5 @@
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.EEAContentTypes</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.exhibit</customWorkspace>
 </project>
