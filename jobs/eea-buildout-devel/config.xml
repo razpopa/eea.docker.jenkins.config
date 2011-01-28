@@ -2,6 +2,12 @@
 <project>
   <actions/>
   <description>Run EEA Buildout with devel.cfg on SVN change.</description>
+  <logRotator>
+    <daysToKeep>5</daysToKeep>
+    <numToKeep>-1</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
@@ -16,17 +22,17 @@
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
-    <useUpdate>true</useUpdate>
-    <doRevert>false</doRevert>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
     <excludedRegions></excludedRegions>
     <includedRegions></includedRegions>
     <excludedUsers></excludedUsers>
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
@@ -53,6 +59,7 @@ bin/buildout -c devel.cfg</command>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
+    <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.GroupChatIMMessageTarget>

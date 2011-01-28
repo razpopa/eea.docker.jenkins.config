@@ -267,6 +267,7 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>EUNIS</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -286,7 +287,6 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
-        <string>EUNIS</string>
       </jobNames>
       <jobFilters/>
       <columns>

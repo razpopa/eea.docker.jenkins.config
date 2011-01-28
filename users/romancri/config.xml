@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>Cristian Romanescu</fullName>
+  <properties>
+    <hudson.model.MyViewsProperty>
+      <primaryViewName>All</primaryViewName>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>All</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty/>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>MJPFeV:bfbcfb3527392186734880e6363e1806939a8f2a0217d99b11a517215f276310</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>cristian.romanescu@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+  </properties>
+</user>

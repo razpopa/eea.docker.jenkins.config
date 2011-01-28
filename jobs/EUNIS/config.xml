@@ -2,6 +2,12 @@
 <maven2-moduleset>
   <actions/>
   <description></description>
+  <logRotator>
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>5</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
@@ -16,17 +22,17 @@
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
-    <useUpdate>true</useUpdate>
-    <doRevert>false</doRevert>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
     <excludedRegions></excludedRegions>
     <includedRegions></includedRegions>
     <excludedUsers></excludedUsers>
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
@@ -34,14 +40,53 @@
     <groupId>eionet.eunis</groupId>
     <artifactId>eunis</artifactId>
   </rootModule>
-  <goals>-Dmaven.test.skip=true -Denv=live compile</goals>
+  <goals>-Dmaven.test.skip=true -Denv=live install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <usePrivateRepository>false</usePrivateRepository>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
   <archivingDisabled>false</archivingDisabled>
+  <resolveDependencies>false</resolveDependencies>
+  <processPlugins>false</processPlugins>
+  <mavenValidationLevel>-1</mavenValidationLevel>
   <reporters>
+    <hudson.plugins.findbugs.FindBugsReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[FINDBUGS] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.tasks.TasksReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[TASKS] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>true</canRunOnFailed>
+      <pattern></pattern>
+      <excludePattern></excludePattern>
+      <high></high>
+      <normal></normal>
+      <low></low>
+      <ignoreCase>false</ignoreCase>
+    </hudson.plugins.tasks.TasksReporter>
+    <hudson.plugins.pmd.PmdReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[PMD] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.pmd.PmdReporter>
+    <hudson.plugins.dry.DryReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[DRY] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <highThreshold>50</highThreshold>
+      <normalThreshold>25</normalThreshold>
+    </hudson.plugins.dry.DryReporter>
     <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
       <config>
         <suppressions class="tree-set">
@@ -188,9 +233,127 @@
     </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
   </reporters>
   <publishers>
+    <hudson.plugins.analysis.collector.AnalysisPublisher>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <thresholdLimit>low</thresholdLimit>
+      <pluginName>[ANALYSIS-COLLECTOR] </pluginName>
+      <defaultEncoding></defaultEncoding>
+      <canRunOnFailed>true</canRunOnFailed>
+      <useDeltaValues>false</useDeltaValues>
+      <thresholds>
+        <unstableTotalAll></unstableTotalAll>
+        <unstableTotalHigh></unstableTotalHigh>
+        <unstableTotalNormal></unstableTotalNormal>
+        <unstableTotalLow></unstableTotalLow>
+        <unstableNewAll></unstableNewAll>
+        <unstableNewHigh></unstableNewHigh>
+        <unstableNewNormal></unstableNewNormal>
+        <unstableNewLow></unstableNewLow>
+        <failedTotalAll></failedTotalAll>
+        <failedTotalHigh></failedTotalHigh>
+        <failedTotalNormal></failedTotalNormal>
+        <failedTotalLow></failedTotalLow>
+        <failedNewAll></failedNewAll>
+        <failedNewHigh></failedNewHigh>
+        <failedNewNormal></failedNewNormal>
+        <failedNewLow></failedNewLow>
+      </thresholds>
+    </hudson.plugins.analysis.collector.AnalysisPublisher>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.cobertura.CoberturaPublisher>
+      <coberturaReportFile>**/target/site/cobertura/coverage.xml</coberturaReportFile>
+      <onlyStable>false</onlyStable>
+      <healthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CLASSES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>70</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>PACKAGES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+        </targets>
+      </healthyTarget>
+      <unhealthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CLASSES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>PACKAGES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </unhealthyTarget>
+      <failingTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CLASSES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>PACKAGES</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </failingTarget>
+      <sourceEncoding>ASCII</sourceEncoding>
+    </hudson.plugins.cobertura.CoberturaPublisher>
+    <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher/>
+    <hudson.plugins.cigame.GamePublisher/>
   </publishers>
   <buildWrappers/>
 </maven2-moduleset>
