@@ -267,6 +267,7 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>CR2</string>
         <string>EUNIS</string>
       </jobNames>
       <jobFilters/>
@@ -287,6 +288,7 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
+        <string>CR2</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -305,33 +307,33 @@
       <rightPortletWidth>50%</rightPortletWidth>
       <leftPortlets>
         <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-          <id>dashboard_portlet_68</id>
+          <id>dashboard_portlet_15</id>
           <name>Unstable Jobs</name>
         </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
         <hudson.plugins.view.dashboard.builds.LatestBuilds>
-          <id>dashboard_portlet_69</id>
+          <id>dashboard_portlet_16</id>
           <name>Latest builds</name>
           <numBuilds>20</numBuilds>
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
         <hudson.plugins.view.dashboard.stats.StatJobs>
-          <id>dashboard_portlet_70</id>
+          <id>dashboard_portlet_17</id>
           <name>Job statistics</name>
         </hudson.plugins.view.dashboard.stats.StatJobs>
         <hudson.plugins.view.dashboard.test.TestStatisticsChart>
-          <id>dashboard_portlet_71</id>
+          <id>dashboard_portlet_18</id>
           <name>Test Statistics Chart</name>
         </hudson.plugins.view.dashboard.test.TestStatisticsChart>
       </leftPortlets>
       <rightPortlets>
         <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
-          <id>dashboard_portlet_72</id>
+          <id>dashboard_portlet_19</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
           <height>200</height>
           <dayCountString>30</dayCountString>
         </hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
         <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
-          <id>dashboard_portlet_73</id>
+          <id>dashboard_portlet_20</id>
           <name>Code Coverages</name>
         </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
       </rightPortlets>

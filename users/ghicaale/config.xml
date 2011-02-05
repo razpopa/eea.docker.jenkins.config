@@ -23,5 +23,9 @@
     <hudson.plugins.jabber.user.JabberUserProperty>
       <jid>alec@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>-23.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>

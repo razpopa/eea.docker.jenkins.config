@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
   <fullName>Antonio De Marinis</fullName>
+  <description>EEA Web Manager and System Architect</description>
   <properties>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
@@ -20,5 +21,9 @@
     <hudson.tasks.Mailer_-UserProperty>
       <emailAddress>demarinis@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>-6.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>

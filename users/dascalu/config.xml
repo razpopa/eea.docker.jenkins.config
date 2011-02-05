@@ -1,28 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>Søren Roug</fullName>
-  <description>Project manager for Java applications</description>
+  <fullName>dascalu</fullName>
   <properties>
+    <hudson.tasks.Mailer_-UserProperty/>
     <hudson.model.MyViewsProperty>
-      <primaryViewName>Alle</primaryViewName>
+      <primaryViewName>All</primaryViewName>
       <views>
         <hudson.model.AllView>
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
-          <name>Alle</name>
+          <name>All</name>
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty/>
-    <hudson.security.HudsonPrivateSecurityRealm_-Details>
-      <passwordHash>SeGAff:7a55abf0d8cecc9ad193d7ac4e4030ec946ea913e0b67b509b3853ac9203845b</passwordHash>
-    </hudson.security.HudsonPrivateSecurityRealm_-Details>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>soren.roug@eea.europa.eu</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>1.0</score>
+      <score>6.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>
