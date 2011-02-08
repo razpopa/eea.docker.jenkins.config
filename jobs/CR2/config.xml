@@ -33,6 +33,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>jdk6</jdk>
   <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>

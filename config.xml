@@ -1,89 +1,127 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
-  <version>1.390</version>
+  <version>1.395</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Computer.Configure:ciobabog</permission>
     <permission>hudson.model.Computer.Configure:demarant</permission>
     <permission>hudson.model.Computer.Configure:ghicaale</permission>
+    <permission>hudson.model.Computer.Configure:ichimdav</permission>
     <permission>hudson.model.Computer.Configure:roug</permission>
     <permission>hudson.model.Computer.Configure:tiberich</permission>
     <permission>hudson.model.Computer.Configure:voineali</permission>
+    <permission>hudson.model.Computer.Delete:ciobabog</permission>
     <permission>hudson.model.Computer.Delete:demarant</permission>
     <permission>hudson.model.Computer.Delete:ghicaale</permission>
+    <permission>hudson.model.Computer.Delete:ichimdav</permission>
     <permission>hudson.model.Computer.Delete:roug</permission>
     <permission>hudson.model.Computer.Delete:tiberich</permission>
     <permission>hudson.model.Computer.Delete:voineali</permission>
+    <permission>hudson.model.Hudson.Administer:ciobabog</permission>
     <permission>hudson.model.Hudson.Administer:demarant</permission>
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>
+    <permission>hudson.model.Hudson.Administer:ichimdav</permission>
     <permission>hudson.model.Hudson.Administer:roug</permission>
     <permission>hudson.model.Hudson.Administer:tiberich</permission>
     <permission>hudson.model.Hudson.Administer:voineali</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Read:ciobabog</permission>
     <permission>hudson.model.Hudson.Read:demarant</permission>
     <permission>hudson.model.Hudson.Read:ghicaale</permission>
+    <permission>hudson.model.Hudson.Read:ichimdav</permission>
     <permission>hudson.model.Hudson.Read:roug</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
+    <permission>hudson.model.Item.Build:ciobabog</permission>
     <permission>hudson.model.Item.Build:demarant</permission>
     <permission>hudson.model.Item.Build:ghicaale</permission>
+    <permission>hudson.model.Item.Build:ichimdav</permission>
     <permission>hudson.model.Item.Build:roug</permission>
     <permission>hudson.model.Item.Build:tiberich</permission>
     <permission>hudson.model.Item.Build:voineali</permission>
+    <permission>hudson.model.Item.Configure:ciobabog</permission>
     <permission>hudson.model.Item.Configure:demarant</permission>
     <permission>hudson.model.Item.Configure:ghicaale</permission>
+    <permission>hudson.model.Item.Configure:ichimdav</permission>
     <permission>hudson.model.Item.Configure:roug</permission>
     <permission>hudson.model.Item.Configure:tiberich</permission>
     <permission>hudson.model.Item.Configure:voineali</permission>
+    <permission>hudson.model.Item.Create:ciobabog</permission>
     <permission>hudson.model.Item.Create:demarant</permission>
     <permission>hudson.model.Item.Create:ghicaale</permission>
+    <permission>hudson.model.Item.Create:ichimdav</permission>
     <permission>hudson.model.Item.Create:roug</permission>
     <permission>hudson.model.Item.Create:tiberich</permission>
     <permission>hudson.model.Item.Create:voineali</permission>
+    <permission>hudson.model.Item.Delete:ciobabog</permission>
     <permission>hudson.model.Item.Delete:demarant</permission>
     <permission>hudson.model.Item.Delete:ghicaale</permission>
+    <permission>hudson.model.Item.Delete:ichimdav</permission>
     <permission>hudson.model.Item.Delete:roug</permission>
     <permission>hudson.model.Item.Delete:tiberich</permission>
     <permission>hudson.model.Item.Delete:voineali</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
+    <permission>hudson.model.Item.Read:ciobabog</permission>
     <permission>hudson.model.Item.Read:demarant</permission>
     <permission>hudson.model.Item.Read:ghicaale</permission>
+    <permission>hudson.model.Item.Read:ichimdav</permission>
     <permission>hudson.model.Item.Read:roug</permission>
     <permission>hudson.model.Item.Read:tiberich</permission>
     <permission>hudson.model.Item.Read:voineali</permission>
+    <permission>hudson.model.Item.Release:ciobabog</permission>
+    <permission>hudson.model.Item.Release:demarant</permission>
+    <permission>hudson.model.Item.Release:ghicaale</permission>
+    <permission>hudson.model.Item.Release:ichimdav</permission>
+    <permission>hudson.model.Item.Release:roug</permission>
+    <permission>hudson.model.Item.Release:tiberich</permission>
+    <permission>hudson.model.Item.Release:voineali</permission>
+    <permission>hudson.model.Item.Workspace:ciobabog</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
+    <permission>hudson.model.Run.Delete:ciobabog</permission>
     <permission>hudson.model.Run.Delete:demarant</permission>
     <permission>hudson.model.Run.Delete:ghicaale</permission>
+    <permission>hudson.model.Run.Delete:ichimdav</permission>
     <permission>hudson.model.Run.Delete:roug</permission>
     <permission>hudson.model.Run.Delete:tiberich</permission>
     <permission>hudson.model.Run.Delete:voineali</permission>
+    <permission>hudson.model.Run.Update:ciobabog</permission>
     <permission>hudson.model.Run.Update:demarant</permission>
     <permission>hudson.model.Run.Update:ghicaale</permission>
+    <permission>hudson.model.Run.Update:ichimdav</permission>
     <permission>hudson.model.Run.Update:roug</permission>
     <permission>hudson.model.Run.Update:tiberich</permission>
     <permission>hudson.model.Run.Update:voineali</permission>
+    <permission>hudson.model.View.Configure:ciobabog</permission>
     <permission>hudson.model.View.Configure:demarant</permission>
     <permission>hudson.model.View.Configure:ghicaale</permission>
+    <permission>hudson.model.View.Configure:ichimdav</permission>
     <permission>hudson.model.View.Configure:roug</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
     <permission>hudson.model.View.Configure:voineali</permission>
+    <permission>hudson.model.View.Create:ciobabog</permission>
     <permission>hudson.model.View.Create:demarant</permission>
     <permission>hudson.model.View.Create:ghicaale</permission>
+    <permission>hudson.model.View.Create:ichimdav</permission>
     <permission>hudson.model.View.Create:roug</permission>
     <permission>hudson.model.View.Create:tiberich</permission>
     <permission>hudson.model.View.Create:voineali</permission>
+    <permission>hudson.model.View.Delete:ciobabog</permission>
     <permission>hudson.model.View.Delete:demarant</permission>
     <permission>hudson.model.View.Delete:ghicaale</permission>
+    <permission>hudson.model.View.Delete:ichimdav</permission>
     <permission>hudson.model.View.Delete:roug</permission>
     <permission>hudson.model.View.Delete:tiberich</permission>
     <permission>hudson.model.View.Delete:voineali</permission>
+    <permission>hudson.scm.SCM.Tag:ciobabog</permission>
     <permission>hudson.scm.SCM.Tag:demarant</permission>
     <permission>hudson.scm.SCM.Tag:ghicaale</permission>
+    <permission>hudson.scm.SCM.Tag:ichimdav</permission>
     <permission>hudson.scm.SCM.Tag:roug</permission>
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
@@ -92,7 +130,51 @@
     <disableSignup>false</disableSignup>
   </securityRealm>
   <systemMessage>Welcome to Continuous Integration Testing site for European Environment Agency (EEA, www.eea.europa.eu)</systemMessage>
-  <jdks/>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter"/>
+  <jdks>
+    <jdk>
+      <name>jdk14</name>
+      <home></home>
+      <properties>
+        <hudson.tools.InstallSourceProperty>
+          <installers>
+            <hudson.tools.JDKInstaller>
+              <id>j2sdk-1.4.2_19-oth-JPR@CDS-CDS_Developer</id>
+              <acceptLicense>true</acceptLicense>
+            </hudson.tools.JDKInstaller>
+          </installers>
+        </hudson.tools.InstallSourceProperty>
+      </properties>
+    </jdk>
+    <jdk>
+      <name>jdk50</name>
+      <home></home>
+      <properties>
+        <hudson.tools.InstallSourceProperty>
+          <installers>
+            <hudson.tools.JDKInstaller>
+              <id>jdk-1.5.0_22-oth-JPR@CDS-CDS_Developer</id>
+              <acceptLicense>true</acceptLicense>
+            </hudson.tools.JDKInstaller>
+          </installers>
+        </hudson.tools.InstallSourceProperty>
+      </properties>
+    </jdk>
+    <jdk>
+      <name>jdk6</name>
+      <home></home>
+      <properties>
+        <hudson.tools.InstallSourceProperty>
+          <installers>
+            <hudson.tools.JDKInstaller>
+              <id>jdk-6u22-oth-JPR@CDS-CDS_Developer</id>
+              <acceptLicense>true</acceptLicense>
+            </hudson.tools.JDKInstaller>
+          </installers>
+        </hudson.tools.InstallSourceProperty>
+      </properties>
+    </jdk>
+  </jdks>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
   <clouds/>
@@ -307,33 +389,37 @@
       <rightPortletWidth>50%</rightPortletWidth>
       <leftPortlets>
         <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-          <id>dashboard_portlet_15</id>
+          <id>dashboard_portlet_57</id>
           <name>Unstable Jobs</name>
         </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
+        <hudson.plugins.view.dashboard.stats.StatJobs>
+          <id>dashboard_portlet_58</id>
+          <name>Job statistics</name>
+        </hudson.plugins.view.dashboard.stats.StatJobs>
         <hudson.plugins.view.dashboard.builds.LatestBuilds>
-          <id>dashboard_portlet_16</id>
+          <id>dashboard_portlet_59</id>
           <name>Latest builds</name>
           <numBuilds>20</numBuilds>
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
-        <hudson.plugins.view.dashboard.stats.StatJobs>
-          <id>dashboard_portlet_17</id>
-          <name>Job statistics</name>
-        </hudson.plugins.view.dashboard.stats.StatJobs>
-        <hudson.plugins.view.dashboard.test.TestStatisticsChart>
-          <id>dashboard_portlet_18</id>
-          <name>Test Statistics Chart</name>
-        </hudson.plugins.view.dashboard.test.TestStatisticsChart>
+        <hudson.plugins.warnings.dashboard.WarningsTablePortlet>
+          <id>dashboard_portlet_60</id>
+          <name>Compiler warnings per project</name>
+        </hudson.plugins.warnings.dashboard.WarningsTablePortlet>
       </leftPortlets>
       <rightPortlets>
         <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
-          <id>dashboard_portlet_19</id>
+          <id>dashboard_portlet_61</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
           <height>200</height>
           <dayCountString>30</dayCountString>
         </hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
+        <hudson.plugins.view.dashboard.test.TestStatisticsChart>
+          <id>dashboard_portlet_62</id>
+          <name>Test Statistics Chart</name>
+        </hudson.plugins.view.dashboard.test.TestStatisticsChart>
         <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
-          <id>dashboard_portlet_20</id>
+          <id>dashboard_portlet_63</id>
           <name>Code Coverages</name>
         </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
       </rightPortlets>

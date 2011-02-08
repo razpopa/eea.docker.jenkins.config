@@ -22,7 +22,7 @@
       <emailAddress>demarinis@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>-6.0</score>
+      <score>-5.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

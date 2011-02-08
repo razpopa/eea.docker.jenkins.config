@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver_-DescriptorImpl>
+  <repos>
+    <org.jvnet.hudson.plugins.repositoryconnector.Repository>
+      <url>http://repo1.maven.org/maven2</url>
+      <type>default</type>
+      <id>central</id>
+    </org.jvnet.hudson.plugins.repositoryconnector.Repository>
+  </repos>
+  <localRepository></localRepository>
+</org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver_-DescriptorImpl>

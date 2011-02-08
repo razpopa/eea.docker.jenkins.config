@@ -1,11 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>Alexandru Ghica</fullName>
-  <description>Software engineer @ Eau de Web, Romania</description>
+  <fullName>Bogdan Ciobanu</fullName>
   <properties>
-    <hudson.security.HudsonPrivateSecurityRealm_-Details>
-      <passwordHash>zOvFWD:01a0cd1305d83fc2f3856e592a1685ef7d6bf7a9082867526431082499bc9ba3</passwordHash>
-    </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -17,15 +13,16 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>alec.ghica@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty>
-      <jid>alec@jabber.eaudeweb.ro</jid>
-    </hudson.plugins.jabber.user.JabberUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>-20.0</score>
+      <score>1.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>GHNOln:9e07f408d3d983b7015f202b277b0549724c78b6edda84219b3bc1f3ef558e04</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>bogdan.ciobanu@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>
