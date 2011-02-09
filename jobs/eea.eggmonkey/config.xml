@@ -3,7 +3,7 @@
   <actions/>
   <description>- Run eea.eggmonkey tests</description>
   <logRotator>
-    <daysToKeep>5</daysToKeep>
+    <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
@@ -34,6 +34,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>30 * * * *</spec>
@@ -291,7 +292,7 @@ cp ../../parts/xmltestreport/testreports/*eea.eggmonkey*.xml xmltestreport/</com
       <sourceEncoding>ASCII</sourceEncoding>
     </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.tasks.Mailer>
-      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro</recipients>
+      <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>

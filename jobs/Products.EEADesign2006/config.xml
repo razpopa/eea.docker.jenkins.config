@@ -2,6 +2,12 @@
 <project>
   <actions/>
   <description>- Run Products.EEADesign2006 tests</description>
+  <logRotator>
+    <daysToKeep>30</daysToKeep>
+    <numToKeep>-1</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
@@ -16,18 +22,19 @@
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
-    <useUpdate>true</useUpdate>
-    <doRevert>false</doRevert>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
     <excludedRegions></excludedRegions>
     <includedRegions></includedRegions>
     <excludedUsers></excludedUsers>
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>30 * * * *</spec>
@@ -101,9 +108,6 @@
       </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
-      <factGenerator/>
-    </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">
@@ -250,8 +254,11 @@
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
+    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+      <factGenerator/>
+    </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
-      <recipients>antonio.de.marinis@eea.europa.eu tiberiu.ichim@eaudeweb.ro alec.ghica@eaudeweb.ro alin.voinea@eaudeweb.ro</recipients>
+      <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>

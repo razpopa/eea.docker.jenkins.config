@@ -3,7 +3,7 @@
   <actions/>
   <description>EEA Faceted Navigation build on a clean Plone 2.5 instance</description>
   <logRotator>
-    <daysToKeep>5</daysToKeep>
+    <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
@@ -38,6 +38,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>(Default)</jdk>
   <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
@@ -52,7 +53,7 @@ bin/instance test -v -vv --nowarning -s eea.facetednavigation</command>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
-      <recipients>alin.voinea@eaudeweb.ro</recipients>
+      <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
