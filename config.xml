@@ -5,6 +5,7 @@
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Computer.Configure:batradav</permission>
     <permission>hudson.model.Computer.Configure:ciobabog</permission>
     <permission>hudson.model.Computer.Configure:demarant</permission>
     <permission>hudson.model.Computer.Configure:ghicaale</permission>
@@ -12,6 +13,7 @@
     <permission>hudson.model.Computer.Configure:roug</permission>
     <permission>hudson.model.Computer.Configure:tiberich</permission>
     <permission>hudson.model.Computer.Configure:voineali</permission>
+    <permission>hudson.model.Computer.Delete:batradav</permission>
     <permission>hudson.model.Computer.Delete:ciobabog</permission>
     <permission>hudson.model.Computer.Delete:demarant</permission>
     <permission>hudson.model.Computer.Delete:ghicaale</permission>
@@ -19,6 +21,7 @@
     <permission>hudson.model.Computer.Delete:roug</permission>
     <permission>hudson.model.Computer.Delete:tiberich</permission>
     <permission>hudson.model.Computer.Delete:voineali</permission>
+    <permission>hudson.model.Hudson.Administer:batradav</permission>
     <permission>hudson.model.Hudson.Administer:ciobabog</permission>
     <permission>hudson.model.Hudson.Administer:demarant</permission>
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>
@@ -27,6 +30,7 @@
     <permission>hudson.model.Hudson.Administer:tiberich</permission>
     <permission>hudson.model.Hudson.Administer:voineali</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Read:batradav</permission>
     <permission>hudson.model.Hudson.Read:ciobabog</permission>
     <permission>hudson.model.Hudson.Read:demarant</permission>
     <permission>hudson.model.Hudson.Read:ghicaale</permission>
@@ -34,6 +38,7 @@
     <permission>hudson.model.Hudson.Read:roug</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
+    <permission>hudson.model.Item.Build:batradav</permission>
     <permission>hudson.model.Item.Build:ciobabog</permission>
     <permission>hudson.model.Item.Build:demarant</permission>
     <permission>hudson.model.Item.Build:ghicaale</permission>
@@ -41,6 +46,7 @@
     <permission>hudson.model.Item.Build:roug</permission>
     <permission>hudson.model.Item.Build:tiberich</permission>
     <permission>hudson.model.Item.Build:voineali</permission>
+    <permission>hudson.model.Item.Configure:batradav</permission>
     <permission>hudson.model.Item.Configure:ciobabog</permission>
     <permission>hudson.model.Item.Configure:demarant</permission>
     <permission>hudson.model.Item.Configure:ghicaale</permission>
@@ -48,6 +54,7 @@
     <permission>hudson.model.Item.Configure:roug</permission>
     <permission>hudson.model.Item.Configure:tiberich</permission>
     <permission>hudson.model.Item.Configure:voineali</permission>
+    <permission>hudson.model.Item.Create:batradav</permission>
     <permission>hudson.model.Item.Create:ciobabog</permission>
     <permission>hudson.model.Item.Create:demarant</permission>
     <permission>hudson.model.Item.Create:ghicaale</permission>
@@ -55,6 +62,7 @@
     <permission>hudson.model.Item.Create:roug</permission>
     <permission>hudson.model.Item.Create:tiberich</permission>
     <permission>hudson.model.Item.Create:voineali</permission>
+    <permission>hudson.model.Item.Delete:batradav</permission>
     <permission>hudson.model.Item.Delete:ciobabog</permission>
     <permission>hudson.model.Item.Delete:demarant</permission>
     <permission>hudson.model.Item.Delete:ghicaale</permission>
@@ -63,6 +71,7 @@
     <permission>hudson.model.Item.Delete:tiberich</permission>
     <permission>hudson.model.Item.Delete:voineali</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
+    <permission>hudson.model.Item.Read:batradav</permission>
     <permission>hudson.model.Item.Read:ciobabog</permission>
     <permission>hudson.model.Item.Read:demarant</permission>
     <permission>hudson.model.Item.Read:ghicaale</permission>
@@ -70,6 +79,7 @@
     <permission>hudson.model.Item.Read:roug</permission>
     <permission>hudson.model.Item.Read:tiberich</permission>
     <permission>hudson.model.Item.Read:voineali</permission>
+    <permission>hudson.model.Item.Release:batradav</permission>
     <permission>hudson.model.Item.Release:ciobabog</permission>
     <permission>hudson.model.Item.Release:demarant</permission>
     <permission>hudson.model.Item.Release:ghicaale</permission>
@@ -77,12 +87,14 @@
     <permission>hudson.model.Item.Release:roug</permission>
     <permission>hudson.model.Item.Release:tiberich</permission>
     <permission>hudson.model.Item.Release:voineali</permission>
+    <permission>hudson.model.Item.Workspace:batradav</permission>
     <permission>hudson.model.Item.Workspace:ciobabog</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
+    <permission>hudson.model.Run.Delete:batradav</permission>
     <permission>hudson.model.Run.Delete:ciobabog</permission>
     <permission>hudson.model.Run.Delete:demarant</permission>
     <permission>hudson.model.Run.Delete:ghicaale</permission>
@@ -90,6 +102,7 @@
     <permission>hudson.model.Run.Delete:roug</permission>
     <permission>hudson.model.Run.Delete:tiberich</permission>
     <permission>hudson.model.Run.Delete:voineali</permission>
+    <permission>hudson.model.Run.Update:batradav</permission>
     <permission>hudson.model.Run.Update:ciobabog</permission>
     <permission>hudson.model.Run.Update:demarant</permission>
     <permission>hudson.model.Run.Update:ghicaale</permission>
@@ -97,6 +110,7 @@
     <permission>hudson.model.Run.Update:roug</permission>
     <permission>hudson.model.Run.Update:tiberich</permission>
     <permission>hudson.model.Run.Update:voineali</permission>
+    <permission>hudson.model.View.Configure:batradav</permission>
     <permission>hudson.model.View.Configure:ciobabog</permission>
     <permission>hudson.model.View.Configure:demarant</permission>
     <permission>hudson.model.View.Configure:ghicaale</permission>
@@ -104,6 +118,7 @@
     <permission>hudson.model.View.Configure:roug</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
     <permission>hudson.model.View.Configure:voineali</permission>
+    <permission>hudson.model.View.Create:batradav</permission>
     <permission>hudson.model.View.Create:ciobabog</permission>
     <permission>hudson.model.View.Create:demarant</permission>
     <permission>hudson.model.View.Create:ghicaale</permission>
@@ -111,6 +126,7 @@
     <permission>hudson.model.View.Create:roug</permission>
     <permission>hudson.model.View.Create:tiberich</permission>
     <permission>hudson.model.View.Create:voineali</permission>
+    <permission>hudson.model.View.Delete:batradav</permission>
     <permission>hudson.model.View.Delete:ciobabog</permission>
     <permission>hudson.model.View.Delete:demarant</permission>
     <permission>hudson.model.View.Delete:ghicaale</permission>
@@ -118,6 +134,7 @@
     <permission>hudson.model.View.Delete:roug</permission>
     <permission>hudson.model.View.Delete:tiberich</permission>
     <permission>hudson.model.View.Delete:voineali</permission>
+    <permission>hudson.scm.SCM.Tag:batradav</permission>
     <permission>hudson.scm.SCM.Tag:ciobabog</permission>
     <permission>hudson.scm.SCM.Tag:demarant</permission>
     <permission>hudson.scm.SCM.Tag:ghicaale</permission>
@@ -132,20 +149,6 @@
   <systemMessage>Welcome to Continuous Integration Testing site for European Environment Agency (EEA, www.eea.europa.eu)</systemMessage>
   <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter"/>
   <jdks>
-    <jdk>
-      <name>jdk14</name>
-      <home></home>
-      <properties>
-        <hudson.tools.InstallSourceProperty>
-          <installers>
-            <hudson.tools.JDKInstaller>
-              <id>j2sdk-1.4.2_19-oth-JPR@CDS-CDS_Developer</id>
-              <acceptLicense>true</acceptLicense>
-            </hudson.tools.JDKInstaller>
-          </installers>
-        </hudson.tools.InstallSourceProperty>
-      </properties>
-    </jdk>
     <jdk>
       <name>jdk50</name>
       <home></home>

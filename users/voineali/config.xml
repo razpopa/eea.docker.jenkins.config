@@ -3,11 +3,14 @@
   <fullName>Alin Voinea</fullName>
   <description>Software engineer @ Eau de Web, Romania</description>
   <properties>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>alin.voinea@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>xlWxke:679bf111cffbd9dfbe19f0e57864d594e8a1025ccd600bfedc2d177c501e9be2</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <hudson.model.MyViewsProperty>
-      <primaryViewName>All</primaryViewName>
+      <primaryViewName>Alin Voinea</primaryViewName>
       <views>
         <hudson.model.AllView>
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
@@ -77,6 +80,7 @@
               <name>Test Trend Chart</name>
               <graphWidth>300</graphWidth>
               <graphHeight>220</graphHeight>
+              <dateRange>0</dateRange>
             </hudson.plugins.view.dashboard.test.TestTrendChart>
             <hudson.plugins.view.dashboard.test.TestStatisticsChart>
               <id>dashboard_portlet_22</id>
@@ -88,9 +92,10 @@
         </hudson.plugins.view.dashboard.Dashboard>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>alin.voinea@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>4.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>
       <jid>alin@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>

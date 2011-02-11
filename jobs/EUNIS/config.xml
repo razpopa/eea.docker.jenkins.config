@@ -4,7 +4,7 @@
   <description>European Nature Information System. Using JSP.</description>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
-    <numToKeep>5</numToKeep>
+    <numToKeep>3</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
