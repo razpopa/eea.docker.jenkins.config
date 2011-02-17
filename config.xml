@@ -387,6 +387,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
         <string>CR2</string>
         <string>CR3</string>
+        <string>Products.ThemeCentre</string>
       </jobNames>
       <jobFilters/>
       <columns>

@@ -49,14 +49,6 @@ bin/buildout -c hudson.cfg</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.facetednavigation, eea.dataservice, eea.cache, eea.design, eea.geotags, eea.google, eea.indicators, eea.pagedesign, eea.promotion, eea.rdfmarshaller, eea.relations, eea.reports, eea.socialmedia, eea.soer, eea.themecentre, eea.versions, eea.daviz, eea.faceted.inheritance, eea.faceted.tool, eea.faceted.vocabularies, Products.EEATemplatesService, Products.EEAContentTypes, valentine.imagescales, valentine.gtranslate, eea.alchemy, eea.epub, eea.jquery, eea.locationwidget, eea.testcase, eea.signals, eea.vocab, eea.workflow, eea.eggmonkey, eea.bounce, Products.PloneGazette, eea.exhibit, eea.mediacentre, eea.plone3compat, eea.policy.dev, eea.rdfrepository, eea.sitestructurediff, eea.translations, valentine.linguaflow, Products.EEADesign2006, Products.EEAEnquiry, Products.EEAPloneAdmin</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
@@ -80,6 +72,14 @@ bin/buildout -c hudson.cfg</command>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
       <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier"/>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.facetednavigation, eea.dataservice, eea.cache, eea.design, eea.geotags, eea.google, eea.indicators, eea.pagedesign, eea.promotion, eea.rdfmarshaller, eea.relations, eea.reports, eea.socialmedia, eea.soer, eea.themecentre, eea.versions, eea.daviz, eea.faceted.inheritance, eea.faceted.tool, eea.faceted.vocabularies, Products.EEATemplatesService, Products.EEAContentTypes, valentine.imagescales, valentine.gtranslate, eea.alchemy, eea.epub, eea.jquery, eea.locationwidget, eea.testcase, eea.signals, eea.vocab, eea.workflow, eea.eggmonkey, eea.bounce, Products.PloneGazette, eea.exhibit, eea.mediacentre, eea.plone3compat, eea.policy.dev, eea.rdfrepository, eea.sitestructurediff, eea.translations, valentine.linguaflow, Products.EEADesign2006, Products.EEAEnquiry, Products.EEAPloneAdmin, Products.ThemeCentre</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
