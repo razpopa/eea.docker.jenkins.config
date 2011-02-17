@@ -1,8 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>heinlja</fullName>
+  <fullName>Jaanus Heinlaid</fullName>
+  <description></description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty/>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>jaanus.heinlaid@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>CfpJpb:50410897ea3e75f38ba7dd3b918d4d15e3162f2ee23a46e3b3a8a8db42c3f1ea</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -14,10 +20,10 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
       <score>7.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty/>
   </properties>
 </user>

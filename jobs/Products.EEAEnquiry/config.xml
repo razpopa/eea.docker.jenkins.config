@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/EEAEnquiry</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.EEAEnquiry/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -72,7 +72,7 @@
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/jslint-test eea</command>
+../../bin/jslint-test Products</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -284,5 +284,5 @@
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/products/EEAEnquiry</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.EEAEnquiry</customWorkspace>
 </project>

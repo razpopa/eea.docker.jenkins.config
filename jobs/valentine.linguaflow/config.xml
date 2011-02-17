@@ -12,13 +12,13 @@
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
     <hudson.plugins.trac.TracProjectProperty>
-      <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
+      <tracWebsite>http://dev.plone.org/collective/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
   </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.plone.org/svn/collective/valentine.linguaflow/trunk</remote>
+        <remote>https://svn.plone.org/svn/collective/valentine.linguaflow/tags/0.2</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -317,5 +317,5 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/src/valentine.linguaflow</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/valentine.linguaflow</customWorkspace>
 </project>

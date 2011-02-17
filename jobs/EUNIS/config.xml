@@ -101,7 +101,7 @@
               <type>checkstyle</type>
               <min>10</min>
               <max>999</max>
-              <unstable>999</unstable>
+              <unstable>101027</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -123,7 +123,7 @@
               <type>cpd</type>
               <min>10</min>
               <max>999</max>
-              <unstable>999</unstable>
+              <unstable>1026</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -134,7 +134,7 @@
               <type>findbugs</type>
               <min>10</min>
               <max>999</max>
-              <unstable>999</unstable>
+              <unstable>1285</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -189,7 +189,7 @@
               <type>pmd</type>
               <min>10</min>
               <max>999</max>
-              <unstable>999</unstable>
+              <unstable>418</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -274,19 +274,7 @@
             <int>80</int>
           </entry>
           <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>70</int>
-          </entry>
-          <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>80</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>80</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
             <int>80</int>
           </entry>
           <entry>
@@ -302,19 +290,7 @@
             <int>0</int>
           </entry>
           <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
             <int>0</int>
           </entry>
           <entry>
@@ -330,19 +306,7 @@
             <int>0</int>
           </entry>
           <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
             <int>0</int>
           </entry>
           <entry>

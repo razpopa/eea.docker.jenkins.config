@@ -34,6 +34,7 @@
     <permission>hudson.model.Hudson.Read:ciobabog</permission>
     <permission>hudson.model.Hudson.Read:demarant</permission>
     <permission>hudson.model.Hudson.Read:ghicaale</permission>
+    <permission>hudson.model.Hudson.Read:heinlja</permission>
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
     <permission>hudson.model.Hudson.Read:roug</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
@@ -42,6 +43,7 @@
     <permission>hudson.model.Item.Build:ciobabog</permission>
     <permission>hudson.model.Item.Build:demarant</permission>
     <permission>hudson.model.Item.Build:ghicaale</permission>
+    <permission>hudson.model.Item.Build:heinlja</permission>
     <permission>hudson.model.Item.Build:ichimdav</permission>
     <permission>hudson.model.Item.Build:roug</permission>
     <permission>hudson.model.Item.Build:tiberich</permission>
@@ -50,6 +52,7 @@
     <permission>hudson.model.Item.Configure:ciobabog</permission>
     <permission>hudson.model.Item.Configure:demarant</permission>
     <permission>hudson.model.Item.Configure:ghicaale</permission>
+    <permission>hudson.model.Item.Configure:heinlja</permission>
     <permission>hudson.model.Item.Configure:ichimdav</permission>
     <permission>hudson.model.Item.Configure:roug</permission>
     <permission>hudson.model.Item.Configure:tiberich</permission>
@@ -58,6 +61,7 @@
     <permission>hudson.model.Item.Create:ciobabog</permission>
     <permission>hudson.model.Item.Create:demarant</permission>
     <permission>hudson.model.Item.Create:ghicaale</permission>
+    <permission>hudson.model.Item.Create:heinlja</permission>
     <permission>hudson.model.Item.Create:ichimdav</permission>
     <permission>hudson.model.Item.Create:roug</permission>
     <permission>hudson.model.Item.Create:tiberich</permission>
@@ -66,6 +70,7 @@
     <permission>hudson.model.Item.Delete:ciobabog</permission>
     <permission>hudson.model.Item.Delete:demarant</permission>
     <permission>hudson.model.Item.Delete:ghicaale</permission>
+    <permission>hudson.model.Item.Delete:heinlja</permission>
     <permission>hudson.model.Item.Delete:ichimdav</permission>
     <permission>hudson.model.Item.Delete:roug</permission>
     <permission>hudson.model.Item.Delete:tiberich</permission>
@@ -75,6 +80,7 @@
     <permission>hudson.model.Item.Read:ciobabog</permission>
     <permission>hudson.model.Item.Read:demarant</permission>
     <permission>hudson.model.Item.Read:ghicaale</permission>
+    <permission>hudson.model.Item.Read:heinlja</permission>
     <permission>hudson.model.Item.Read:ichimdav</permission>
     <permission>hudson.model.Item.Read:roug</permission>
     <permission>hudson.model.Item.Read:tiberich</permission>
@@ -83,6 +89,7 @@
     <permission>hudson.model.Item.Release:ciobabog</permission>
     <permission>hudson.model.Item.Release:demarant</permission>
     <permission>hudson.model.Item.Release:ghicaale</permission>
+    <permission>hudson.model.Item.Release:heinlja</permission>
     <permission>hudson.model.Item.Release:ichimdav</permission>
     <permission>hudson.model.Item.Release:roug</permission>
     <permission>hudson.model.Item.Release:tiberich</permission>
@@ -91,6 +98,7 @@
     <permission>hudson.model.Item.Workspace:ciobabog</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
+    <permission>hudson.model.Item.Workspace:heinlja</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
@@ -98,6 +106,7 @@
     <permission>hudson.model.Run.Delete:ciobabog</permission>
     <permission>hudson.model.Run.Delete:demarant</permission>
     <permission>hudson.model.Run.Delete:ghicaale</permission>
+    <permission>hudson.model.Run.Delete:heinlja</permission>
     <permission>hudson.model.Run.Delete:ichimdav</permission>
     <permission>hudson.model.Run.Delete:roug</permission>
     <permission>hudson.model.Run.Delete:tiberich</permission>
@@ -106,6 +115,7 @@
     <permission>hudson.model.Run.Update:ciobabog</permission>
     <permission>hudson.model.Run.Update:demarant</permission>
     <permission>hudson.model.Run.Update:ghicaale</permission>
+    <permission>hudson.model.Run.Update:heinlja</permission>
     <permission>hudson.model.Run.Update:ichimdav</permission>
     <permission>hudson.model.Run.Update:roug</permission>
     <permission>hudson.model.Run.Update:tiberich</permission>
@@ -114,6 +124,7 @@
     <permission>hudson.model.View.Configure:ciobabog</permission>
     <permission>hudson.model.View.Configure:demarant</permission>
     <permission>hudson.model.View.Configure:ghicaale</permission>
+    <permission>hudson.model.View.Configure:heinlja</permission>
     <permission>hudson.model.View.Configure:ichimdav</permission>
     <permission>hudson.model.View.Configure:roug</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
@@ -353,6 +364,7 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>CR2</string>
+        <string>CR3</string>
         <string>EUNIS</string>
       </jobNames>
       <jobFilters/>
@@ -374,6 +386,7 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
         <string>CR2</string>
+        <string>CR3</string>
       </jobNames>
       <jobFilters/>
       <columns>
