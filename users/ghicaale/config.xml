@@ -3,8 +3,11 @@
   <fullName>Alexandru Ghica</fullName>
   <description>Software engineer @ Eau de Web, Romania</description>
   <properties>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>alec.ghica@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
-      <passwordHash>zOvFWD:01a0cd1305d83fc2f3856e592a1685ef7d6bf7a9082867526431082499bc9ba3</passwordHash>
+      <passwordHash>veefbG:667a59530878e5d84aa681919652a14458a5b07758b51dc306d16dc8d7d1e60f</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
@@ -17,15 +20,12 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>alec.ghica@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>-6.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>
       <jid>alec@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>4.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>

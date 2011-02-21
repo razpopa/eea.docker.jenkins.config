@@ -318,5 +318,5 @@ cp ../../parts/xmltestreport/testreports/*eea-mediacentre*.xml xmltestreport/</c
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/src/eea.mediacentre</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.mediacentre</customWorkspace>
 </project>
