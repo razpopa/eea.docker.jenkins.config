@@ -318,5 +318,5 @@ cp ../../parts/xmltestreport/testreports/*eea-sitestructurediff*.xml xmltestrepo
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/src/eea.sitestructurediff</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.sitestructurediff</customWorkspace>
 </project>
