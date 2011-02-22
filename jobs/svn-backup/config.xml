@@ -27,7 +27,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /opt/hudson/buildouts/eea-buildout-hudson
-bin/svn-test /var/lib/hudson</command>
+bin/svn-test /var/lib/jenkins</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
