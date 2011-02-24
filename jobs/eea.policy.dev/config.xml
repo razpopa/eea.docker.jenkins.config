@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.policy.dev</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.policy.dev/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -73,6 +73,10 @@ cp ../../parts/xmltestreport/testreports/*eea-policy-dev*.xml xmltestreport/</co
       <command>cd ${WORKSPACE}
 ../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/epydoc-gen</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>
@@ -113,6 +117,10 @@ cp ../../parts/xmltestreport/testreports/*eea-policy-dev*.xml xmltestreport/</co
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.JavadocArchiver>
+      <javadocDir>apidoc</javadocDir>
+      <keepAll>false</keepAll>
+    </hudson.tasks.JavadocArchiver>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">
@@ -318,5 +326,5 @@ cp ../../parts/xmltestreport/testreports/*eea-policy-dev*.xml xmltestreport/</co
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/src/eea.policy.dev</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.policy.dev</customWorkspace>
 </project>

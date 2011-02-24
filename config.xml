@@ -366,6 +366,7 @@
         <string>CR2</string>
         <string>CR3</string>
         <string>EUNIS</string>
+        <string>ROD</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -388,6 +389,7 @@
         <string>CR2</string>
         <string>CR3</string>
         <string>Products.ThemeCentre</string>
+        <string>ROD</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -406,37 +408,37 @@
       <rightPortletWidth>50%</rightPortletWidth>
       <leftPortlets>
         <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-          <id>dashboard_portlet_57</id>
+          <id>dashboard_portlet_9</id>
           <name>Unstable Jobs</name>
         </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
         <hudson.plugins.view.dashboard.stats.StatJobs>
-          <id>dashboard_portlet_58</id>
+          <id>dashboard_portlet_10</id>
           <name>Job statistics</name>
         </hudson.plugins.view.dashboard.stats.StatJobs>
         <hudson.plugins.view.dashboard.builds.LatestBuilds>
-          <id>dashboard_portlet_59</id>
+          <id>dashboard_portlet_11</id>
           <name>Latest builds</name>
           <numBuilds>20</numBuilds>
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
         <hudson.plugins.warnings.dashboard.WarningsTablePortlet>
-          <id>dashboard_portlet_60</id>
+          <id>dashboard_portlet_12</id>
           <name>Compiler warnings per project</name>
         </hudson.plugins.warnings.dashboard.WarningsTablePortlet>
       </leftPortlets>
       <rightPortlets>
         <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
-          <id>dashboard_portlet_61</id>
+          <id>dashboard_portlet_13</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
           <height>200</height>
           <dayCountString>30</dayCountString>
         </hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
         <hudson.plugins.view.dashboard.test.TestStatisticsChart>
-          <id>dashboard_portlet_62</id>
+          <id>dashboard_portlet_14</id>
           <name>Test Statistics Chart</name>
         </hudson.plugins.view.dashboard.test.TestStatisticsChart>
         <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
-          <id>dashboard_portlet_63</id>
+          <id>dashboard_portlet_15</id>
           <name>Code Coverages</name>
         </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
       </rightPortlets>

@@ -73,6 +73,10 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
       <command>cd ${WORKSPACE}
 ../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/epydoc-gen</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>
@@ -108,6 +112,15 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
       </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/xmltestreport/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.JavadocArchiver>
+      <javadocDir>apidoc</javadocDir>
+      <keepAll>false</keepAll>
+    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.geotags-plone2, eea.geotags-plone3</childProjects>
       <threshold>
@@ -116,11 +129,6 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.tasks.junit.JUnitResultArchiver>
-      <testResults>**/xmltestreport/*.xml</testResults>
-      <keepLongStdio>false</keepLongStdio>
-      <testDataPublishers/>
-    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">

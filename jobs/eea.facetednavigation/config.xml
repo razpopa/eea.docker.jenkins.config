@@ -74,6 +74,10 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
       <command>cd ${WORKSPACE}
 ../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/epydoc-gen</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>
@@ -109,6 +113,15 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
       </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/xmltestreport/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.JavadocArchiver>
+      <javadocDir>apidoc</javadocDir>
+      <keepAll>false</keepAll>
+    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.facetednavigation-plone2, eea.facetednavigation-plone3, eea.facetednavigation-plone4</childProjects>
       <threshold>
@@ -117,11 +130,6 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.tasks.junit.JUnitResultArchiver>
-      <testResults>**/xmltestreport/*.xml</testResults>
-      <keepLongStdio>false</keepLongStdio>
-      <testDataPublishers/>
-    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">

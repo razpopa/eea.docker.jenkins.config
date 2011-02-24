@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<project>
+<maven2-moduleset>
   <actions/>
-  <description>- Run Products.ThemeCentre tests</description>
+  <description>Reporting Obligation Database</description>
   <logRotator>
-    <daysToKeep>30</daysToKeep>
-    <numToKeep>-1</numToKeep>
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
@@ -12,17 +12,16 @@
   <properties>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
     <hudson.plugins.trac.TracProjectProperty>
-      <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
+      <tracWebsite>https://svn.eionet.europa.eu/projects/Reportnet/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
   </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.ThemeCentre/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Reportnet/webrod/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
-    <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
     <excludedRegions></excludedRegions>
     <includedRegions></includedRegions>
     <excludedUsers></excludedUsers>
@@ -33,91 +32,55 @@
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <jdk>(Default)</jdk>
-  <triggers class="vector">
-    <hudson.triggers.SCMTrigger>
-      <spec>30 * * * *</spec>
-    </hudson.triggers.SCMTrigger>
-  </triggers>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>jdk6</jdk>
+  <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
-  <builders>
-    <hudson.tasks.Shell>
-      <command>echo &quot;WARNING: tests are disabled !!!&quot;
-#cd ${WORKSPACE}
-#../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.ThemeCentre
-</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#../../bin/report xml --include=*Products/ThemeCentre*
-</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#mkdir -p xmltestreport
-#cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestreport/</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-../../bin/zptlint-test</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-../../bin/pyflakes-test</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-../../bin/pylint-test</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-../../bin/jslint-test Products</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-../../bin/epydoc-gen</command>
-    </hudson.tasks.Shell>
-  </builders>
-  <publishers>
-    <hudson.plugins.warnings.WarningsPublisher>
-      <healthy>0</healthy>
-      <unHealthy>5</unHealthy>
-      <thresholdLimit>high</thresholdLimit>
-      <pluginName>[WARNINGS] </pluginName>
-      <defaultEncoding></defaultEncoding>
-      <canRunOnFailed>true</canRunOnFailed>
-      <useDeltaValues>false</useDeltaValues>
-      <thresholds>
-        <unstableTotalAll></unstableTotalAll>
-        <unstableTotalHigh>0</unstableTotalHigh>
-        <unstableTotalNormal></unstableTotalNormal>
-        <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll></unstableNewAll>
-        <unstableNewHigh></unstableNewHigh>
-        <unstableNewNormal></unstableNewNormal>
-        <unstableNewLow></unstableNewLow>
-        <failedTotalAll></failedTotalAll>
-        <failedTotalHigh></failedTotalHigh>
-        <failedTotalNormal></failedTotalNormal>
-        <failedTotalLow></failedTotalLow>
-        <failedNewAll></failedNewAll>
-        <failedNewHigh></failedNewHigh>
-        <failedNewNormal></failedNewNormal>
-        <failedNewLow></failedNewLow>
-      </thresholds>
-      <pattern>**/zptlint.log, **/pyflakes.log</pattern>
-      <parserNames>
-        <string>zptlint</string>
-        <string>pyflakes</string>
-      </parserNames>
-      <ignoreConsole>true</ignoreConsole>
-    </hudson.plugins.warnings.WarningsPublisher>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>apidoc</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
-    <hudson.plugins.violations.ViolationsPublisher>
+  <rootModule>
+    <groupId>eionet.rod</groupId>
+    <artifactId>webrod</artifactId>
+  </rootModule>
+  <goals>-Denv=unittest -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd</goals>
+  <mavenName>maven221</mavenName>
+  <aggregatorStyleBuild>true</aggregatorStyleBuild>
+  <incrementalBuild>false</incrementalBuild>
+  <usePrivateRepository>false</usePrivateRepository>
+  <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <archivingDisabled>false</archivingDisabled>
+  <resolveDependencies>false</resolveDependencies>
+  <processPlugins>false</processPlugins>
+  <mavenValidationLevel>-1</mavenValidationLevel>
+  <reporters>
+    <hudson.plugins.findbugs.FindBugsReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[FINDBUGS] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.tasks.TasksReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[TASKS] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <pattern></pattern>
+      <excludePattern></excludePattern>
+      <high></high>
+      <normal></normal>
+      <low></low>
+      <ignoreCase>false</ignoreCase>
+    </hudson.plugins.tasks.TasksReporter>
+    <hudson.plugins.dry.DryReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[DRY] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <highThreshold>50</highThreshold>
+      <normalThreshold>25</normalThreshold>
+    </hudson.plugins.dry.DryReporter>
+    <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
       <config>
         <suppressions class="tree-set">
           <no-comparator/>
@@ -205,11 +168,11 @@
             <string>jslint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
-              <min>0</min>
-              <max>5</max>
-              <unstable>1</unstable>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
               <usePattern>false</usePattern>
-              <pattern>**/jslint.log</pattern>
+              <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
@@ -231,7 +194,7 @@
               <max>999</max>
               <unstable>999</unstable>
               <usePattern>false</usePattern>
-              <pattern>**/pylint.log</pattern>
+              <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
@@ -258,39 +221,62 @@
           </entry>
         </typeConfigs>
         <limit>100</limit>
-        <sourcePathPattern></sourcePathPattern>
-        <fauxProjectPath></fauxProjectPath>
         <encoding>default</encoding>
       </config>
-    </hudson.plugins.violations.ViolationsPublisher>
+    </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
+  </reporters>
+  <publishers>
+    <hudson.plugins.analysis.collector.AnalysisPublisher>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <thresholdLimit>low</thresholdLimit>
+      <pluginName>[ANALYSIS-COLLECTOR] </pluginName>
+      <defaultEncoding></defaultEncoding>
+      <canRunOnFailed>true</canRunOnFailed>
+      <useDeltaValues>false</useDeltaValues>
+      <thresholds>
+        <unstableTotalAll></unstableTotalAll>
+        <unstableTotalHigh></unstableTotalHigh>
+        <unstableTotalNormal></unstableTotalNormal>
+        <unstableTotalLow></unstableTotalLow>
+        <unstableNewAll></unstableNewAll>
+        <unstableNewHigh></unstableNewHigh>
+        <unstableNewNormal></unstableNewNormal>
+        <unstableNewLow></unstableNewLow>
+        <failedTotalAll></failedTotalAll>
+        <failedTotalHigh></failedTotalHigh>
+        <failedTotalNormal></failedTotalNormal>
+        <failedTotalLow></failedTotalLow>
+        <failedNewAll></failedNewAll>
+        <failedNewHigh></failedNewHigh>
+        <failedNewNormal></failedNewNormal>
+        <failedNewLow></failedNewLow>
+      </thresholds>
+    </hudson.plugins.analysis.collector.AnalysisPublisher>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.tasks.Mailer>
-      <recipients>web30development@localhost</recipients>
-      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>true</sendToIndividuals>
-    </hudson.tasks.Mailer>
-    <hudson.plugins.jabber.im.transport.JabberPublisher>
-      <targets>
-        <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alin@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-      </targets>
-      <strategy>FAILURE_AND_FIXED</strategy>
-      <notifyOnBuildStart>false</notifyOnBuildStart>
-      <notifySuspects>false</notifySuspects>
-      <notifyCulprits>false</notifyCulprits>
-      <notifyFixers>false</notifyFixers>
-      <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
-    </hudson.plugins.jabber.im.transport.JabberPublisher>
+    <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher/>
+    <hudson.plugins.cigame.GamePublisher/>
+    <hudson.plugins.emailext.ExtendedEmailPublisher>
+      <recipientList>soren.roug@eea.europa.eu, risto.alt@gmail.com</recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>true</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
-  <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper>
-      <timeoutMinutes>20</timeoutMinutes>
-      <failBuild>true</failBuild>
-    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-  </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.ThemeCentre</customWorkspace>
-</project>
+  <buildWrappers/>
+</maven2-moduleset>
