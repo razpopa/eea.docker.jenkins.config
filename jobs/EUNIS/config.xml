@@ -35,7 +35,11 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>jdk6</jdk>
-  <triggers class="vector"/>
+  <triggers class="vector">
+    <hudson.triggers.SCMTrigger>
+      <spec>15 8-22 * * 1-5</spec>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
     <groupId>eionet.eunis</groupId>
@@ -52,18 +56,25 @@
   <processPlugins>false</processPlugins>
   <mavenValidationLevel>-1</mavenValidationLevel>
   <reporters>
+    <hudson.plugins.pmd.PmdReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[PMD] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.pmd.PmdReporter>
     <hudson.plugins.findbugs.FindBugsReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[FINDBUGS] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
+      <thresholdLimit>high</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
     </hudson.plugins.findbugs.FindBugsReporter>
     <hudson.plugins.tasks.TasksReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[TASKS] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
+      <thresholdLimit>high</thresholdLimit>
       <canRunOnFailed>true</canRunOnFailed>
       <pattern></pattern>
       <excludePattern></excludePattern>
@@ -72,21 +83,14 @@
       <low></low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
-    <hudson.plugins.pmd.PmdReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[PMD] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-    </hudson.plugins.pmd.PmdReporter>
     <hudson.plugins.dry.DryReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[DRY] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
+      <thresholdLimit>high</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
-      <highThreshold>50</highThreshold>
-      <normalThreshold>25</normalThreshold>
+      <highThreshold>1000</highThreshold>
+      <normalThreshold>500</normalThreshold>
     </hudson.plugins.dry.DryReporter>
     <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
       <config>
@@ -319,6 +323,36 @@
     </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher/>
     <hudson.plugins.cigame.GamePublisher/>
+    <hudson.plugins.emailext.ExtendedEmailPublisher>
+      <recipientList>soren.roug@eea.europa.eu, risto.alt@gmail.com</recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>true</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+        <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>true</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
 </maven2-moduleset>
