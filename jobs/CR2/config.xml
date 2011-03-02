@@ -44,7 +44,7 @@
     <groupId>eionet.cr</groupId>
     <artifactId>cr2</artifactId>
   </rootModule>
-  <goals>-Denv=live -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd</goals>
+  <goals>-Denv=live -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -55,6 +55,13 @@
   <processPlugins>false</processPlugins>
   <mavenValidationLevel>-1</mavenValidationLevel>
   <reporters>
+    <hudson.plugins.pmd.PmdReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[PMD] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.pmd.PmdReporter>
     <hudson.plugins.findbugs.FindBugsReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -95,9 +102,9 @@
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>999</unstable>
+              <min>60000</min>
+              <max>60001</max>
+              <unstable>60000</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>

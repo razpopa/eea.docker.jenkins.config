@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.rdfrepository</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.rdfrepository/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -326,5 +326,5 @@ cp ../../parts/xmltestreport/testreports/*eea-rdfrepository*.xml xmltestreport/<
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/src/eea.rdfrepository</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.rdfrepository</customWorkspace>
 </project>

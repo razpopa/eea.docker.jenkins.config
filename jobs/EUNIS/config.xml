@@ -4,7 +4,7 @@
   <description>European Nature Information System. Using JSP.</description>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
-    <numToKeep>3</numToKeep>
+    <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
@@ -37,7 +37,7 @@
   <jdk>jdk6</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>15 8-22 * * 1-5</spec>
+      <spec>24 8-22 * * *</spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -45,7 +45,7 @@
     <groupId>eionet.eunis</groupId>
     <artifactId>eunis</artifactId>
   </rootModule>
-  <goals>-Denv=live install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd</goals>
+  <goals>-Denv=live install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -103,9 +103,9 @@
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>101027</unstable>
+              <min>80000</min>
+              <max>80001</max>
+              <unstable>100000</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -125,9 +125,9 @@
             <string>cpd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>cpd</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>1026</unstable>
+              <min>1300</min>
+              <max>9999</max>
+              <unstable>9999</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -136,9 +136,9 @@
             <string>findbugs</string>
             <hudson.plugins.violations.TypeConfig>
               <type>findbugs</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>1285</unstable>
+              <min>1300</min>
+              <max>9999</max>
+              <unstable>9999</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -191,9 +191,9 @@
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
-              <min>10</min>
+              <min>600</min>
               <max>999</max>
-              <unstable>418</unstable>
+              <unstable>999</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>

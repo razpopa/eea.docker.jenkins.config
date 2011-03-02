@@ -18,10 +18,38 @@
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
         </hudson.model.AllView>
+        <maps.hudson.plugin.xfpanel.XFPanelView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>eXtreme Feedback</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <jobNames class="tree-set">
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+            <string>eea-buildout-pre-production</string>
+          </jobNames>
+          <jobFilters/>
+          <columns/>
+          <colors>
+            <okBG>#7E7EFF</okBG>
+            <okFG>#FFFFFF</okFG>
+            <failedBG>#FFC130</failedBG>
+            <failedFG>#FFFFFF</failedFG>
+            <brokenBG>#FF0000</brokenBG>
+            <brokenFG>#FFFFFF</brokenFG>
+            <otherBG>#CCCCCC</otherBG>
+            <otherFG>#FFFFFF</otherFG>
+          </colors>
+          <numColumns>1</numColumns>
+          <refresh>3</refresh>
+          <fullHD>false</fullHD>
+          <showDescription>false</showDescription>
+          <showZeroTestCounts>true</showZeroTestCounts>
+          <sortDescending>false</sortDescending>
+        </maps.hudson.plugin.xfpanel.XFPanelView>
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>-4.0</score>
+      <score>-19.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>

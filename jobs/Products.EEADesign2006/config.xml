@@ -43,19 +43,19 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;WARNING: tests are disabled !!!&quot;
-#cd ${WORKSPACE}
-#../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.EEADesign2006</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#../../bin/report xml --include=*Products/EEADesign2006*
+      <command>cd ${WORKSPACE}
+../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.EEADesign2006
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#mkdir -p xmltestreport
-#cp ../../parts/xmltestreport/testreports/*Products/EEADesign2006*.xml xmltestreport/</command>
+      <command>cd ${WORKSPACE}
+../../bin/report xml --include=*Products/EEADesign2006*
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+mkdir -p xmltestreport
+cp ../../parts/xmltestreport/testreports/*Products.EEADesign2006*.xml xmltestreport/</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -112,6 +112,11 @@
       </parserNames>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/xmltestreport/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.JavadocArchiver>
       <javadocDir>apidoc</javadocDir>
       <keepAll>false</keepAll>
@@ -265,11 +270,41 @@
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.cobertura.CoberturaPublisher>
+      <coberturaReportFile>coverage.xml</coberturaReportFile>
+      <onlyStable>false</onlyStable>
+      <healthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>70</int>
+          </entry>
+        </targets>
+      </healthyTarget>
+      <unhealthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </unhealthyTarget>
+      <failingTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </failingTarget>
+      <sourceEncoding>ASCII</sourceEncoding>
+    </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
+    <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
