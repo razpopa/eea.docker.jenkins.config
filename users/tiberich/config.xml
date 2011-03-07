@@ -24,7 +24,7 @@
       <jid>tiberiu@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>87.0</score>
+      <score>93.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>
