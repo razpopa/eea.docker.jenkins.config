@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.tasks.Mailer_-DescriptorImpl>
-  <hudsonUrl>http://hudson.eionet.europa.eu/</hudsonUrl>
+  <hudsonUrl>http://ci.eionet.europa.eu/</hudsonUrl>
   <adminAddress>no-reply@eea.europa.eu</adminAddress>
   <smtpHost>localhost</smtpHost>
   <useSsl>false</useSsl>

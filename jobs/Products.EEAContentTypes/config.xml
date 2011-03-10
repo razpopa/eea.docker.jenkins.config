@@ -234,7 +234,7 @@ cp ../../parts/xmltestreport/testreports/*Products-EEAContentTypes*.xml xmltestr
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>1686</unstable>
+              <unstable>1187</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

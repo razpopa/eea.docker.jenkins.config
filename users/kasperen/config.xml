@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>altnyris</fullName>
+  <fullName>kasperen</fullName>
   <properties>
     <hudson.tasks.Mailer_-UserProperty/>
     <hudson.model.MyViewsProperty>
@@ -16,7 +16,7 @@
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>32.0</score>
+      <score>4.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

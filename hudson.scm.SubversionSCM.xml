@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.scm.SubversionSCM_-DescriptorImpl>
-  <generation>326</generation>
+  <generation>462</generation>
   <credentials class="hashtable"/>
   <workspaceFormat>8</workspaceFormat>
   <validateRemoteUpToVar>false</validateRemoteUpToVar>
