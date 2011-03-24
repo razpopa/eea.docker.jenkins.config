@@ -343,6 +343,7 @@
         <string>eea-buildout-devel</string>
         <string>eea-buildout-hudson-trigger</string>
         <string>eea-buildout-pre-production</string>
+        <string>www.eea.europa.eu-devel</string>
       </jobNames>
       <jobFilters/>
       <columns>
