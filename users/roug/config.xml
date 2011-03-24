@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
   <fullName>Søren Roug</fullName>
-  <description>Project manager for Java applications</description>
+  <description>Product Owner for Java applications</description>
   <properties>
     <hudson.model.MyViewsProperty>
       <primaryViewName>Alle</primaryViewName>
@@ -22,7 +22,7 @@
       <emailAddress>soren.roug@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>-461.0</score>
+      <score>54181.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

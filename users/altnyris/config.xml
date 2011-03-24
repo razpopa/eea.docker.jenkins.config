@@ -16,7 +16,7 @@
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>32.0</score>
+      <score>38.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

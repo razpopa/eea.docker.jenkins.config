@@ -103,9 +103,9 @@
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>80000</min>
-              <max>80001</max>
-              <unstable>100000</unstable>
+              <min>60000</min>
+              <max>60001</max>
+              <unstable>80000</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -125,9 +125,9 @@
             <string>cpd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>cpd</type>
-              <min>1300</min>
-              <max>9999</max>
-              <unstable>9999</unstable>
+              <min>200</min>
+              <max>999</max>
+              <unstable>999</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>

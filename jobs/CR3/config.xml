@@ -44,7 +44,7 @@
     <groupId>eionet.cr</groupId>
     <artifactId>cr3</artifactId>
   </rootModule>
-  <goals>-Denv=unittest -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd</goals>
+  <goals>-Denv=unittest -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -62,6 +62,13 @@
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
     </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.checkstyle.CheckStyleReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[CHECKSTYLE] </pluginName>
+      <thresholdLimit>normal</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.checkstyle.CheckStyleReporter>
     <hudson.plugins.tasks.TasksReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -95,9 +102,9 @@
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>999</unstable>
+              <min>19999</min>
+              <max>20000</max>
+              <unstable>20000</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -263,7 +270,7 @@
     <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher/>
     <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.emailext.ExtendedEmailPublisher>
-      <recipientList>jaanus.heinlaid@gmail.com, soren.roug@eea.europa.eu, risto.alt@gmail.com</recipientList>
+      <recipientList>soren.roug@eea.europa.eu, risto.alt@gmail.com, kaido.laine@gmail.com, enriko.kasper@gmail.com, jaanus.heinlaid@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
@@ -290,7 +297,15 @@
       </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
+&#xd;
+Check console output at $BUILD_URL to view the results.&#xd;
+&#xd;
+    == Now fix 1 FindBugs and 10 Checkstyle violations! ==&#xd;
+&#xd;
+Violations report: ${BUILD_URL}eionet.cr$cr3/violations/&#xd;
+&#xd;
+See https://svn.eionet.europa.eu/projects/Reportnet/wiki/TechnicalDebt</defaultContent>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
