@@ -75,11 +75,11 @@
       <pluginName>[TASKS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
-      <pattern></pattern>
+      <pattern>**/*.java</pattern>
       <excludePattern></excludePattern>
-      <high></high>
-      <normal></normal>
-      <low></low>
+      <high>FIXME</high>
+      <normal>TODO</normal>
+      <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
     <hudson.plugins.dry.DryReporter>
@@ -102,9 +102,9 @@
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>19999</min>
-              <max>20000</max>
-              <unstable>20000</unstable>
+              <min>17999</min>
+              <max>18000</max>
+              <unstable>18000</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
