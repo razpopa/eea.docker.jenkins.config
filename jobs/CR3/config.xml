@@ -78,7 +78,7 @@
       <pattern>**/*.java</pattern>
       <excludePattern></excludePattern>
       <high>FIXME</high>
-      <normal>TODO</normal>
+      <normal>TODO, UnsupportedOperationException</normal>
       <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>

@@ -318,6 +318,7 @@
         <string>Products.EEAPloneAdmin</string>
         <string>Products.EEATemplatesService</string>
         <string>Products.PloneGazette</string>
+        <string>Products.ThemeCentre</string>
         <string>valentine.gtranslate</string>
         <string>valentine.imagescales</string>
         <string>valentine.linguaflow</string>

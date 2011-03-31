@@ -43,20 +43,19 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;WARNING: tests are disabled !!!&quot;
-#cd ${WORKSPACE}
-#../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.ThemeCentre
+      <command>cd ${WORKSPACE}
+../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.ThemeCentre
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#../../bin/report xml --include=*Products/ThemeCentre*
+      <command>cd ${WORKSPACE}
+../../bin/report xml --include=*Products/ThemeCentre*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>#cd ${WORKSPACE}
-#mkdir -p xmltestreport
-#cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestreport/</command>
+      <command>cd ${WORKSPACE}
+mkdir -p xmltestreport
+cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestreport/</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
