@@ -22,7 +22,7 @@
       <emailAddress>soren.roug@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>55647.0</score>
+      <score>24241.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

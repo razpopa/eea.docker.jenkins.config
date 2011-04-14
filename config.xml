@@ -232,7 +232,11 @@
       <filterQueue>false</filterQueue>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea.faceted.tool-plone4</string>
         <string>eea.facetednavigation-plone4</string>
+        <string>eea.google-plone4</string>
+        <string>eea.reports-plone4</string>
+        <string>eea.socialmedia-plone4</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -345,6 +349,7 @@
         <string>eea-buildout-hudson-trigger</string>
         <string>eea-buildout-pre-production</string>
         <string>www.eea.europa.eu-devel</string>
+        <string>www.eea.europa.eu-hudson</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -447,6 +452,29 @@
       <topPortlets/>
       <bottomPortlets/>
     </hudson.plugins.view.dashboard.Dashboard>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone 4.x EEA</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>eea.faceted.tool-www</string>
+        <string>eea.google-www</string>
+        <string>eea.reports-www</string>
+        <string>eea.socialmedia-www</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
   </views>
   <primaryView>Dashboard</primaryView>
   <slaveAgentPort>0</slaveAgentPort>

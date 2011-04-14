@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <maven2-moduleset>
   <actions/>
-  <description>European Nature Information System. Using JSP.</description>
+  <description>European Nature Information System. Using JSP.&#xd;
+Polled for changes 24 minutes past the hour 8-22</description>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
@@ -78,9 +79,9 @@
       <canRunOnFailed>true</canRunOnFailed>
       <pattern></pattern>
       <excludePattern></excludePattern>
-      <high></high>
-      <normal></normal>
-      <low></low>
+      <high>FIXME</high>
+      <normal>TODO</normal>
+      <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
     <hudson.plugins.dry.DryReporter>
@@ -268,59 +269,6 @@
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.plugins.cobertura.CoberturaPublisher>
-      <coberturaReportFile>**/target/site/cobertura/coverage.xml</coberturaReportFile>
-      <onlyStable>false</onlyStable>
-      <healthyTarget>
-        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>CLASSES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>80</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>80</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>PACKAGES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>80</int>
-          </entry>
-        </targets>
-      </healthyTarget>
-      <unhealthyTarget>
-        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>CLASSES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>PACKAGES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-        </targets>
-      </unhealthyTarget>
-      <failingTarget>
-        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>CLASSES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>FILES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>PACKAGES</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>0</int>
-          </entry>
-        </targets>
-      </failingTarget>
-      <sourceEncoding>ASCII</sourceEncoding>
-    </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher/>
     <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.emailext.ExtendedEmailPublisher>

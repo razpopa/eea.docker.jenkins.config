@@ -44,7 +44,7 @@
     <groupId>eionet.rod</groupId>
     <artifactId>webrod</artifactId>
   </rootModule>
-  <goals>-Denv=unittest -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd</goals>
+  <goals>-Denv=unittest -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -62,6 +62,13 @@
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
     </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.checkstyle.CheckStyleReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[CHECKSTYLE] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.checkstyle.CheckStyleReporter>
     <hudson.plugins.tasks.TasksReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -70,9 +77,9 @@
       <canRunOnFailed>false</canRunOnFailed>
       <pattern></pattern>
       <excludePattern></excludePattern>
-      <high></high>
-      <normal></normal>
-      <low></low>
+      <high>FIXME</high>
+      <normal>TODO</normal>
+      <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
     <hudson.plugins.dry.DryReporter>
@@ -95,9 +102,9 @@
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>999</unstable>
+              <min>50000</min>
+              <max>50001</max>
+              <unstable>50001</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -128,7 +135,7 @@
             <string>findbugs</string>
             <hudson.plugins.violations.TypeConfig>
               <type>findbugs</type>
-              <min>10</min>
+              <min>200</min>
               <max>999</max>
               <unstable>999</unstable>
               <usePattern>false</usePattern>
@@ -261,7 +268,6 @@
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher/>
-    <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.emailext.ExtendedEmailPublisher>
       <recipientList>soren.roug@eea.europa.eu, risto.alt@gmail.com</recipientList>
       <configuredTriggers>
