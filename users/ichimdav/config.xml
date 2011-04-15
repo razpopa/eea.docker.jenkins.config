@@ -17,11 +17,12 @@
           <name>All</name>
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>1600.0</score>
+      <score>1601.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>

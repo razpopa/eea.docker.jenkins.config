@@ -11,6 +11,7 @@
           <name>Alle</name>
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
@@ -22,7 +23,7 @@
       <emailAddress>soren.roug@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>24241.0</score>
+      <score>24474.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

@@ -201,6 +201,7 @@
       <name>All</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
     </hudson.model.AllView>
     <listView>
       <owner class="hudson" reference="../../.."/>
@@ -233,8 +234,10 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>eea.faceted.tool-plone4</string>
+        <string>eea.faceted.vocabularies-plone4</string>
         <string>eea.facetednavigation-plone4</string>
         <string>eea.google-plone4</string>
+        <string>eea.jquery-plone4</string>
         <string>eea.reports-plone4</string>
         <string>eea.socialmedia-plone4</string>
       </jobNames>
@@ -460,7 +463,9 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>eea.faceted.tool-www</string>
+        <string>eea.faceted.vocabularies-www</string>
         <string>eea.google-www</string>
+        <string>eea.jquery-www</string>
         <string>eea.reports-www</string>
         <string>eea.socialmedia-www</string>
       </jobNames>

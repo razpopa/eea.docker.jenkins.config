@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Faceted Navigation build on a clean Plone 4 instance</description>
+  <description>- Run EEA jQuery tests within Plone 4 EEA Buildout</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -17,12 +17,8 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://svn.plone.org/svn/collective/eea.facetednavigation/buildout</remote>
+        <remote>https://svn.plone.org/svn/collective/eea.jquery/trunk</remote>
         <local>.</local>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.plone.org/svn/collective/eea.facetednavigation/trunk</remote>
-        <local>src/eea.facetednavigation</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
@@ -36,7 +32,7 @@
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
-  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
@@ -47,28 +43,41 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-python2.6 bootstrap.py -c hudson.cfg
-bin/buildout -c hudson.cfg</command>
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.jquery
+</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/coverage run bin/xmltestrunner -v -vv -s eea.facetednavigation</command>
+../../bin/report xml --include=*eea/jquery*
+</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/report xml --include=*eea/facetednavigation*</command>
+mkdir -p xmltestreport
+cp ../../parts/xmltestreport/testreports/*eea-jquery*.xml xmltestreport/
+</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/zptlint-test src/eea.facetednavigation</command>
+../../bin/zptlint-test</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/pyflakes-test src/eea.facetednavigation</command>
+../../bin/pyflakes-test
+</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/pylint-test src/eea.facetednavigation</command>
+../../bin/pylint-test
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/jslint-test eea</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/epydoc-gen</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -81,11 +90,11 @@ bin/pylint-test src/eea.facetednavigation</command>
       <canRunOnFailed>true</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds>
-        <unstableTotalAll></unstableTotalAll>
-        <unstableTotalHigh>0</unstableTotalHigh>
+        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll></unstableNewAll>
+        <unstableNewAll>0</unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
         <unstableNewLow></unstableNewLow>
@@ -106,10 +115,22 @@ bin/pylint-test src/eea.facetednavigation</command>
       <ignoreConsole>true</ignoreConsole>
     </hudson.plugins.warnings.WarningsPublisher>
     <hudson.tasks.junit.JUnitResultArchiver>
-      <testResults>**/parts/xmltestrunner/testreports/*.xml</testResults>
+      <testResults>**/xmltestreport/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.JavadocArchiver>
+      <javadocDir>apidoc</javadocDir>
+      <keepAll>false</keepAll>
+    </hudson.tasks.JavadocArchiver>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.jquery-plone4</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">
@@ -198,11 +219,11 @@ bin/pylint-test src/eea.facetednavigation</command>
             <string>jslint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
-              <min>10</min>
-              <max>999</max>
-              <unstable>999</unstable>
+              <min>0</min>
+              <max>5</max>
+              <unstable>1493</unstable>
               <usePattern>false</usePattern>
-              <pattern></pattern>
+              <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
@@ -222,7 +243,7 @@ bin/pylint-test src/eea.facetednavigation</command>
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>999</unstable>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -291,7 +312,7 @@ bin/pylint-test src/eea.facetednavigation</command>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>false</sendToIndividuals>
+      <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
     <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
@@ -311,8 +332,9 @@ bin/pylint-test src/eea.facetednavigation</command>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
-      <timeoutMinutes>10</timeoutMinutes>
+      <timeoutMinutes>20</timeoutMinutes>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.jquery</customWorkspace>
 </project>
