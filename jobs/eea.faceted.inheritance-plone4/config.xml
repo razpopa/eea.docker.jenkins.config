@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA jQuery build on a clean Plone 4 instance</description>
+  <description>EEA Faceted Inheritance build on a clean Plone 4 instance</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -18,12 +18,12 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.plone.org/svn/collective/eea.jquery/buildouts/plone4</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.faceted.inheritance/buildouts/plone4</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.plone.org/svn/collective/eea.jquery/trunk</remote>
-        <local>src/eea.jquery</local>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.faceted.inheritance/branches/plone4</remote>
+        <local>src/eea.faceted.inheritance</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
@@ -53,7 +53,7 @@ bin/buildout</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/test -v -vv -s eea.jquery</command>
+bin/test -v -vv -s eea.faceted.inheritance</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

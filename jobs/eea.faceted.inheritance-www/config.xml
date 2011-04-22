@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run EEA Faceted Vocabularies tests within Plone 4 EEA Buildout</description>
+  <description>- Run EEA Faceted Inheritance tests within Plone 4 EEA Buildout</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.plone.org/svn/collective/eea.faceted.vocabularies/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.faceted.inheritance/branches/plone4</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -44,18 +44,18 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.faceted.vocabularies
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.faceted.inheritance
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*eea/faceted/vocabularies*
+../../bin/report xml --include=*eea/faceted/inheritance*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestreport/
+cp ../../parts/xmltestreport/testreports/*eea-faceted-inheritance*.xml xmltestreport/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -124,14 +124,6 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
       <javadocDir>apidoc</javadocDir>
       <keepAll>false</keepAll>
     </hudson.tasks.JavadocArchiver>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.faceted.vocabularies-plone4</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">
@@ -330,6 +322,14 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
       <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.faceted.inheritance-plone4</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
@@ -337,5 +337,5 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.faceted.vocabularies</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.faceted.inheritance</customWorkspace>
 </project>
