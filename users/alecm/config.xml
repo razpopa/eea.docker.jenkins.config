@@ -1,11 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>Tiberiu Ichim</fullName>
-  <description>Software engineer @ Eau de Web, Romania</description>
+  <fullName>alecm</fullName>
   <properties>
-    <hudson.security.HudsonPrivateSecurityRealm_-Details>
-      <passwordHash>glWOhG:7a562bc9994d4574df9146f5b748273a282a852294f51cf5c9732fb4144bdbaf</passwordHash>
-    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty/>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -18,14 +15,9 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>tiberiu.ichim@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty>
-      <jid>tiberiu@jabber.eaudeweb.ro</jid>
-    </hudson.plugins.jabber.user.JabberUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>99.0</score>
+      <score>3.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

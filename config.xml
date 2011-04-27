@@ -1,12 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
-  <version>1.406</version>
+  <version>1.408</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
-    <permission>hudson.model.Computer.Configure:batradav</permission>
-    <permission>hudson.model.Computer.Configure:ciobabog</permission>
     <permission>hudson.model.Computer.Configure:demarant</permission>
     <permission>hudson.model.Computer.Configure:ghicaale</permission>
     <permission>hudson.model.Computer.Configure:ichimdav</permission>
@@ -23,13 +21,10 @@
     <permission>hudson.model.Computer.Delete:szabozo0</permission>
     <permission>hudson.model.Computer.Delete:tiberich</permission>
     <permission>hudson.model.Computer.Delete:voineali</permission>
-    <permission>hudson.model.Hudson.Administer:batradav</permission>
-    <permission>hudson.model.Hudson.Administer:ciobabog</permission>
     <permission>hudson.model.Hudson.Administer:demarant</permission>
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>
     <permission>hudson.model.Hudson.Administer:ichimdav</permission>
     <permission>hudson.model.Hudson.Administer:roug</permission>
-    <permission>hudson.model.Hudson.Administer:szabozo0</permission>
     <permission>hudson.model.Hudson.Administer:tiberich</permission>
     <permission>hudson.model.Hudson.Administer:voineali</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
@@ -40,7 +35,6 @@
     <permission>hudson.model.Hudson.Read:heinlja</permission>
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
     <permission>hudson.model.Hudson.Read:roug</permission>
-    <permission>hudson.model.Hudson.Read:szabozo0</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
     <permission>hudson.model.Item.Build:batradav</permission>
@@ -104,13 +98,11 @@
     <permission>hudson.model.Item.Release:szabozo0</permission>
     <permission>hudson.model.Item.Release:tiberich</permission>
     <permission>hudson.model.Item.Release:voineali</permission>
-    <permission>hudson.model.Item.Workspace:batradav</permission>
-    <permission>hudson.model.Item.Workspace:ciobabog</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
     <permission>hudson.model.Item.Workspace:heinlja</permission>
+    <permission>hudson.model.Item.Workspace:ichimdav</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
-    <permission>hudson.model.Item.Workspace:szabozo0</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
     <permission>hudson.model.Run.Delete:batradav</permission>
@@ -140,11 +132,8 @@
     <permission>hudson.model.View.Configure:heinlja</permission>
     <permission>hudson.model.View.Configure:ichimdav</permission>
     <permission>hudson.model.View.Configure:roug</permission>
-    <permission>hudson.model.View.Configure:szabozo0</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
     <permission>hudson.model.View.Configure:voineali</permission>
-    <permission>hudson.model.View.Create:batradav</permission>
-    <permission>hudson.model.View.Create:ciobabog</permission>
     <permission>hudson.model.View.Create:demarant</permission>
     <permission>hudson.model.View.Create:ghicaale</permission>
     <permission>hudson.model.View.Create:ichimdav</permission>
@@ -152,8 +141,6 @@
     <permission>hudson.model.View.Create:szabozo0</permission>
     <permission>hudson.model.View.Create:tiberich</permission>
     <permission>hudson.model.View.Create:voineali</permission>
-    <permission>hudson.model.View.Delete:batradav</permission>
-    <permission>hudson.model.View.Delete:ciobabog</permission>
     <permission>hudson.model.View.Delete:demarant</permission>
     <permission>hudson.model.View.Delete:ghicaale</permission>
     <permission>hudson.model.View.Delete:ichimdav</permission>
@@ -161,13 +148,10 @@
     <permission>hudson.model.View.Delete:szabozo0</permission>
     <permission>hudson.model.View.Delete:tiberich</permission>
     <permission>hudson.model.View.Delete:voineali</permission>
-    <permission>hudson.scm.SCM.Tag:batradav</permission>
-    <permission>hudson.scm.SCM.Tag:ciobabog</permission>
     <permission>hudson.scm.SCM.Tag:demarant</permission>
     <permission>hudson.scm.SCM.Tag:ghicaale</permission>
     <permission>hudson.scm.SCM.Tag:ichimdav</permission>
     <permission>hudson.scm.SCM.Tag:roug</permission>
-    <permission>hudson.scm.SCM.Tag:szabozo0</permission>
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
@@ -226,6 +210,7 @@
       <description>Builds on a clean Plone 3 installation</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>eea.facetednavigation-plone3</string>
@@ -248,14 +233,18 @@
       <description>Builds on a clean Plone 4  installation</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea.epub-plone4</string>
         <string>eea.faceted.inheritance-plone4</string>
         <string>eea.faceted.tool-plone4</string>
         <string>eea.faceted.vocabularies-plone4</string>
         <string>eea.facetednavigation-plone4</string>
         <string>eea.google-plone4</string>
         <string>eea.jquery-plone4</string>
+        <string>eea.rdfmarshaller-plone4</string>
+        <string>eea.relations-plone4</string>
         <string>eea.reports-plone4</string>
         <string>eea.socialmedia-plone4</string>
       </jobNames>
@@ -276,6 +265,7 @@
       <description>Builds on a clean Plone 2 installation</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>eea.facetednavigation-plone2</string>
@@ -298,6 +288,7 @@
       <description>EEA Plone 2 builds</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
         <string>eea.alchemy</string>
@@ -364,6 +355,7 @@
       <name>Plone EEA Buildouts</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>eea-buildout-devel</string>
@@ -389,6 +381,7 @@
       <description>Java applications</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>CR2</string>
@@ -478,14 +471,18 @@
       <name>Plone 4.x EEA</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>eea.epub-www</string>
         <string>eea.faceted.inheritance-www</string>
         <string>eea.faceted.tool-www</string>
         <string>eea.faceted.vocabularies-www</string>
         <string>eea.facetednavigation-www</string>
         <string>eea.google-www</string>
         <string>eea.jquery-www</string>
+        <string>eea.rdfmarshaller-www</string>
+        <string>eea.relations-www</string>
         <string>eea.reports-www</string>
         <string>eea.socialmedia-www</string>
       </jobNames>
