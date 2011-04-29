@@ -37,7 +37,7 @@
   <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>30 * * * *</spec>
+      <spec>@hourly</spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -76,10 +76,6 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
       <command>cd ${WORKSPACE}
 ../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-../../bin/epydoc-gen</command>
-    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>
@@ -108,6 +104,7 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <shouldDetectModules>false</shouldDetectModules>
       <pattern>**/zptlint.log, **/pyflakes.log</pattern>
       <parserNames>
         <string>zptlint</string>
@@ -121,7 +118,7 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.JavadocArchiver>
-      <javadocDir>apidoc</javadocDir>
+      <javadocDir>../../apidoc-eea</javadocDir>
       <keepAll>false</keepAll>
     </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
@@ -278,9 +275,9 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
-    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.plugins.cobertura.CoberturaPublisher>
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>

@@ -41,7 +41,7 @@
   <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>30 * * * *</spec>
+      <spec>@hourly</spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -57,9 +57,9 @@ bin/xmltestrunner -v -vv -s eea.facetednavigation</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
-    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>

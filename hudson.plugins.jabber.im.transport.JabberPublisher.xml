@@ -10,4 +10,6 @@
   <commandPrefix>!</commandPrefix>
   <defaultIdSuffix></defaultIdSuffix>
   <subscriptionMode>accept_all</subscriptionMode>
+  <proxyType>NONE</proxyType>
+  <proxyPort>3128</proxyPort>
 </hudson.plugins.jabber.im.transport.JabberPublisherDescriptor>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Geotags build on a clean Plone 2.5 instance</description>
+  <description>EEA versions build on a clean Plone 4 instance</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -18,12 +18,8 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.geotags/buildouts/plone2</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.versions/buildouts/plone4</remote>
         <local>.</local>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.geotags/trunk</remote>
-        <local>extras/eea.geotags</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
@@ -39,19 +35,27 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
-  <triggers class="vector"/>
+  <triggers class="vector">
+    <hudson.triggers.SCMTrigger>
+      <spec>@hourly</spec>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>python2.4 bootstrap.py
-bin/buildout -c devel.cfg
-bin/instance test -v -vv --nowarning -s eea.geotags</command>
+      <command>cd ${WORKSPACE}
+./install.sh
+bin/buildout</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+bin/test -v -vv -s eea.versions</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
-    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
@@ -61,7 +65,7 @@ bin/instance test -v -vv --nowarning -s eea.geotags</command>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alin@jabber.eaudeweb.ro</value>
+          <value>tiberiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -75,7 +79,7 @@ bin/instance test -v -vv --nowarning -s eea.geotags</command>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
-      <timeoutMinutes>10</timeoutMinutes>
+      <timeoutMinutes>30</timeoutMinutes>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
-  <version>1.408</version>
+  <version>1.409</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -213,19 +213,18 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>eea.facetednavigation-plone3</string>
-        <string>eea.geotags-plone3</string>
       </jobNames>
       <jobFilters/>
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
         <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
+      <includeRegex>^.+-plone3$</includeRegex>
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
@@ -247,17 +246,19 @@
         <string>eea.relations-plone4</string>
         <string>eea.reports-plone4</string>
         <string>eea.socialmedia-plone4</string>
+        <string>eea.versions-plone4</string>
       </jobNames>
       <jobFilters/>
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
         <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
+      <includeRegex>.*-plone4</includeRegex>
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
@@ -268,19 +269,18 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
-        <string>eea.facetednavigation-plone2</string>
-        <string>eea.geotags-plone2</string>
       </jobNames>
       <jobFilters/>
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
         <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
+      <includeRegex>^.+-plone2$</includeRegex>
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
@@ -344,10 +344,10 @@
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
         <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
     </listView>
     <listView>
@@ -369,10 +369,10 @@
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
         <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
     </listView>
     <listView>
@@ -405,23 +405,12 @@
       <name>Dashboard</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
-        <string>CR2</string>
-        <string>CR3</string>
-        <string>Products.ThemeCentre</string>
-        <string>ROD</string>
       </jobNames>
       <jobFilters/>
-      <columns>
-        <hudson.views.StatusColumn/>
-        <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
-        <hudson.views.LastDurationColumn/>
-        <hudson.views.BuildButtonColumn/>
-      </columns>
+      <columns/>
       <includeRegex>.*</includeRegex>
       <useCssStyle>false</useCssStyle>
       <includeStdJobList>false</includeStdJobList>
@@ -429,37 +418,33 @@
       <rightPortletWidth>50%</rightPortletWidth>
       <leftPortlets>
         <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-          <id>dashboard_portlet_9</id>
+          <id>dashboard_portlet_26</id>
           <name>Unstable Jobs</name>
         </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
         <hudson.plugins.view.dashboard.stats.StatJobs>
-          <id>dashboard_portlet_10</id>
+          <id>dashboard_portlet_27</id>
           <name>Job statistics</name>
         </hudson.plugins.view.dashboard.stats.StatJobs>
         <hudson.plugins.view.dashboard.builds.LatestBuilds>
-          <id>dashboard_portlet_11</id>
+          <id>dashboard_portlet_28</id>
           <name>Latest builds</name>
-          <numBuilds>20</numBuilds>
+          <numBuilds>70</numBuilds>
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
-        <hudson.plugins.warnings.dashboard.WarningsTablePortlet>
-          <id>dashboard_portlet_12</id>
-          <name>Compiler warnings per project</name>
-        </hudson.plugins.warnings.dashboard.WarningsTablePortlet>
       </leftPortlets>
       <rightPortlets>
         <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
-          <id>dashboard_portlet_13</id>
+          <id>dashboard_portlet_29</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
           <height>200</height>
           <dayCountString>30</dayCountString>
         </hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
         <hudson.plugins.view.dashboard.test.TestStatisticsChart>
-          <id>dashboard_portlet_14</id>
+          <id>dashboard_portlet_30</id>
           <name>Test Statistics Chart</name>
         </hudson.plugins.view.dashboard.test.TestStatisticsChart>
         <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
-          <id>dashboard_portlet_15</id>
+          <id>dashboard_portlet_31</id>
           <name>Code Coverages</name>
         </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
       </rightPortlets>
@@ -469,33 +454,47 @@
     <listView>
       <owner class="hudson" reference="../../.."/>
       <name>Plone 4.x EEA</name>
+      <description>Jobs that use www.eea.europa.eu buildout</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>eea.epub-www</string>
-        <string>eea.faceted.inheritance-www</string>
-        <string>eea.faceted.tool-www</string>
-        <string>eea.faceted.vocabularies-www</string>
-        <string>eea.facetednavigation-www</string>
-        <string>eea.google-www</string>
-        <string>eea.jquery-www</string>
-        <string>eea.rdfmarshaller-www</string>
-        <string>eea.relations-www</string>
-        <string>eea.reports-www</string>
-        <string>eea.socialmedia-www</string>
       </jobNames>
       <jobFilters/>
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
         <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
+      <includeRegex>^.+\-www$</includeRegex>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone EEA Documentation</name>
+      <description>API Documentation for EEA packages</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>EEA Plone 4 API Documentation</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.column.console.LastBuildColumn/>
+      </columns>
+      <includeRegex>^.+Documentation$</includeRegex>
     </listView>
   </views>
   <primaryView>Dashboard</primaryView>

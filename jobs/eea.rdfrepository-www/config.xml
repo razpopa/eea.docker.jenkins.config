@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run EEA jQuery tests within Plone 4 EEA Buildout</description>
+  <description>- Run eea.rdfrepository tests within Plone 4 EEA Buildout</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.plone.org/svn/collective/eea.jquery/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.rdfrepository/branches/plone4</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -31,7 +31,7 @@
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
@@ -44,18 +44,18 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.jquery
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.rdfrepository
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*eea/jquery*
+../../bin/report xml --include=*eea/rdfrepository*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*eea-jquery*.xml xmltestreport/
+cp ../../parts/xmltestreport/testreports/*eea-rdfrepository*.xml xmltestreport/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -122,7 +122,7 @@ cp ../../parts/xmltestreport/testreports/*eea-jquery*.xml xmltestreport/
       <keepAll>false</keepAll>
     </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
-      <childProjects>eea.jquery-plone4</childProjects>
+      <childProjects>eea.rdfrepository-plone4</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -219,7 +219,7 @@ cp ../../parts/xmltestreport/testreports/*eea-jquery*.xml xmltestreport/
               <type>jslint</type>
               <min>0</min>
               <max>5</max>
-              <unstable>1493</unstable>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -241,7 +241,7 @@ cp ../../parts/xmltestreport/testreports/*eea-jquery*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>1</unstable>
+              <unstable>10</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -316,7 +316,7 @@ cp ../../parts/xmltestreport/testreports/*eea-jquery*.xml xmltestreport/
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alin@jabber.eaudeweb.ro</value>
+          <value>tiberiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -334,5 +334,5 @@ cp ../../parts/xmltestreport/testreports/*eea-jquery*.xml xmltestreport/
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.jquery</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.rdfrepository</customWorkspace>
 </project>

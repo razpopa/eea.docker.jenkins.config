@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Geotags build on a clean Plone 2.5 instance</description>
+  <description>Generates API Documentation for EEA Plone 4 packages</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -15,43 +15,32 @@
     </hudson.plugins.trac.TracProjectProperty>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM">
-    <locations>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.geotags/buildouts/plone2</remote>
-        <local>.</local>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.geotags/trunk</remote>
-        <local>extras/eea.geotags</local>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-    </locations>
-    <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
-    <excludedRegions></excludedRegions>
-    <includedRegions></includedRegions>
-    <excludedUsers></excludedUsers>
-    <excludedRevprop></excludedRevprop>
-    <excludedCommitMessages></excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
-  </scm>
+  <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
-  <triggers class="vector"/>
+  <triggers class="vector">
+    <hudson.triggers.TimerTrigger>
+      <spec>@daily</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>python2.4 bootstrap.py
-bin/buildout -c devel.cfg
-bin/instance test -v -vv --nowarning -s eea.geotags</command>
+      <command>cd ${WORKSPACE}
+bin/epydoc-all</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.tasks.JavadocArchiver>
+      <javadocDir>apidoc-eea</javadocDir>
+      <keepAll>false</keepAll>
+    </hudson.tasks.JavadocArchiver>
+    <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
-    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
@@ -60,9 +49,9 @@ bin/instance test -v -vv --nowarning -s eea.geotags</command>
     <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
-        <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alin@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.GroupChatIMMessageTarget>
+          <name>web3.0development@conference.jabber.eea.europa.eu</name>
+        </hudson.plugins.im.GroupChatIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
       <notifyOnBuildStart>false</notifyOnBuildStart>
@@ -70,13 +59,14 @@ bin/instance test -v -vv --nowarning -s eea.geotags</command>
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier"/>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
-      <timeoutMinutes>10</timeoutMinutes>
+      <timeoutMinutes>60</timeoutMinutes>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson</customWorkspace>
 </project>

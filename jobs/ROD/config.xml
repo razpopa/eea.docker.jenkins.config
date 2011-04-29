@@ -13,6 +13,7 @@
     <hudson.plugins.trac.TracProjectProperty>
       <tracWebsite>https://svn.eionet.europa.eu/projects/Reportnet/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty/>
   </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>

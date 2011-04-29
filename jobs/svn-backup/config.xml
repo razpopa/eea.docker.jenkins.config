@@ -20,7 +20,7 @@
   <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.TimerTrigger>
-      <spec>@midnight</spec>
+      <spec>@daily</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>

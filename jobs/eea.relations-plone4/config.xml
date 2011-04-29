@@ -13,6 +13,7 @@
     <hudson.plugins.trac.TracProjectProperty>
       <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty/>
   </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>
@@ -52,9 +53,9 @@ bin/test -v -vv -s eea.relations</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
-    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
