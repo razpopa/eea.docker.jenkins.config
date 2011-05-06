@@ -235,18 +235,47 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea.alchemy-plone4</string>
+        <string>eea.bounce-plone4</string>
+        <string>eea.cache-plone4</string>
+        <string>eea.dataservice-plone4</string>
+        <string>eea.daviz-plone4</string>
+        <string>eea.design-plone4</string>
+        <string>eea.eggmonkey-plone4</string>
         <string>eea.epub-plone4</string>
+        <string>eea.exhibit-plone4</string>
         <string>eea.faceted.inheritance-plone4</string>
         <string>eea.faceted.tool-plone4</string>
         <string>eea.faceted.vocabularies-plone4</string>
         <string>eea.facetednavigation-plone4</string>
+        <string>eea.geotags-plone4</string>
         <string>eea.google-plone4</string>
+        <string>eea.indicators-plone4</string>
         <string>eea.jquery-plone4</string>
+        <string>eea.locationwidget-plone4</string>
+        <string>eea.mediacentre-plone4</string>
+        <string>eea.pagedesign-plone4</string>
+        <string>eea.plone3compat-plone4</string>
+        <string>eea.policy.dev-plone4</string>
+        <string>eea.promotion-plone4</string>
         <string>eea.rdfmarshaller-plone4</string>
         <string>eea.relations-plone4</string>
         <string>eea.reports-plone4</string>
+        <string>eea.signals-plone4</string>
+        <string>eea.sitestructurediff-plone4</string>
         <string>eea.socialmedia-plone4</string>
+        <string>eea.soer-plone4</string>
+        <string>eea.testcase-plone4</string>
+        <string>eea.themecentre-plone4</string>
+        <string>eea.translations-plone4</string>
         <string>eea.versions-plone4</string>
+        <string>eea.vocab-plone4</string>
+        <string>eea.workflow-plone4</string>
+        <string>Products.EEAContentTypes-plone4</string>
+        <string>Products.eeawebapplication-plone4</string>
+        <string>Products.NavigationManager-plone4</string>
+        <string>valentine.imagescales-plone4</string>
+        <string>valentine.linguaflow-plone4</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -388,6 +417,7 @@
         <string>CR3</string>
         <string>EUNIS</string>
         <string>ROD</string>
+        <string>Sparql Client</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -408,6 +438,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
+        <string>Sparql Client</string>
       </jobNames>
       <jobFilters/>
       <columns/>
@@ -460,6 +491,35 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>eea.alchemy-www</string>
+        <string>eea.bounce-www</string>
+        <string>eea.cache-www</string>
+        <string>eea.dataservice-www</string>
+        <string>eea.daviz-www</string>
+        <string>eea.design-www</string>
+        <string>eea.eggmonkey-www</string>
+        <string>eea.exhibit-www</string>
+        <string>eea.geotags-www</string>
+        <string>eea.indicators-www</string>
+        <string>eea.locationwidget-www</string>
+        <string>eea.mediacentre-www</string>
+        <string>eea.pagedesign-www</string>
+        <string>eea.plone3compat-www</string>
+        <string>eea.policy.dev-www</string>
+        <string>eea.promotion-www</string>
+        <string>eea.signals-www</string>
+        <string>eea.sitestructurediff-www</string>
+        <string>eea.soer-www</string>
+        <string>eea.testcase-www</string>
+        <string>eea.themecentre-www</string>
+        <string>eea.translations-www</string>
+        <string>eea.vocab-www</string>
+        <string>eea.workflow-www</string>
+        <string>Products.EEAContentTypes-www</string>
+        <string>Products.eeawebapplication-www</string>
+        <string>Products.NavigationManager-www</string>
+        <string>valentine.imagescales-www</string>
+        <string>valentine.linguaflow-www</string>
       </jobNames>
       <jobFilters/>
       <columns>

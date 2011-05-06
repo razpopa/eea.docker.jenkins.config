@@ -103,9 +103,9 @@ Polls SVN every 12 minutes past the hour 8-22</description>
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>17999</min>
-              <max>18000</max>
-              <unstable>18000</unstable>
+              <min>6999</min>
+              <max>7000</max>
+              <unstable>8000</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -264,6 +264,7 @@ Polls SVN every 12 minutes past the hour 8-22</description>
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <shouldDetectModules>false</shouldDetectModules>
     </hudson.plugins.analysis.collector.AnalysisPublisher>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
