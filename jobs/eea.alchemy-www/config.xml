@@ -31,7 +31,7 @@
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
@@ -55,7 +55,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*eea.alchemy*.xml xmltestreport/
+cp ../../parts/xmltestreport/testreports/*eea-alchemy*.xml xmltestreport/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -117,10 +117,6 @@ cp ../../parts/xmltestreport/testreports/*eea.alchemy*.xml xmltestreport/
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.alchemy-plone4</childProjects>
       <threshold>
@@ -241,7 +237,7 @@ cp ../../parts/xmltestreport/testreports/*eea.alchemy*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>1</unstable>
+              <unstable>175</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

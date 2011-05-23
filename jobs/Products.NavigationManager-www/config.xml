@@ -31,7 +31,7 @@
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
@@ -49,7 +49,7 @@
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*Products.NavigationManager*
+../../bin/report xml --include=*Products/NavigationManager*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -117,10 +117,6 @@ cp ../../parts/xmltestreport/testreports/*Products.NavigationManager*.xml xmltes
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>Products.NavigationManager-plone4</childProjects>
       <threshold>

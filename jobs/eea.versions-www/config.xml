@@ -117,10 +117,14 @@ cp ../../parts/xmltestreport/testreports/*eea-versions*.xml xmltestreport/
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.versions-plone4</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">
@@ -319,14 +323,6 @@ cp ../../parts/xmltestreport/testreports/*eea-versions*.xml xmltestreport/
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
       <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.versions-plone4</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>

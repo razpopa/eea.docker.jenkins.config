@@ -117,10 +117,6 @@ cp -f ../../parts/xmltestreport/testreports/*valentine-imagescales*.xml xmltestr
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>valentine.imagescales-plone4</childProjects>
       <threshold>

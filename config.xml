@@ -155,8 +155,11 @@
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
-    <disableSignup>false</disableSignup>
+  <securityRealm class="hudson.security.LDAPSecurityRealm">
+    <server>ldap2.eionet.europa.eu</server>
+    <rootDN>ou=Users,o=Eionet,l=Europe</rootDN>
+    <userSearchBase></userSearchBase>
+    <userSearch>uid={0}</userSearch>
   </securityRealm>
   <systemMessage>Welcome to Continuous Integration Testing site for European Environment Agency (EEA, www.eea.europa.eu)</systemMessage>
   <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter"/>
@@ -272,8 +275,11 @@
         <string>eea.vocab-plone4</string>
         <string>eea.workflow-plone4</string>
         <string>Products.EEAContentTypes-plone4</string>
+        <string>Products.EEAPloneAdmin-plone4</string>
+        <string>Products.EEATemplatesService-plone4</string>
         <string>Products.eeawebapplication-plone4</string>
         <string>Products.NavigationManager-plone4</string>
+        <string>valentine.gtranslate-plone4</string>
         <string>valentine.imagescales-plone4</string>
         <string>valentine.linguaflow-plone4</string>
       </jobNames>
@@ -516,8 +522,11 @@
         <string>eea.vocab-www</string>
         <string>eea.workflow-www</string>
         <string>Products.EEAContentTypes-www</string>
+        <string>Products.EEAPloneAdmin-www</string>
+        <string>Products.EEATemplatesService-www</string>
         <string>Products.eeawebapplication-www</string>
         <string>Products.NavigationManager-www</string>
+        <string>valentine.gtranslate-www</string>
         <string>valentine.imagescales-www</string>
         <string>valentine.linguaflow-www</string>
       </jobNames>

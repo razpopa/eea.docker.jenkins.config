@@ -31,7 +31,7 @@
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
@@ -55,7 +55,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*eea.locationwidget*.xml xmltestreport/
+cp ../../parts/xmltestreport/testreports/*eea-locationwidget*.xml xmltestreport/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -117,10 +117,6 @@ cp ../../parts/xmltestreport/testreports/*eea.locationwidget*.xml xmltestreport/
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.locationwidget-plone4</childProjects>
       <threshold>
@@ -316,7 +312,7 @@ cp ../../parts/xmltestreport/testreports/*eea.locationwidget*.xml xmltestreport/
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>tiberiu@jabber.eaudeweb.ro</value>
+          <value>david.ichim@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

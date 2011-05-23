@@ -15,7 +15,7 @@
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>37009.0</score>
+      <score>20.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
@@ -24,5 +24,8 @@
     <hudson.tasks.Mailer_-UserProperty>
       <emailAddress>enriko.kasper@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.openid.OpenIdUserProperty>
+      <identifiers/>
+    </hudson.plugins.openid.OpenIdUserProperty>
   </properties>
 </user>

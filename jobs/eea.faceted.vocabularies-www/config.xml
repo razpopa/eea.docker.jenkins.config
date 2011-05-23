@@ -117,10 +117,6 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.faceted.vocabularies-plone4</childProjects>
       <threshold>
@@ -308,7 +304,7 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-vocabularies*.xml xmltestr
       <sourceEncoding>ASCII</sourceEncoding>
     </hudson.plugins.cobertura.CoberturaPublisher>
     <hudson.tasks.Mailer>
-      <recipients>web30development@localhost</recipients>
+      <recipients>web30development@localhost eea-facetednavigation@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>

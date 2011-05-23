@@ -117,10 +117,6 @@ cp ../../parts/xmltestreport/testreports/*eea.design*.xml xmltestreport/
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.design-plone4</childProjects>
       <threshold>

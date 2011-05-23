@@ -61,7 +61,7 @@ bin/xmltestrunner -v -vv -s eea.facetednavigation</command>
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
-      <recipients>web30development@localhost</recipients>
+      <recipients>web30development@localhost, eea-facetednavigation@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>

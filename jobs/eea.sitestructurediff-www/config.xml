@@ -117,10 +117,6 @@ cp ../../parts/xmltestreport/testreports/*eea.sitestructurediff*.xml xmltestrepo
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.sitestructurediff-plone4</childProjects>
       <threshold>

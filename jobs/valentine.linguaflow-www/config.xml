@@ -117,10 +117,6 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>../../apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>valentine.linguaflow-plone4</childProjects>
       <threshold>

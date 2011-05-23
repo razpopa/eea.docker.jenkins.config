@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>- Run Products.EEAPloneAdmin tests within Plone 4 EEA Buildout</description>
+  <logRotator>
+    <daysToKeep>30</daysToKeep>
+    <numToKeep>-1</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.trac.TracProjectProperty>
+      <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
+    </hudson.plugins.trac.TracProjectProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty/>
+  </properties>
+  <scm class="hudson.scm.SubversionSCM">
+    <locations>
+      <hudson.scm.SubversionSCM_-ModuleLocation>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.EEAPloneAdmin/branches/plone4</remote>
+        <local>.</local>
+      </hudson.scm.SubversionSCM_-ModuleLocation>
+    </locations>
+    <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
+    <excludedRegions></excludedRegions>
+    <includedRegions></includedRegions>
+    <excludedUsers></excludedUsers>
+    <excludedRevprop></excludedRevprop>
+    <excludedCommitMessages></excludedCommitMessages>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
+  <jdk>(Default)</jdk>
+  <triggers class="vector">
+    <hudson.triggers.SCMTrigger>
+      <spec>@hourly</spec>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s Products.EEAPloneAdmin
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/report xml --include=*Products/EEAPloneAdmin*
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+mkdir -p xmltestreport
+cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestreport/
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/zptlint-test</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/pyflakes-test
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/pylint-test
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+../../bin/jslint-test Products</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.warnings.WarningsPublisher>
+      <healthy>0</healthy>
+      <unHealthy>5</unHealthy>
+      <thresholdLimit>high</thresholdLimit>
+      <pluginName>[WARNINGS] </pluginName>
+      <defaultEncoding></defaultEncoding>
+      <canRunOnFailed>true</canRunOnFailed>
+      <useDeltaValues>false</useDeltaValues>
+      <thresholds>
+        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalHigh></unstableTotalHigh>
+        <unstableTotalNormal></unstableTotalNormal>
+        <unstableTotalLow></unstableTotalLow>
+        <unstableNewAll>0</unstableNewAll>
+        <unstableNewHigh></unstableNewHigh>
+        <unstableNewNormal></unstableNewNormal>
+        <unstableNewLow></unstableNewLow>
+        <failedTotalAll></failedTotalAll>
+        <failedTotalHigh></failedTotalHigh>
+        <failedTotalNormal></failedTotalNormal>
+        <failedTotalLow></failedTotalLow>
+        <failedNewAll></failedNewAll>
+        <failedNewHigh></failedNewHigh>
+        <failedNewNormal></failedNewNormal>
+        <failedNewLow></failedNewLow>
+      </thresholds>
+      <shouldDetectModules>false</shouldDetectModules>
+      <pattern>**/zptlint.log, **/pyflakes.log</pattern>
+      <parserNames>
+        <string>zptlint</string>
+        <string>pyflakes</string>
+      </parserNames>
+      <ignoreConsole>true</ignoreConsole>
+    </hudson.plugins.warnings.WarningsPublisher>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/xmltestreport/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>Products.EEAPloneAdmin-plone4</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+    <hudson.plugins.violations.ViolationsPublisher>
+      <config>
+        <suppressions class="tree-set">
+          <no-comparator/>
+        </suppressions>
+        <typeConfigs>
+          <no-comparator/>
+          <entry>
+            <string>checkstyle</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>checkstyle</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>codenarc</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>codenarc</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>cpd</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>cpd</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>findbugs</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>findbugs</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>fxcop</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>fxcop</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>gendarme</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>gendarme</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>jcreport</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>jcreport</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>jslint</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>jslint</type>
+              <min>0</min>
+              <max>5</max>
+              <unstable>1</unstable>
+              <usePattern>false</usePattern>
+              <pattern>**/jslint.log</pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>pmd</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>pmd</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>pylint</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>pylint</type>
+              <min>29800</min>
+              <max>29801</max>
+              <unstable>29800</unstable>
+              <usePattern>false</usePattern>
+              <pattern>**/pylint.log</pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>simian</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>simian</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>stylecop</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>stylecop</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+        </typeConfigs>
+        <limit>100</limit>
+        <sourcePathPattern></sourcePathPattern>
+        <fauxProjectPath></fauxProjectPath>
+        <encoding>default</encoding>
+      </config>
+    </hudson.plugins.violations.ViolationsPublisher>
+    <hudson.plugins.girls.CordellWalkerRecorder>
+      <factGenerator/>
+    </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.plugins.cobertura.CoberturaPublisher>
+      <coberturaReportFile>coverage.xml</coberturaReportFile>
+      <onlyStable>true</onlyStable>
+      <healthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+        </targets>
+      </healthyTarget>
+      <unhealthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </unhealthyTarget>
+      <failingTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </failingTarget>
+      <sourceEncoding>ASCII</sourceEncoding>
+    </hudson.plugins.cobertura.CoberturaPublisher>
+    <hudson.tasks.Mailer>
+      <recipients>web30development@localhost</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>true</sendToIndividuals>
+    </hudson.tasks.Mailer>
+    <hudson.plugins.cigame.GamePublisher/>
+    <hudson.plugins.jabber.im.transport.JabberPublisher>
+      <targets>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>tiberiu@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+      </targets>
+      <strategy>FAILURE_AND_FIXED</strategy>
+      <notifyOnBuildStart>false</notifyOnBuildStart>
+      <notifySuspects>false</notifySuspects>
+      <notifyCulprits>false</notifyCulprits>
+      <notifyFixers>false</notifyFixers>
+      <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
+    </hudson.plugins.jabber.im.transport.JabberPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper>
+      <timeoutMinutes>20</timeoutMinutes>
+      <failBuild>true</failBuild>
+    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+  </buildWrappers>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/Products.EEAPloneAdmin</customWorkspace>
+</project>
