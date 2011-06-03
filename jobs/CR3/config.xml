@@ -56,6 +56,29 @@ Polls SVN every 12 minutes past the hour 8-22</description>
   <processPlugins>false</processPlugins>
   <mavenValidationLevel>-1</mavenValidationLevel>
   <reporters>
+    <hudson.plugins.checkstyle.CheckStyleReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[CHECKSTYLE] </pluginName>
+      <thresholdLimit>normal</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.checkstyle.CheckStyleReporter>
+    <hudson.plugins.findbugs.FindBugsReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[FINDBUGS] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.dry.DryReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[DRY] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <highThreshold>50</highThreshold>
+      <normalThreshold>25</normalThreshold>
+    </hudson.plugins.dry.DryReporter>
     <hudson.plugins.tasks.TasksReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -69,29 +92,6 @@ Polls SVN every 12 minutes past the hour 8-22</description>
       <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
-    <hudson.plugins.findbugs.FindBugsReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[FINDBUGS] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-    </hudson.plugins.findbugs.FindBugsReporter>
-    <hudson.plugins.checkstyle.CheckStyleReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[CHECKSTYLE] </pluginName>
-      <thresholdLimit>normal</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-    </hudson.plugins.checkstyle.CheckStyleReporter>
-    <hudson.plugins.dry.DryReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[DRY] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-      <highThreshold>50</highThreshold>
-      <normalThreshold>25</normalThreshold>
-    </hudson.plugins.dry.DryReporter>
     <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
       <config>
         <suppressions class="tree-set">

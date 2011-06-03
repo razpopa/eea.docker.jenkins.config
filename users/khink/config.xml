@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>thomasdesvenain</fullName>
+  <fullName>khink</fullName>
   <properties>
     <hudson.tasks.Mailer_-UserProperty/>
+    <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -15,13 +16,12 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty/>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>-18.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>2.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>
