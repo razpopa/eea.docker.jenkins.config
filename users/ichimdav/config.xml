@@ -22,7 +22,7 @@
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>41.0</score>
+      <score>103.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>
@@ -31,5 +31,8 @@
     <hudson.plugins.openid.OpenIdUserProperty>
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>gshEoNcapGISiUPzUT4p0j7mIPRbZrvHHxTf580Z0PJv/dQSczY0E0jJCtGtZo3w</apiToken>
+    </jenkins.security.ApiTokenProperty>
   </properties>
 </user>

@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
+  <disabledAdministrativeMonitors/>
   <version>1.409</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
@@ -158,6 +159,7 @@
   <securityRealm class="hudson.security.LDAPSecurityRealm">
     <server>ldap2.eionet.europa.eu</server>
     <rootDN>ou=Users,o=Eionet,l=Europe</rootDN>
+    <inhibitInferRootDN>false</inhibitInferRootDN>
     <userSearchBase></userSearchBase>
     <userSearch>uid={0}</userSearch>
   </securityRealm>
@@ -200,13 +202,6 @@
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
   <views>
-    <hudson.model.AllView>
-      <owner class="hudson" reference="../../.."/>
-      <name>All</name>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-    </hudson.model.AllView>
     <listView>
       <owner class="hudson" reference="../../.."/>
       <name>Plone 3.x clean</name>
@@ -258,7 +253,6 @@
         <string>eea.locationwidget-plone4</string>
         <string>eea.mediacentre-plone4</string>
         <string>eea.pagedesign-plone4</string>
-        <string>eea.plone3compat-plone4</string>
         <string>eea.policy.dev-plone4</string>
         <string>eea.promotion-plone4</string>
         <string>eea.rdfmarshaller-plone4</string>
@@ -268,7 +262,6 @@
         <string>eea.sitestructurediff-plone4</string>
         <string>eea.socialmedia-plone4</string>
         <string>eea.soer-plone4</string>
-        <string>eea.testcase-plone4</string>
         <string>eea.themecentre-plone4</string>
         <string>eea.translations-plone4</string>
         <string>eea.versions-plone4</string>
@@ -406,6 +399,7 @@
         <hudson.views.JobColumn/>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
+        <hudson.views.LastSuccessColumn/>
         <hudson.views.BuildButtonColumn/>
         <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
@@ -421,6 +415,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>CR2</string>
         <string>CR3</string>
+        <string>DATADICT</string>
         <string>EUNIS</string>
         <string>ROD</string>
         <string>Sparql Client</string>
@@ -444,6 +439,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
+        <string>DATADICT</string>
         <string>Sparql Client</string>
       </jobNames>
       <jobFilters/>
@@ -510,13 +506,11 @@
         <string>eea.locationwidget-www</string>
         <string>eea.mediacentre-www</string>
         <string>eea.pagedesign-www</string>
-        <string>eea.plone3compat-www</string>
         <string>eea.policy.dev-www</string>
         <string>eea.promotion-www</string>
         <string>eea.signals-www</string>
         <string>eea.sitestructurediff-www</string>
         <string>eea.soer-www</string>
-        <string>eea.testcase-www</string>
         <string>eea.themecentre-www</string>
         <string>eea.translations-www</string>
         <string>eea.vocab-www</string>
@@ -560,6 +554,7 @@
         <hudson.views.JobColumn/>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
+        <hudson.views.LastSuccessColumn/>
         <hudson.views.BuildButtonColumn/>
         <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
@@ -571,5 +566,4 @@
   <label></label>
   <nodeProperties/>
   <globalNodeProperties/>
-  <disabledAdministrativeMonitors/>
 </hudson>

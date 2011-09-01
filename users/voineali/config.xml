@@ -91,7 +91,7 @@
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>328.0</score>
+      <score>436.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>
@@ -99,9 +99,14 @@
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
       <identifiers>
+        <string>http://alin-voinea.myopenid.com/</string>
+        <string>https://me.yahoo.com/a/nJrsqGp.rsJD6YgQNiahT5FRuY3DVeAHrg--</string>
         <string>https://www.google.com/accounts/o8/id?id=AItOawnuAwagvZpGks2ev-l-ZzF5oMs9swbCPKY</string>
       </identifiers>
     </hudson.plugins.openid.OpenIdUserProperty>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>LP2BKfE+yt8NQRryV1iNe6BUgXw8hvFfIqj9biEUDwlv/dQSczY0E0jJCtGtZo3w</apiToken>
+    </jenkins.security.ApiTokenProperty>
     <hudson.tasks.Mailer_-UserProperty>
       <emailAddress>alin.voinea@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>

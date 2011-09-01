@@ -25,11 +25,14 @@
       <jid>tiberiu@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>35.0</score>
+      <score>75.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>EcjR1rOVhqQTgubpP88v1rYu40t5ZK4Jsv6DytYJDgRv/dQSczY0E0jJCtGtZo3w</apiToken>
+    </jenkins.security.ApiTokenProperty>
   </properties>
 </user>
