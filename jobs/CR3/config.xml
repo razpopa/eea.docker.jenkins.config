@@ -55,6 +55,9 @@ Polls SVN every 12 minutes past the hour 8-22</description>
   <resolveDependencies>false</resolveDependencies>
   <processPlugins>false</processPlugins>
   <mavenValidationLevel>-1</mavenValidationLevel>
+  <runHeadless>false</runHeadless>
+  <settingConfigId></settingConfigId>
+  <globalSettingConfigId></globalSettingConfigId>
   <reporters>
     <hudson.plugins.checkstyle.CheckStyleReporter>
       <healthy></healthy>
@@ -271,7 +274,7 @@ Polls SVN every 12 minutes past the hour 8-22</description>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.emailext.ExtendedEmailPublisher>
-      <recipientList>soren.roug@eea.europa.eu, risto.alt@gmail.com, kaido.laine@gmail.com, enriko.kasper@gmail.com, jaanus.heinlaid@gmail.com</recipientList>
+      <recipientList>soren.roug@eea.europa.eu, jaanus.heinlaid@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
@@ -284,28 +287,17 @@ Polls SVN every 12 minutes past the hour 8-22</description>
             <sendToRecipientList>true</sendToRecipientList>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
-        <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
-          <email>
-            <recipientList></recipientList>
-            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
-            <body>$PROJECT_DEFAULT_CONTENT</body>
-            <sendToDevelopers>true</sendToDevelopers>
-            <sendToRequester>false</sendToRequester>
-            <includeCulprits>false</includeCulprits>
-            <sendToRecipientList>true</sendToRecipientList>
-          </email>
-        </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
       </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
-
-Check console output at $BUILD_URL to view the results.
-
-    == Now fix 1 FindBugs and 10 Checkstyle violations! ==
-
-Violations report: ${BUILD_URL}eionet.cr$cr3/violations/
-
+      <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
+&#xd;
+Check console output at $BUILD_URL to view the results.&#xd;
+&#xd;
+    == Now fix 1 FindBugs and 10 Checkstyle violations! ==&#xd;
+&#xd;
+Violations report: ${BUILD_URL}eionet.cr$cr3/violations/&#xd;
+&#xd;
 See https://svn.eionet.europa.eu/projects/Reportnet/wiki/TechnicalDebt</defaultContent>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>

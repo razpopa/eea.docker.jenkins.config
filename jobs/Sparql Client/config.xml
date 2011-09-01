@@ -30,7 +30,7 @@ Polls SVN every 42 minutes past the hour 8-22</description>
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>jdk6</jdk>
@@ -54,7 +54,33 @@ Polls SVN every 42 minutes past the hour 8-22</description>
   <resolveDependencies>false</resolveDependencies>
   <processPlugins>false</processPlugins>
   <mavenValidationLevel>-1</mavenValidationLevel>
+  <runHeadless>false</runHeadless>
+  <settingConfigId></settingConfigId>
+  <globalSettingConfigId></globalSettingConfigId>
   <reporters>
+    <hudson.plugins.checkstyle.CheckStyleReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[CHECKSTYLE] </pluginName>
+      <thresholdLimit>normal</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.checkstyle.CheckStyleReporter>
+    <hudson.plugins.findbugs.FindBugsReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[FINDBUGS] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.dry.DryReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[DRY] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <highThreshold>50</highThreshold>
+      <normalThreshold>25</normalThreshold>
+    </hudson.plugins.dry.DryReporter>
     <hudson.plugins.tasks.TasksReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -68,29 +94,6 @@ Polls SVN every 42 minutes past the hour 8-22</description>
       <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
-    <hudson.plugins.findbugs.FindBugsReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[FINDBUGS] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-    </hudson.plugins.findbugs.FindBugsReporter>
-    <hudson.plugins.checkstyle.CheckStyleReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[CHECKSTYLE] </pluginName>
-      <thresholdLimit>normal</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-    </hudson.plugins.checkstyle.CheckStyleReporter>
-    <hudson.plugins.dry.DryReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[DRY] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-      <highThreshold>50</highThreshold>
-      <normalThreshold>25</normalThreshold>
-    </hudson.plugins.dry.DryReporter>
     <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
       <config>
         <suppressions class="tree-set">
@@ -283,17 +286,6 @@ Polls SVN every 42 minutes past the hour 8-22</description>
             <sendToRecipientList>true</sendToRecipientList>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
-        <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
-          <email>
-            <recipientList></recipientList>
-            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
-            <body>$PROJECT_DEFAULT_CONTENT</body>
-            <sendToDevelopers>true</sendToDevelopers>
-            <sendToRequester>false</sendToRequester>
-            <includeCulprits>false</includeCulprits>
-            <sendToRecipientList>true</sendToRecipientList>
-          </email>
-        </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
       </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>

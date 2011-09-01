@@ -41,6 +41,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.geotags</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -105,6 +106,7 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <shouldDetectModules>false</shouldDetectModules>
       <pattern>**/zptlint.log, **/pyflakes.log</pattern>
       <parserNames>
         <string>zptlint</string>
@@ -334,5 +336,4 @@ cp ../../parts/xmltestreport/testreports/*eea-geotags*.xml xmltestreport/</comma
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/eea.geotags</customWorkspace>
 </project>

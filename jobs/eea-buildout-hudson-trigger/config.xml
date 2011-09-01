@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://svn.eionet.europa.eu/repositories/Zope/trunk/eea-buildout</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea-buildout</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -36,14 +36,15 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
   <triggers class="vector">
-    <hudson.triggers.SCMTrigger>
-      <spec>@hourly</spec>
-    </hudson.triggers.SCMTrigger>
     <hudson.triggers.TimerTrigger>
       <spec>45 5,11,15 * * 1-5</spec>
     </hudson.triggers.TimerTrigger>
+    <hudson.triggers.SCMTrigger>
+      <spec>@hourly</spec>
+    </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -52,10 +53,9 @@ bin/buildout -c hudson.cfg</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>apidoc-eea</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
+    <hudson.plugins.girls.CordellWalkerRecorder>
+      <factGenerator/>
+    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.facetednavigation, eea.dataservice, eea.cache, eea.design, eea.geotags, eea.google, eea.indicators, eea.pagedesign, eea.promotion, eea.rdfmarshaller, eea.relations, eea.reports, eea.socialmedia, eea.soer, eea.themecentre, eea.versions, eea.daviz, eea.faceted.inheritance, eea.faceted.tool, eea.faceted.vocabularies, Products.EEATemplatesService, Products.EEAContentTypes, valentine.imagescales, valentine.gtranslate, eea.alchemy, eea.epub, eea.jquery, eea.locationwidget, eea.testcase, eea.signals, eea.vocab, eea.workflow, eea.eggmonkey, eea.bounce, Products.PloneGazette, eea.exhibit, eea.mediacentre, eea.plone3compat, eea.policy.dev, eea.rdfrepository, eea.sitestructurediff, eea.translations, valentine.linguaflow, Products.EEADesign2006, Products.EEAEnquiry, Products.EEAPloneAdmin, Products.ThemeCentre</childProjects>
       <threshold>
@@ -64,15 +64,16 @@ bin/buildout -c hudson.cfg</command>
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.girls.CordellWalkerRecorder>
-      <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.tasks.JavadocArchiver>
+      <javadocDir>apidoc-eea</javadocDir>
+      <keepAll>false</keepAll>
+    </hudson.tasks.JavadocArchiver>
+    <hudson.plugins.cigame.GamePublisher/>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.GroupChatIMMessageTarget>
@@ -94,5 +95,4 @@ bin/buildout -c hudson.cfg</command>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson</customWorkspace>
 </project>

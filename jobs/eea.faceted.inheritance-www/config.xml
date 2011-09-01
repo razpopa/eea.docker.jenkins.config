@@ -41,6 +41,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.faceted.inheritance</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -331,5 +332,4 @@ cp ../../parts/xmltestreport/testreports/*eea-faceted-inheritance*.xml xmltestre
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.faceted.inheritance</customWorkspace>
 </project>

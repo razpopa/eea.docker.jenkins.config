@@ -41,6 +41,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>true</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/Products.eeawebapplication</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -326,5 +327,4 @@ cp ../../parts/xmltestreport/testreports/*Products.eeawebapplication*.xml xmltes
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/Products.eeawebapplication</customWorkspace>
 </project>

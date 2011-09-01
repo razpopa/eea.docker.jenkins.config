@@ -41,6 +41,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.EEAPloneAdmin</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>echo &quot;WARNING: Tests are disabled !!!&quot;
@@ -106,6 +107,7 @@
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <shouldDetectModules>false</shouldDetectModules>
       <pattern>**/zptlint.log, **/pyflakes.log</pattern>
       <parserNames>
         <string>zptlint</string>
@@ -292,5 +294,4 @@
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.EEAPloneAdmin</customWorkspace>
 </project>

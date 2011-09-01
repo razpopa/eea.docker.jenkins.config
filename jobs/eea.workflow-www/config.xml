@@ -270,7 +270,7 @@ cp ../../parts/xmltestreport/testreports/*eea-workflow*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>4</unstable>
+              <unstable>5</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

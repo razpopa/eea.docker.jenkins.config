@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://svn.eionet.europa.eu/repositories/Zope/trunk/eea-buildout</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea-buildout</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -36,14 +36,15 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
   <triggers class="vector">
-    <hudson.triggers.SCMTrigger>
-      <spec>@hourly</spec>
-    </hudson.triggers.SCMTrigger>
     <hudson.triggers.TimerTrigger>
       <spec>45 5,11,15 * * 1-5</spec>
     </hudson.triggers.TimerTrigger>
+    <hudson.triggers.SCMTrigger>
+      <spec>@hourly</spec>
+    </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-pre-production</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -59,12 +60,12 @@ bin/www1-uptest</command>
     <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.plugins.cigame.GamePublisher/>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.GroupChatIMMessageTarget>
@@ -86,5 +87,4 @@ bin/www1-uptest</command>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-pre-production</customWorkspace>
 </project>

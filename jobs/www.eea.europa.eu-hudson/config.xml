@@ -18,7 +18,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>http://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -36,14 +36,15 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
   <triggers class="vector">
-    <hudson.triggers.SCMTrigger>
-      <spec>@hourly</spec>
-    </hudson.triggers.SCMTrigger>
     <hudson.triggers.TimerTrigger>
       <spec>15 5,11,15 * * 1-5</spec>
     </hudson.triggers.TimerTrigger>
+    <hudson.triggers.SCMTrigger>
+      <spec>@hourly</spec>
+    </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -55,12 +56,20 @@ bin/buildout -c hudson.cfg</command>
     <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.faceted.tool-www, eea.socialmedia-www, eea.google-www, eea.reports-www, eea.faceted.vocabularies-www, eea.jquery-www, eea.facetednavigation-www, eea.faceted.inheritance-www, eea.rdfmarshaller-www, eea.relations-www, eea.versions-www, eea.epub-www, eea.rdfrepository-www, Products.eeawebapplication-www, eea.alchemy-www, eea.bounce-www, eea.cache-www, eea.dataservice-www, eea.daviz-www, eea.design-www, eea.eggmonkey-www, eea.exhibit-www, eea.geotags-www, eea.indicators-www, eea.locationwidget-www, eea.mediacentre-www, eea.pagedesign-www, eea.plone3compat-www, eea.policy.dev-www, eea.promotion-www, eea.signals-www, eea.sitestructurediff-www, eea.soer-www, eea.themecentre-www, eea.translations-www, eea.vocab-www, eea.workflow-www, Products.EEAContentTypes-www, Products.NavigationManager-www, valentine.linguaflow-www, valentine.imagescales-www, Products.EEAPloneAdmin-www, Products.EEATemplatesService-www, valentine.gtranslate-www</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+    <hudson.plugins.cigame.GamePublisher/>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher/>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.GroupChatIMMessageTarget>
@@ -75,14 +84,6 @@ bin/buildout -c hudson.cfg</command>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
       <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier"/>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.faceted.tool-www, eea.socialmedia-www, eea.google-www, eea.reports-www, eea.faceted.vocabularies-www, eea.jquery-www, eea.facetednavigation-www, eea.faceted.inheritance-www, eea.rdfmarshaller-www, eea.relations-www, eea.versions-www, eea.epub-www, eea.rdfrepository-www, Products.eeawebapplication-www, eea.alchemy-www, eea.bounce-www, eea.cache-www, eea.dataservice-www, eea.daviz-www, eea.design-www, eea.eggmonkey-www, eea.exhibit-www, eea.geotags-www, eea.indicators-www, eea.locationwidget-www, eea.mediacentre-www, eea.pagedesign-www, eea.plone3compat-www, eea.policy.dev-www, eea.promotion-www, eea.signals-www, eea.sitestructurediff-www, eea.soer-www, eea.testcase-www, eea.themecentre-www, eea.translations-www, eea.vocab-www, eea.workflow-www, Products.EEAContentTypes-www, Products.NavigationManager-www, valentine.linguaflow-www, valentine.imagescales-www, Products.EEAPloneAdmin-www, Products.EEATemplatesService-www, valentine.gtranslate-www</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
@@ -90,5 +91,4 @@ bin/buildout -c hudson.cfg</command>
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson</customWorkspace>
 </project>

@@ -41,6 +41,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.EEAContentTypes</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -328,5 +329,4 @@ cp ../../parts/xmltestreport/testreports/*Products-EEAContentTypes*.xml xmltestr
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.EEAContentTypes</customWorkspace>
 </project>

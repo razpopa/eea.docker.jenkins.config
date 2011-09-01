@@ -10,10 +10,10 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.disk__usage.DiskUsageProperty/>
     <hudson.plugins.trac.TracProjectProperty>
       <tracWebsite>https://svn.eionet.europa.eu/projects/Reportnet/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty/>
   </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>
@@ -54,14 +54,10 @@
   <resolveDependencies>false</resolveDependencies>
   <processPlugins>false</processPlugins>
   <mavenValidationLevel>-1</mavenValidationLevel>
+  <runHeadless>false</runHeadless>
+  <settingConfigId></settingConfigId>
+  <globalSettingConfigId></globalSettingConfigId>
   <reporters>
-    <hudson.plugins.pmd.PmdReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[PMD] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-    </hudson.plugins.pmd.PmdReporter>
     <hudson.plugins.findbugs.FindBugsReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -69,6 +65,22 @@
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
     </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.pmd.PmdReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[PMD] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+    </hudson.plugins.pmd.PmdReporter>
+    <hudson.plugins.dry.DryReporter>
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[DRY] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <highThreshold>50</highThreshold>
+      <normalThreshold>25</normalThreshold>
+    </hudson.plugins.dry.DryReporter>
     <hudson.plugins.tasks.TasksReporter>
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -82,15 +94,6 @@
       <low></low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
-    <hudson.plugins.dry.DryReporter>
-      <healthy></healthy>
-      <unHealthy></unHealthy>
-      <pluginName>[DRY] </pluginName>
-      <thresholdLimit>low</thresholdLimit>
-      <canRunOnFailed>false</canRunOnFailed>
-      <highThreshold>50</highThreshold>
-      <normalThreshold>25</normalThreshold>
-    </hudson.plugins.dry.DryReporter>
     <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
       <config>
         <suppressions class="tree-set">
@@ -263,6 +266,7 @@
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <shouldDetectModules>false</shouldDetectModules>
     </hudson.plugins.analysis.collector.AnalysisPublisher>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
@@ -272,17 +276,6 @@
     <hudson.plugins.emailext.ExtendedEmailPublisher>
       <recipientList>soren.roug@eea.europa.eu, jaanus.heinlaid@gmail.com</recipientList>
       <configuredTriggers>
-        <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
-          <email>
-            <recipientList></recipientList>
-            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
-            <body>$PROJECT_DEFAULT_CONTENT</body>
-            <sendToDevelopers>true</sendToDevelopers>
-            <sendToRequester>false</sendToRequester>
-            <includeCulprits>false</includeCulprits>
-            <sendToRecipientList>true</sendToRecipientList>
-          </email>
-        </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
             <recipientList></recipientList>
@@ -294,17 +287,6 @@
             <sendToRecipientList>true</sendToRecipientList>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
-        <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
-          <email>
-            <recipientList></recipientList>
-            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
-            <body>$PROJECT_DEFAULT_CONTENT</body>
-            <sendToDevelopers>true</sendToDevelopers>
-            <sendToRequester>false</sendToRequester>
-            <includeCulprits>false</includeCulprits>
-            <sendToRecipientList>true</sendToRecipientList>
-          </email>
-        </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
       </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
