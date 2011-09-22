@@ -41,6 +41,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.plone3compat</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -117,14 +118,6 @@ cp ../../parts/xmltestreport/testreports/*eea.plone3compat*.xml xmltestreport/
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.plone3compat-plone4</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">
@@ -330,5 +323,4 @@ cp ../../parts/xmltestreport/testreports/*eea.plone3compat*.xml xmltestreport/
       <failBuild>true</failBuild>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.plone3compat</customWorkspace>
 </project>

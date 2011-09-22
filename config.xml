@@ -163,8 +163,12 @@
     <userSearchBase></userSearchBase>
     <userSearch>uid={0}</userSearch>
   </securityRealm>
+  <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
   <systemMessage>Welcome to Continuous Integration Testing site for European Environment Agency (EEA, www.eea.europa.eu)</systemMessage>
-  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter"/>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter">
+    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
+  </markupFormatter>
   <jdks>
     <jdk>
       <name>jdk50</name>
@@ -386,6 +390,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>community.eea.europa.eu</string>
         <string>eea-buildout-devel</string>
         <string>eea-buildout-hudson-trigger</string>
         <string>eea-buildout-pre-production</string>
@@ -440,6 +445,7 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[6]/jobNames/comparator"/>
         <string>DATADICT</string>
+        <string>eea.mediacentre-www</string>
         <string>Sparql Client</string>
       </jobNames>
       <jobFilters/>
@@ -504,7 +510,6 @@
         <string>eea.geotags-www</string>
         <string>eea.indicators-www</string>
         <string>eea.locationwidget-www</string>
-        <string>eea.mediacentre-www</string>
         <string>eea.pagedesign-www</string>
         <string>eea.policy.dev-www</string>
         <string>eea.promotion-www</string>
