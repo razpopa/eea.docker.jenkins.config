@@ -307,9 +307,9 @@ cp ../../parts/xmltestreport/testreports/*eea-indicators*.xml xmltestreport/
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>10</min>
+              <min>19</min>
               <max>999</max>
-              <unstable>24</unstable>
+              <unstable>19</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

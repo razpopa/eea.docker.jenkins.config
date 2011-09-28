@@ -157,7 +157,7 @@
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
   <securityRealm class="hudson.security.LDAPSecurityRealm">
-    <server>ldap2.eionet.europa.eu</server>
+    <server>ldap3.eionet.europa.eu</server>
     <rootDN>ou=Users,o=Eionet,l=Europe</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
     <userSearchBase></userSearchBase>
