@@ -385,4 +385,6 @@ See https://svn.eionet.europa.eu/projects/Reportnet/wiki/TechnicalDebt</defaultC
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
+  <prebuilders/>
+  <postbuilders/>
 </maven2-moduleset>

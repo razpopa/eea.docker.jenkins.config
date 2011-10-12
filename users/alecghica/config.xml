@@ -20,8 +20,11 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>57.0</score>
+      <score>58.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>MLmdxR8XeXu+6Y1qTWOjNgC6Ez6q4nIcaSOmEaRSayBv/dQSczY0E0jJCtGtZo3w</apiToken>
+    </jenkins.security.ApiTokenProperty>
   </properties>
 </user>

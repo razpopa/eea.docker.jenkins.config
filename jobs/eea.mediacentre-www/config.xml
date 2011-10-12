@@ -76,9 +76,6 @@ cp ../../parts/xmltestreport/testreports/*eea-mediacentre*.xml xmltestreport/
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.girls.CordellWalkerRecorder>
-      <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.mediacentre-plone4</childProjects>
       <threshold>
