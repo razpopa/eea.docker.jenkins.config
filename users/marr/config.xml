@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>voolajuh</fullName>
+  <fullName>marr</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>5SU4e8ktaW3rWu2gNyFX0JX9DTRYUCjbrvrGTVpzmrVv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>UC00geg7maxqH/uAduPWfQSn2jC0BZn0KPlLCb3kLAhv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
     <hudson.tasks.Mailer_-UserProperty/>
     <hudson.plugins.jabber.user.JabberUserProperty/>
@@ -22,7 +22,7 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>-3.0</score>
+      <score>1.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

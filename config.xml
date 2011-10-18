@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>1.409</version>
+  <version>1.434</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -177,7 +177,7 @@
         <hudson.tools.InstallSourceProperty>
           <installers>
             <hudson.tools.JDKInstaller>
-              <id>jdk-1.5.0_22-oth-JPR@CDS-CDS_Developer</id>
+              <id>jdk-1.5.0_22-oth-JPR</id>
               <acceptLicense>true</acceptLicense>
             </hudson.tools.JDKInstaller>
           </installers>
@@ -191,7 +191,7 @@
         <hudson.tools.InstallSourceProperty>
           <installers>
             <hudson.tools.JDKInstaller>
-              <id>jdk-6u22-oth-JPR@CDS-CDS_Developer</id>
+              <id>jdk-6u22-oth-JPR</id>
               <acceptLicense>true</acceptLicense>
             </hudson.tools.JDKInstaller>
           </installers>
@@ -215,16 +215,27 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>eea.tags-plone3</string>
       </jobNames>
       <jobFilters/>
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
-        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
       <includeRegex>^.+-plone3$</includeRegex>
     </listView>
@@ -266,6 +277,7 @@
         <string>eea.sitestructurediff-plone4</string>
         <string>eea.socialmedia-plone4</string>
         <string>eea.soer-plone4</string>
+        <string>eea.tags-plone4</string>
         <string>eea.themecentre-plone4</string>
         <string>eea.translations-plone4</string>
         <string>eea.versions-plone4</string>
@@ -284,11 +296,21 @@
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
-        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
       <includeRegex>.*-plone4</includeRegex>
     </listView>
@@ -301,16 +323,27 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>eea.tags-plone2</string>
       </jobNames>
       <jobFilters/>
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
-        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
       <includeRegex>^.+-plone2$</includeRegex>
     </listView>
@@ -375,11 +408,21 @@
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
-        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
     </listView>
     <listView>
@@ -401,12 +444,22 @@
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>false</showDescription>
+          <showLastBuild>false</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
         <hudson.views.LastSuccessColumn/>
         <hudson.views.BuildButtonColumn/>
-        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
     </listView>
     <listView>
@@ -429,10 +482,20 @@
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
+        <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
       </columns>
     </listView>
@@ -506,8 +569,14 @@
         <string>eea.daviz-www</string>
         <string>eea.design-www</string>
         <string>eea.eggmonkey-www</string>
+        <string>eea.epub-www</string>
         <string>eea.exhibit-www</string>
+        <string>eea.faceted.inheritance-www</string>
+        <string>eea.faceted.tool-www</string>
+        <string>eea.faceted.vocabularies-www</string>
+        <string>eea.facetednavigation-www</string>
         <string>eea.geotags-www</string>
+        <string>eea.google-www</string>
         <string>eea.indicators-www</string>
         <string>eea.locationwidget-www</string>
         <string>eea.pagedesign-www</string>
@@ -516,6 +585,7 @@
         <string>eea.signals-www</string>
         <string>eea.sitestructurediff-www</string>
         <string>eea.soer-www</string>
+        <string>eea.tags-www</string>
         <string>eea.themecentre-www</string>
         <string>eea.translations-www</string>
         <string>eea.vocab-www</string>
@@ -533,11 +603,21 @@
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>true</showDescription>
+          <showLastBuild>true</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
         <hudson.views.BuildButtonColumn/>
-        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
       <includeRegex>^.+\-www$</includeRegex>
     </listView>
@@ -556,15 +636,38 @@
       <columns>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>false</showDescription>
+          <showLastBuild>false</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.CronViewColumn/>
         <hudson.views.LastSuccessColumn/>
         <hudson.views.BuildButtonColumn/>
-        <hudson.plugins.column.console.LastBuildColumn/>
       </columns>
       <includeRegex>^.+Documentation$</includeRegex>
     </listView>
+    <hudson.plugins.iphoneview.IPhoneView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plone EEA Mobile View</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <includeRegex>.*-www</includeRegex>
+    </hudson.plugins.iphoneview.IPhoneView>
   </views>
   <primaryView>Dashboard</primaryView>
   <slaveAgentPort>0</slaveAgentPort>

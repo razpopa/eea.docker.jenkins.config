@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.skype.im.transport.SkypePublisherDescriptor>
+  <helpRedirect/>
+  <enabled>false</enabled>
+  <port>5222</port>
+  <exposePresence>true</exposePresence>
+  <enableSASL>true</enableSASL>
+  <commandPrefix>!</commandPrefix>
+  <defaultIdSuffix></defaultIdSuffix>
+</hudson.plugins.skype.im.transport.SkypePublisherDescriptor>

@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.plugins.jabber.im.transport.JabberPublisherDescriptor>
+  <helpRedirect/>
   <enabled>true</enabled>
   <port>5222</port>
   <hudsonNickname>hudson@jabber.eea.europa.eu</hudsonNickname>
@@ -10,6 +11,7 @@
   <commandPrefix>!</commandPrefix>
   <defaultIdSuffix></defaultIdSuffix>
   <subscriptionMode>accept_all</subscriptionMode>
+  <emailAddressAsJabberId>false</emailAddressAsJabberId>
   <proxyType>NONE</proxyType>
   <proxyPort>3128</proxyPort>
 </hudson.plugins.jabber.im.transport.JabberPublisherDescriptor>

@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>
+  <helpRedirect/>
   <hudsonUrl>http://ci.eionet.europa.eu/</hudsonUrl>
   <adminAddress>no-reply@eea.europa.eu</adminAddress>
   <smtpHost>localhost</smtpHost>
@@ -9,5 +10,8 @@
   <defaultBody>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
 &#xd;
 Check console output at $BUILD_URL to view the results.</defaultBody>
+  <recipientList></recipientList>
+  <maxAttachmentSize>-1</maxAttachmentSize>
   <overrideGlobalSettings>true</overrideGlobalSettings>
+  <precedenceBulk>false</precedenceBulk>
 </hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>

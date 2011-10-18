@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.scm.SubversionSCM_-DescriptorImpl>
+  <helpRedirect/>
   <generation>497</generation>
   <credentials class="hashtable">
     <entry>
@@ -12,4 +13,5 @@
   </credentials>
   <workspaceFormat>8</workspaceFormat>
   <validateRemoteUpToVar>false</validateRemoteUpToVar>
+  <storeAuthToDisk>true</storeAuthToDisk>
 </hudson.scm.SubversionSCM_-DescriptorImpl>

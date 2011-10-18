@@ -379,4 +379,6 @@ Polled for changes 24 minutes past the hour 8-22</description>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
+  <prebuilders/>
+  <postbuilders/>
 </maven2-moduleset>

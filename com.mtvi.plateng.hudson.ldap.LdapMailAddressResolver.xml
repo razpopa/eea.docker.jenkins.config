@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.mtvi.plateng.hudson.ldap.Configuration>
+  <performSearch>false</performSearch>
+</com.mtvi.plateng.hudson.ldap.Configuration>

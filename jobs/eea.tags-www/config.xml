@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run EEA RDF Marshaller tests within Plone 4 EEA Buildout</description>
+  <description>- Run EEA Tags tests within Plone 4 EEA Buildout</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -19,7 +19,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.rdfmarshaller/branches/plone4</remote>
+        <remote>https://svn.plone.org/svn/collective/eea.tags/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -42,22 +42,22 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.rdfmarshaller</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.tags</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.rdfmarshaller
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.tags
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*eea/rdfmarshaller*
+../../bin/report xml --include=*eea/tags*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*eea-rdfmarshaller*.xml xmltestreport/
+cp ../../parts/xmltestreport/testreports/*eea.tags*.xml xmltestreport/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -123,7 +123,7 @@ cp ../../parts/xmltestreport/testreports/*eea-rdfmarshaller*.xml xmltestreport/
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.BuildTrigger>
-      <childProjects>eea.rdfmarshaller-plone4</childProjects>
+      <childProjects>eea.tags-plone4</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -309,7 +309,7 @@ cp ../../parts/xmltestreport/testreports/*eea-rdfmarshaller*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>20</unstable>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -347,12 +347,12 @@ cp ../../parts/xmltestreport/testreports/*eea-rdfmarshaller*.xml xmltestreport/
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>true</sendToIndividuals>
+      <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alec@jabber.eaudeweb.ro</value>
+          <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

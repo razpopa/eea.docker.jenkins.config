@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.scm.BlameSubversionSCM_-DescriptorImpl>
+  <helpRedirect/>
+  <generation>1</generation>
+  <credentials class="hashtable"/>
+</hudson.scm.BlameSubversionSCM_-DescriptorImpl>

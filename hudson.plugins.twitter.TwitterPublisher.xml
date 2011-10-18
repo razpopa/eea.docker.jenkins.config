@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.plugins.twitter.TwitterPublisher_-DescriptorImpl>
+  <helpRedirect/>
   <token></token>
   <tokenSecret></tokenSecret>
   <hudsonUrl>http://ci.eionet.europa.eu/</hudsonUrl>

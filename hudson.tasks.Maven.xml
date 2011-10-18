@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.tasks.Maven_-DescriptorImpl>
+  <helpRedirect/>
   <installations>
     <hudson.tasks.Maven_-MavenInstallation>
       <name>maven302</name>
-      <home></home>
       <properties>
         <hudson.tools.InstallSourceProperty>
           <installers>
@@ -16,7 +16,6 @@
     </hudson.tasks.Maven_-MavenInstallation>
     <hudson.tasks.Maven_-MavenInstallation>
       <name>maven221</name>
-      <home></home>
       <properties>
         <hudson.tools.InstallSourceProperty>
           <installers>

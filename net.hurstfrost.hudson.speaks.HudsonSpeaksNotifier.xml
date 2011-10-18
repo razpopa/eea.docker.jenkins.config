@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<net.hurstfrost.hudson.speaks.HudsonSpeaksNotifier_-HudsonSpeaksDescriptor>
+  <helpRedirect/>
+  <globalTemplate>&lt;j:choose&gt;
+&lt;j:when test=&quot;${build.result!=&apos;SUCCESS&apos; || build.project.lastBuild.result!=&apos;SUCCESS&apos;}&quot;&gt;
+Your attention please. Project ${build.project.name}, build number ${build.number}: ${build.result} in ${duration}.
+&lt;j:if test=&quot;${build.result!=&apos;SUCCESS&apos;}&quot;&gt; Get fixing those bugs team!&lt;/j:if&gt;
+&lt;/j:when&gt;
+&lt;j:otherwise&gt;&lt;!-- Say nothing --&gt;&lt;/j:otherwise&gt;
+&lt;/j:choose&gt;</globalTemplate>
+</net.hurstfrost.hudson.speaks.HudsonSpeaksNotifier_-HudsonSpeaksDescriptor>

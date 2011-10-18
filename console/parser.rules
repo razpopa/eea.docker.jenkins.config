@@ -1,0 +1,22 @@
+# OK
+ok /0 errors/
+ok /0 failures/
+
+# Errors
+error /[Ee]rror/
+error /ERROR/
+error /Failed example:/
+error /cp: cannot stat/
+error /No data to report/
+error /UNSTABLE/
+error /[Ff]ailure/
+error /[Aa]borted/
+
+# Warnings
+warning /[Ww]arning/
+warning /WARNING/
+
+# Info
+info /[Ii]nfo/
+info /INFO/
+info /Ran /
