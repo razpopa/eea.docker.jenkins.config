@@ -445,7 +445,61 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
       <emailAddress>alin.voinea@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty>
-      <favorites/>
+      <favorites>
+        <string>eea.facetednavigation-plone2</string>
+        <string>eea.geotags-plone2</string>
+        <string>eea.tags-plone2</string>
+        <string>eea.facetednavigation-plone3</string>
+        <string>eea.geotags-plone3</string>
+        <string>eea.tags-plone3</string>
+        <string>eea.alchemy</string>
+        <string>eea.dataservice</string>
+        <string>eea.daviz</string>
+        <string>eea.exhibit</string>
+        <string>eea.faceted.inheritance</string>
+        <string>eea.faceted.tool</string>
+        <string>eea.faceted.vocabularies</string>
+        <string>eea.facetednavigation</string>
+        <string>eea.geotags</string>
+        <string>eea.google</string>
+        <string>eea.jquery</string>
+        <string>eea.relations</string>
+        <string>eea.reports</string>
+        <string>eea.alchemy-www</string>
+        <string>eea.dataservice-www</string>
+        <string>eea.daviz-www</string>
+        <string>eea.exhibit-www</string>
+        <string>eea.faceted.inheritance-www</string>
+        <string>eea.faceted.tool-www</string>
+        <string>eea.faceted.vocabularies-www</string>
+        <string>eea.facetednavigation-www</string>
+        <string>eea.geotags-www</string>
+        <string>eea.google-www</string>
+        <string>eea.jquery-www</string>
+        <string>eea.relations-www</string>
+        <string>eea.reports-www</string>
+        <string>eea.tags-www</string>
+        <string>Products.NavigationManager-www</string>
+        <string>eea.alchemy-plone4</string>
+        <string>eea.dataservice-plone4</string>
+        <string>eea.daviz-plone4</string>
+        <string>eea.exhibit-plone4</string>
+        <string>eea.faceted.inheritance-plone4</string>
+        <string>eea.faceted.tool-plone4</string>
+        <string>eea.faceted.vocabularies-plone4</string>
+        <string>eea.facetednavigation-plone4</string>
+        <string>eea.geotags-plone4</string>
+        <string>eea.google-plone4</string>
+        <string>eea.jquery-plone4</string>
+        <string>eea.relations-plone4</string>
+        <string>eea.reports-plone4</string>
+        <string>eea.tags-plone4</string>
+        <string>Products.NavigationManager-plone4</string>
+        <string>www.eea.europa.eu-hudson</string>
+        <string>eea-buildout-pre-production</string>
+        <string>eea-buildout-hudson-trigger</string>
+        <string>community.eea.europa.eu</string>
+      </favorites>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>
       <jid>alin@jabber.eaudeweb.ro</jid>
@@ -573,6 +627,74 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
           <topPortlets/>
           <bottomPortlets/>
         </hudson.plugins.view.dashboard.Dashboard>
+        <hudson.plugins.nested__view.NestedView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>Nested View</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+          <views>
+            <hudson.plugins.sectioned__view.SectionedView>
+              <owner class="hudson.plugins.nested_view.NestedView" reference="../../.."/>
+              <name>Sectioned View</name>
+              <filterExecutors>false</filterExecutors>
+              <filterQueue>false</filterQueue>
+              <properties class="hudson.model.View$PropertyList"/>
+              <sections>
+                <hudson.plugins.sectioned__view.TestResultViewSection>
+                  <jobNames class="tree-set">
+                    <comparator class="hudson.util.CaseInsensitiveComparator"/>
+                  </jobNames>
+                  <jobFilters/>
+                  <name>Test Results</name>
+                  <includeRegex>.*-www</includeRegex>
+                  <width>FULL</width>
+                  <alignment>CENTER</alignment>
+                </hudson.plugins.sectioned__view.TestResultViewSection>
+              </sections>
+            </hudson.plugins.sectioned__view.SectionedView>
+            <hudson.plugins.sectioned__view.SectionedView>
+              <owner class="hudson.plugins.nested_view.NestedView" reference="../../.."/>
+              <name>Another Section View</name>
+              <filterExecutors>false</filterExecutors>
+              <filterQueue>false</filterQueue>
+              <properties class="hudson.model.View$PropertyList"/>
+              <sections>
+                <hudson.plugins.sectioned__view.ListViewSection>
+                  <jobNames class="tree-set">
+                    <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.sectioned__view.SectionedView/sections/hudson.plugins.sectioned__view.TestResultViewSection/jobNames/comparator"/>
+                  </jobNames>
+                  <jobFilters/>
+                  <name>List View</name>
+                  <includeRegex>.*-www</includeRegex>
+                  <width>FULL</width>
+                  <alignment>CENTER</alignment>
+                  <columns>
+                    <hudson.plugins.favorite.column.FavoriteColumn/>
+                    <hudson.views.StatusColumn/>
+                    <hudson.views.WeatherColumn/>
+                    <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+                      <colorblindHint>nohint</colorblindHint>
+                      <showColor>false</showColor>
+                      <showDescription>true</showDescription>
+                      <showLastBuild>true</showLastBuild>
+                    </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+                    <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+                      <colorblindHint>nohint</colorblindHint>
+                      <timeAgoTypeString>DIFF</timeAgoTypeString>
+                      <onlyShowLastStatus>false</onlyShowLastStatus>
+                      <hideDays>0</hideDays>
+                    </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+                    <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
+                    <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+                    <hudson.views.BuildButtonColumn/>
+                  </columns>
+                </hudson.plugins.sectioned__view.ListViewSection>
+              </sections>
+            </hudson.plugins.sectioned__view.SectionedView>
+          </views>
+          <defaultView>Another Section View</defaultView>
+        </hudson.plugins.nested__view.NestedView>
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
