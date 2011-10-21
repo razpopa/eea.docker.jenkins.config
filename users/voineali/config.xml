@@ -438,12 +438,9 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>639.0</score>
+      <score>30325.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>alin.voinea@gmail.com</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty>
       <favorites>
         <string>eea.facetednavigation-plone2</string>
@@ -710,5 +707,8 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
     <hudson.plugins.skype.user.SkypeUserProperty>
       <skypeId>alin.voinea</skypeId>
     </hudson.plugins.skype.user.SkypeUserProperty>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>alin.voinea@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>
