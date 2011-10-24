@@ -363,7 +363,7 @@ Polled for changes 24 minutes past the hour 8-22</description>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
-            <recipientList></recipientList>
+            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>true</sendToDevelopers>
@@ -379,6 +379,4 @@ Polled for changes 24 minutes past the hour 8-22</description>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
-  <prebuilders/>
-  <postbuilders/>
 </maven2-moduleset>
