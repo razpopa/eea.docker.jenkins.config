@@ -13,12 +13,16 @@
     <hudson.plugins.trac.TracProjectProperty>
       <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty>
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty/>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
   </properties>
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.reports/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.reports/branches/plone25</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -31,7 +35,7 @@
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
@@ -107,12 +111,17 @@ cp ../../parts/xmltestreport/testreports/*eea-reports*.xml xmltestreport/</comma
         <failedNewLow></failedNewLow>
       </thresholds>
       <shouldDetectModules>false</shouldDetectModules>
-      <pattern>**/zptlint.log, **/pyflakes.log</pattern>
-      <parserNames>
-        <string>zptlint</string>
-        <string>pyflakes</string>
-      </parserNames>
-      <ignoreConsole>true</ignoreConsole>
+      <parserConfigurations>
+        <hudson.plugins.warnings.ParserConfiguration>
+          <pattern>**/zptlint.log, **/pyflakes.log</pattern>
+          <parserName>zptlint</parserName>
+        </hudson.plugins.warnings.ParserConfiguration>
+        <hudson.plugins.warnings.ParserConfiguration>
+          <pattern>**/zptlint.log, **/pyflakes.log</pattern>
+          <parserName>pyflakes</parserName>
+        </hudson.plugins.warnings.ParserConfiguration>
+      </parserConfigurations>
+      <consoleLogParsers/>
     </hudson.plugins.warnings.WarningsPublisher>
     <hudson.plugins.chucknorris.CordellWalkerRecorder>
       <factGenerator/>
@@ -196,6 +205,28 @@ cp ../../parts/xmltestreport/testreports/*eea-reports*.xml xmltestreport/</comma
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
+            <string>cpplint</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>cpplint</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>csslint</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>csslint</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
             <string>findbugs</string>
             <hudson.plugins.violations.TypeConfig>
               <type>findbugs</type>
@@ -248,6 +279,17 @@ cp ../../parts/xmltestreport/testreports/*eea-reports*.xml xmltestreport/</comma
               <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>pep8</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>pep8</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
@@ -320,6 +362,7 @@ cp ../../parts/xmltestreport/testreports/*eea-reports*.xml xmltestreport/</comma
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
       <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
+      <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>

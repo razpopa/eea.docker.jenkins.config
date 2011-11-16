@@ -23,7 +23,7 @@
       <emailAddress>soren.roug@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>1446.0</score>
+      <score>1458.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
@@ -32,5 +32,10 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>G7fBkLlYlqR3wpHrNYKxmkY9E4Y5yTUw/PwXasqHkAFv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty>
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty/>
   </properties>
 </user>

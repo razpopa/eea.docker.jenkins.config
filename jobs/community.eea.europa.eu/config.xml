@@ -13,6 +13,9 @@
     <hudson.plugins.trac.TracProjectProperty>
       <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty>
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty/>
     <hudson.plugins.disk__usage.DiskUsageProperty/>
   </properties>
@@ -32,7 +35,7 @@
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
@@ -49,14 +52,23 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-python bootstrap.py
-bin/buildout</command>
+./install.sh
+./bin/buildout -c hudson.cfg</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+./bin/instance-uptest</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.plugins.logparser.LogParserPublisher>
+      <unstableOnWarning>false</unstableOnWarning>
+      <failBuildOnError>false</failBuildOnError>
+      <parsingRulesPath>/var/lib/jenkins/console/parser.rules</parsingRulesPath>
+    </hudson.plugins.logparser.LogParserPublisher>
     <hudson.plugins.cigame.GamePublisher/>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>

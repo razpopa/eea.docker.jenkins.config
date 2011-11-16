@@ -404,7 +404,6 @@
           <properties class="hudson.model.View$PropertyList"/>
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
-            <string>community.eea.europa.eu</string>
           </jobNames>
           <jobFilters/>
           <columns>
@@ -429,7 +428,7 @@
             <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
             <hudson.views.BuildButtonColumn/>
           </columns>
-          <includeRegex>[eea|Products|valentine].[^\-]+</includeRegex>
+          <includeRegex>^[eea|Products|valentine].[^\-]+$</includeRegex>
           <statusFilter>true</statusFilter>
         </listView>
         <listView>

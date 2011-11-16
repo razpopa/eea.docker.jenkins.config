@@ -32,5 +32,10 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>QyHkTz9q6Oncve8gM4g1hQ15dKyn2wM4PvvRYVtzdgVv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty>
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty/>
   </properties>
 </user>

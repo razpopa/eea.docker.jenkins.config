@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.EEAPloneAdmin/branches/plone4</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.EEAPloneAdmin/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -315,9 +315,9 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>15</min>
-              <max>20</max>
-              <unstable>16</unstable>
+              <min>17</min>
+              <max>22</max>
+              <unstable>18</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

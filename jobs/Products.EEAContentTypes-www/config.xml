@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.EEAContentTypes/branches/plone4</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.EEAContentTypes/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>

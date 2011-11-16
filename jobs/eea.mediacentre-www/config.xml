@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.mediacentre/branches/plone4</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.mediacentre/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -246,9 +246,9 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
             <string>jslint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
-              <min>74</min>
-              <max>78</max>
-              <unstable>75</unstable>
+              <min>159</min>
+              <max>161</max>
+              <unstable>160</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -279,9 +279,9 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>0</min>
+              <min>2</min>
               <max>5</max>
-              <unstable>1</unstable>
+              <unstable>3</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
