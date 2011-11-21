@@ -418,17 +418,28 @@ Polls SVN every 12 minutes past the hour 8-22</description>
             <sendToRecipientList>true</sendToRecipientList>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+        <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
+          <email>
+            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>true</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>true</sendToRecipientList>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
       </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
-
-Check console output at $BUILD_URL to view the results.
-
-    == Now fix 1 FindBugs and 10 Checkstyle violations! ==
-
-Violations report: ${BUILD_URL}eionet.cr$cr3/violations/
-
+      <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
+&#xd;
+Check console output at $BUILD_URL to view the results.&#xd;
+&#xd;
+    == Now fix 1 FindBugs and 10 Checkstyle violations! ==&#xd;
+&#xd;
+Violations report: ${BUILD_URL}eionet.cr$cr3/violations/&#xd;
+&#xd;
 See https://svn.eionet.europa.eu/projects/Reportnet/wiki/TechnicalDebt</defaultContent>
       <attachmentsPattern></attachmentsPattern>
     </hudson.plugins.emailext.ExtendedEmailPublisher>

@@ -92,11 +92,11 @@ cp ../../parts/xmltestreport/testreports/*eea-indicators*.xml xmltestreport/
       <canRunOnFailed>true</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds>
-        <unstableTotalAll>4</unstableTotalAll>
+        <unstableTotalAll>1</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll></unstableNewAll>
+        <unstableNewAll>1</unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
         <unstableNewLow></unstableNewLow>
@@ -310,9 +310,9 @@ cp ../../parts/xmltestreport/testreports/*eea-indicators*.xml xmltestreport/
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>30</min>
-              <max>999</max>
-              <unstable>30</unstable>
+              <min>21</min>
+              <max>26</max>
+              <unstable>22</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

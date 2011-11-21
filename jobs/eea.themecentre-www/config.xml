@@ -92,11 +92,11 @@ cp ../../parts/xmltestreport/testreports/*eea-themecentre*.xml xmltestreport/
       <canRunOnFailed>true</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds>
-        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalAll>1</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll>0</unstableNewAll>
+        <unstableNewAll>1</unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
         <unstableNewLow></unstableNewLow>
@@ -315,9 +315,9 @@ cp ../../parts/xmltestreport/testreports/*eea-themecentre*.xml xmltestreport/
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>2</min>
-              <max>7</max>
-              <unstable>3</unstable>
+              <min>4</min>
+              <max>9</max>
+              <unstable>5</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

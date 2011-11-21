@@ -5,29 +5,29 @@
     <hudson.plugins.warnings.GroovyParser>
       <name>zptlint</name>
       <regexp>^.*in:\s(\S*)\s*(?:\&lt;class\s&apos;)?(\S*)(?:&apos;\&gt;)?:\s(.*)\s*,.*line\s*([0-9]*).*$</regexp>
-      <script>import hudson.plugins.warnings.parser.Warning
-import hudson.plugins.analysis.util.model.Priority
-
-String fileName = matcher.group(1)
-String category = matcher.group(2)
-String message = matcher.group(3)
-String lineNumber = matcher.group(4)
-
+      <script>import hudson.plugins.warnings.parser.Warning&#xd;
+import hudson.plugins.analysis.util.model.Priority&#xd;
+&#xd;
+String fileName = matcher.group(1)&#xd;
+String category = matcher.group(2)&#xd;
+String message = matcher.group(3)&#xd;
+String lineNumber = matcher.group(4)&#xd;
+&#xd;
 return new Warning(fileName, Integer.parseInt(lineNumber), category, &quot;ZPTLint Parser&quot;, message, Priority.HIGH)</script>
       <example></example>
     </hudson.plugins.warnings.GroovyParser>
     <hudson.plugins.warnings.GroovyParser>
       <name>pyflakes</name>
       <regexp>^(.*):([0-9]*):(.*)$</regexp>
-      <script>import hudson.plugins.warnings.parser.Warning
-import hudson.plugins.analysis.util.model.Priority
-
-String fileName = matcher.group(1)
-String category = &quot;PyFlakes Error&quot;
-String lineNumber = matcher.group(2)
-String message = matcher.group(3)
-
-return new Warning(fileName, Integer.parseInt(lineNumber), category, &quot;PyFlakes Parser&quot;, message, Priority.NORMAL)
+      <script>import hudson.plugins.warnings.parser.Warning&#xd;
+import hudson.plugins.analysis.util.model.Priority&#xd;
+&#xd;
+String fileName = matcher.group(1)&#xd;
+String category = &quot;PyFlakes Error&quot;&#xd;
+String lineNumber = matcher.group(2)&#xd;
+String message = matcher.group(3)&#xd;
+&#xd;
+return new Warning(fileName, Integer.parseInt(lineNumber), category, &quot;PyFlakes Parser&quot;, message, Priority.NORMAL)&#xd;
 </script>
       <example></example>
     </hudson.plugins.warnings.GroovyParser>

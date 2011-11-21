@@ -28,6 +28,7 @@
     <permission>hudson.model.Hudson.Administer:roug</permission>
     <permission>hudson.model.Hudson.Administer:tiberich</permission>
     <permission>hudson.model.Hudson.Administer:voineali</permission>
+    <permission>hudson.model.Hudson.Read:altnyris</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Hudson.Read:batradav</permission>
     <permission>hudson.model.Hudson.Read:ciobabog</permission>
@@ -38,6 +39,7 @@
     <permission>hudson.model.Hudson.Read:roug</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
+    <permission>hudson.model.Item.Build:altnyris</permission>
     <permission>hudson.model.Item.Build:batradav</permission>
     <permission>hudson.model.Item.Build:ciobabog</permission>
     <permission>hudson.model.Item.Build:demarant</permission>
@@ -48,6 +50,7 @@
     <permission>hudson.model.Item.Build:szabozo0</permission>
     <permission>hudson.model.Item.Build:tiberich</permission>
     <permission>hudson.model.Item.Build:voineali</permission>
+    <permission>hudson.model.Item.Configure:altnyris</permission>
     <permission>hudson.model.Item.Configure:batradav</permission>
     <permission>hudson.model.Item.Configure:ciobabog</permission>
     <permission>hudson.model.Item.Configure:demarant</permission>
@@ -58,6 +61,7 @@
     <permission>hudson.model.Item.Configure:szabozo0</permission>
     <permission>hudson.model.Item.Configure:tiberich</permission>
     <permission>hudson.model.Item.Configure:voineali</permission>
+    <permission>hudson.model.Item.Create:altnyris</permission>
     <permission>hudson.model.Item.Create:batradav</permission>
     <permission>hudson.model.Item.Create:ciobabog</permission>
     <permission>hudson.model.Item.Create:demarant</permission>
@@ -68,6 +72,7 @@
     <permission>hudson.model.Item.Create:szabozo0</permission>
     <permission>hudson.model.Item.Create:tiberich</permission>
     <permission>hudson.model.Item.Create:voineali</permission>
+    <permission>hudson.model.Item.Delete:altnyris</permission>
     <permission>hudson.model.Item.Delete:batradav</permission>
     <permission>hudson.model.Item.Delete:ciobabog</permission>
     <permission>hudson.model.Item.Delete:demarant</permission>
@@ -78,6 +83,7 @@
     <permission>hudson.model.Item.Delete:szabozo0</permission>
     <permission>hudson.model.Item.Delete:tiberich</permission>
     <permission>hudson.model.Item.Delete:voineali</permission>
+    <permission>hudson.model.Item.Read:altnyris</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:batradav</permission>
     <permission>hudson.model.Item.Read:ciobabog</permission>
@@ -89,6 +95,7 @@
     <permission>hudson.model.Item.Read:szabozo0</permission>
     <permission>hudson.model.Item.Read:tiberich</permission>
     <permission>hudson.model.Item.Read:voineali</permission>
+    <permission>hudson.model.Item.Release:altnyris</permission>
     <permission>hudson.model.Item.Release:batradav</permission>
     <permission>hudson.model.Item.Release:ciobabog</permission>
     <permission>hudson.model.Item.Release:demarant</permission>
@@ -99,6 +106,7 @@
     <permission>hudson.model.Item.Release:szabozo0</permission>
     <permission>hudson.model.Item.Release:tiberich</permission>
     <permission>hudson.model.Item.Release:voineali</permission>
+    <permission>hudson.model.Item.Workspace:altnyris</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
     <permission>hudson.model.Item.Workspace:heinlja</permission>
@@ -106,6 +114,7 @@
     <permission>hudson.model.Item.Workspace:roug</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
+    <permission>hudson.model.Run.Delete:altnyris</permission>
     <permission>hudson.model.Run.Delete:batradav</permission>
     <permission>hudson.model.Run.Delete:ciobabog</permission>
     <permission>hudson.model.Run.Delete:demarant</permission>
@@ -116,6 +125,7 @@
     <permission>hudson.model.Run.Delete:szabozo0</permission>
     <permission>hudson.model.Run.Delete:tiberich</permission>
     <permission>hudson.model.Run.Delete:voineali</permission>
+    <permission>hudson.model.Run.Update:altnyris</permission>
     <permission>hudson.model.Run.Update:batradav</permission>
     <permission>hudson.model.Run.Update:ciobabog</permission>
     <permission>hudson.model.Run.Update:demarant</permission>
@@ -295,6 +305,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[2]/jobNames/comparator"/>
         <string>DATADICT</string>
         <string>eea.mediacentre-www</string>
+        <string>jenkins-up2date</string>
         <string>Sparql Client</string>
       </jobNames>
       <jobFilters/>
@@ -386,7 +397,7 @@
       </jobNames>
       <jobFilters/>
       <columns/>
-      <includeRegex>.*-www</includeRegex>
+      <includeRegex>.*-(www|plone4)</includeRegex>
     </hudson.plugins.iphoneview.IPhoneView>
     <hudson.plugins.nested__view.NestedView>
       <owner class="hudson" reference="../../.."/>
@@ -531,6 +542,9 @@
           <properties class="hudson.model.View$PropertyList"/>
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
+            <string>eea.aoamap-www</string>
+            <string>eea.forms-www</string>
+            <string>Products.EEAEnquiry-www</string>
           </jobNames>
           <jobFilters/>
           <columns>
@@ -566,6 +580,9 @@
           <properties class="hudson.model.View$PropertyList"/>
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
+            <string>eea.aoamap-plone4</string>
+            <string>eea.forms-plone4</string>
+            <string>Products.EEAEnquiry-plone4</string>
           </jobNames>
           <jobFilters/>
           <columns>
