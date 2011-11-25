@@ -50,7 +50,7 @@ Polled for changes 24 minutes past the hour 8-22</description>
     <groupId>eionet.eunis</groupId>
     <artifactId>eunis</artifactId>
   </rootModule>
-  <goals>-Denv=live install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
+  <goals>-Denv=unittest install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>

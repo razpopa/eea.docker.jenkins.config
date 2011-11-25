@@ -230,6 +230,7 @@
         <string>eea-buildout-pre-production</string>
         <string>www.eea.europa.eu-devel</string>
         <string>www.eea.europa.eu-hudson</string>
+        <string>www.eea.europa.eu-pre-production</string>
       </jobNames>
       <jobFilters/>
       <columns>
