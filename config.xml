@@ -545,6 +545,7 @@
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-www</string>
             <string>eea.forms-www</string>
+            <string>eea.sparql-plone4</string>
             <string>Products.EEAEnquiry-www</string>
           </jobNames>
           <jobFilters/>
