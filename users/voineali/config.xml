@@ -438,30 +438,12 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>32544.0</score>
+      <score>32572.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty>
       <favorites>
-        <string>eea.facetednavigation-plone2</string>
-        <string>eea.geotags-plone2</string>
-        <string>eea.tags-plone2</string>
-        <string>eea.facetednavigation-plone3</string>
-        <string>eea.geotags-plone3</string>
-        <string>eea.tags-plone3</string>
-        <string>eea.alchemy</string>
-        <string>eea.dataservice</string>
-        <string>eea.daviz</string>
-        <string>eea.exhibit</string>
-        <string>eea.faceted.inheritance</string>
-        <string>eea.faceted.tool</string>
         <string>eea.faceted.vocabularies</string>
-        <string>eea.facetednavigation</string>
-        <string>eea.geotags</string>
-        <string>eea.google</string>
-        <string>eea.jquery</string>
-        <string>eea.relations</string>
-        <string>eea.reports</string>
         <string>eea.alchemy-www</string>
         <string>eea.dataservice-www</string>
         <string>eea.daviz-www</string>
@@ -493,9 +475,10 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
         <string>eea.tags-plone4</string>
         <string>Products.NavigationManager-plone4</string>
         <string>www.eea.europa.eu-hudson</string>
-        <string>eea-buildout-pre-production</string>
-        <string>eea-buildout-hudson-trigger</string>
         <string>community.eea.europa.eu</string>
+        <string>www.eea.europa.eu-devel</string>
+        <string>www.eea.europa.eu-pre-production</string>
+        <string>EEA Plone 4 API Documentation</string>
       </favorites>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>

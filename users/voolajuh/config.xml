@@ -22,7 +22,7 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>23.0</score>
+      <score>25.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>

@@ -13,6 +13,7 @@
     <permission>hudson.model.Computer.Configure:szabozo0</permission>
     <permission>hudson.model.Computer.Configure:tiberich</permission>
     <permission>hudson.model.Computer.Configure:voineali</permission>
+    <permission>hudson.model.Computer.Create:voineali</permission>
     <permission>hudson.model.Computer.Delete:batradav</permission>
     <permission>hudson.model.Computer.Delete:ciobabog</permission>
     <permission>hudson.model.Computer.Delete:demarant</permission>
@@ -26,6 +27,7 @@
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>
     <permission>hudson.model.Hudson.Administer:ichimdav</permission>
     <permission>hudson.model.Hudson.Administer:roug</permission>
+    <permission>hudson.model.Hudson.Administer:szabozo0</permission>
     <permission>hudson.model.Hudson.Administer:tiberich</permission>
     <permission>hudson.model.Hudson.Administer:voineali</permission>
     <permission>hudson.model.Hudson.Read:altnyris</permission>
@@ -37,8 +39,10 @@
     <permission>hudson.model.Hudson.Read:heinlja</permission>
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
     <permission>hudson.model.Hudson.Read:roug</permission>
+    <permission>hudson.model.Hudson.Read:szabozo0</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
+    <permission>hudson.model.Hudson.RunScripts:voineali</permission>
     <permission>hudson.model.Item.Build:altnyris</permission>
     <permission>hudson.model.Item.Build:batradav</permission>
     <permission>hudson.model.Item.Build:ciobabog</permission>
@@ -112,6 +116,7 @@
     <permission>hudson.model.Item.Workspace:heinlja</permission>
     <permission>hudson.model.Item.Workspace:ichimdav</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
+    <permission>hudson.model.Item.Workspace:szabozo0</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
     <permission>hudson.model.Run.Delete:altnyris</permission>
@@ -143,6 +148,7 @@
     <permission>hudson.model.View.Configure:heinlja</permission>
     <permission>hudson.model.View.Configure:ichimdav</permission>
     <permission>hudson.model.View.Configure:roug</permission>
+    <permission>hudson.model.View.Configure:szabozo0</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
     <permission>hudson.model.View.Configure:voineali</permission>
     <permission>hudson.model.View.Create:demarant</permission>
@@ -163,6 +169,7 @@
     <permission>hudson.scm.SCM.Tag:ghicaale</permission>
     <permission>hudson.scm.SCM.Tag:ichimdav</permission>
     <permission>hudson.scm.SCM.Tag:roug</permission>
+    <permission>hudson.scm.SCM.Tag:szabozo0</permission>
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
@@ -225,9 +232,6 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>community.eea.europa.eu</string>
-        <string>eea-buildout-devel</string>
-        <string>eea-buildout-hudson-trigger</string>
-        <string>eea-buildout-pre-production</string>
         <string>www.eea.europa.eu-devel</string>
         <string>www.eea.europa.eu-hudson</string>
         <string>www.eea.europa.eu-pre-production</string>
@@ -265,12 +269,14 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>ACLADMIN</string>
         <string>CR2</string>
         <string>CR3</string>
         <string>DATADICT</string>
         <string>EUNIS</string>
         <string>ROD</string>
         <string>Sparql Client</string>
+        <string>XMLCONV</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -306,8 +312,10 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[2]/jobNames/comparator"/>
         <string>DATADICT</string>
         <string>eea.mediacentre-www</string>
+        <string>eea.sparql-www</string>
         <string>jenkins-up2date</string>
         <string>Sparql Client</string>
+        <string>XMLCONV</string>
       </jobNames>
       <jobFilters/>
       <columns/>
@@ -402,132 +410,6 @@
     </hudson.plugins.iphoneview.IPhoneView>
     <hudson.plugins.nested__view.NestedView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plone 2</name>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <views>
-        <listView>
-          <owner class="hudson.plugins.nested_view.NestedView" reference="../../.."/>
-          <name>EEA</name>
-          <description>EEA Plone 2 builds</description>
-          <filterExecutors>false</filterExecutors>
-          <filterQueue>false</filterQueue>
-          <properties class="hudson.model.View$PropertyList"/>
-          <jobNames class="tree-set">
-            <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
-          </jobNames>
-          <jobFilters/>
-          <columns>
-            <hudson.plugins.favorite.column.FavoriteColumn/>
-            <hudson.views.StatusColumn/>
-            <hudson.views.WeatherColumn/>
-            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
-              <colorblindHint>nohint</colorblindHint>
-              <showColor>false</showColor>
-              <showDescription>true</showDescription>
-              <showLastBuild>true</showLastBuild>
-            </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
-              <colorblindHint>nohint</colorblindHint>
-              <timeAgoTypeString>DIFF</timeAgoTypeString>
-              <onlyShowLastStatus>false</onlyShowLastStatus>
-              <hideDays>0</hideDays>
-            </com.robestone.hudson.compactcolumns.AllStatusesColumn>
-            <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-            <hudson.plugins.CronViewColumn/>
-            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
-            <hudson.views.BuildButtonColumn/>
-          </columns>
-          <includeRegex>^[eea|Products|valentine].[^\-]+$</includeRegex>
-          <statusFilter>true</statusFilter>
-        </listView>
-        <listView>
-          <owner class="hudson.plugins.nested_view.NestedView" reference="../../.."/>
-          <name>Clean</name>
-          <description>Builds on a clean Plone 2 installation</description>
-          <filterExecutors>false</filterExecutors>
-          <filterQueue>false</filterQueue>
-          <properties class="hudson.model.View$PropertyList"/>
-          <jobNames class="tree-set">
-            <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
-          </jobNames>
-          <jobFilters/>
-          <columns>
-            <hudson.plugins.favorite.column.FavoriteColumn/>
-            <hudson.views.StatusColumn/>
-            <hudson.views.WeatherColumn/>
-            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
-              <colorblindHint>nohint</colorblindHint>
-              <showColor>false</showColor>
-              <showDescription>true</showDescription>
-              <showLastBuild>true</showLastBuild>
-            </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
-              <colorblindHint>nohint</colorblindHint>
-              <timeAgoTypeString>DIFF</timeAgoTypeString>
-              <onlyShowLastStatus>false</onlyShowLastStatus>
-              <hideDays>0</hideDays>
-            </com.robestone.hudson.compactcolumns.AllStatusesColumn>
-            <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-            <hudson.plugins.CronViewColumn/>
-            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
-            <hudson.views.BuildButtonColumn/>
-          </columns>
-          <includeRegex>^.*-plone2$</includeRegex>
-        </listView>
-      </views>
-      <defaultView>EEA</defaultView>
-    </hudson.plugins.nested__view.NestedView>
-    <hudson.plugins.nested__view.NestedView>
-      <owner class="hudson" reference="../../.."/>
-      <name>Plone 3</name>
-      <description>Plone 3 buildouts</description>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <views>
-        <listView>
-          <owner class="hudson.plugins.nested_view.NestedView" reference="../../.."/>
-          <name>Clean</name>
-          <filterExecutors>false</filterExecutors>
-          <filterQueue>false</filterQueue>
-          <properties class="hudson.model.View$PropertyList"/>
-          <jobNames class="tree-set">
-            <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
-          </jobNames>
-          <jobFilters/>
-          <columns>
-            <hudson.plugins.favorite.column.FavoriteColumn/>
-            <hudson.views.StatusColumn/>
-            <hudson.views.WeatherColumn/>
-            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
-              <colorblindHint>nohint</colorblindHint>
-              <showColor>false</showColor>
-              <showDescription>true</showDescription>
-              <showLastBuild>true</showLastBuild>
-            </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
-              <colorblindHint>nohint</colorblindHint>
-              <timeAgoTypeString>DIFF</timeAgoTypeString>
-              <onlyShowLastStatus>false</onlyShowLastStatus>
-              <hideDays>0</hideDays>
-            </com.robestone.hudson.compactcolumns.AllStatusesColumn>
-            <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-            <hudson.plugins.CronViewColumn/>
-            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
-            <hudson.views.BuildButtonColumn/>
-          </columns>
-          <includeRegex>^.*-plone3$</includeRegex>
-        </listView>
-      </views>
-      <defaultView>Clean</defaultView>
-    </hudson.plugins.nested__view.NestedView>
-    <hudson.plugins.nested__view.NestedView>
-      <owner class="hudson" reference="../../.."/>
       <name>Plone 4</name>
       <description>Plone 4 buildouts</description>
       <filterExecutors>false</filterExecutors>
@@ -545,7 +427,6 @@
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-www</string>
             <string>eea.forms-www</string>
-            <string>eea.sparql-plone4</string>
             <string>Products.EEAEnquiry-www</string>
           </jobNames>
           <jobFilters/>

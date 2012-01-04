@@ -17,7 +17,7 @@
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>-12.0</score>
+      <score>-22.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
@@ -26,5 +26,10 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>DidLaSVYdjWYr/y32PV/PyxX3YqYGBaPDXgGGrsDPGZv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty>
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty/>
   </properties>
 </user>

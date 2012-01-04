@@ -317,7 +317,7 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
               <type>pylint</type>
               <min>0</min>
               <max>999</max>
-              <unstable>26</unstable>
+              <unstable>50</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
