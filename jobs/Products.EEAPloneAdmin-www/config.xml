@@ -317,7 +317,7 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
               <type>pylint</type>
               <min>0</min>
               <max>999</max>
-              <unstable>50</unstable>
+              <unstable>35</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -359,6 +359,12 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
     </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>ichimdav@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>tiberiu@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
         <hudson.plugins.im.DefaultIMMessageTarget>
           <value>alec@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>

@@ -438,12 +438,11 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>32611.0</score>
+      <score>32647.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty>
       <favorites>
-        <string>eea.faceted.vocabularies</string>
         <string>eea.alchemy-www</string>
         <string>eea.dataservice-www</string>
         <string>eea.daviz-www</string>
@@ -479,6 +478,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
         <string>www.eea.europa.eu-devel</string>
         <string>www.eea.europa.eu-pre-production</string>
         <string>EEA Plone 4 API Documentation</string>
+        <string>eea.converter-www</string>
       </favorites>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>

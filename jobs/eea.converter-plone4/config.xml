@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA RDF Marshaller build on a clean Plone 4 instance</description>
+  <description>EEA Converter build on a clean Plone 4 instance</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.rdfmarshaller/buildouts/plone4</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.converter/buildouts/plone4</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -49,11 +49,11 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 ./install.sh
-bin/buildout</command>
+bin/buildout -c hudson.cfg</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/test -v -vv -s eea.rdfmarshaller</command>
+bin/test -v -vv -s eea.converter</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -69,13 +69,10 @@ bin/test -v -vv -s eea.rdfmarshaller</command>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>ichimdav@jabber.eaudeweb.ro</value>
+          <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>tiberiu@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alec@jabber.eaudeweb.ro</value>
+          <value>zoltan@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

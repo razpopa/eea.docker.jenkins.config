@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run Products.ThemeCentre tests</description>
+  <description>- Run EEA Converter tests within Plone 4 EEA Buildout</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.ThemeCentre/branches/plone25</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.converter/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -35,32 +35,33 @@
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>30 * * * *</spec>
+      <spec>@hourly</spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <customWorkspace>/opt/hudson/buildouts/eea-buildout-hudson/extras/Products.ThemeCentre</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.converter</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/coverage run ../../bin/xmltestreport -v -vv --nowarning -s Products.ThemeCentre
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.converter
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*Products/ThemeCentre*
+../../bin/report xml --include=*eea/converter*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestreport/</command>
+cp ../../parts/xmltestreport/testreports/*eea-converter*.xml xmltestreport/
+</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -68,19 +69,17 @@ cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestrepor
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/pyflakes-test</command>
+../../bin/pyflakes-test
+</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/pylint-test</command>
+../../bin/pylint-test
+</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/jslint-test Products</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-../../bin/epydoc-gen</command>
+../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -93,11 +92,11 @@ cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestrepor
       <canRunOnFailed>true</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds>
-        <unstableTotalAll></unstableTotalAll>
-        <unstableTotalHigh>0</unstableTotalHigh>
+        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll></unstableNewAll>
+        <unstableNewAll>0</unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
         <unstableNewLow></unstableNewLow>
@@ -123,13 +122,43 @@ cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestrepor
       </parserConfigurations>
       <consoleLogParsers/>
     </hudson.plugins.warnings.WarningsPublisher>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
-    </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.tasks.JavadocArchiver>
-      <javadocDir>apidoc</javadocDir>
-      <keepAll>false</keepAll>
-    </hudson.tasks.JavadocArchiver>
+    </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.plugins.cobertura.CoberturaPublisher>
+      <coberturaReportFile>coverage.xml</coberturaReportFile>
+      <onlyStable>true</onlyStable>
+      <healthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>80</int>
+          </entry>
+        </targets>
+      </healthyTarget>
+      <unhealthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </unhealthyTarget>
+      <failingTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </failingTarget>
+      <sourceEncoding>ASCII</sourceEncoding>
+    </hudson.plugins.cobertura.CoberturaPublisher>
+    <hudson.tasks.junit.JUnitResultArchiver>
+      <testResults>**/xmltestreport/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+    </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.violations.ViolationsPublisher>
       <config>
         <suppressions class="tree-set">
@@ -275,7 +304,7 @@ cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestrepor
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>999</unstable>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -309,6 +338,7 @@ cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestrepor
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
+    <hudson.plugins.cigame.GamePublisher/>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
@@ -318,6 +348,9 @@ cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestrepor
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
           <value>alin@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>zoltan@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -329,6 +362,14 @@ cp ../../parts/xmltestreport/testreports/*Products-ThemeCentre*.xml xmltestrepor
       <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.converter-plone4</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>

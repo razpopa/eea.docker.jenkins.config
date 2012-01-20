@@ -330,33 +330,33 @@
       <rightPortletWidth>50%</rightPortletWidth>
       <leftPortlets>
         <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
-          <id>dashboard_portlet_26</id>
+          <id>dashboard_portlet_1</id>
           <name>Unstable Jobs</name>
         </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
         <hudson.plugins.view.dashboard.stats.StatJobs>
-          <id>dashboard_portlet_27</id>
+          <id>dashboard_portlet_2</id>
           <name>Job statistics</name>
         </hudson.plugins.view.dashboard.stats.StatJobs>
         <hudson.plugins.view.dashboard.builds.LatestBuilds>
-          <id>dashboard_portlet_28</id>
+          <id>dashboard_portlet_3</id>
           <name>Latest builds</name>
-          <numBuilds>70</numBuilds>
+          <numBuilds>60</numBuilds>
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
       </leftPortlets>
       <rightPortlets>
         <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
-          <id>dashboard_portlet_29</id>
+          <id>dashboard_portlet_4</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
           <height>200</height>
           <dayCountString>30</dayCountString>
         </hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
         <hudson.plugins.view.dashboard.test.TestStatisticsChart>
-          <id>dashboard_portlet_30</id>
+          <id>dashboard_portlet_5</id>
           <name>Test Statistics Chart</name>
         </hudson.plugins.view.dashboard.test.TestStatisticsChart>
         <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
-          <id>dashboard_portlet_31</id>
+          <id>dashboard_portlet_6</id>
           <name>Code Coverages</name>
         </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
       </rightPortlets>
@@ -430,6 +430,7 @@
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-www</string>
+            <string>eea.converter-www</string>
             <string>eea.forms-www</string>
             <string>Products.EEAEnquiry-www</string>
           </jobNames>
@@ -468,6 +469,7 @@
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-plone4</string>
+            <string>eea.converter-plone4</string>
             <string>eea.forms-plone4</string>
             <string>Products.EEAEnquiry-plone4</string>
           </jobNames>

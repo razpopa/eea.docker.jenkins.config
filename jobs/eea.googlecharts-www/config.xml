@@ -125,6 +125,14 @@ cp ../../parts/xmltestreport/testreports/*eea-googlecharts*.xml xmltestreport/
     <hudson.plugins.girls.CordellWalkerRecorder>
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.googlecharts-plone4</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
     <hudson.plugins.cobertura.CoberturaPublisher>
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
