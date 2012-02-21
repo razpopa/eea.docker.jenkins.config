@@ -279,7 +279,7 @@ cp ../../parts/xmltestreport/testreports/*eea-googlecharts*.xml xmltestreport/
               <type>jslint</type>
               <min>0</min>
               <max>5</max>
-              <unstable>1</unstable>
+              <unstable>4</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -312,7 +312,7 @@ cp ../../parts/xmltestreport/testreports/*eea-googlecharts*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>5</unstable>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -347,6 +347,29 @@ cp ../../parts/xmltestreport/testreports/*eea-googlecharts*.xml xmltestreport/
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
     <hudson.plugins.cigame.GamePublisher/>
+    <hudson.tasks.Mailer>
+      <recipients>web30development@localhost</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>false</sendToIndividuals>
+    </hudson.tasks.Mailer>
+    <hudson.plugins.jabber.im.transport.JabberPublisher>
+      <targets>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>alin@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>zoltan@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+      </targets>
+      <strategy>FAILURE_AND_FIXED</strategy>
+      <notifyOnBuildStart>false</notifyOnBuildStart>
+      <notifySuspects>false</notifySuspects>
+      <notifyCulprits>false</notifyCulprits>
+      <notifyFixers>false</notifyFixers>
+      <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
+      <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
+    </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>

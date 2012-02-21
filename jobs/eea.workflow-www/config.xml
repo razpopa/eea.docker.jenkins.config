@@ -277,9 +277,9 @@ cp ../../parts/xmltestreport/testreports/*eea-workflow*.xml xmltestreport/
             <string>jslint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
-              <min>0</min>
-              <max>5</max>
-              <unstable>1</unstable>
+              <min>20</min>
+              <max>50</max>
+              <unstable>40</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -310,9 +310,9 @@ cp ../../parts/xmltestreport/testreports/*eea-workflow*.xml xmltestreport/
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>10</min>
+              <min>100</min>
               <max>999</max>
-              <unstable>5</unstable>
+              <unstable>50</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

@@ -313,12 +313,11 @@
         <string>DATADICT</string>
         <string>eea.googlecharts-plone4</string>
         <string>eea.googlecharts-www</string>
-        <string>eea.googlechartsconfig-plone4</string>
-        <string>eea.googlechartsconfig-www</string>
         <string>eea.mediacentre-www</string>
         <string>eea.sparql-www</string>
         <string>jenkins-up2date</string>
         <string>Sparql Client</string>
+        <string>unreleased-eggs</string>
         <string>XMLCONV</string>
       </jobNames>
       <jobFilters/>

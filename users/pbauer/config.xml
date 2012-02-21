@@ -1,10 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>altnyris</fullName>
+  <fullName>pbauer</fullName>
   <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>kIWdXYwQLB3nweshlRf3zewlyWasQOk0HdGzAHjPFJRv/dQSczY0E0jJCtGtZo3w</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
     <hudson.tasks.Mailer_-UserProperty/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty>
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.model.MyViewsProperty>
-      <primaryViewName>All</primaryViewName>
       <views>
         <hudson.model.AllView>
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
@@ -15,21 +22,13 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty/>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>-100.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
-    <jenkins.security.ApiTokenProperty>
-      <apiToken>3uF+sFRlkpOeexN5MGJSxwtYKwDkBycpxo5wabJfgDFv/dQSczY0E0jJCtGtZo3w</apiToken>
-    </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
-      <favorites/>
-    </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty/>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>0.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>

@@ -284,8 +284,8 @@ cp ../../parts/xmltestreport/testreports/*Products-EEAContentTypes*.xml xmltestr
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
               <min>0</min>
-              <max>5</max>
-              <unstable>56</unstable>
+              <max>999</max>
+              <unstable>88</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -318,7 +318,7 @@ cp ../../parts/xmltestreport/testreports/*Products-EEAContentTypes*.xml xmltestr
               <type>pylint</type>
               <min>0</min>
               <max>999</max>
-              <unstable>60</unstable>
+              <unstable>62</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
