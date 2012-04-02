@@ -26,7 +26,7 @@
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>5.0</score>
+      <score>14.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.tasks.Mailer_-UserProperty>

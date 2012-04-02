@@ -429,6 +429,7 @@
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-www</string>
+            <string>eea.app.visualization-www</string>
             <string>eea.converter-www</string>
             <string>eea.forms-www</string>
             <string>Products.EEAEnquiry-www</string>
@@ -468,6 +469,7 @@
           <jobNames class="tree-set">
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-plone4</string>
+            <string>eea.app.visualization-plone4</string>
             <string>eea.converter-plone4</string>
             <string>eea.forms-plone4</string>
             <string>Products.EEAEnquiry-plone4</string>

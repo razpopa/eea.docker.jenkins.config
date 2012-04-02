@@ -1,11 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>voolajuh</fullName>
+  <fullName>fafhrd91</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>5SU4e8ktaW3rWu2gNyFX0JX9DTRYUCjbrvrGTVpzmrVv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>N4M0W+ziPp/Eu1nefIvjeh3EH1cjHO5NBo/xAE5zVj5v/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <hudson.tasks.Mailer_-UserProperty/>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty>
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty/>
     <hudson.model.MyViewsProperty>
       <views>
@@ -21,14 +24,13 @@
     <hudson.plugins.openid.OpenIdUserProperty>
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>62.0</score>
+      <score>1.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
-      <favorites/>
-    </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty/>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>fafhrd91@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

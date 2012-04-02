@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>pyl- Run Products.EEAPloneAdmin tests within Plone 4 EEA Buildout</description>
+  <description>- Run EEA App Visualization tests within Plone 4 EEA Buildout</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.EEAPloneAdmin/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.app.visualization/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -45,22 +45,22 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/Products.EEAPloneAdmin</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.app.visualization</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/coverage run ../../bin/xmltestreport -v -vv -s Products.EEAPloneAdmin
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.app.visualization
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*Products/EEAPloneAdmin*
+../../bin/report xml --include=*eea/app/visualization*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestreport/
+cp ../../parts/xmltestreport/testreports/*eea-app-visualization*.xml xmltestreport/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -79,7 +79,7 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/jslint-test Products</command>
+../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -126,18 +126,13 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Products.EEAPloneAdmin-plone4</childProjects>
+      <childProjects>eea.app.visualization-plone4</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.logparser.LogParserPublisher>
-      <unstableOnWarning>false</unstableOnWarning>
-      <failBuildOnError>false</failBuildOnError>
-      <parsingRulesPath>/var/lib/jenkins/console/parser.rules</parsingRulesPath>
-    </hudson.plugins.logparser.LogParserPublisher>
     <hudson.plugins.cobertura.CoberturaPublisher>
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
@@ -315,9 +310,9 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>0</min>
+              <min>10</min>
               <max>999</max>
-              <unstable>36</unstable>
+              <unstable>5</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -360,13 +355,10 @@ cp ../../parts/xmltestreport/testreports/*Products.EEAPloneAdmin*.xml xmltestrep
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>ichimdav@jabber.eaudeweb.ro</value>
+          <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>tiberiu@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alec@jabber.eaudeweb.ro</value>
+          <value>zoltan@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

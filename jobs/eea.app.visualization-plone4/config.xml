@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Geotags build on a clean Plone 4 instance</description>
+  <description>EEA App Visualization build on a clean Plone 4 instance</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.geotags/buildouts/plone4</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.app.visualization/buildouts/plone4</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -49,11 +49,11 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 ./install.sh
-bin/buildout</command>
+bin/buildout -c hudson.cfg</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-bin/test -v -vv -s eea.geotags</command>
+bin/test -v -vv -s eea.app.visualization</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -70,9 +70,6 @@ bin/test -v -vv -s eea.geotags</command>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
           <value>alin@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alec@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
