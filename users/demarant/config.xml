@@ -49,14 +49,16 @@
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>796.0</score>
+      <score>831.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty>
       <jid>marinis@jabber.eea.europa.eu</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
-      <identifiers/>
+      <identifiers>
+        <string>https://www.google.com/accounts/o8/id?id=AItOawk_60NZaZ3kBvxJmVl7uvMq_aFohEBOf4E</string>
+      </identifiers>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
       <apiToken>BZBdcAWUVxH2dwnPi4fA+Stc1U0q5n6sQnoeq6saxsRv/dQSczY0E0jJCtGtZo3w</apiToken>

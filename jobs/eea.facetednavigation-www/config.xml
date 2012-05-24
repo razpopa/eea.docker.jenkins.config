@@ -378,7 +378,7 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost eea-facetednavigation@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>false</sendToIndividuals>
+      <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>

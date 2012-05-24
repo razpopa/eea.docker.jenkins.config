@@ -64,7 +64,7 @@ bin/test -v -vv -s eea.sparql</command>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>false</sendToIndividuals>
+      <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>

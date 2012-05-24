@@ -355,7 +355,7 @@ cp ../../parts/xmltestreport/testreports/*eea-socialmedia*.xml xmltestreport/
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alec@jabber.eaudeweb.ro</value>
+          <value>prosperini@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

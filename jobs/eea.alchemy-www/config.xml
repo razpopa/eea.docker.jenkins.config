@@ -312,7 +312,7 @@ cp ../../parts/xmltestreport/testreports/*eea-alchemy*.xml xmltestreport/
               <type>pylint</type>
               <min>0</min>
               <max>5</max>
-              <unstable>1</unstable>
+              <unstable>2</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

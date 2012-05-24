@@ -355,7 +355,13 @@ cp ../../parts/xmltestreport/testreports/*eea-dataservice*.xml xmltestreport/
     <hudson.plugins.jabber.im.transport.JabberPublisher>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget>
-          <value>alin@jabber.eaudeweb.ro</value>
+          <value>alec@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>tiberiu@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>david.ichim@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

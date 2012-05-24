@@ -357,6 +357,12 @@ cp ../../parts/xmltestreport/testreports/*eea-indicators*.xml xmltestreport/
         <hudson.plugins.im.DefaultIMMessageTarget>
           <value>tiberiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>alec@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget>
+          <value>ichimdav@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
       <notifyOnBuildStart>false</notifyOnBuildStart>

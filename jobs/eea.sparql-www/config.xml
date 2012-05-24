@@ -32,7 +32,7 @@
     <excludedUsers></excludedUsers>
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.CheckoutUpdater"/>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -312,7 +312,7 @@ cp ../../parts/xmltestreport/testreports/*eea-sparql*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>5</unstable>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
