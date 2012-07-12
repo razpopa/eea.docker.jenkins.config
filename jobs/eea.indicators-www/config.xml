@@ -81,6 +81,17 @@ cp ../../parts/xmltestreport/testreports/*eea-indicators*.xml xmltestreport/
       <command>cd ${WORKSPACE}
 ../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>exit 0
+cd ${WORKSPACE}
+COUNT=`find . -name *.pt | xargs ../../bin/i18ndude find-untranslated -n | wc -l`
+if [[ $COUNT &gt; 0 ]] ; then
+   echo &quot;***********************&quot;
+   echo &quot;* Error: i18ndude found files that were not translated&quot;
+   echo &quot;***********************&quot;
+   exit 1
+fi</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.warnings.WarningsPublisher>

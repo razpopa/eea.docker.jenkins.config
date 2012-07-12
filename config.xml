@@ -38,6 +38,7 @@
     <permission>hudson.model.Hudson.Read:ghicaale</permission>
     <permission>hudson.model.Hudson.Read:heinlja</permission>
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
+    <permission>hudson.model.Hudson.Read:moregale</permission>
     <permission>hudson.model.Hudson.Read:roug</permission>
     <permission>hudson.model.Hudson.Read:szabozo0</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
@@ -50,6 +51,7 @@
     <permission>hudson.model.Item.Build:ghicaale</permission>
     <permission>hudson.model.Item.Build:heinlja</permission>
     <permission>hudson.model.Item.Build:ichimdav</permission>
+    <permission>hudson.model.Item.Build:moregale</permission>
     <permission>hudson.model.Item.Build:roug</permission>
     <permission>hudson.model.Item.Build:szabozo0</permission>
     <permission>hudson.model.Item.Build:tiberich</permission>
@@ -61,6 +63,7 @@
     <permission>hudson.model.Item.Configure:ghicaale</permission>
     <permission>hudson.model.Item.Configure:heinlja</permission>
     <permission>hudson.model.Item.Configure:ichimdav</permission>
+    <permission>hudson.model.Item.Configure:moregale</permission>
     <permission>hudson.model.Item.Configure:roug</permission>
     <permission>hudson.model.Item.Configure:szabozo0</permission>
     <permission>hudson.model.Item.Configure:tiberich</permission>
@@ -72,6 +75,7 @@
     <permission>hudson.model.Item.Create:ghicaale</permission>
     <permission>hudson.model.Item.Create:heinlja</permission>
     <permission>hudson.model.Item.Create:ichimdav</permission>
+    <permission>hudson.model.Item.Create:moregale</permission>
     <permission>hudson.model.Item.Create:roug</permission>
     <permission>hudson.model.Item.Create:szabozo0</permission>
     <permission>hudson.model.Item.Create:tiberich</permission>
@@ -83,6 +87,7 @@
     <permission>hudson.model.Item.Delete:ghicaale</permission>
     <permission>hudson.model.Item.Delete:heinlja</permission>
     <permission>hudson.model.Item.Delete:ichimdav</permission>
+    <permission>hudson.model.Item.Delete:moregale</permission>
     <permission>hudson.model.Item.Delete:roug</permission>
     <permission>hudson.model.Item.Delete:szabozo0</permission>
     <permission>hudson.model.Item.Delete:tiberich</permission>
@@ -95,6 +100,7 @@
     <permission>hudson.model.Item.Read:ghicaale</permission>
     <permission>hudson.model.Item.Read:heinlja</permission>
     <permission>hudson.model.Item.Read:ichimdav</permission>
+    <permission>hudson.model.Item.Read:moregale</permission>
     <permission>hudson.model.Item.Read:roug</permission>
     <permission>hudson.model.Item.Read:szabozo0</permission>
     <permission>hudson.model.Item.Read:tiberich</permission>
@@ -106,6 +112,7 @@
     <permission>hudson.model.Item.Release:ghicaale</permission>
     <permission>hudson.model.Item.Release:heinlja</permission>
     <permission>hudson.model.Item.Release:ichimdav</permission>
+    <permission>hudson.model.Item.Release:moregale</permission>
     <permission>hudson.model.Item.Release:roug</permission>
     <permission>hudson.model.Item.Release:szabozo0</permission>
     <permission>hudson.model.Item.Release:tiberich</permission>
@@ -115,6 +122,7 @@
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
     <permission>hudson.model.Item.Workspace:heinlja</permission>
     <permission>hudson.model.Item.Workspace:ichimdav</permission>
+    <permission>hudson.model.Item.Workspace:moregale</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
     <permission>hudson.model.Item.Workspace:szabozo0</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
@@ -126,6 +134,7 @@
     <permission>hudson.model.Run.Delete:ghicaale</permission>
     <permission>hudson.model.Run.Delete:heinlja</permission>
     <permission>hudson.model.Run.Delete:ichimdav</permission>
+    <permission>hudson.model.Run.Delete:moregale</permission>
     <permission>hudson.model.Run.Delete:roug</permission>
     <permission>hudson.model.Run.Delete:szabozo0</permission>
     <permission>hudson.model.Run.Delete:tiberich</permission>
@@ -137,6 +146,7 @@
     <permission>hudson.model.Run.Update:ghicaale</permission>
     <permission>hudson.model.Run.Update:heinlja</permission>
     <permission>hudson.model.Run.Update:ichimdav</permission>
+    <permission>hudson.model.Run.Update:moregale</permission>
     <permission>hudson.model.Run.Update:roug</permission>
     <permission>hudson.model.Run.Update:szabozo0</permission>
     <permission>hudson.model.Run.Update:tiberich</permission>
@@ -147,6 +157,7 @@
     <permission>hudson.model.View.Configure:ghicaale</permission>
     <permission>hudson.model.View.Configure:heinlja</permission>
     <permission>hudson.model.View.Configure:ichimdav</permission>
+    <permission>hudson.model.View.Configure:moregale</permission>
     <permission>hudson.model.View.Configure:roug</permission>
     <permission>hudson.model.View.Configure:szabozo0</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
@@ -232,6 +243,7 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>community.eea.europa.eu</string>
+        <string>daviz.eionet.europa.eu</string>
         <string>www.eea.europa.eu-devel</string>
         <string>www.eea.europa.eu-hudson</string>
         <string>www.eea.europa.eu-pre-production</string>
@@ -316,6 +328,8 @@
         <string>eea.mediacentre-www</string>
         <string>eea.sparql-www</string>
         <string>jenkins-up2date</string>
+        <string>Reportek-docs</string>
+        <string>Reportek-tests</string>
         <string>Sparql Client</string>
         <string>unreleased-eggs</string>
         <string>XMLCONV</string>

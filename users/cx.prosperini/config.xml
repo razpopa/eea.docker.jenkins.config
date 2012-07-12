@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>prospchr</fullName>
+  <fullName>cx.prosperini</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>OL71x1L/w6u+UgnPyj5swcmVpPPRE0wVgl/YqyCH6mBv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>BeYuSnCgG4Ef6eWTy8F0W8NwzxREjVTNgLZWwQGO7YJv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.tasks.Mailer_-UserProperty/>
     <hudson.plugins.favorite.user.FavoriteUserProperty>
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
@@ -27,8 +26,11 @@
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>103.0</score>
+      <score>1.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>cx.prosperini@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

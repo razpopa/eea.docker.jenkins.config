@@ -1,14 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
   <fullName>Zoltan Szabo</fullName>
-  <description></description>
+  <description>Software engineer @ Eau de Web, Romania</description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>zoltan.szabo@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>wAadnd:c920f5c8fbc2cff079ae212ba6c98a30218118601721ea2ec029de9a227505f0</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>szYYokUpK62VdLN8zBnzI+2vWNjp5iagFUiutHicImNv/dQSczY0E0jJCtGtZo3w</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
+    <hudson.plugins.greenballs.ColorBlindProperty>
+      <enabledColorBlindSupport>false</enabledColorBlindSupport>
+    </hudson.plugins.greenballs.ColorBlindProperty>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>1078.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>zoltan.szabo@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty>
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty>
+      <jid>zoltan@jabber.eaudeweb.ro</jid>
+    </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -21,23 +38,12 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>1027.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty>
-      <jid>zoltan@jabber.eaudeweb.ro</jid>
-    </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.plugins.openid.OpenIdUserProperty>
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
-    <jenkins.security.ApiTokenProperty>
-      <apiToken>szYYokUpK62VdLN8zBnzI+2vWNjp5iagFUiutHicImNv/dQSczY0E0jJCtGtZo3w</apiToken>
-    </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
-      <favorites/>
-    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
+      <authorizedKeys></authorizedKeys>
+    </org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
     <hudson.plugins.skype.user.SkypeUserProperty/>
   </properties>
 </user>
