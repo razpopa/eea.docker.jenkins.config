@@ -6,7 +6,6 @@
       <apiToken>OL71x1L/w6u+UgnPyj5swcmVpPPRE0wVgl/YqyCH6mBv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.tasks.Mailer_-UserProperty/>
     <hudson.plugins.favorite.user.FavoriteUserProperty>
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
@@ -27,8 +26,11 @@
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>103.0</score>
+      <score>125.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>christian.prosperini@eea.europa.eu</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>
