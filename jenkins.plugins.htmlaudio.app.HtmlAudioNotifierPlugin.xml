@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <jenkins.plugins.htmlaudio.app.HtmlAudioNotifierPlugin_-PluginDescriptor>
   <helpRedirect/>
-  <enabledByDefault>false</enabledByDefault>
-  <successSoundUrl></successSoundUrl>
-  <successAfterFailureSoundUrl>pop.wav</successAfterFailureSoundUrl>
-  <failureSoundUrl>horse.wav</failureSoundUrl>
+  <enabledByDefault>true</enabledByDefault>
+  <longPollingEnabled>false</longPollingEnabled>
+  <successSoundUrl>https://dl.dropbox.com/s/ces8cmkpbw5uuvo/flawless.wav?dl=1</successSoundUrl>
+  <successAfterFailureSoundUrl>https://dl.dropbox.com/s/nbu2t325x5lwg5n/excellent.wav?dl=1</successAfterFailureSoundUrl>
+  <failureSoundUrl>https://dl.dropbox.com/s/4rhrkmf5vnlvhit/fatality.wav?dl=1</failureSoundUrl>
 </jenkins.plugins.htmlaudio.app.HtmlAudioNotifierPlugin_-PluginDescriptor>

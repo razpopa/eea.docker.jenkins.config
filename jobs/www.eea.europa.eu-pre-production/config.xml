@@ -74,6 +74,7 @@ bin/www1-uptest</command>
       <targets>
         <hudson.plugins.im.GroupChatIMMessageTarget>
           <name>web3.0development@conference.jabber.eea.europa.eu</name>
+          <notificationOnly>false</notificationOnly>
         </hudson.plugins.im.GroupChatIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -90,6 +91,9 @@ bin/www1-uptest</command>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper>
       <timeoutMinutes>60</timeoutMinutes>
       <failBuild>true</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>

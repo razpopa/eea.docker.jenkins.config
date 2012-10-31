@@ -15,6 +15,8 @@ String lineNumber = matcher.group(4)
 
 return new Warning(fileName, Integer.parseInt(lineNumber), category, &quot;ZPTLint Parser&quot;, message, Priority.HIGH)</script>
       <example></example>
+      <linkName>Compiler Warnings</linkName>
+      <trendName>Compiler Warnings Trend</trendName>
     </hudson.plugins.warnings.GroovyParser>
     <hudson.plugins.warnings.GroovyParser>
       <name>pyflakes</name>
@@ -30,6 +32,8 @@ String message = matcher.group(3)
 return new Warning(fileName, Integer.parseInt(lineNumber), category, &quot;PyFlakes Parser&quot;, message, Priority.NORMAL)
 </script>
       <example></example>
+      <linkName>Compiler Warnings</linkName>
+      <trendName>Compiler Warnings Trend</trendName>
     </hudson.plugins.warnings.GroovyParser>
   </groovyParsers>
 </hudson.plugins.warnings.WarningsDescriptor>

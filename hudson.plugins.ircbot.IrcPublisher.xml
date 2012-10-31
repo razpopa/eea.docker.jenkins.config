@@ -1,6 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl>
+  <helpRedirect/>
   <enabled>false</enabled>
   <port>194</port>
+  <ssl>false</ssl>
+  <nick>jenkins-bot</nick>
+  <commandPrefix>!jenkins</commandPrefix>
   <useNotice>false</useNotice>
+  <charset>UTF-8</charset>
 </hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl>

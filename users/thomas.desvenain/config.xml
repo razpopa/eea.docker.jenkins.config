@@ -25,12 +25,16 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty/>
+    <hudson.plugins.cigame.UserScoreProperty>
+      <score>5.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
     <hudson.tasks.Mailer_-UserProperty>
       <emailAddress>thomas.desvenain@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>1.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.plugins.ircbot.IrcUserProperty/>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
   </properties>
 </user>

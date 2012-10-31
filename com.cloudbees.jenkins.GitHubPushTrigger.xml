@@ -2,10 +2,5 @@
 <com.cloudbees.jenkins.GitHubPushTrigger_-DescriptorImpl>
   <helpRedirect/>
   <manageHook>false</manageHook>
-  <credentials>
-    <com.cloudbees.jenkins.Credential>
-      <username></username>
-      <password>b/3UEnM2NBNIyQrRrWaN8A==</password>
-    </com.cloudbees.jenkins.Credential>
-  </credentials>
+  <credentials/>
 </com.cloudbees.jenkins.GitHubPushTrigger_-DescriptorImpl>

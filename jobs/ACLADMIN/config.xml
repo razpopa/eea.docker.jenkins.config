@@ -45,14 +45,14 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
-    <groupId>eionet.gdem</groupId>
+    <groupId>eionet.acl</groupId>
     <artifactId>acladmin</artifactId>
   </rootModule>
   <goals>-Denv=default -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
-  <usePrivateRepository>false</usePrivateRepository>
+  <perModuleEmail>true</perModuleEmail>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
   <archivingDisabled>false</archivingDisabled>
   <resolveDependencies>false</resolveDependencies>
@@ -87,6 +87,7 @@
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
     </hudson.plugins.checkstyle.CheckStyleReporter>
     <hudson.plugins.findbugs.FindBugsReporter>
       <healthy></healthy>
@@ -113,6 +114,7 @@
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
       <isRankActivated>false</isRankActivated>
     </hudson.plugins.findbugs.FindBugsReporter>
     <hudson.plugins.pmd.PmdReporter>
@@ -140,6 +142,7 @@
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
     </hudson.plugins.pmd.PmdReporter>
     <hudson.plugins.dry.DryReporter>
       <healthy></healthy>
@@ -166,6 +169,7 @@
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
       <highThreshold>50</highThreshold>
       <normalThreshold>25</normalThreshold>
     </hudson.plugins.dry.DryReporter>
@@ -194,6 +198,7 @@
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
       <pattern></pattern>
       <excludePattern></excludePattern>
       <high>FIXME</high>
@@ -407,6 +412,8 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <shouldDetectModules>false</shouldDetectModules>
+      <dontComputeNew>false</dontComputeNew>
+      <doNotResolveRelativePaths>false</doNotResolveRelativePaths>
       <isCheckStyleDeactivated>false</isCheckStyleDeactivated>
       <isDryDeactivated>false</isDryDeactivated>
       <isFindBugsDeactivated>false</isFindBugsDeactivated>
@@ -423,7 +430,7 @@
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
           <email>
-            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>true</sendToDevelopers>
@@ -434,7 +441,7 @@
         </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
-            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>true</sendToDevelopers>
@@ -445,7 +452,7 @@
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
           <email>
-            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>true</sendToDevelopers>
@@ -462,4 +469,6 @@
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
+  <prebuilders/>
+  <postbuilders/>
 </maven2-moduleset>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl>
+  <helpRedirect/>
+  <installations>
+    <jenkins.plugins.shiningpanda.tools.PythonInstallation>
+      <name>System</name>
+      <home>/usr</home>
+      <properties/>
+    </jenkins.plugins.shiningpanda.tools.PythonInstallation>
+  </installations>
+</jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl>

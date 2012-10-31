@@ -10,8 +10,8 @@
   <defaultBody>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
 &#xd;
 Check console output at $BUILD_URL to view the results.</defaultBody>
-  <recipientList></recipientList>
   <maxAttachmentSize>-1</maxAttachmentSize>
+  <recipientList></recipientList>
   <overrideGlobalSettings>true</overrideGlobalSettings>
   <precedenceBulk>false</precedenceBulk>
 </hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>

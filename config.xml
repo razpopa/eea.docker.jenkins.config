@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>1.432</version>
+  <version>1.477</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -191,42 +191,14 @@
     <userSearchBase></userSearchBase>
     <userSearch>uid={0}</userSearch>
   </securityRealm>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
   <systemMessage>Welcome to Continuous Integration Testing site for European Environment Agency (EEA, www.eea.europa.eu)</systemMessage>
   <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter">
     <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
   </markupFormatter>
-  <jdks>
-    <jdk>
-      <name>jdk50</name>
-      <home></home>
-      <properties>
-        <hudson.tools.InstallSourceProperty>
-          <installers>
-            <hudson.tools.JDKInstaller>
-              <id>jdk-1.5.0_22-oth-JPR</id>
-              <acceptLicense>true</acceptLicense>
-            </hudson.tools.JDKInstaller>
-          </installers>
-        </hudson.tools.InstallSourceProperty>
-      </properties>
-    </jdk>
-    <jdk>
-      <name>jdk6</name>
-      <home></home>
-      <properties>
-        <hudson.tools.InstallSourceProperty>
-          <installers>
-            <hudson.tools.JDKInstaller>
-              <id>jdk-6u27-oth-JPR</id>
-              <acceptLicense>true</acceptLicense>
-            </hudson.tools.JDKInstaller>
-          </installers>
-        </hudson.tools.InstallSourceProperty>
-      </properties>
-    </jdk>
-  </jdks>
+  <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
   <clouds/>
@@ -286,6 +258,7 @@
         <string>CR3</string>
         <string>DATADICT</string>
         <string>EUNIS</string>
+        <string>RDFExport</string>
         <string>ROD</string>
         <string>Sparql Client</string>
         <string>XMLCONV</string>
@@ -327,6 +300,8 @@
         <string>eea.googlecharts-www</string>
         <string>eea.mediacentre-www</string>
         <string>eea.sparql-www</string>
+        <string>eea.uberlisting-plone4</string>
+        <string>eea.uberlisting-www</string>
         <string>jenkins-up2date</string>
         <string>Reportek-docs</string>
         <string>Reportek-tests</string>
@@ -363,6 +338,7 @@
           <width>500</width>
           <height>200</height>
           <dayCountString>30</dayCountString>
+          <actionSelector/>
         </hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
         <hudson.plugins.view.dashboard.test.TestStatisticsChart>
           <id>dashboard_portlet_5</id>
@@ -423,12 +399,12 @@
       </jobNames>
       <jobFilters/>
       <columns/>
-      <includeRegex>.*-(www|plone4)</includeRegex>
+      <includeRegex>.*-(www|plone4|sync)</includeRegex>
     </hudson.plugins.iphoneview.IPhoneView>
     <hudson.plugins.nested__view.NestedView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plone 4</name>
-      <description>Plone 4 buildouts</description>
+      <name>Plone-Zope</name>
+      <description>Plone buildouts</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -475,7 +451,7 @@
         </listView>
         <listView>
           <owner class="hudson.plugins.nested_view.NestedView" reference="../../.."/>
-          <name>Clean</name>
+          <name>Plone4</name>
           <description>Builds on a clean Plone 4  installation</description>
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
@@ -513,9 +489,99 @@
           </columns>
           <includeRegex>.*-plone4</includeRegex>
         </listView>
+        <listView>
+          <owner class="hudson.plugins.nested_view.NestedView" reference="../../.."/>
+          <name>Zope</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+          <jobNames class="tree-set">
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+            <string>eea.app.visualization-zope</string>
+            <string>eea.converter-zope</string>
+            <string>eea.daviz-zope</string>
+            <string>eea.exhibit-zope</string>
+            <string>eea.googlecharts-zope</string>
+            <string>eea.jquery-zope</string>
+          </jobNames>
+          <jobFilters/>
+          <columns>
+            <hudson.plugins.favorite.column.FavoriteColumn/>
+            <hudson.views.WeatherColumn/>
+            <hudson.views.StatusColumn/>
+            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+              <colorblindHint>nohint</colorblindHint>
+              <showColor>false</showColor>
+              <showDescription>true</showDescription>
+              <showLastBuild>true</showLastBuild>
+            </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+              <colorblindHint>nohint</colorblindHint>
+              <timeAgoTypeString>DIFF</timeAgoTypeString>
+              <onlyShowLastStatus>false</onlyShowLastStatus>
+              <hideDays>0</hideDays>
+            </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+            <hudson.views.LastDurationColumn/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
+            <hudson.plugins.CronViewColumn/>
+            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+            <hudson.views.BuildButtonColumn/>
+          </columns>
+          <includeRegex>.*-zope</includeRegex>
+        </listView>
       </views>
       <defaultView>EEA</defaultView>
     </hudson.plugins.nested__view.NestedView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Github</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../hudson.plugins.nested__view.NestedView/views/listView[3]/jobNames/comparator"/>
+        <string>eea.app.visualization-sync</string>
+        <string>eea.cache-sync</string>
+        <string>eea.converter-sync</string>
+        <string>eea.daviz-sync</string>
+        <string>eea.depiction-sync</string>
+        <string>eea.exhibit-sync</string>
+        <string>eea.faceted.vocabularies-sync</string>
+        <string>eea.facetednavigation-sync</string>
+        <string>eea.forms-sync</string>
+        <string>eea.googlecharts-sync</string>
+        <string>eea.jquery-sync</string>
+        <string>eea.relations-sync</string>
+        <string>eea.sparql-sync</string>
+        <string>eea.tags-sync</string>
+        <string>eea.uberlisting-sync</string>
+        <string>eea.versions-sync</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.plugins.favorite.column.FavoriteColumn/>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>false</showDescription>
+          <showLastBuild>false</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
+        <hudson.plugins.CronViewColumn/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>.*-sync</includeRegex>
+    </listView>
   </views>
   <primaryView>Dashboard</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
