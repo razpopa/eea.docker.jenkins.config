@@ -184,7 +184,7 @@
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.LDAPSecurityRealm">
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.1">
     <server>ldap3.eionet.europa.eu</server>
     <rootDN>ou=Users,o=Eionet,l=Europe</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
@@ -222,25 +222,25 @@
       </jobNames>
       <jobFilters/>
       <columns>
-        <hudson.plugins.favorite.column.FavoriteColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.9"/>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <showColor>false</showColor>
           <showDescription>false</showDescription>
           <showLastBuild>false</showLastBuild>
         </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <timeAgoTypeString>DIFF</timeAgoTypeString>
           <onlyShowLastStatus>false</onlyShowLastStatus>
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-        <hudson.plugins.CronViewColumn/>
-        <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
     </listView>
@@ -265,29 +265,29 @@
       </jobNames>
       <jobFilters/>
       <columns>
-        <hudson.plugins.favorite.column.FavoriteColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.9"/>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <showColor>false</showColor>
           <showDescription>true</showDescription>
           <showLastBuild>true</showLastBuild>
         </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <timeAgoTypeString>DIFF</timeAgoTypeString>
           <onlyShowLastStatus>false</onlyShowLastStatus>
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-        <hudson.plugins.CronViewColumn/>
-        <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
     </listView>
-    <hudson.plugins.view.dashboard.Dashboard>
+    <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.3">
       <owner class="hudson" reference="../../.."/>
       <name>Dashboard</name>
       <filterExecutors>false</filterExecutors>
@@ -332,7 +332,7 @@
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
       </leftPortlets>
       <rightPortlets>
-        <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet>
+        <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet plugin="warnings@4.13">
           <id>dashboard_portlet_4</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
@@ -344,7 +344,7 @@
           <id>dashboard_portlet_5</id>
           <name>Test Statistics Chart</name>
         </hudson.plugins.view.dashboard.test.TestStatisticsChart>
-        <hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
+        <hudson.plugins.cobertura.dashboard.CoverageTablePortlet plugin="cobertura@1.5">
           <id>dashboard_portlet_6</id>
           <name>Code Coverages</name>
         </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
@@ -365,30 +365,30 @@
       </jobNames>
       <jobFilters/>
       <columns>
-        <hudson.plugins.favorite.column.FavoriteColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.9"/>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <showColor>false</showColor>
           <showDescription>false</showDescription>
           <showLastBuild>false</showLastBuild>
         </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <timeAgoTypeString>DIFF</timeAgoTypeString>
           <onlyShowLastStatus>false</onlyShowLastStatus>
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-        <hudson.plugins.CronViewColumn/>
-        <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
       <includeRegex>^.+Documentation$</includeRegex>
     </listView>
-    <hudson.plugins.iphoneview.IPhoneView>
+    <hudson.plugins.iphoneview.IPhoneView plugin="iphoneview@0.2">
       <owner class="hudson" reference="../../.."/>
       <name>Plone EEA Mobile View</name>
       <filterExecutors>false</filterExecutors>
@@ -401,7 +401,7 @@
       <columns/>
       <includeRegex>.*-(www|plone4|sync)</includeRegex>
     </hudson.plugins.iphoneview.IPhoneView>
-    <hudson.plugins.nested__view.NestedView>
+    <hudson.plugins.nested__view.NestedView plugin="nested-view@1.8">
       <owner class="hudson" reference="../../.."/>
       <name>Plone-Zope</name>
       <description>Plone buildouts</description>
@@ -426,25 +426,25 @@
           </jobNames>
           <jobFilters/>
           <columns>
-            <hudson.plugins.favorite.column.FavoriteColumn/>
+            <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.9"/>
             <hudson.views.StatusColumn/>
             <hudson.views.WeatherColumn/>
-            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+            <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <showColor>false</showColor>
               <showDescription>false</showDescription>
               <showLastBuild>false</showLastBuild>
             </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+            <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <timeAgoTypeString>DIFF</timeAgoTypeString>
               <onlyShowLastStatus>false</onlyShowLastStatus>
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-            <hudson.plugins.CronViewColumn/>
-            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+            <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+            <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
           </columns>
           <includeRegex>^.+\-www$</includeRegex>
@@ -466,25 +466,25 @@
           </jobNames>
           <jobFilters/>
           <columns>
-            <hudson.plugins.favorite.column.FavoriteColumn/>
+            <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.9"/>
             <hudson.views.StatusColumn/>
             <hudson.views.WeatherColumn/>
-            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+            <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <showColor>false</showColor>
               <showDescription>true</showDescription>
               <showLastBuild>true</showLastBuild>
             </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+            <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <timeAgoTypeString>DIFF</timeAgoTypeString>
               <onlyShowLastStatus>false</onlyShowLastStatus>
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-            <hudson.plugins.CronViewColumn/>
-            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+            <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+            <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
           </columns>
           <includeRegex>.*-plone4</includeRegex>
@@ -506,25 +506,25 @@
           </jobNames>
           <jobFilters/>
           <columns>
-            <hudson.plugins.favorite.column.FavoriteColumn/>
+            <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.9"/>
             <hudson.views.WeatherColumn/>
             <hudson.views.StatusColumn/>
-            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+            <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <showColor>false</showColor>
               <showDescription>true</showDescription>
               <showLastBuild>true</showLastBuild>
             </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+            <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <timeAgoTypeString>DIFF</timeAgoTypeString>
               <onlyShowLastStatus>false</onlyShowLastStatus>
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-            <hudson.plugins.CronViewColumn/>
-            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+            <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+            <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
           </columns>
           <includeRegex>.*-zope</includeRegex>
@@ -556,28 +556,30 @@
         <string>eea.tags-sync</string>
         <string>eea.uberlisting-sync</string>
         <string>eea.versions-sync</string>
+        <string>github-open-issues</string>
+        <string>jenkins-up2date</string>
       </jobNames>
       <jobFilters/>
       <columns>
-        <hudson.plugins.favorite.column.FavoriteColumn/>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.9"/>
         <hudson.views.StatusColumn/>
         <hudson.views.WeatherColumn/>
-        <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <showColor>false</showColor>
           <showDescription>false</showDescription>
           <showLastBuild>false</showLastBuild>
         </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-        <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
           <colorblindHint>nohint</colorblindHint>
           <timeAgoTypeString>DIFF</timeAgoTypeString>
           <onlyShowLastStatus>false</onlyShowLastStatus>
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-        <hudson.plugins.CronViewColumn/>
-        <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
       <includeRegex>.*-sync</includeRegex>

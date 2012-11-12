@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Indicators build on a clean Plone 4 instance</description>
+  <description>Check if there is any open issue with github repositories&#xd;
+</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -18,57 +19,33 @@
     </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.12"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.42">
-    <locations>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.indicators/buildouts/plone4</remote>
-        <local>.</local>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-    </locations>
-    <browser class="hudson.plugins.trac.TracRepositoryBrowser" plugin="trac@1.13"/>
-    <excludedRegions></excludedRegions>
-    <includedRegions></includedRegions>
-    <excludedUsers></excludedUsers>
-    <excludedRevprop></excludedRevprop>
-    <excludedCommitMessages></excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
-  </scm>
+  <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector">
-    <hudson.triggers.SCMTrigger>
-      <spec>@hourly</spec>
-    </hudson.triggers.SCMTrigger>
-  </triggers>
+  <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-./install.sh
-bin/buildout</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}
-bin/test -v -vv -s eea.indicators</command>
+bin/zopepy bin/github.py info var/log</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
+    <hudson.tasks.Mailer>
+      <recipients>web30development@localhost</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>false</sendToIndividuals>
+    </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.22">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
-          <value>tiberiu@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
-          <value>alec@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
-          <value>ichimdav@jabber.eaudeweb.ro</value>
+          <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -83,12 +60,13 @@ bin/test -v -vv -s eea.indicators</command>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.10">
-      <timeoutMinutes>30</timeoutMinutes>
+      <timeoutMinutes>5</timeoutMinutes>
       <failBuild>false</failBuild>
       <writingDescription>false</writingDescription>
       <timeoutPercentage>0</timeoutPercentage>
       <timeoutType>absolute</timeoutType>
       <timeoutMinutesElasticDefault>3</timeoutMinutesElasticDefault>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.2.2"/>
   </buildWrappers>
 </project>

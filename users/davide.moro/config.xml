@@ -1,11 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>voolajuh</fullName>
+  <fullName>davide.moro</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>5SU4e8ktaW3rWu2gNyFX0JX9DTRYUCjbrvrGTVpzmrVv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>KuSeSkaqlJY4j3liwOadqngR8gI+GKom3sugNh2XKJ1v/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.tasks.Mailer_-UserProperty/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22"/>
     <hudson.model.MyViewsProperty>
       <views>
@@ -21,18 +26,13 @@
     <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>91.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
-      <favorites/>
-    </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
+      <score>2.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>

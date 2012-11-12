@@ -31,7 +31,7 @@
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty/>
     <hudson.plugins.cigame.UserScoreProperty>
-      <score>9.0</score>
+      <score>12.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>

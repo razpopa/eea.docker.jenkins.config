@@ -9,7 +9,7 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>LP2BKfE+yt8NQRryV1iNe6BUgXw8hvFfIqj9biEUDwlv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1">
       <imageBytes>iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAABd8UlEQVR42ny8hXubCZbm6/vszO7O
 dHcxhBPHsWNmZmYG2ZZsGSSZZbaYmZkly7bMzMzMTipVDdM03T3dO3vnr7hHdnVuzd3d6+etrz47
 iqPvp/ec855PTlz2L853z063jo9W93YXN7dnV9cnF5cnFpbGFhZH5uYHp6ZtY+Mmx7BxyAEyDA2b
@@ -434,14 +434,14 @@ iwKJwmSnt2JKUTSL800jrANISXkm3bGOoEmlabN5FoTUh9MUU8y1FEsjCFZIeQGMa86iqWEEMQIr
 RWDFSKo0my4FDtpAUkFw2g1EYzbDgeP5cEwbnmnGscy5HAuS64TyPemiggxRIIdrQ7JMuSwbmmbA
 UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageBytes>
     </net.hurstfrost.jenkins.avatar.user.AvatarProperty>
-    <hudson.plugins.greenballs.ColorBlindProperty>
+    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>33057.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
+      <score>33220.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
       <favorites>
         <string>eea.alchemy-www</string>
         <string>eea.dataservice-www</string>
@@ -481,13 +481,13 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
         <string>eea.converter-www</string>
       </favorites>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
       <jid>alin@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.model.MyViewsProperty>
       <primaryViewName>Alin Dashboard</primaryViewName>
       <views>
-        <hudson.plugins.view.dashboard.Dashboard>
+        <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.3">
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
           <name>Alin Dashboard</name>
           <filterExecutors>false</filterExecutors>
@@ -497,27 +497,27 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
           </jobNames>
           <jobFilters>
-            <hudson.plugins.favorite.filter.FavoriteFilter/>
+            <hudson.plugins.favorite.filter.FavoriteFilter plugin="favorite@1.9"/>
           </jobFilters>
           <columns>
             <hudson.views.StatusColumn/>
             <hudson.views.WeatherColumn/>
-            <com.robestone.hudson.compactcolumns.JobNameColorColumn>
+            <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <showColor>false</showColor>
               <showDescription>true</showDescription>
               <showLastBuild>true</showLastBuild>
             </com.robestone.hudson.compactcolumns.JobNameColorColumn>
-            <com.robestone.hudson.compactcolumns.AllStatusesColumn>
+            <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.9">
               <colorblindHint>nohint</colorblindHint>
               <timeAgoTypeString>DIFF</timeAgoTypeString>
               <onlyShowLastStatus>false</onlyShowLastStatus>
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn/>
-            <hudson.plugins.CronViewColumn/>
-            <org.jenkins.ci.plugins.column.console.LastBuildColumn/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+            <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+            <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
           </columns>
           <includeRegex>.*</includeRegex>
@@ -542,7 +542,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
         </hudson.plugins.view.dashboard.Dashboard>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers>
         <string>http://alin-voinea.myopenid.com/</string>
         <string>https://me.yahoo.com/a/nJrsqGp.rsJD6YgQNiahT5FRuY3DVeAHrg--</string>
@@ -552,11 +552,11 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
     <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
       <authorizedKeys></authorizedKeys>
     </org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
-    <hudson.plugins.skype.user.SkypeUserProperty/>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.plugins.ircbot.IrcUserProperty/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
     <hudson.tasks.Mailer_-UserProperty>
       <emailAddress>alin.voinea@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
