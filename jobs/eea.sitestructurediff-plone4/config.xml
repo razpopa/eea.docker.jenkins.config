@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Translations build on a clean Plone 4 instance</description>
+  <description>EEA Sitestructurediff build on a clean Plone 4 instance</description>
   <logRotator>
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -23,7 +23,7 @@
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.44">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.translations/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.sitestructurediff/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -54,23 +54,23 @@ bin/buildout</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}/buildouts/plone4
-bin/test -v -vv -s eea.translations</command>
+bin/test -v -vv -s eea.sitestructurediff</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
     <hudson.tasks.Mailer>
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.22">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
-          <value>tiberiu@jabber.eaudeweb.ro</value>
+          <value>david.ichim@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
