@@ -10,37 +10,43 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.trac.TracProjectProperty>
-      <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
-    </hudson.plugins.trac.TracProjectProperty>
-    <hudson.plugins.disk__usage.DiskUsageProperty/>
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.11">
+      <redmineWebsite>http://taskman.eionet.europa.eu/</redmineWebsite>
+      <projectName>zope</projectName>
+      <redmineVersionNumber></redmineVersionNumber>
+    </hudson.plugins.redmine.RedmineProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.12"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.44">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.plone.org/svn/collective/valentine.linguaflow/branches/plone4</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
-    <browser class="hudson.plugins.trac.TracRepositoryBrowser"/>
+    <browser class="hudson.plugins.trac.TracRepositoryBrowser" plugin="trac@1.13"/>
     <excludedRegions></excludedRegions>
     <includedRegions></includedRegions>
     <excludedUsers></excludedUsers>
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
+    <ignoreDirPropChanges>false</ignoreDirPropChanges>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/valentine.linguaflow</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
@@ -76,9 +82,12 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
       <command>cd ${WORKSPACE}
 ../../bin/jslint-test eea</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>find . -name *.pt | xargs ../../bin/i18ndude find-untranslated -n | wc -l</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher>
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.13">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>high</thresholdLimit>
@@ -86,7 +95,7 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.43">
         <unstableTotalAll>0</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -105,12 +114,19 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
         <failedNewLow></failedNewLow>
       </thresholds>
       <shouldDetectModules>false</shouldDetectModules>
-      <pattern>**/zptlint.log, **/pyflakes.log</pattern>
-      <parserNames>
-        <string>zptlint</string>
-        <string>pyflakes</string>
-      </parserNames>
-      <ignoreConsole>true</ignoreConsole>
+      <dontComputeNew>false</dontComputeNew>
+      <doNotResolveRelativePaths>false</doNotResolveRelativePaths>
+      <parserConfigurations>
+        <hudson.plugins.warnings.ParserConfiguration>
+          <pattern>**/zptlint.log, **/pyflakes.log</pattern>
+          <parserName>zptlint</parserName>
+        </hudson.plugins.warnings.ParserConfiguration>
+        <hudson.plugins.warnings.ParserConfiguration>
+          <pattern>**/zptlint.log, **/pyflakes.log</pattern>
+          <parserName>pyflakes</parserName>
+        </hudson.plugins.warnings.ParserConfiguration>
+      </parserConfigurations>
+      <consoleParsers/>
     </hudson.plugins.warnings.WarningsPublisher>
     <hudson.tasks.junit.JUnitResultArchiver>
       <testResults>**/xmltestreport/*.xml</testResults>
@@ -125,7 +141,7 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.violations.ViolationsPublisher>
+    <hudson.plugins.violations.ViolationsPublisher plugin="violations@0.7.10">
       <config>
         <suppressions class="tree-set">
           <no-comparator/>
@@ -158,6 +174,28 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
             <string>cpd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>cpd</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>cpplint</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>cpplint</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
+            <string>csslint</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>csslint</type>
               <min>10</min>
               <max>999</max>
               <unstable>999</unstable>
@@ -221,6 +259,17 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
+            <string>pep8</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>pep8</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
@@ -271,10 +320,10 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
-    <hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.plugins.cobertura.CoberturaPublisher>
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.5">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
       <healthyTarget>
@@ -308,10 +357,10 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher/>
-    <hudson.plugins.jabber.im.transport.JabberPublisher>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.22">
       <targets>
-        <hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
           <value>tiberiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
@@ -321,14 +370,18 @@ cp ../../parts/xmltestreport/testreports/*valentine-linguaflow*.xml xmltestrepor
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.21"/>
+      <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.10">
       <timeoutMinutes>20</timeoutMinutes>
-      <failBuild>true</failBuild>
+      <failBuild>false</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
+      <timeoutMinutesElasticDefault>3</timeoutMinutesElasticDefault>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/valentine.linguaflow</customWorkspace>
 </project>

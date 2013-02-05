@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>1.477</version>
+  <version>1.489</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -254,7 +254,6 @@
       <jobNames class="tree-set">
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>ACLADMIN</string>
-        <string>CR2</string>
         <string>CR3</string>
         <string>DATADICT</string>
         <string>EUNIS</string>
@@ -303,6 +302,7 @@
         <string>eea.uberlisting-plone4</string>
         <string>eea.uberlisting-www</string>
         <string>jenkins-up2date</string>
+        <string>new-egg-versions-on-pypi</string>
         <string>Reportek-docs</string>
         <string>Reportek-tests</string>
         <string>Sparql Client</string>
@@ -534,7 +534,7 @@
     </hudson.plugins.nested__view.NestedView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Github</name>
+      <name>Utilities</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -558,6 +558,7 @@
         <string>eea.versions-sync</string>
         <string>github-open-issues</string>
         <string>jenkins-up2date</string>
+        <string>new-egg-versions-on-pypi</string>
       </jobNames>
       <jobFilters/>
       <columns>

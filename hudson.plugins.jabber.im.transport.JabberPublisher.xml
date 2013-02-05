@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.jabber.im.transport.JabberPublisherDescriptor>
+<hudson.plugins.jabber.im.transport.JabberPublisherDescriptor plugin="jabber@1.22">
   <helpRedirect/>
   <enabled>true</enabled>
   <port>5222</port>
@@ -8,9 +8,9 @@
   <exposePresence>true</exposePresence>
   <enableSASL>false</enableSASL>
   <defaultTargets>
-    <hudson.plugins.im.GroupChatIMMessageTarget>
+    <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.21">
       <name>web3.0development@conference.jabber.eea.europa.eu</name>
-      <notificationOnly>false</notificationOnly>
+      <notificationOnly>true</notificationOnly>
     </hudson.plugins.im.GroupChatIMMessageTarget>
   </defaultTargets>
   <commandPrefix>!</commandPrefix>

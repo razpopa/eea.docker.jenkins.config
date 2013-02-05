@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.depgraph__view.DependencyGraphProperty_-DescriptorImpl>
+<hudson.plugins.depgraph__view.DependencyGraphProperty_-DescriptorImpl plugin="depgraph-view@0.2">
   <helpRedirect/>
 </hudson.plugins.depgraph__view.DependencyGraphProperty_-DescriptorImpl>

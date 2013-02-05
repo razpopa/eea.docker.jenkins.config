@@ -1,10 +1,14 @@
 *.tmp
 \.*
-*.log
+*\.log
+*github-polling.log
 plugins
 monitoring
 war
 updates
+selenium-grid
+sounds
+*.jar
 *.key
 builds 
 cobertura

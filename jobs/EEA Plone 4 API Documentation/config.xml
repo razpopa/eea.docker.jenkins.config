@@ -10,17 +10,21 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.trac.TracProjectProperty>
-      <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
-    </hudson.plugins.trac.TracProjectProperty>
-    <hudson.plugins.disk__usage.DiskUsageProperty/>
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.11">
+      <redmineWebsite>http://taskman.eionet.europa.eu/</redmineWebsite>
+      <projectName>zope</projectName>
+      <redmineVersionNumber></redmineVersionNumber>
+    </hudson.plugins.redmine.RedmineProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.12"/>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>(Default)</jdk>
   <triggers class="vector">
     <hudson.triggers.TimerTrigger>
       <spec>@daily</spec>
@@ -35,11 +39,11 @@ bin/epydoc-all</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.JavadocArchiver>
+    <hudson.tasks.JavadocArchiver plugin="javadoc@1.0">
       <javadocDir>apidoc-eea</javadocDir>
       <keepAll>false</keepAll>
     </hudson.tasks.JavadocArchiver>
-    <hudson.plugins.girls.CordellWalkerRecorder>
+    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.Mailer>
@@ -47,11 +51,12 @@ bin/epydoc-all</command>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher/>
-    <hudson.plugins.jabber.im.transport.JabberPublisher>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.22">
       <targets>
-        <hudson.plugins.im.GroupChatIMMessageTarget>
+        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.21">
           <name>web3.0development@conference.jabber.eea.europa.eu</name>
+          <notificationOnly>false</notificationOnly>
         </hudson.plugins.im.GroupChatIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -60,14 +65,18 @@ bin/epydoc-all</command>
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.21"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.10">
       <timeoutMinutes>60</timeoutMinutes>
-      <failBuild>true</failBuild>
+      <failBuild>false</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
+      <timeoutMinutesElasticDefault>3</timeoutMinutesElasticDefault>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>

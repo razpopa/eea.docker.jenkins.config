@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<com.mtvi.plateng.hudson.ldap.Configuration>
+<com.mtvi.plateng.hudson.ldap.Configuration plugin="ldapemail@0.7">
   <performSearch>false</performSearch>
 </com.mtvi.plateng.hudson.ldap.Configuration>

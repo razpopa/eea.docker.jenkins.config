@@ -1,17 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
   <fullName>david.batranu</fullName>
+  <description></description>
   <properties>
     <jenkins.security.ApiTokenProperty>
       <apiToken>hltBzSNfzcaFAYTCZECHohS9QRQT85nUKgRcs1CaBgBv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.tasks.Mailer_-UserProperty/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
+      <enabledColorBlindSupport>false</enabledColorBlindSupport>
+    </hudson.plugins.greenballs.ColorBlindProperty>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
+      <score>0.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress></emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18">
+      <nick>david.batranu</nick>
+    </hudson.plugins.ircbot.IrcUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22"/>
     <hudson.model.MyViewsProperty>
+      <primaryViewName></primaryViewName>
       <views>
         <hudson.model.AllView>
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
@@ -22,17 +36,15 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty/>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>6.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.ircbot.IrcUserProperty/>
+    <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
+      <authorizedKeys></authorizedKeys>
+    </org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
   </properties>
 </user>

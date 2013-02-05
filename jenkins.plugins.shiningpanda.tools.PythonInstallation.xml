@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl>
+<jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl plugin="shiningpanda@0.14">
   <helpRedirect/>
   <installations>
     <jenkins.plugins.shiningpanda.tools.PythonInstallation>

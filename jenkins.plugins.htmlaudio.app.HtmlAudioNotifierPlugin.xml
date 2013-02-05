@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<jenkins.plugins.htmlaudio.app.HtmlAudioNotifierPlugin_-PluginDescriptor>
+<jenkins.plugins.htmlaudio.app.HtmlAudioNotifierPlugin_-PluginDescriptor plugin="html-audio-notifier@0.4">
   <helpRedirect/>
   <enabledByDefault>true</enabledByDefault>
   <longPollingEnabled>false</longPollingEnabled>

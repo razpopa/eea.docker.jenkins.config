@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<net.hurstfrost.hudson.speaks.HudsonSpeaksNotifier_-HudsonSpeaksDescriptor>
+<net.hurstfrost.hudson.speaks.HudsonSpeaksNotifier_-HudsonSpeaksDescriptor plugin="speaks@0.1.1">
   <helpRedirect/>
   <globalTemplate>&lt;j:choose&gt;
 &lt;j:when test=&quot;${build.result!=&apos;SUCCESS&apos; || build.project.lastBuild.result!=&apos;SUCCESS&apos;}&quot;&gt;

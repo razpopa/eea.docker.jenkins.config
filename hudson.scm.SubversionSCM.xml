@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.scm.SubversionSCM_-DescriptorImpl>
+<hudson.scm.SubversionSCM_-DescriptorImpl plugin="subversion@1.42">
   <helpRedirect/>
-  <generation>679</generation>
+  <generation>683</generation>
   <credentials class="hashtable">
     <entry>
       <string>&lt;https://svn.eionet.europa.eu:443&gt; Eionet Sitedirectory</string>

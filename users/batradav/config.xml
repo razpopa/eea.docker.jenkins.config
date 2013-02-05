@@ -3,12 +3,32 @@
   <fullName>David Batranu</fullName>
   <description>Software engineer @ Eau de Web, Romania</description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>david.batranu@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>NtpNjw:e742552308d60de91b8476bb8f5f1ead8e5484bc4d770f9a2aa0f09d4ea88ef3</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>PsPKncbuOlZyTcjgj3luFZLx/E2nJkwn6gixGfGCK0lv/dQSczY0E0jJCtGtZo3w</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
+      <enabledColorBlindSupport>false</enabledColorBlindSupport>
+    </hudson.plugins.greenballs.ColorBlindProperty>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
+      <score>85.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.tasks.Mailer_-UserProperty>
+      <emailAddress>david.batranu@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18">
+      <nick>batradav</nick>
+    </hudson.plugins.ircbot.IrcUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
+      <jid>david@jabber.eaudeweb.ro</jid>
+    </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -20,23 +40,15 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>1.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty>
-      <jid>david@jabber.eaudeweb.ro</jid>
-    </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
-    <jenkins.security.ApiTokenProperty>
-      <apiToken>PsPKncbuOlZyTcjgj3luFZLx/E2nJkwn6gixGfGCK0lv/dQSczY0E0jJCtGtZo3w</apiToken>
-    </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
-      <favorites/>
-    </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty/>
+    <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
+      <authorizedKeys></authorizedKeys>
+    </org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
   </properties>
 </user>

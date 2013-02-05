@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl>
+<hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl plugin="ircbot@2.18">
   <helpRedirect/>
   <enabled>false</enabled>
   <port>194</port>

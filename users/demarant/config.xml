@@ -18,7 +18,7 @@
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
         </hudson.model.AllView>
-        <maps.hudson.plugin.xfpanel.XFPanelView>
+        <maps.hudson.plugin.xfpanel.XFPanelView plugin="xfpanel@1.1.1">
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
           <name>eXtreme Feedback</name>
           <filterExecutors>false</filterExecutors>
@@ -48,14 +48,14 @@
         </maps.hudson.plugin.xfpanel.XFPanelView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>973.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
+      <score>58.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
       <jid>marinis@jabber.eea.europa.eu</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers>
         <string>https://www.google.com/accounts/o8/id?id=AItOawk_60NZaZ3kBvxJmVl7uvMq_aFohEBOf4E</string>
       </identifiers>
@@ -63,12 +63,12 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>BZBdcAWUVxH2dwnPi4fA+Stc1U0q5n6sQnoeq6saxsRv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty/>
-    <hudson.plugins.ircbot.IrcUserProperty/>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>

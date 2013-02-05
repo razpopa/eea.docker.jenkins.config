@@ -20,23 +20,27 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty>
-      <score>-72.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
+      <score>0.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
       <jid>boghy@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
       <apiToken>t/BmzRK2Mzkbp/mT2hqaQ3xfkmX6B5rOQeT88lwDpNBv/dQSczY0E0jJCtGtZo3w</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty/>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
   </properties>
 </user>
