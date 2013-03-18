@@ -7,7 +7,7 @@
       <passwordHash>ljNtzH:54e687b9bae7fbc1745b91fb05a75047279c7e44947d08480a6f7ca8e9773d4d</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>LP2BKfE+yt8NQRryV1iNe6BUgXw8hvFfIqj9biEUDwlv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>4+wT5ckqFX278YgZPSKskrw74zfNMhYDZSleqjvuGZ2aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1">
       <imageBytes>iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAABd8UlEQVR42ny8hXubCZbm6/vszO7O
@@ -438,7 +438,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>99.0</score>
+      <score>246.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
@@ -493,7 +493,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
           <properties class="hudson.model.View$PropertyList"/>
-          <jobNames class="tree-set">
+          <jobNames>
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
           </jobNames>
           <jobFilters>
@@ -557,7 +557,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
-    <hudson.tasks.Mailer_-UserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
       <emailAddress>alin.voinea@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

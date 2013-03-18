@@ -124,7 +124,7 @@ cp ../../parts/xmltestreport/testreports/*eea-app-visualization*.xml xmltestrepo
       <canRunOnFailed>true</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds plugin="analysis-core@1.43">
-        <unstableTotalAll>7</unstableTotalAll>
+        <unstableTotalAll>8</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
@@ -338,7 +338,7 @@ cp ../../parts/xmltestreport/testreports/*eea-app-visualization*.xml xmltestrepo
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>22</unstable>
+              <unstable>23</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

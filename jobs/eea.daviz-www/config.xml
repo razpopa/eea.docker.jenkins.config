@@ -2,7 +2,7 @@
 <project>
   <actions/>
   <description>- Run EEA Daviz tests within Plone 4 EEA Buildout</description>
-  <logRotator>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -69,6 +69,7 @@
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -202,11 +203,8 @@ cp ../../parts/xmltestreport/testreports/*eea-daviz*.xml xmltestreport/
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.violations.ViolationsPublisher plugin="violations@0.7.10">
       <config>
-        <suppressions class="tree-set">
-          <no-comparator/>
-        </suppressions>
+        <suppressions class="sorted-set"/>
         <typeConfigs>
-          <no-comparator/>
           <entry>
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
@@ -380,13 +378,22 @@ cp ../../parts/xmltestreport/testreports/*eea-daviz*.xml xmltestreport/
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
     <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
-    <hudson.tasks.Mailer>
+    <hudson.tasks.Mailer plugin="mailer@1.4">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.22">
       <targets>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
+          <value>tiberiu@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
+          <value>alec@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
+          <value>ichimdav@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
           <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>

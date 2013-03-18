@@ -2,7 +2,7 @@
 <user>
   <fullName>bratucu</fullName>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty/>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4"/>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -16,14 +16,14 @@
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22"/>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>-6.0</score>
+      <score>27.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>59+vjKH9pszwqSSqsSM1y1QckuRQiZjPewuO+xn6IHxv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>VyJ6/NpJPz+bAs7ALJHQTchJH+OrAywYnRCb+LFO4OaaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

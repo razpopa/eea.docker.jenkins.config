@@ -212,7 +212,7 @@
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
-      <jobNames class="tree-set">
+      <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>community.eea.europa.eu</string>
         <string>daviz.eionet.europa.eu</string>
@@ -251,15 +251,17 @@
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
-      <jobNames class="tree-set">
+      <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>ACLADMIN</string>
         <string>CR3</string>
         <string>DATADICT</string>
+        <string>EionetDir</string>
         <string>EUNIS</string>
         <string>RDFExport</string>
         <string>ROD</string>
         <string>Sparql Client</string>
+        <string>WEBQ</string>
         <string>XMLCONV</string>
       </jobNames>
       <jobFilters/>
@@ -292,7 +294,7 @@
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
-      <jobNames class="tree-set">
+      <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[2]/jobNames/comparator"/>
         <string>DATADICT</string>
         <string>eea.googlecharts-plone4</string>
@@ -359,7 +361,7 @@
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
-      <jobNames class="tree-set">
+      <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>EEA Plone 4 API Documentation</string>
       </jobNames>
@@ -394,7 +396,7 @@
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
-      <jobNames class="tree-set">
+      <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
       </jobNames>
       <jobFilters/>
@@ -416,7 +418,7 @@
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
           <properties class="hudson.model.View$PropertyList"/>
-          <jobNames class="tree-set">
+          <jobNames>
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-www</string>
             <string>eea.app.visualization-www</string>
@@ -456,7 +458,7 @@
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
           <properties class="hudson.model.View$PropertyList"/>
-          <jobNames class="tree-set">
+          <jobNames>
             <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../hudson.plugins.iphoneview.IPhoneView/jobNames/comparator"/>
             <string>eea.aoamap-plone4</string>
             <string>eea.app.visualization-plone4</string>
@@ -495,7 +497,7 @@
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
           <properties class="hudson.model.View$PropertyList"/>
-          <jobNames class="tree-set">
+          <jobNames>
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
             <string>eea.app.visualization-zope</string>
             <string>eea.converter-zope</string>
@@ -538,7 +540,7 @@
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
-      <jobNames class="tree-set">
+      <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../hudson.plugins.nested__view.NestedView/views/listView[3]/jobNames/comparator"/>
         <string>eea.app.visualization-sync</string>
         <string>eea.cache-sync</string>

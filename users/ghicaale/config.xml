@@ -3,7 +3,7 @@
   <fullName>Alexandru Ghica</fullName>
   <description>Software engineer @ Eau de Web, Romania</description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
       <emailAddress>alec.ghica@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
@@ -21,7 +21,7 @@
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>-3.0</score>
+      <score>42.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
@@ -31,7 +31,7 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>2wvrT5XZ96sowXqeHejQAUUGxG+USQXMSoLiY0osiFVv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>vs9LkDO1SbN0oqTqYWTfr4PXV6aVUKFpCVCb6tOFuiuaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

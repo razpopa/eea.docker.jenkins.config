@@ -18,21 +18,21 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.tasks.Mailer_-UserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
       <emailAddress>tiberiu.ichim@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
       <jid>tiberiu@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>117.0</score>
+      <score>172.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>EcjR1rOVhqQTgubpP88v1rYu40t5ZK4Jsv6DytYJDgRv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>aJ5zk5KZRESkXpRJfc7BMys53RiaWTuCRIkE0yT22ryaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

@@ -3,7 +3,7 @@
   <fullName>prospchr</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>OL71x1L/w6u+UgnPyj5swcmVpPPRE0wVgl/YqyCH6mBv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>bIFCQSTsWzGnHgrV4s4oQPOjmChK4FJyJJPlEKxj5QuaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
@@ -26,10 +26,10 @@
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>26.0</score>
+      <score>49.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.tasks.Mailer_-UserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
       <emailAddress>christian.prosperini@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@1.489">
+<maven2-moduleset plugin="maven-plugin@1.504">
   <actions/>
-  <description>RDF Export. Checks for updates 15 minutes past the hour.</description>
-  <logRotator>
+  <description>Web questionnaire Checks for updates 56 minutes past the hour.</description>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -22,7 +22,7 @@
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.44">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Reportnet/RDFExport</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Reportnet/webq/trunk</remote>
         <local>.</local>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -40,15 +40,16 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>15 8-22 * * 1-5</spec>
+      <spec>56 8-22 * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
-    <groupId>eionet.rdf-export</groupId>
-    <artifactId>rdf-exporter</artifactId>
+    <groupId>eionet.gdem</groupId>
+    <artifactId>webq</artifactId>
   </rootModule>
-  <goals>-Denv=unittest install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
+  <goals>-Denv=default -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -61,6 +62,9 @@
   <runHeadless>false</runHeadless>
   <settingConfigId></settingConfigId>
   <globalSettingConfigId></globalSettingConfigId>
+  <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+  <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters>
     <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.29">
       <healthy></healthy>
@@ -117,6 +121,25 @@
       <dontComputeNew>false</dontComputeNew>
       <isRankActivated>false</isRankActivated>
     </hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.pmd.PmdReporter plugin="pmd@3.29">
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[PMD] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <useDeltaValues>false</useDeltaValues>
+      <thresholds plugin="analysis-core@1.43">
+        <unstableTotalAll></unstableTotalAll>
+        <unstableTotalHigh></unstableTotalHigh>
+        <unstableTotalNormal></unstableTotalNormal>
+        <unstableTotalLow></unstableTotalLow>
+        <failedTotalAll></failedTotalAll>
+        <failedTotalHigh></failedTotalHigh>
+        <failedTotalNormal></failedTotalNormal>
+        <failedTotalLow></failedTotalLow>
+      </thresholds>
+      <dontComputeNew>true</dontComputeNew>
+    </hudson.plugins.pmd.PmdReporter>
     <hudson.plugins.dry.DryReporter plugin="dry@2.30">
       <healthy></healthy>
       <unHealthy></unHealthy>
@@ -181,18 +204,15 @@
     </hudson.plugins.tasks.TasksReporter>
     <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter plugin="violations@0.7.10">
       <config>
-        <suppressions class="tree-set">
-          <no-comparator/>
-        </suppressions>
+        <suppressions class="sorted-set"/>
         <typeConfigs>
-          <no-comparator/>
           <entry>
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>100</min>
-              <max>200</max>
-              <unstable>999</unstable>
+              <min>8000</min>
+              <max>8200</max>
+              <unstable>8300</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -399,7 +419,7 @@
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher plugin="dependencyanalyzer@0.6"/>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.24.1">
-      <recipientList>soren.roug@eea.europa.eu</recipientList>
+      <recipientList>soren.roug@eea.europa.eu, enriko.kasper@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
           <email>

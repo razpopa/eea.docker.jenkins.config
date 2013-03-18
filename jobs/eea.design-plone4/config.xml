@@ -2,7 +2,7 @@
 <project>
   <actions/>
   <description>EEA Design build on a clean Plone 4 instance</description>
-  <logRotator>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -43,6 +43,7 @@
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -63,6 +64,12 @@ bin/test -v -vv -s eea.design</command>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
           <value>david.ichim@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
+          <value>tiberiu.ichim@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
+          <value>alec@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
