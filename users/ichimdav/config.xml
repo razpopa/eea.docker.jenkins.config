@@ -3,7 +3,7 @@
   <fullName>Ichim David</fullName>
   <description>Software engineer @ Eau de Web, Romania</description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
       <emailAddress>david.ichim@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
@@ -21,27 +21,30 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>83.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+      <score>164.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">
       <jid>david.ichim@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
       <apiToken>CvZJdq51JX+e9dqTCPn1uZL/7V59VtPfPgci2AhS3SqaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.14">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
+      <credentials/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
   </properties>
 </user>

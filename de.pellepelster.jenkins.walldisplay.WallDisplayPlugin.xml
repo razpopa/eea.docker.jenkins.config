@@ -1,10 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<de.pellepelster.jenkins.walldisplay.Configuration plugin="jenkinswalldisplay@0.6.12">
+<de.pellepelster.jenkins.walldisplay.Configuration plugin="jenkinswalldisplay@0.6.17">
   <theme>default</theme>
   <fontFamily>sans-serif</fontFamily>
+  <buildRange>all</buildRange>
+  <sortOrder>job name</sortOrder>
   <jenkinsTimeOut>15</jenkinsTimeOut>
   <jenkinsUpdateInterval>20</jenkinsUpdateInterval>
+  <paintInterval>0</paintInterval>
   <showDetails>false</showDetails>
+  <showGravatar>false</showGravatar>
   <showBuildNumber>true</showBuildNumber>
   <showDisabledBuilds>true</showDisabledBuilds>
 </de.pellepelster.jenkins.walldisplay.Configuration>

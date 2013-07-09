@@ -3,7 +3,7 @@
   <fullName>kiorky</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>NZfcrwXFPGcooE/Kfq8I7cB4qw6omTTY29algw73wnBv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>2vs/sc5AVNw27cug6XSz604tOuvZo68xAEkxfZhVsSGaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
@@ -26,10 +26,10 @@
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>0.0</score>
+      <score>6.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.tasks.Mailer_-UserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
       <emailAddress>kiorky@cryptelium.net</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>

@@ -24,7 +24,7 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>DidLaSVYdjWYr/y32PV/PyxX3YqYGBaPDXgGGrsDPGZv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>I3D36Leqoe1mguFC+rfAG+BgWA7/3UZNgXwTeE2sVSyaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

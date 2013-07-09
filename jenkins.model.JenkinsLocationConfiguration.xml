@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.model.JenkinsLocationConfiguration>
+  <adminAddress>no-reply@eea.europa.eu</adminAddress>
+  <jenkinsUrl>http://ci.eionet.europa.eu/</jenkinsUrl>
+</jenkins.model.JenkinsLocationConfiguration>

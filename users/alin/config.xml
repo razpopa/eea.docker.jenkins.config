@@ -3,7 +3,7 @@
   <fullName>alin</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>reLsHymzMxuRLanZT9HPhstrZdu8ZbY1zPFqGwQ74ipv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>REAtdLlELCSksHwaeX4msSJYkNj8otLbmPH20mnMFh2aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.tasks.Mailer_-UserProperty/>

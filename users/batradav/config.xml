@@ -7,7 +7,7 @@
       <passwordHash>NtpNjw:e742552308d60de91b8476bb8f5f1ead8e5484bc4d770f9a2aa0f09d4ea88ef3</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>PsPKncbuOlZyTcjgj3luFZLx/E2nJkwn6gixGfGCK0lv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>Y8nti2updnhJO3hJaa9HP9Ns/BaAZ+r70BQeb6Wobj6aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">

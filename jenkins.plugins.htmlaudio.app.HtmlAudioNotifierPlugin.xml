@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <jenkins.plugins.htmlaudio.app.HtmlAudioNotifierPlugin_-PluginDescriptor plugin="html-audio-notifier@0.4">
-  <helpRedirect/>
-  <enabledByDefault>true</enabledByDefault>
+  <enabledByDefault>false</enabledByDefault>
   <longPollingEnabled>false</longPollingEnabled>
   <successSoundUrl>https://dl.dropbox.com/s/ces8cmkpbw5uuvo/flawless.wav?dl=1</successSoundUrl>
   <successAfterFailureSoundUrl>https://dl.dropbox.com/s/nbu2t325x5lwg5n/excellent.wav?dl=1</successAfterFailureSoundUrl>

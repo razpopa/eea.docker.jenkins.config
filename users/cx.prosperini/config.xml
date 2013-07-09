@@ -3,7 +3,7 @@
   <fullName>cx.prosperini</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>BeYuSnCgG4Ef6eWTy8F0W8NwzxREjVTNgLZWwQGO7YJv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>mrLz4ewjRGAsGpeZSwLDHko2typ7eXwx/zFCa2x0t2GaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

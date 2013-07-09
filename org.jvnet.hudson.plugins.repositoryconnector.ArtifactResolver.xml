@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver_-DescriptorImpl plugin="repository-connector@0.8.2">
-  <helpRedirect/>
   <repos>
     <org.jvnet.hudson.plugins.repositoryconnector.Repository>
       <url>http://repo1.maven.org/maven2</url>

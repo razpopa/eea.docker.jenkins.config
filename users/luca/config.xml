@@ -3,7 +3,7 @@
   <fullName>luca</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>pwfMNFzL0D9JQbhYPSAAv1rvvCrKQbEfF6BaEJqPkBdv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>YxGbx+I+Wg0FfODPZG7p/7h5Trxw0LcaKKxZMWsflTyaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

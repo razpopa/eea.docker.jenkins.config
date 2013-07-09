@@ -437,11 +437,11 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>246.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+      <score>46.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.14">
       <favorites>
         <string>eea.alchemy-www</string>
         <string>eea.dataservice-www</string>
@@ -481,13 +481,13 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
         <string>eea.converter-www</string>
       </favorites>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">
       <jid>alin@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.model.MyViewsProperty>
       <primaryViewName>Alin Dashboard</primaryViewName>
       <views>
-        <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.3">
+        <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.6">
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
           <name>Alin Dashboard</name>
           <filterExecutors>false</filterExecutors>
@@ -497,7 +497,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
           </jobNames>
           <jobFilters>
-            <hudson.plugins.favorite.filter.FavoriteFilter plugin="favorite@1.9"/>
+            <hudson.plugins.favorite.filter.FavoriteFilter plugin="favorite@1.14"/>
           </jobFilters>
           <columns>
             <hudson.views.StatusColumn/>
@@ -515,12 +515,13 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.4"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
           </columns>
           <includeRegex>.*</includeRegex>
+          <recurse>false</recurse>
           <useCssStyle>false</useCssStyle>
           <includeStdJobList>false</includeStdJobList>
           <leftPortletWidth>50%</leftPortletWidth>
@@ -529,6 +530,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
             <hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
               <id>dashboard_portlet_22</id>
               <name>Unstable Jobs</name>
+              <showOnlyFailedJobs>false</showOnlyFailedJobs>
             </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
           </leftPortlets>
           <rightPortlets/>
@@ -542,7 +544,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
         </hudson.plugins.view.dashboard.Dashboard>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
       <identifiers>
         <string>http://alin-voinea.myopenid.com/</string>
         <string>https://me.yahoo.com/a/nJrsqGp.rsJD6YgQNiahT5FRuY3DVeAHrg--</string>
@@ -556,8 +558,11 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23"/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
+      <credentials/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
       <emailAddress>alin.voinea@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

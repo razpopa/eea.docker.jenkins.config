@@ -3,7 +3,7 @@
   <fullName>fafhrd91</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>N4M0W+ziPp/Eu1nefIvjeh3EH1cjHO5NBo/xAE5zVj5v/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>SRoiWKclnJDyD3yxKE4RiseIVoRNgLyAmY+TPA6M462aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

@@ -3,7 +3,7 @@
   <fullName>esartor</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>pdeiJtjU21bSDGT9/7URfKk3fYIhyYFHJKCs/YgmXglv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>7HD/1AR2aXU/Kca89FbSXtJylueB4X/uwOvNyY39DZSaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.tasks.Mailer_-UserProperty/>

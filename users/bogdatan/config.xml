@@ -3,7 +3,7 @@
   <fullName>bogdatan</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>PfdYyw+0V586zkxctd9GFegOzVe4sUB8nNXGuu6kaalv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>U2snv8srvwwpVHsvExGgPvptSbUMfygqePyrBLrLq9CaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <hudson.tasks.Mailer_-UserProperty/>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22"/>

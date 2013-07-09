@@ -3,7 +3,7 @@
   <fullName>tiberiu.ichim</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>nG1inizDWB1gyZ9EyXKklLE7VyUY0UsKKNOPUVrbO2Bv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>+95gX/rChOMU9m7bROG7/BPvMN4thAj6cV6sNLuNX+OaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.tasks.Mailer_-UserProperty/>

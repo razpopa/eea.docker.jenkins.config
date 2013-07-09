@@ -3,7 +3,7 @@
   <fullName>avoinea</fullName>
   <description></description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
       <emailAddress>voineali</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
@@ -21,25 +21,28 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
       <score>0.0</score>
       <isNotParticipatingInGame>true</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22"/>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>QyHkTz9q6Oncve8gM4g1hQ15dKyn2wM4PvvRYVtzdgVv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>ouPL6lrxo38qKhOvP2Izzveh4kyhxGjApDDkoYPXXRmaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.13">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.22"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
+      <credentials/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
   </properties>
 </user>

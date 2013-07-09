@@ -3,12 +3,35 @@
   <fullName>Antonio De Marinis</fullName>
   <description>EEA Web Manager and System Architect</description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty>
-      <emailAddress>demarinis@eea.europa.eu</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>wAUpox:0b8dfb4cda8c21b2a270a995534ac9793e9426e5ee96c0fe89edc40bbbb050c4</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>TB1ZfdqszchQd/+QJtl47ChSaMKkF6JnsGErUiio8jqaTo4YgslF9IL/1JVZ/wsc</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
+      <enabledColorBlindSupport>true</enabledColorBlindSupport>
+    </hudson.plugins.greenballs.ColorBlindProperty>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+      <score>117.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
+      <credentials/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
+      <emailAddress>demarinis@eea.europa.eu</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.14">
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23">
+      <nick>demarant</nick>
+    </hudson.plugins.ircbot.IrcUserProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">
+      <jid>marinis@jabber.eea.europa.eu</jid>
+    </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -18,17 +41,18 @@
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
         </hudson.model.AllView>
-        <maps.hudson.plugin.xfpanel.XFPanelView plugin="xfpanel@1.1.1">
+        <maps.hudson.plugin.xfpanel.XFPanelView plugin="xfpanel@1.2.0">
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
           <name>eXtreme Feedback</name>
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
-          <jobNames class="tree-set">
+          <jobNames>
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
             <string>eea-buildout-pre-production</string>
           </jobNames>
           <jobFilters/>
           <columns/>
+          <recurse>false</recurse>
           <colors>
             <okBG>#7E7EFF</okBG>
             <okFG>#FFFFFF</okFG>
@@ -48,29 +72,20 @@
         </maps.hudson.plugin.xfpanel.XFPanelView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>110.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
-      <jid>marinis@jabber.eea.europa.eu</jid>
-    </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
       <identifiers>
         <string>https://www.google.com/accounts/o8/id?id=AItOawk_60NZaZ3kBvxJmVl7uvMq_aFohEBOf4E</string>
       </identifiers>
     </hudson.plugins.openid.OpenIdUserProperty>
-    <jenkins.security.ApiTokenProperty>
-      <apiToken>BZBdcAWUVxH2dwnPi4fA+Stc1U0q5n6sQnoeq6saxsRv/dQSczY0E0jJCtGtZo3w</apiToken>
-    </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
-      <favorites/>
-    </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18"/>
+    <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
+      <authorizedKeys>ssh-dss AAAAB3NzaC1kc3MAAACBALTLy+j2jaDMMwK6+TPZguKInO18/TK1Ni6fRELKdwGG4ImSr7PsqwYcuyvgosv1G4mIyAN2ORTFVcTL5XccPfdNp4TDNvqkZ2nZFWsJ5Cz3MTuJ+rNJioBFTZSCYkbvehqCAxmyg7XVRz4kIcxH4KmLcHOaWm9r6jFQvHUKnpITAAAAFQCygRqOKwXFR+f8HnoNCNviTOEEtQAAAIEAqOIm6oakfpyuCUjgbkmQv9m+Nmdq0ExqJeAT4LLjOknDdNeFuy/9y/H8oFsX5QDD5dybH4pGSk+uYh/SFlMxlwOrYF6U+fyqGlNekzfrx5md3MYztflWCyufKMoVQpeZV/q4srJvAg4IFKYSZtbTxCXNRI8Wmrfy5csWxw3jba4AAACBAIhl0sxId5WcQKJa8h4P3l+GnupVjlJv9hLKu5bAA9bK1oX1uFl8WMRjUvxj4YW0TlErxzmY7sGDeXrhH8Yn+athv8UnhYjK0AF2cxKRz0L89hi3Ws/RJu0GZtZKAVY/2FvWQvH5q11l4n+29u0Q3NicdT5fBWpQ+60NuGzJIIkI app_143@localhost
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7UrjZV1sIGwZ0ZQoZ15yE+eBZHULfrHBSI8rlDnOXTmTTaX6P1gMLII5sJz2lrhM0n5+kyiM+0v0sREpv2Uob508aczBas+j6Y1wQTNTiBCSWJd1WlM+vwtFdudBQxoht34CXwXjLr2JEpHxA3t1pLNcXNNGotFFYxEHbOmmaDT1DON9d2ljJGBq7Y1+lfd60nMLuIVdVRUELOt9Jx5YE6lIuZiLWeScGSBHU/hFlCYEVjdwqJnKdDhFBEZbq6NrQuK71cCJO/W0bEdV9tvQZa8g7IUqxqD9RmCGiiYHxjLKw3pP+KAbE0s73QPBfVPqqto9uvvlrg6CUlf/LbzBuw== marinis@www.naran.se</authorizedKeys>
+    </org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0">
+      <skypeId>demarinis-eea</skypeId>
+    </hudson.plugins.skype.user.SkypeUserProperty>
   </properties>
 </user>

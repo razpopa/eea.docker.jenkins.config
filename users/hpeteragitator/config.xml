@@ -23,7 +23,7 @@
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>s7dX4Qy6YT6WkzMlwqLekxMtXU4SKJrqxkCukitf+A9v/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>HbGODUnNT8e2SG6inArEicw0y7n6NM6l1WredNbAY2GaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

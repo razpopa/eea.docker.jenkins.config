@@ -5,4 +5,5 @@
   <noUserCommitMessage>false</noUserCommitMessage>
   <displayStatus>false</displayStatus>
   <commitMessagePattern>[message]</commitMessagePattern>
+  <manualSynchronizationIncludes/>
 </hudson.plugins.scm__sync__configuration.ScmSyncConfigurationPlugin>

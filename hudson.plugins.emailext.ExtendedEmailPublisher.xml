@@ -1,17 +1,52 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.24.1">
-  <helpRedirect/>
+<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.30.2">
   <hudsonUrl>http://ci.eionet.europa.eu/</hudsonUrl>
-  <adminAddress>no-reply@eea.europa.eu</adminAddress>
+  <adminAddress>ci-no-reply@eionet.europa.eu</adminAddress>
   <smtpHost>localhost</smtpHost>
   <useSsl>false</useSsl>
-  <defaultContentType>text/plain</defaultContentType>
+  <defaultContentType>text/html</defaultContentType>
   <defaultSubject>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</defaultSubject>
-  <defaultBody>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
-&#xd;
-Check console output at $BUILD_URL to view the results.</defaultBody>
+  <defaultBody>&lt;html&gt;&#xd;
+&lt;head&gt;&#xd;
+&lt;title&gt;$PROJECT_NAME&lt;/title&gt;&#xd;
+&lt;style type=&quot;text/css&quot;&gt;&#xd;
+.Successful, .Fixed { background-color: #ccffcc }&#xd;
+.Unstable { background-color: #ffff80 }&#xd;
+.Failure, .Failing {background-color: #ff9090 }&#xd;
+&lt;/style&gt;&#xd;
+&lt;/head&gt;&#xd;
+&lt;body class=&quot;$BUILD_STATUS&quot;&gt;&#xd;
+&lt;style type=&quot;text/css&quot;&gt;&#xd;
+.Successful, .Fixed { background-color: #ccffcc }&#xd;
+.Unstable { background-color: #ffff80 }&#xd;
+.Failure, .Failing {background-color: #ff9090 }&#xd;
+&lt;/style&gt;&#xd;
+&lt;div class=&quot;$BUILD_STATUS&quot;&gt;&#xd;
+&lt;h1&gt;&#xd;
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS&#xd;
+&lt;/h1&gt;&#xd;
+&lt;p style=&quot;text-align:center;font-size:110%&quot;&gt;&#xd;
+Check console output at &lt;a href=&quot;$BUILD_URL&quot;&gt;$BUILD_URL&lt;/a&gt; to view the results.&#xd;
+&lt;/p&gt;&#xd;
+&lt;blockquote style=&quot;margin: 1em 3em; border: 1px solid black; padding: 0em 1em&quot;&gt;&#xd;
+&lt;p&gt;&#xd;
+Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.&#xd;
+&lt;/p&gt;&#xd;
+&lt;/blockquote&gt;&#xd;
+&lt;h2&gt;Tests&lt;/h2&gt;&#xd;
+&lt;p style=&quot;white-space: pre&quot;&gt;&#xd;
+${FAILED_TESTS, showStack=false, maxTests=10, onlyRegressions=false}&#xd;
+&lt;/p&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;</defaultBody>
+  <defaultPresendScript></defaultPresendScript>
   <maxAttachmentSize>-1</maxAttachmentSize>
   <recipientList></recipientList>
+  <defaultReplyTo></defaultReplyTo>
+  <excludedCommitters></excludedCommitters>
   <overrideGlobalSettings>true</overrideGlobalSettings>
   <precedenceBulk>false</precedenceBulk>
+  <debugMode>false</debugMode>
+  <enableSecurity>false</enableSecurity>
 </hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>

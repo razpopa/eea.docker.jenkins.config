@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.git.GitSCM_-DescriptorImpl plugin="git@1.1.22">
-  <helpRedirect/>
-  <generation>65</generation>
+<hudson.plugins.git.GitSCM_-DescriptorImpl plugin="git@1.4.0">
+  <generation>69</generation>
   <globalConfigName></globalConfigName>
   <globalConfigEmail></globalConfigEmail>
+  <createAccountBasedOnEmail>false</createAccountBasedOnEmail>
 </hudson.plugins.git.GitSCM_-DescriptorImpl>

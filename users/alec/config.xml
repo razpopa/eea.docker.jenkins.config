@@ -3,7 +3,7 @@
   <fullName>alec</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>pyiNIvP4dFVlchqa/jYsIzvnf+1VEmc2XRbh1wYSdUBv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>inA2Ng4c/OQWt8rrWJdfSdvp0kMXdR2Wk40veyURVM6aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">

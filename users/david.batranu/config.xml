@@ -4,7 +4,7 @@
   <description></description>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>hltBzSNfzcaFAYTCZECHohS9QRQT85nUKgRcs1CaBgBv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>vlbuWGLJB994mZEUTUNNcWhfiLf+Bpx4jNu0bykTRtGaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">

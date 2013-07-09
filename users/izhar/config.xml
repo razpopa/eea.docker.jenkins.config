@@ -3,7 +3,7 @@
   <fullName>izhar</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>U3ntx0OqQGCBcwDMQNpI5NcxU51b7aeM9OEmw4TC8ldv/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>AEoimnxu1sa0gBN6lSl8pr+81eWUGg9qbVjnm4PTtdCaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.tasks.Mailer_-UserProperty/>

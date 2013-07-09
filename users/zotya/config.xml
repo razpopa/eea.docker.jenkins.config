@@ -3,7 +3,7 @@
   <fullName>zotya</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>AlI+TntQ3GsEGaxz8Ri0lVFPFE01BCw3te/CnuAp6r1v/dQSczY0E0jJCtGtZo3w</apiToken>
+      <apiToken>EJq3HR9Emdg4NJpNc6P2jr7FGW3j3x24+xRLStyDT8qaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
     <hudson.tasks.Mailer_-UserProperty/>
