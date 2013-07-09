@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset>
+<maven2-moduleset plugin="maven-plugin@1.514">
   <actions/>
   <description>Content Registry version 3&#xd;
-Polls SVN every 12 minutes past the hour 8-22</description>
-  <logRotator>
+</description>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -11,20 +11,22 @@ Polls SVN every 12 minutes past the hour 8-22</description>
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.trac.TracProjectProperty>
-      <tracWebsite>https://svn.eionet.europa.eu/projects/Reportnet/</tracWebsite>
-    </hudson.plugins.trac.TracProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty>
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.12">
+      <projectName></projectName>
+      <redmineVersionNumber></redmineVersionNumber>
+    </hudson.plugins.redmine.RedmineProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty/>
-    <hudson.plugins.disk__usage.DiskUsageProperty/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.16"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.45">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Reportnet/cr3/trunk</remote>
         <local>.</local>
+        <depthOption>infinity</depthOption>
+        <ignoreExternalsOption>false</ignoreExternalsOption>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <excludedRegions></excludedRegions>
@@ -33,15 +35,17 @@ Polls SVN every 12 minutes past the hour 8-22</description>
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
+    <ignoreDirPropChanges>false</ignoreDirPropChanges>
+    <filterChangelog>false</filterChangelog>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>jdk6</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>12 8-22 * * *</spec>
+      <spec>H 8-22 * * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -49,11 +53,11 @@ Polls SVN every 12 minutes past the hour 8-22</description>
     <groupId>eionet.cr</groupId>
     <artifactId>cr3</artifactId>
   </rootModule>
-  <goals>-Denv=unittest -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
+  <goals>-Denv=unittest -Dmaven.test.skip=true clean cobertura:cobertura javadoc:javadoc findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
-  <usePrivateRepository>false</usePrivateRepository>
+  <perModuleEmail>true</perModuleEmail>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
   <archivingDisabled>false</archivingDisabled>
   <resolveDependencies>false</resolveDependencies>
@@ -62,15 +66,18 @@ Polls SVN every 12 minutes past the hour 8-22</description>
   <runHeadless>false</runHeadless>
   <settingConfigId></settingConfigId>
   <globalSettingConfigId></globalSettingConfigId>
+  <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+  <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters>
-    <hudson.plugins.checkstyle.CheckStyleReporter>
+    <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.35">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[CHECKSTYLE] </pluginName>
       <thresholdLimit>normal</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -88,15 +95,17 @@ Polls SVN every 12 minutes past the hour 8-22</description>
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.checkstyle.CheckStyleReporter>
-    <hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.48">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[FINDBUGS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -114,16 +123,18 @@ Polls SVN every 12 minutes past the hour 8-22</description>
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <isRankActivated>false</isRankActivated>
     </hudson.plugins.findbugs.FindBugsReporter>
-    <hudson.plugins.dry.DryReporter>
+    <hudson.plugins.dry.DryReporter plugin="dry@2.34">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[DRY] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -141,17 +152,19 @@ Polls SVN every 12 minutes past the hour 8-22</description>
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <highThreshold>50</highThreshold>
       <normalThreshold>25</normalThreshold>
     </hudson.plugins.dry.DryReporter>
-    <hudson.plugins.tasks.TasksReporter>
+    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.36">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[TASKS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -169,6 +182,8 @@ Polls SVN every 12 minutes past the hour 8-22</description>
         <failedNewNormal></failedNewNormal>
         <failedNewLow></failedNewLow>
       </thresholds>
+      <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <pattern>**/*.java</pattern>
       <excludePattern></excludePattern>
       <high>FIXME</high>
@@ -176,13 +191,10 @@ Polls SVN every 12 minutes past the hour 8-22</description>
       <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
-    <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
+    <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter plugin="violations@0.7.11">
       <config>
-        <suppressions class="tree-set">
-          <no-comparator/>
-        </suppressions>
+        <suppressions class="sorted-set"/>
         <typeConfigs>
-          <no-comparator/>
           <entry>
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
@@ -305,6 +317,17 @@ Polls SVN every 12 minutes past the hour 8-22</description>
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
+            <string>perlcritic</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>perlcritic</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
@@ -355,15 +378,16 @@ Polls SVN every 12 minutes past the hour 8-22</description>
     </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
   </reporters>
   <publishers>
-    <hudson.plugins.analysis.collector.AnalysisPublisher>
+    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.35">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <thresholdLimit>low</thresholdLimit>
       <pluginName>[ANALYSIS-COLLECTOR] </pluginName>
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -382,6 +406,8 @@ Polls SVN every 12 minutes past the hour 8-22</description>
         <failedNewLow></failedNewLow>
       </thresholds>
       <shouldDetectModules>false</shouldDetectModules>
+      <dontComputeNew>false</dontComputeNew>
+      <doNotResolveRelativePaths>true</doNotResolveRelativePaths>
       <isCheckStyleDeactivated>false</isCheckStyleDeactivated>
       <isDryDeactivated>false</isDryDeactivated>
       <isFindBugsDeactivated>false</isFindBugsDeactivated>
@@ -389,60 +415,90 @@ Polls SVN every 12 minutes past the hour 8-22</description>
       <isOpenTasksDeactivated>false</isOpenTasksDeactivated>
       <isWarningsDeactivated>false</isWarningsDeactivated>
     </hudson.plugins.analysis.collector.AnalysisPublisher>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.plugins.cigame.GamePublisher/>
-    <hudson.plugins.emailext.ExtendedEmailPublisher>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.28">
       <recipientList>soren.roug@eea.europa.eu, jaanus.heinlaid@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
           <email>
-            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>true</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
-            <sendToRecipientList>true</sendToRecipientList>
+            <sendToRecipientList>false</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
           </email>
         </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
+        <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>true</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>false</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
-            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>true</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
           <email>
-            <recipientList>$PROJECT_DEFAULT_RECIPIENTS</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
             <sendToDevelopers>true</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
       </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:&#xd;
-&#xd;
-Check console output at $BUILD_URL to view the results.&#xd;
-&#xd;
-    == Now fix 1 FindBugs and 10 Checkstyle violations! ==&#xd;
-&#xd;
-Violations report: ${BUILD_URL}eionet.cr$cr3/violations/&#xd;
-&#xd;
-See https://svn.eionet.europa.eu/projects/Reportnet/wiki/TechnicalDebt</defaultContent>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
+      <presendScript></presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo></replyTo>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
+  <prebuilders/>
+  <postbuilders/>
+  <runPostStepsIfResult>
+    <name>FAILURE</name>
+    <ordinal>2</ordinal>
+    <color>RED</color>
+  </runPostStepsIfResult>
 </maven2-moduleset>

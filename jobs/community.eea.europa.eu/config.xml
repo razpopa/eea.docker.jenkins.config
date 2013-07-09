@@ -2,7 +2,7 @@
 <project>
   <actions/>
   <description>Run cyn.in 3.2.2 buildout on SVN change.</description>
-  <logRotator>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -18,13 +18,15 @@
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.12"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.16"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.44">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.45">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/community.eea.europa.eu/trunk</remote>
         <local>.</local>
+        <depthOption>infinity</depthOption>
+        <ignoreExternalsOption>false</ignoreExternalsOption>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser" plugin="trac@1.13"/>
@@ -35,6 +37,7 @@
     <excludedCommitMessages></excludedCommitMessages>
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
     <ignoreDirPropChanges>false</ignoreDirPropChanges>
+    <filterChangelog>false</filterChangelog>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -46,11 +49,17 @@
     </hudson.triggers.TimerTrigger>
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <customWorkspace>/opt/hudson/buildouts/community.eea.europa.eu</customWorkspace>
   <builders>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}/src
+echo &quot;Cleanup deprecated and buggy setup.cfg...&quot;
+rm -f `find . -name setup.cfg`</command>
+    </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 ./install.sh
@@ -70,15 +79,15 @@
       <failBuildOnError>false</failBuildOnError>
       <parsingRulesPath>/var/lib/jenkins/console/parser.rules</parsingRulesPath>
     </hudson.plugins.logparser.LogParserPublisher>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
-    <hudson.tasks.Mailer>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
+    <hudson.tasks.Mailer plugin="mailer@1.4">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.22">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
       <targets>
-        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.21">
+        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.25">
           <name>web3.0development@conference.jabber.eea.europa.eu</name>
           <notificationOnly>false</notificationOnly>
         </hudson.plugins.im.GroupChatIMMessageTarget>
@@ -89,12 +98,12 @@
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.21"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.25"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.10">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
       <timeoutMinutes>60</timeoutMinutes>
       <failBuild>false</failBuild>
       <writingDescription>false</writingDescription>

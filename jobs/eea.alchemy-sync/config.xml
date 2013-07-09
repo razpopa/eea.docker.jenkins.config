@@ -1,20 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Valentine.linguaflow build on a clean Plone 4 instance</description>
-  <logRotator class="hudson.tasks.LogRotator">
-    <daysToKeep>30</daysToKeep>
-    <numToKeep>-1</numToKeep>
-    <artifactDaysToKeep>-1</artifactDaysToKeep>
-    <artifactNumToKeep>-1</artifactNumToKeep>
-  </logRotator>
+  <description>Merge collective fork to eea</description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.12">
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.11">
       <redmineWebsite>http://taskman.eionet.europa.eu/</redmineWebsite>
       <projectName>zope</projectName>
       <redmineVersionNumber></redmineVersionNumber>
     </hudson.plugins.redmine.RedmineProjectProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.5">
+      <projectUrl>http://github.com/eea/eea.alchemy/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
@@ -26,7 +23,7 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>https://github.com/collective/valentine.linguaflow.git</url>
+        <url>git@github.com:eea/eea.alchemy.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -47,7 +44,7 @@
     <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
     <gitTool>Default</gitTool>
     <browser class="hudson.plugins.git.browser.GithubWeb">
-      <url>https://github.com/collective/valentine.linguaflow/</url>
+      <url>https://github.com/eea/eea.alchemy/</url>
     </browser>
     <submoduleCfg class="list"/>
     <relativeTargetDir></relativeTargetDir>
@@ -56,7 +53,7 @@
     <excludedUsers></excludedUsers>
     <gitConfigName></gitConfigName>
     <gitConfigEmail></gitConfigEmail>
-    <skipTag>false</skipTag>
+    <skipTag>true</skipTag>
     <includedRegions></includedRegions>
     <scmName></scmName>
   </scm>
@@ -64,21 +61,14 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector">
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.5">
-      <spec></spec>
-    </com.cloudbees.jenkins.GitHubPushTrigger>
-  </triggers>
+  <triggers class="vector"/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}/buildouts/plone4
-./install.sh
-bin/buildout</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}/buildouts/plone4
-bin/test -v -vv -s valentine.linguaflow</command>
+      <command>cd ${WORKSPACE}
+wget -O git-sync https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk/tools/bash/git-sync.sh
+chmod u+x git-sync
+./git-sync https://github.com/collective/eea.alchemy.git</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -86,15 +76,14 @@ bin/test -v -vv -s valentine.linguaflow</command>
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.Mailer plugin="mailer@1.4">
-      <recipients>web30development@localhost</recipients>
+      <recipients>eea-github@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.25">
-          <value>tiberiu@jabber.eaudeweb.ro</value>
+          <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -109,7 +98,7 @@ bin/test -v -vv -s valentine.linguaflow</command>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
-      <timeoutMinutes>30</timeoutMinutes>
+      <timeoutMinutes>10</timeoutMinutes>
       <failBuild>false</failBuild>
       <writingDescription>false</writingDescription>
       <timeoutPercentage>0</timeoutPercentage>

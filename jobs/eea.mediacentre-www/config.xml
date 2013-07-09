@@ -2,7 +2,7 @@
 <project>
   <actions/>
   <description>- Run EEA mediacentre tests within Plone 4 EEA Buildout</description>
-  <logRotator>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -10,7 +10,7 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.11">
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.12">
       <redmineWebsite>http://taskman.eionet.europa.eu/</redmineWebsite>
       <projectName>zope</projectName>
       <redmineVersionNumber></redmineVersionNumber>
@@ -18,13 +18,15 @@
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.12"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.16"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.44">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.45">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.mediacentre/trunk</remote>
         <local>.</local>
+        <depthOption>infinity</depthOption>
+        <ignoreExternalsOption>false</ignoreExternalsOption>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <browser class="hudson.plugins.trac.TracRepositoryBrowser" plugin="trac@1.13"/>
@@ -35,6 +37,7 @@
     <excludedCommitMessages></excludedCommitMessages>
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
     <ignoreDirPropChanges>false</ignoreDirPropChanges>
+    <filterChangelog>false</filterChangelog>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -43,6 +46,7 @@
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -85,15 +89,16 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.13">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.25">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>low</thresholdLimit>
       <pluginName>[WARNINGS] </pluginName>
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.43">
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll>1</unstableTotalAll>
         <unstableTotalHigh>1</unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -142,13 +147,10 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
       <failBuildOnError>false</failBuildOnError>
       <parsingRulesPath>/var/lib/jenkins/console/parser.rules</parsingRulesPath>
     </hudson.plugins.logparser.LogParserPublisher>
-    <hudson.plugins.violations.ViolationsPublisher plugin="violations@0.7.10">
+    <hudson.plugins.violations.ViolationsPublisher plugin="violations@0.7.11">
       <config>
-        <suppressions class="tree-set">
-          <no-comparator/>
-        </suppressions>
+        <suppressions class="sorted-set"/>
         <typeConfigs>
-          <no-comparator/>
           <entry>
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
@@ -271,6 +273,17 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
+            <string>perlcritic</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>perlcritic</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
@@ -287,7 +300,7 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
               <type>pylint</type>
               <min>2</min>
               <max>5</max>
-              <unstable>3</unstable>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -321,15 +334,15 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.18"/>
-    <hudson.tasks.Mailer>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
+    <hudson.tasks.Mailer plugin="mailer@1.4">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.22">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
       <targets>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.21">
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.25">
           <value>david.ichim@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
@@ -339,12 +352,12 @@ cp ../../parts/xmltestreport/testreports/*eea.mediacentre*.xml xmltestreport/
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.21"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.25"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.10">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
       <timeoutMinutes>20</timeoutMinutes>
       <failBuild>false</failBuild>
       <writingDescription>false</writingDescription>

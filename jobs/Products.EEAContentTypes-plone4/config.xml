@@ -2,7 +2,7 @@
 <project>
   <actions/>
   <description>Products.EEAContentTypes build on a clean Plone 4 instance</description>
-  <logRotator>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -33,7 +33,7 @@
     <excludedUsers></excludedUsers>
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.CheckoutUpdater"/>
+    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
     <ignoreDirPropChanges>false</ignoreDirPropChanges>
   </scm>
   <canRoam>true</canRoam>
@@ -43,6 +43,7 @@
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -61,7 +62,7 @@ bin/test -v -vv -s Products.EEAContentTypes</command>
     <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.tasks.Mailer>
+    <hudson.tasks.Mailer plugin="mailer@1.4">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>

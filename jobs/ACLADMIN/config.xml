@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset>
+<maven2-moduleset plugin="maven-plugin@1.514">
   <actions/>
   <description>Conversions. Checks for updates 43 minutes past the hour.</description>
-  <logRotator>
+  <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>-1</daysToKeep>
     <numToKeep>5</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
@@ -10,20 +10,25 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.trac.TracProjectProperty>
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.12">
+      <projectName></projectName>
+      <redmineVersionNumber></redmineVersionNumber>
+    </hudson.plugins.redmine.RedmineProjectProperty>
+    <hudson.plugins.trac.TracProjectProperty plugin="trac@1.13">
       <tracWebsite>https://svn.eionet.europa.eu/projects/Reportnet/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty/>
-    <hudson.plugins.disk__usage.DiskUsageProperty/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.16"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.45">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Reportnet/acladmin/trunk</remote>
         <local>.</local>
+        <depthOption>infinity</depthOption>
+        <ignoreExternalsOption>false</ignoreExternalsOption>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
     <excludedRegions></excludedRegions>
@@ -32,15 +37,17 @@
     <excludedRevprop></excludedRevprop>
     <excludedCommitMessages></excludedCommitMessages>
     <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
+    <ignoreDirPropChanges>false</ignoreDirPropChanges>
+    <filterChangelog>false</filterChangelog>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>jdk6</jdk>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>43 8-22 * * 1-5</spec>
+      <spec>H 8-22 * * 1-5</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -48,7 +55,7 @@
     <groupId>eionet.acl</groupId>
     <artifactId>acladmin</artifactId>
   </rootModule>
-  <goals>-Denv=default -Dmaven.test.skip=true install javadoc:javadoc cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
+  <goals>-Denv=default clean cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle javadoc:javadoc</goals>
   <mavenName>maven221</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -61,15 +68,18 @@
   <runHeadless>false</runHeadless>
   <settingConfigId></settingConfigId>
   <globalSettingConfigId></globalSettingConfigId>
+  <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+  <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters>
-    <hudson.plugins.checkstyle.CheckStyleReporter>
+    <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.35">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[CHECKSTYLE] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -88,15 +98,16 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.checkstyle.CheckStyleReporter>
-    <hudson.plugins.findbugs.FindBugsReporter>
+    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.48">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[FINDBUGS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -115,16 +126,17 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <isRankActivated>false</isRankActivated>
     </hudson.plugins.findbugs.FindBugsReporter>
-    <hudson.plugins.pmd.PmdReporter>
+    <hudson.plugins.pmd.PmdReporter plugin="pmd@3.34">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[PMD] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -143,15 +155,16 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.pmd.PmdReporter>
-    <hudson.plugins.dry.DryReporter>
+    <hudson.plugins.dry.DryReporter plugin="dry@2.34">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[DRY] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -170,17 +183,18 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <highThreshold>50</highThreshold>
       <normalThreshold>25</normalThreshold>
     </hudson.plugins.dry.DryReporter>
-    <hudson.plugins.tasks.TasksReporter>
+    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.36">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[TASKS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -199,6 +213,7 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <pattern></pattern>
       <excludePattern></excludePattern>
       <high>FIXME</high>
@@ -206,13 +221,10 @@
       <low>@deprecated</low>
       <ignoreCase>false</ignoreCase>
     </hudson.plugins.tasks.TasksReporter>
-    <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
+    <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter plugin="violations@0.7.11">
       <config>
-        <suppressions class="tree-set">
-          <no-comparator/>
-        </suppressions>
+        <suppressions class="sorted-set"/>
         <typeConfigs>
-          <no-comparator/>
           <entry>
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
@@ -335,6 +347,17 @@
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
+            <string>perlcritic</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>perlcritic</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
@@ -385,15 +408,16 @@
     </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
   </reporters>
   <publishers>
-    <hudson.plugins.analysis.collector.AnalysisPublisher>
+    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.35">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <thresholdLimit>low</thresholdLimit>
       <pluginName>[ANALYSIS-COLLECTOR] </pluginName>
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds>
+      <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -413,7 +437,7 @@
       </thresholds>
       <shouldDetectModules>false</shouldDetectModules>
       <dontComputeNew>false</dontComputeNew>
-      <doNotResolveRelativePaths>false</doNotResolveRelativePaths>
+      <doNotResolveRelativePaths>true</doNotResolveRelativePaths>
       <isCheckStyleDeactivated>false</isCheckStyleDeactivated>
       <isDryDeactivated>false</isDryDeactivated>
       <isFindBugsDeactivated>false</isFindBugsDeactivated>
@@ -421,11 +445,70 @@
       <isOpenTasksDeactivated>false</isOpenTasksDeactivated>
       <isWarningsDeactivated>false</isWarningsDeactivated>
     </hudson.plugins.analysis.collector.AnalysisPublisher>
-    <hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher/>
-    <hudson.plugins.emailext.ExtendedEmailPublisher>
+    <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher plugin="dependencyanalyzer@0.6"/>
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.8">
+      <coberturaReportFile>**/target/site/cobertura/coverage.xml</coberturaReportFile>
+      <onlyStable>false</onlyStable>
+      <failUnhealthy>false</failUnhealthy>
+      <failUnstable>false</failUnstable>
+      <autoUpdateHealth>false</autoUpdateHealth>
+      <autoUpdateStability>false</autoUpdateStability>
+      <zoomCoverageChart>false</zoomCoverageChart>
+      <failNoReports>true</failNoReports>
+      <healthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>100000</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>100000</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>100000</int>
+          </entry>
+        </targets>
+      </healthyTarget>
+      <unhealthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </unhealthyTarget>
+      <failingTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </failingTarget>
+      <sourceEncoding>UTF_8</sourceEncoding>
+    </hudson.plugins.cobertura.CoberturaPublisher>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.28">
       <recipientList>soren.roug@eea.europa.eu</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
@@ -436,9 +519,28 @@
             <sendToDevelopers>true</sendToDevelopers>
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
-            <sendToRecipientList>true</sendToRecipientList>
+            <sendToRecipientList>false</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
           </email>
         </hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
+        <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
+          <email>
+            <recipientList></recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <sendToDevelopers>true</sendToDevelopers>
+            <sendToRequester>false</sendToRequester>
+            <includeCulprits>false</includeCulprits>
+            <sendToRecipientList>false</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
           <email>
             <recipientList></recipientList>
@@ -448,6 +550,10 @@
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
         <hudson.plugins.emailext.plugins.trigger.FixedTrigger>
@@ -459,16 +565,29 @@
             <sendToRequester>false</sendToRequester>
             <includeCulprits>false</includeCulprits>
             <sendToRecipientList>true</sendToRecipientList>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>false</attachBuildLog>
+            <compressBuildLog>false</compressBuildLog>
+            <replyTo></replyTo>
           </email>
         </hudson.plugins.emailext.plugins.trigger.FixedTrigger>
       </configuredTriggers>
       <contentType>default</contentType>
       <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <defaultContent>${DEFAULT_CONTENT}</defaultContent>
       <attachmentsPattern></attachmentsPattern>
+      <presendScript></presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo></replyTo>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>
   <prebuilders/>
   <postbuilders/>
+  <runPostStepsIfResult>
+    <name>FAILURE</name>
+    <ordinal>2</ordinal>
+    <color>RED</color>
+  </runPostStepsIfResult>
 </maven2-moduleset>
