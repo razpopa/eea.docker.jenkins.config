@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.jira.JiraProjectProperty_-DescriptorImpl plugin="jira@1.36">
+<hudson.plugins.jira.JiraProjectProperty_-DescriptorImpl plugin="jira@1.37">
   <sites/>
 </hudson.plugins.jira.JiraProjectProperty_-DescriptorImpl>

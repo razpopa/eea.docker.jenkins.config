@@ -30,7 +30,15 @@ Check console output at &lt;a href=&quot;$BUILD_URL&quot;&gt;$BUILD_URL&lt;/a&gt
 &lt;/p&gt;&#xd;
 &lt;blockquote style=&quot;margin: 1em 3em; border: 1px solid black; padding: 0em 1em&quot;&gt;&#xd;
 &lt;p&gt;&#xd;
-Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.&#xd;
+“Kim said that it is hard to convince even experienced people to bother setting up a system architecture&#xd;
+that supports regression testing and to build test cases as they go. However, once they experience&#xd;
+the pleasure of developing with automated regression tests at their fingertips, they never go back.&#xd;
+The regression tests and batch test architecture give them a freedom to make changes and a feeling&#xd;
+of security they never had before. They make some changes, then push the test button, and find out&#xd;
+if they messed up something that was working before.”&#xd;
+&lt;/p&gt;&#xd;
+&lt;p&gt;&#xd;
+&lt;cite&gt;Crystal Clear, by Alistair Cockburn, page 6&lt;/cite&gt;&#xd;
 &lt;/p&gt;&#xd;
 &lt;/blockquote&gt;&#xd;
 &lt;h2&gt;Tests&lt;/h2&gt;&#xd;

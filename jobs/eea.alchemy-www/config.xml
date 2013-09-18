@@ -64,7 +64,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector">
+  <triggers>
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
@@ -127,11 +127,11 @@ cp ../../parts/xmltestreport/testreports/*eea-alchemy*.xml xmltestreport/
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
       <thresholds plugin="analysis-core@1.49">
-        <unstableTotalAll>13</unstableTotalAll>
+        <unstableTotalAll>15</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll>13</unstableNewAll>
+        <unstableNewAll>15</unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
         <unstableNewLow></unstableNewLow>
@@ -159,9 +159,9 @@ cp ../../parts/xmltestreport/testreports/*eea-alchemy*.xml xmltestreport/
       </parserConfigurations>
       <consoleParsers/>
     </hudson.plugins.warnings.WarningsPublisher>
-    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
+    <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
+    </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.tasks.BuildTrigger>
       <childProjects>eea.alchemy-plone4</childProjects>
       <threshold>
@@ -170,7 +170,7 @@ cp ../../parts/xmltestreport/testreports/*eea-alchemy*.xml xmltestreport/
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9">
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.1">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
       <failUnhealthy>false</failUnhealthy>
@@ -178,6 +178,7 @@ cp ../../parts/xmltestreport/testreports/*eea-alchemy*.xml xmltestreport/
       <autoUpdateHealth>false</autoUpdateHealth>
       <autoUpdateStability>false</autoUpdateStability>
       <zoomCoverageChart>false</zoomCoverageChart>
+      <maxNumberOfBuilds>0</maxNumberOfBuilds>
       <failNoReports>false</failNoReports>
       <healthyTarget>
         <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">

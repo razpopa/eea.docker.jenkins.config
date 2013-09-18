@@ -9,24 +9,24 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>Y8nti2updnhJO3hJaa9HP9Ns/BaAZ+r70BQeb6Wobj6aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.18">
-      <score>85.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+      <score>9.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.tasks.Mailer_-UserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
       <emailAddress>david.batranu@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.9">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.18">
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23">
       <nick>batradav</nick>
     </hudson.plugins.ircbot.IrcUserProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.22">
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">
       <jid>david@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
     <hudson.model.MyViewsProperty>
@@ -40,7 +40,7 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.5">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
@@ -50,5 +50,8 @@
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
+      <credentials/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
   </properties>
 </user>

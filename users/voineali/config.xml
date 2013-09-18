@@ -9,8 +9,9 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>4+wT5ckqFX278YgZPSKskrw74zfNMhYDZSleqjvuGZ2aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1">
-      <imageBytes>iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAABd8UlEQVR42ny8hXubCZbm6/vszO7O
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2">
+      <avatarImage>
+        <imageBytes>iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAABd8UlEQVR42ny8hXubCZbm6/vszO7O
 dHcxhBPHsWNmZmYG2ZZsGSSZZbaYmZkly7bMzMzMTipVDdM03T3dO3vnr7hHdnVuzd3d6+etrz47
 iqPvp/ec855PTlz2L853z063jo9W93YXN7dnV9cnF5cnFpbGFhZH5uYHp6ZtY+Mmx7BxyAEyDA2b
 hielpkGpya6yD8ks/VKzxeBwgAYnJ/rHRs39g0OjEzPTC7Mzi+sr25vrO6uLS3q1athuHRmw8phU
@@ -433,15 +434,18 @@ OWnpuyStX7V3XpeU7FeUbZeWzaLsfTBTFyavM0NSClq1PL+erw9TmVIZVxTQqysdujqPqd5rLfO4
 iwKJwmSnt2JKUTSL800jrANISXkm3bGOoEmlabN5FoTUh9MUU8y1FEsjCFZIeQGMa86iqWEEMQIr
 RWDFSKo0my4FDtpAUkFw2g1EYzbDgeP5cEwbnmnGscy5HAuS64TyPemiggxRIIdrQ7JMuSwbmmbA
 UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageBytes>
+        <mimeType>image/png</mimeType>
+        <filenameSuffix>png</filenameSuffix>
+      </avatarImage>
     </net.hurstfrost.jenkins.avatar.user.AvatarProperty>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>46.0</score>
+      <score>145.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.14">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites>
         <string>eea.alchemy-www</string>
         <string>eea.dataservice-www</string>
@@ -487,7 +491,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
     <hudson.model.MyViewsProperty>
       <primaryViewName>Alin Dashboard</primaryViewName>
       <views>
-        <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.6">
+        <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.8">
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
           <name>Alin Dashboard</name>
           <filterExecutors>false</filterExecutors>
@@ -497,7 +501,7 @@ UVShwoqdSztiMa9IQOYwsGBSy7ggAbKISAxoQmBF+k+1MpdwvkKagQAAAABJRU5ErkJggg==</imageB
             <comparator class="hudson.util.CaseInsensitiveComparator"/>
           </jobNames>
           <jobFilters>
-            <hudson.plugins.favorite.filter.FavoriteFilter plugin="favorite@1.14"/>
+            <hudson.plugins.favorite.filter.FavoriteFilter plugin="favorite@1.16"/>
           </jobFilters>
           <columns>
             <hudson.views.StatusColumn/>

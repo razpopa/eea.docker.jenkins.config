@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>bauer</fullName>
+  <fullName>kaptejaa</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>uURiXCCd71lg6xqUf2N7UPXmSfoEalpcJalYcAz7yq+aTo4YgslF9IL/1JVZ/wsc</apiToken>
+      <apiToken>1bnK5cpLr/b102cAj41WkgIx3jpRcQPonmWyfZBfWq6aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
+      <credentials/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
@@ -30,14 +34,8 @@
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>1.0</score>
+      <score>-3.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
-      <credentials/>
-    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
-      <emailAddress>bauer@starzel.de</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

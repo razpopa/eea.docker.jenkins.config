@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Generates documentation with sphinx and upload http://eea.github.io</description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>30</daysToKeep>
+    <numToKeep>-1</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.13">
+      <redmineWebsite>http://taskman.eionet.europa.eu/</redmineWebsite>
+      <projectName>zope</projectName>
+      <redmineVersionNumber></redmineVersionNumber>
+    </hudson.plugins.redmine.RedmineProjectProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.7">
+      <projectUrl>http://github.com/eea/eea.github.com/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.17"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>@weekly</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson</customWorkspace>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+bin/develop up</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+source bin/activate
+bin/sphinx
+deactivate
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}/src/eea.github.com
+git add -A
+git commit -m &quot;[JENKINS] - Auto-update documentation&quot;
+git push
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
+      <factGenerator/>
+    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
+      <targets>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.25">
+          <value>alin@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
+      </targets>
+      <strategy>FAILURE_AND_FIXED</strategy>
+      <notifyOnBuildStart>false</notifyOnBuildStart>
+      <notifySuspects>false</notifySuspects>
+      <notifyCulprits>false</notifyCulprits>
+      <notifyFixers>false</notifyFixers>
+      <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.25"/>
+      <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
+    </hudson.plugins.jabber.im.transport.JabberPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.11">
+      <timeoutMinutes>60</timeoutMinutes>
+      <failBuild>false</failBuild>
+      <writingDescription>false</writingDescription>
+      <timeoutPercentage>0</timeoutPercentage>
+      <timeoutType>absolute</timeoutType>
+      <timeoutMinutesElasticDefault>3</timeoutMinutesElasticDefault>
+    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+  </buildWrappers>
+</project>

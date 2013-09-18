@@ -10,7 +10,7 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.12">
+    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.13">
       <redmineWebsite>http://taskman.eionet.europa.eu/</redmineWebsite>
       <projectName>zope</projectName>
       <redmineVersionNumber></redmineVersionNumber>
@@ -18,9 +18,9 @@
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.16"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.17"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.45">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.50">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.soer/trunk</remote>
@@ -43,7 +43,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector">
+  <triggers>
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
@@ -91,7 +91,7 @@ cp ../../parts/xmltestreport/testreports/*eea-soer*.xml xmltestreport/
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.25">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.26">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>high</thresholdLimit>
@@ -144,7 +144,7 @@ cp ../../parts/xmltestreport/testreports/*eea-soer*.xml xmltestreport/
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.8">
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.1">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
       <failUnhealthy>false</failUnhealthy>
@@ -152,6 +152,7 @@ cp ../../parts/xmltestreport/testreports/*eea-soer*.xml xmltestreport/
       <autoUpdateHealth>false</autoUpdateHealth>
       <autoUpdateStability>false</autoUpdateStability>
       <zoomCoverageChart>false</zoomCoverageChart>
+      <maxNumberOfBuilds>0</maxNumberOfBuilds>
       <failNoReports>false</failNoReports>
       <healthyTarget>
         <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
@@ -337,7 +338,7 @@ cp ../../parts/xmltestreport/testreports/*eea-soer*.xml xmltestreport/
               <type>pylint</type>
               <min>16</min>
               <max>999</max>
-              <unstable>47</unstable>
+              <unstable>26</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -372,7 +373,7 @@ cp ../../parts/xmltestreport/testreports/*eea-soer*.xml xmltestreport/
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
     <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
-    <hudson.tasks.Mailer plugin="mailer@1.4">
+    <hudson.tasks.Mailer plugin="mailer@1.5">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>

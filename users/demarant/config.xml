@@ -9,12 +9,12 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>TB1ZfdqszchQd/+QJtl47ChSaMKkF6JnsGErUiio8jqaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
       <enabledColorBlindSupport>true</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>117.0</score>
+      <score>111.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
@@ -23,7 +23,7 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
       <emailAddress>demarinis@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.14">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23">
@@ -41,7 +41,7 @@
           <filterExecutors>false</filterExecutors>
           <filterQueue>false</filterQueue>
         </hudson.model.AllView>
-        <maps.hudson.plugin.xfpanel.XFPanelView plugin="xfpanel@1.2.0">
+        <maps.hudson.plugin.xfpanel.XFPanelView plugin="xfpanel@1.2.2">
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
           <name>eXtreme Feedback</name>
           <filterExecutors>false</filterExecutors>

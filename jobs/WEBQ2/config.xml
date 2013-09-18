@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <maven2-moduleset plugin="maven-plugin@1.522">
   <actions/>
-  <description>European Nature Information System. Using JSP.&#xd;
-Polled for changes 24 minutes past the hour 8-22</description>
+  <description>Web questionnaire version 2</description>
   <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>-1</daysToKeep>
-    <numToKeep>5</numToKeep>
+    <numToKeep>10</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
@@ -23,13 +22,12 @@ Polled for changes 24 minutes past the hour 8-22</description>
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.50">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Biodiversity/EUNIS2/trunk</remote>
+        <remote>https://svn.eionet.europa.eu/repositories/Reportnet/webq2/trunk</remote>
         <local>.</local>
         <depthOption>infinity</depthOption>
         <ignoreExternalsOption>false</ignoreExternalsOption>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
-    <browser class="hudson.plugins.trac.TracRepositoryBrowser" plugin="trac@1.13"/>
     <excludedRegions></excludedRegions>
     <includedRegions></includedRegions>
     <excludedUsers></excludedUsers>
@@ -51,8 +49,8 @@ Polled for changes 24 minutes past the hour 8-22</description>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
-    <groupId>eionet.eunis</groupId>
-    <artifactId>eunis</artifactId>
+    <groupId>eionet.webq</groupId>
+    <artifactId>webq2</artifactId>
   </rootModule>
   <goals>-Denv=unittest clean cobertura:cobertura javadoc:javadoc findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
   <mavenName>maven302</mavenName>
@@ -71,11 +69,39 @@ Polled for changes 24 minutes past the hour 8-22</description>
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters>
+    <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.35">
+      <healthy></healthy>
+      <unHealthy></unHealthy>
+      <pluginName>[CHECKSTYLE] </pluginName>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
+      <useDeltaValues>false</useDeltaValues>
+      <thresholds plugin="analysis-core@1.49">
+        <unstableTotalAll></unstableTotalAll>
+        <unstableTotalHigh></unstableTotalHigh>
+        <unstableTotalNormal></unstableTotalNormal>
+        <unstableTotalLow></unstableTotalLow>
+        <unstableNewAll></unstableNewAll>
+        <unstableNewHigh></unstableNewHigh>
+        <unstableNewNormal></unstableNewNormal>
+        <unstableNewLow></unstableNewLow>
+        <failedTotalAll></failedTotalAll>
+        <failedTotalHigh></failedTotalHigh>
+        <failedTotalNormal></failedTotalNormal>
+        <failedTotalLow></failedTotalLow>
+        <failedNewAll></failedNewAll>
+        <failedNewHigh></failedNewHigh>
+        <failedNewNormal></failedNewNormal>
+        <failedNewLow></failedNewLow>
+      </thresholds>
+      <dontComputeNew>false</dontComputeNew>
+      <useStableBuildAsReference>false</useStableBuildAsReference>
+    </hudson.plugins.checkstyle.CheckStyleReporter>
     <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.48">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[FINDBUGS] </pluginName>
-      <thresholdLimit>high</thresholdLimit>
+      <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds plugin="analysis-core@1.49">
@@ -112,27 +138,19 @@ Polled for changes 24 minutes past the hour 8-22</description>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll></unstableNewAll>
-        <unstableNewHigh></unstableNewHigh>
-        <unstableNewNormal></unstableNewNormal>
-        <unstableNewLow></unstableNewLow>
         <failedTotalAll></failedTotalAll>
         <failedTotalHigh></failedTotalHigh>
         <failedTotalNormal></failedTotalNormal>
         <failedTotalLow></failedTotalLow>
-        <failedNewAll></failedNewAll>
-        <failedNewHigh></failedNewHigh>
-        <failedNewNormal></failedNewNormal>
-        <failedNewLow></failedNewLow>
       </thresholds>
-      <dontComputeNew>false</dontComputeNew>
+      <dontComputeNew>true</dontComputeNew>
       <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.pmd.PmdReporter>
     <hudson.plugins.dry.DryReporter plugin="dry@2.34">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[DRY] </pluginName>
-      <thresholdLimit>high</thresholdLimit>
+      <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds plugin="analysis-core@1.49">
@@ -155,15 +173,15 @@ Polled for changes 24 minutes past the hour 8-22</description>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
       <useStableBuildAsReference>false</useStableBuildAsReference>
-      <highThreshold>1000</highThreshold>
-      <normalThreshold>500</normalThreshold>
+      <highThreshold>50</highThreshold>
+      <normalThreshold>25</normalThreshold>
     </hudson.plugins.dry.DryReporter>
     <hudson.plugins.tasks.TasksReporter plugin="tasks@4.36">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[TASKS] </pluginName>
-      <thresholdLimit>high</thresholdLimit>
-      <canRunOnFailed>true</canRunOnFailed>
+      <thresholdLimit>low</thresholdLimit>
+      <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
       <thresholds plugin="analysis-core@1.49">
         <unstableTotalAll></unstableTotalAll>
@@ -200,9 +218,9 @@ Polled for changes 24 minutes past the hour 8-22</description>
             <string>checkstyle</string>
             <hudson.plugins.violations.TypeConfig>
               <type>checkstyle</type>
-              <min>60000</min>
-              <max>60001</max>
-              <unstable>80000</unstable>
+              <min>1000</min>
+              <max>1800</max>
+              <unstable>2300</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -222,7 +240,7 @@ Polled for changes 24 minutes past the hour 8-22</description>
             <string>cpd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>cpd</type>
-              <min>200</min>
+              <min>10</min>
               <max>999</max>
               <unstable>999</unstable>
               <usePattern>false</usePattern>
@@ -255,9 +273,9 @@ Polled for changes 24 minutes past the hour 8-22</description>
             <string>findbugs</string>
             <hudson.plugins.violations.TypeConfig>
               <type>findbugs</type>
-              <min>1300</min>
-              <max>9999</max>
-              <unstable>9999</unstable>
+              <min>150</min>
+              <max>999</max>
+              <unstable>999</unstable>
               <usePattern>false</usePattern>
               <pattern></pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -332,7 +350,7 @@ Polled for changes 24 minutes past the hour 8-22</description>
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
-              <min>600</min>
+              <min>10</min>
               <max>999</max>
               <unstable>999</unstable>
               <usePattern>false</usePattern>
@@ -374,7 +392,7 @@ Polled for changes 24 minutes past the hour 8-22</description>
           </entry>
         </typeConfigs>
         <limit>100</limit>
-        <encoding>default</encoding>
+        <encoding>UTF-8</encoding>
       </config>
     </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
   </reporters>
@@ -429,20 +447,20 @@ Polled for changes 24 minutes past the hour 8-22</description>
       <autoUpdateStability>false</autoUpdateStability>
       <zoomCoverageChart>false</zoomCoverageChart>
       <maxNumberOfBuilds>0</maxNumberOfBuilds>
-      <failNoReports>false</failNoReports>
+      <failNoReports>true</failNoReports>
       <healthyTarget>
         <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
           <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>100000</int>
+            <int>4000000</int>
           </entry>
           <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>100000</int>
+            <int>4000000</int>
           </entry>
           <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>100000</int>
+            <int>2000000</int>
           </entry>
         </targets>
       </healthyTarget>
@@ -478,11 +496,10 @@ Polled for changes 24 minutes past the hour 8-22</description>
           </entry>
         </targets>
       </failingTarget>
-      <sourceEncoding>UTF_8</sourceEncoding>
+      <sourceEncoding>ASCII</sourceEncoding>
     </hudson.plugins.cobertura.CoberturaPublisher>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.30.2">
-      <recipientList>soren.roug@eea.europa.eu</recipientList>
+      <recipientList>soren.roug@eea.europa.eu, enriko.kasper@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
           <email>

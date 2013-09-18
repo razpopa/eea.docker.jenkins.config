@@ -9,18 +9,18 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>1tAyB80S/dvM/y1NAlWt+J0fuNh6mrhyLxqL2QSzmieaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>167.0</score>
+      <score>233.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
       <emailAddress>zoltan.szabo@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.14">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">

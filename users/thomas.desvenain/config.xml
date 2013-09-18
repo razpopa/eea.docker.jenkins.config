@@ -5,8 +5,8 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>tAlWcHDfm2ofQQhtMe+pkJDyngkQgJvdCcbIb2AZBq6aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.14">
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
@@ -26,7 +26,7 @@
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>-15.0</score>
+      <score>-12.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">

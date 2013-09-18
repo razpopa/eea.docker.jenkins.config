@@ -64,7 +64,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
-  <triggers class="vector">
+  <triggers>
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
@@ -170,7 +170,7 @@ cp ../../parts/xmltestreport/testreports/*eea-workflow*.xml xmltestreport/
         <color>BLUE</color>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9">
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.1">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
       <failUnhealthy>false</failUnhealthy>
@@ -178,6 +178,7 @@ cp ../../parts/xmltestreport/testreports/*eea-workflow*.xml xmltestreport/
       <autoUpdateHealth>false</autoUpdateHealth>
       <autoUpdateStability>false</autoUpdateStability>
       <zoomCoverageChart>false</zoomCoverageChart>
+      <maxNumberOfBuilds>0</maxNumberOfBuilds>
       <failNoReports>false</failNoReports>
       <healthyTarget>
         <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
@@ -317,9 +318,9 @@ cp ../../parts/xmltestreport/testreports/*eea-workflow*.xml xmltestreport/
             <string>jslint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
-              <min>0</min>
+              <min>1</min>
               <max>5</max>
-              <unstable>1</unstable>
+              <unstable>2</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
