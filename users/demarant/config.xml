@@ -10,15 +10,22 @@
       <apiToken>TB1ZfdqszchQd/+QJtl47ChSaMKkF6JnsGErUiio8jqaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
-    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.12">
+    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.13">
       <enabledColorBlindSupport>true</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>111.0</score>
+      <score>183.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
-      <credentials/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.9.3">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+      </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
       <emailAddress>demarinis@eea.europa.eu</emailAddress>
@@ -72,7 +79,7 @@
         </maps.hudson.plugin.xfpanel.XFPanelView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.7">
       <identifiers>
         <string>https://www.google.com/accounts/o8/id?id=AItOawk_60NZaZ3kBvxJmVl7uvMq_aFohEBOf4E</string>
       </identifiers>

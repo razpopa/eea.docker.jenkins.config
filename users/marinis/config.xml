@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>marinis</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>N3Oq05bRZS5JunWwl8AgUYnyAbrJOoRaouJNl4IGRYGaTo4YgslF9IL/1JVZ/wsc</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.4">
+      <credentials/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
+      <favorites/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23"/>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>All</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
+      <identifiers/>
+    </hudson.plugins.openid.OpenIdUserProperty>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
+      <emailAddress>marinis@centaurus.eea.europa.eu</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+      <score>2.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+    </hudson.plugins.cigame.UserScoreProperty>
+  </properties>
+</user>
