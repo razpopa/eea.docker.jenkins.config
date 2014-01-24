@@ -14,10 +14,10 @@
       <enabledColorBlindSupport>true</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>183.0</score>
+      <score>187.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.9.3">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.9.4">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -27,7 +27,7 @@
         </entry>
       </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
       <emailAddress>demarinis@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
@@ -79,7 +79,7 @@
         </maps.hudson.plugin.xfpanel.XFPanelView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.7">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
       <identifiers>
         <string>https://www.google.com/accounts/o8/id?id=AItOawk_60NZaZ3kBvxJmVl7uvMq_aFohEBOf4E</string>
       </identifiers>
@@ -94,5 +94,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7UrjZV1sIGwZ0ZQoZ15yE+eBZHULfrHBSI8rlDnOXTmT
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0">
       <skypeId>demarinis-eea</skypeId>
     </hudson.plugins.skype.user.SkypeUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
   </properties>
 </user>

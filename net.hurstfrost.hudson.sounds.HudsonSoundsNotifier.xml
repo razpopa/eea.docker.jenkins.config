@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<net.hurstfrost.hudson.sounds.HudsonSoundsNotifier_-HudsonSoundsDescriptor plugin="sounds@0.4">
+<net.hurstfrost.hudson.sounds.HudsonSoundsNotifier_-HudsonSoundsDescriptor plugin="sounds@0.4.3">
   <soundArchive>file:/var/lib/jenkins/sounds/sound-archive.zip</soundArchive>
   <playMethod>BROWSER</playMethod>
   <systemCommand></systemCommand>

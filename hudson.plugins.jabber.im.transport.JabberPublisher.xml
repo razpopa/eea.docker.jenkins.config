@@ -9,7 +9,7 @@
   <enableSASL>false</enableSASL>
   <scrambledPasswords>true</scrambledPasswords>
   <defaultTargets>
-    <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.25">
+    <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.28">
       <name>web3.0development@conference.jabber.eea.europa.eu</name>
       <notificationOnly>true</notificationOnly>
     </hudson.plugins.im.GroupChatIMMessageTarget>

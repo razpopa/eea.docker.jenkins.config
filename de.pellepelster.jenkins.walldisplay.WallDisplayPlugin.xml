@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<de.pellepelster.jenkins.walldisplay.Configuration plugin="jenkinswalldisplay@0.6.17">
+<de.pellepelster.jenkins.walldisplay.Configuration plugin="jenkinswalldisplay@0.6.21">
   <theme>default</theme>
   <fontFamily>sans-serif</fontFamily>
   <buildRange>all</buildRange>
@@ -10,5 +10,7 @@
   <showDetails>false</showDetails>
   <showGravatar>false</showGravatar>
   <showBuildNumber>true</showBuildNumber>
+  <showLastStableTimeAgo>false</showLastStableTimeAgo>
   <showDisabledBuilds>true</showDisabledBuilds>
+  <blinkBgPicturesWhenBuilding>false</blinkBgPicturesWhenBuilding>
 </de.pellepelster.jenkins.walldisplay.Configuration>
