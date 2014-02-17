@@ -34,7 +34,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>**</name>
+        <name>*/master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -57,10 +57,10 @@
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
     <groupId>eionet.cr</groupId>
-    <artifactId>cr-das</artifactId>
+    <artifactId>cr3</artifactId>
   </rootModule>
   <goals>-Denv=unittest -Dmaven.test.skip=true clean cobertura:cobertura javadoc:javadoc findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle</goals>
-  <mavenName>maven221</mavenName>
+  <mavenName>maven302</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>

@@ -13,6 +13,7 @@
     <permission>hudson.model.Computer.Configure:ghicaale</permission>
     <permission>hudson.model.Computer.Configure:ichimdav</permission>
     <permission>hudson.model.Computer.Configure:melisand</permission>
+    <permission>hudson.model.Computer.Configure:mironovi</permission>
     <permission>hudson.model.Computer.Configure:pasoviul</permission>
     <permission>hudson.model.Computer.Configure:robaaoli</permission>
     <permission>hudson.model.Computer.Configure:roug</permission>
@@ -20,6 +21,7 @@
     <permission>hudson.model.Computer.Configure:tiberich</permission>
     <permission>hudson.model.Computer.Configure:voineali</permission>
     <permission>hudson.model.Computer.Create:dascalu</permission>
+    <permission>hudson.model.Computer.Create:mironovi</permission>
     <permission>hudson.model.Computer.Create:pasoviul</permission>
     <permission>hudson.model.Computer.Create:robaaoli</permission>
     <permission>hudson.model.Computer.Create:tiberich</permission>
@@ -31,6 +33,7 @@
     <permission>hudson.model.Computer.Delete:ghicaale</permission>
     <permission>hudson.model.Computer.Delete:ichimdav</permission>
     <permission>hudson.model.Computer.Delete:melisand</permission>
+    <permission>hudson.model.Computer.Delete:mironovi</permission>
     <permission>hudson.model.Computer.Delete:pasoviul</permission>
     <permission>hudson.model.Computer.Delete:robaaoli</permission>
     <permission>hudson.model.Computer.Delete:roug</permission>
@@ -59,6 +62,7 @@
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
     <permission>hudson.model.Hudson.Read:kasperen</permission>
     <permission>hudson.model.Hudson.Read:melisand</permission>
+    <permission>hudson.model.Hudson.Read:mironovi</permission>
     <permission>hudson.model.Hudson.Read:moregale</permission>
     <permission>hudson.model.Hudson.Read:pasoviul</permission>
     <permission>hudson.model.Hudson.Read:robaaoli</permission>
@@ -81,6 +85,7 @@
     <permission>hudson.model.Item.Build:ichimdav</permission>
     <permission>hudson.model.Item.Build:kasperen</permission>
     <permission>hudson.model.Item.Build:melisand</permission>
+    <permission>hudson.model.Item.Build:mironovi</permission>
     <permission>hudson.model.Item.Build:moregale</permission>
     <permission>hudson.model.Item.Build:pasoviul</permission>
     <permission>hudson.model.Item.Build:robaaoli</permission>
@@ -98,6 +103,7 @@
     <permission>hudson.model.Item.Configure:ichimdav</permission>
     <permission>hudson.model.Item.Configure:kasperen</permission>
     <permission>hudson.model.Item.Configure:melisand</permission>
+    <permission>hudson.model.Item.Configure:mironovi</permission>
     <permission>hudson.model.Item.Configure:moregale</permission>
     <permission>hudson.model.Item.Configure:pasoviul</permission>
     <permission>hudson.model.Item.Configure:robaaoli</permission>
@@ -115,6 +121,7 @@
     <permission>hudson.model.Item.Create:ichimdav</permission>
     <permission>hudson.model.Item.Create:kasperen</permission>
     <permission>hudson.model.Item.Create:melisand</permission>
+    <permission>hudson.model.Item.Create:mironovi</permission>
     <permission>hudson.model.Item.Create:moregale</permission>
     <permission>hudson.model.Item.Create:pasoviul</permission>
     <permission>hudson.model.Item.Create:robaaoli</permission>
@@ -132,6 +139,7 @@
     <permission>hudson.model.Item.Delete:ichimdav</permission>
     <permission>hudson.model.Item.Delete:kasperen</permission>
     <permission>hudson.model.Item.Delete:melisand</permission>
+    <permission>hudson.model.Item.Delete:mironovi</permission>
     <permission>hudson.model.Item.Delete:moregale</permission>
     <permission>hudson.model.Item.Delete:pasoviul</permission>
     <permission>hudson.model.Item.Delete:robaaoli</permission>
@@ -150,6 +158,7 @@
     <permission>hudson.model.Item.Read:ichimdav</permission>
     <permission>hudson.model.Item.Read:kasperen</permission>
     <permission>hudson.model.Item.Read:melisand</permission>
+    <permission>hudson.model.Item.Read:mironovi</permission>
     <permission>hudson.model.Item.Read:moregale</permission>
     <permission>hudson.model.Item.Read:pasoviul</permission>
     <permission>hudson.model.Item.Read:robaaoli</permission>
@@ -167,6 +176,7 @@
     <permission>hudson.model.Item.Release:ichimdav</permission>
     <permission>hudson.model.Item.Release:kasperen</permission>
     <permission>hudson.model.Item.Release:melisand</permission>
+    <permission>hudson.model.Item.Release:mironovi</permission>
     <permission>hudson.model.Item.Release:moregale</permission>
     <permission>hudson.model.Item.Release:pasoviul</permission>
     <permission>hudson.model.Item.Release:robaaoli</permission>
@@ -182,6 +192,7 @@
     <permission>hudson.model.Item.Workspace:ichimdav</permission>
     <permission>hudson.model.Item.Workspace:kasperen</permission>
     <permission>hudson.model.Item.Workspace:melisand</permission>
+    <permission>hudson.model.Item.Workspace:mironovi</permission>
     <permission>hudson.model.Item.Workspace:moregale</permission>
     <permission>hudson.model.Item.Workspace:pasoviul</permission>
     <permission>hudson.model.Item.Workspace:robaaoli</permission>
@@ -199,6 +210,7 @@
     <permission>hudson.model.Run.Delete:ichimdav</permission>
     <permission>hudson.model.Run.Delete:kasperen</permission>
     <permission>hudson.model.Run.Delete:melisand</permission>
+    <permission>hudson.model.Run.Delete:mironovi</permission>
     <permission>hudson.model.Run.Delete:moregale</permission>
     <permission>hudson.model.Run.Delete:pasoviul</permission>
     <permission>hudson.model.Run.Delete:robaaoli</permission>
@@ -216,6 +228,7 @@
     <permission>hudson.model.Run.Update:ichimdav</permission>
     <permission>hudson.model.Run.Update:kasperen</permission>
     <permission>hudson.model.Run.Update:melisand</permission>
+    <permission>hudson.model.Run.Update:mironovi</permission>
     <permission>hudson.model.Run.Update:moregale</permission>
     <permission>hudson.model.Run.Update:pasoviul</permission>
     <permission>hudson.model.Run.Update:robaaoli</permission>
@@ -230,6 +243,7 @@
     <permission>hudson.model.View.Configure:ghicaale</permission>
     <permission>hudson.model.View.Configure:ichimdav</permission>
     <permission>hudson.model.View.Configure:melisand</permission>
+    <permission>hudson.model.View.Configure:mironovi</permission>
     <permission>hudson.model.View.Configure:moregale</permission>
     <permission>hudson.model.View.Configure:pasoviul</permission>
     <permission>hudson.model.View.Configure:robaaoli</permission>
@@ -242,6 +256,7 @@
     <permission>hudson.model.View.Create:ghicaale</permission>
     <permission>hudson.model.View.Create:ichimdav</permission>
     <permission>hudson.model.View.Create:melisand</permission>
+    <permission>hudson.model.View.Create:mironovi</permission>
     <permission>hudson.model.View.Create:pasoviul</permission>
     <permission>hudson.model.View.Create:robaaoli</permission>
     <permission>hudson.model.View.Create:roug</permission>
@@ -253,6 +268,7 @@
     <permission>hudson.model.View.Delete:ghicaale</permission>
     <permission>hudson.model.View.Delete:ichimdav</permission>
     <permission>hudson.model.View.Delete:melisand</permission>
+    <permission>hudson.model.View.Delete:mironovi</permission>
     <permission>hudson.model.View.Delete:pasoviul</permission>
     <permission>hudson.model.View.Delete:robaaoli</permission>
     <permission>hudson.model.View.Delete:roug</permission>
@@ -264,6 +280,7 @@
     <permission>hudson.scm.SCM.Tag:ghicaale</permission>
     <permission>hudson.scm.SCM.Tag:ichimdav</permission>
     <permission>hudson.scm.SCM.Tag:melisand</permission>
+    <permission>hudson.scm.SCM.Tag:mironovi</permission>
     <permission>hudson.scm.SCM.Tag:pasoviul</permission>
     <permission>hudson.scm.SCM.Tag:robaaoli</permission>
     <permission>hudson.scm.SCM.Tag:roug</permission>

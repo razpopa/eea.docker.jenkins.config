@@ -10,9 +10,6 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
       <projectUrl>http://github.com/eea/eea.github.com/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -52,6 +49,14 @@ git co searchindex.js
 git add -A
 echo `git commit -m &quot;[JENKINS] - Auto-update documentation&quot;`
 git push</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+source bin/activate
+cd ${WORKSPACE}/src/eea.github.com
+echo `./build-templates --commit &quot;[JENKINS] - Auto-update documentation&quot;; echo $?`
+deactivate
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
