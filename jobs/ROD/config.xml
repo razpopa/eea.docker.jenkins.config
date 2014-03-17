@@ -58,8 +58,8 @@
     <groupId>eionet.rod</groupId>
     <artifactId>webrod</artifactId>
   </rootModule>
-  <goals>-Denv=unittest -Dmaven.test.skip=false clean cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd javadoc:javadoc checkstyle:checkstyle</goals>
-  <mavenName>maven221</mavenName>
+  <goals>-Denv=unittest clean cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd javadoc:javadoc checkstyle:checkstyle</goals>
+  <mavenName>maven302</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
