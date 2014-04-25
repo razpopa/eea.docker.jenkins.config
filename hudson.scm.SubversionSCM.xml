@@ -1,15 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.scm.SubversionSCM_-DescriptorImpl plugin="subversion@1.54">
+<hudson.scm.SubversionSCM_-DescriptorImpl plugin="subversion@2.2">
   <generation>729</generation>
-  <credentials class="hashtable">
-    <entry>
-      <string>&lt;https://svn.eionet.europa.eu:443&gt; Eionet Sitedirectory</string>
-      <hudson.scm.SubversionSCM_-DescriptorImpl_-PasswordCredential>
-        <userName>voineali</userName>
-        <password>1Tj+V5ZII/iqFBKXs3rh3/ERvHaNjKJF2sfPaRNbWoY=</password>
-      </hudson.scm.SubversionSCM_-DescriptorImpl_-PasswordCredential>
-    </entry>
-  </credentials>
+  <mayHaveLegacyPerJobCredentials>false</mayHaveLegacyPerJobCredentials>
   <workspaceFormat>100</workspaceFormat>
   <validateRemoteUpToVar>false</validateRemoteUpToVar>
   <storeAuthToDisk>true</storeAuthToDisk>

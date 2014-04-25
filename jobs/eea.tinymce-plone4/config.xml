@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Daviz build on a clean Plone 4 instance</description>
+  <description>EEA TinyMCE build on a clean Plone 4 instance</description>
   <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -10,25 +10,20 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
-      <projectUrl>http://github.com/eea/eea.daviz/</projectUrl>
+      <projectUrl>http://github.com/eea/eea.tinymce/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.4">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.21"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <name></name>
-        <refspec></refspec>
-        <url>https://github.com/collective/eea.daviz.git</url>
+        <url>https://github.com/eea/eea.tinymce.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -37,14 +32,11 @@
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <gitTool>Default</gitTool>
     <browser class="hudson.plugins.git.browser.GithubWeb">
-      <url>https://github.com/collective/eea.daviz/</url>
+      <url>https://github.com/eea/eea.tinymce/</url>
     </browser>
     <submoduleCfg class="list"/>
-    <extensions>
-      <hudson.plugins.git.extensions.impl.PerBuildTag/>
-    </extensions>
+    <extensions/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -54,6 +46,10 @@
     <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.8">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
+    <hudson.triggers.SCMTrigger>
+      <spec>@hourly</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
@@ -64,7 +60,7 @@ bin/buildout</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}/buildouts/plone4
-bin/test -v -vv -s eea.daviz</command>
+bin/test -v -vv -s eea.tinymce</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -80,10 +76,7 @@ bin/test -v -vv -s eea.daviz</command>
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
-          <value>alin@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
-          <value>zoltan@jabber.eaudeweb.ro</value>
+          <value>olimpiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -95,26 +88,14 @@ bin/test -v -vv -s eea.daviz</command>
       <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.28"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.daviz-zope,eea.daviz-sync</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.12.2">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>30</timeoutMinutes>
       </strategy>
-      <operationList class="java.util.Arrays$ArrayList">
-        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
-          <hudson.plugins.build__timeout.operations.AbortOperation/>
-        </a>
-      </operationList>
+      <failBuild>false</failBuild>
+      <writingDescription>false</writingDescription>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>

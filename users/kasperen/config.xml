@@ -21,26 +21,42 @@
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>DQUOxU:b3b158ef86c7f0397341e9420cbd717c1aa01fe5005fdd2757c39e75f936cd28</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
-      <emailAddress>enriko.kasper@gmail.com</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
       <apiToken>lDRSaCOVv+sbQGnSBspRq6Y18yOPSCA0jBTNbbMZZPSaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.13">
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.22"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.3.1">
-      <credentials/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+      </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+      <emailAddress>enriko.kasper@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1397464695105</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>

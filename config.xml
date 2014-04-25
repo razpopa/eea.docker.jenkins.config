@@ -2,6 +2,7 @@
 <hudson>
   <disabledAdministrativeMonitors>
     <string>jenkins.security.RekeySecretAdminMonitor</string>
+    <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
   </disabledAdministrativeMonitors>
   <version>1.546</version>
   <numExecutors>3</numExecutors>
@@ -288,7 +289,7 @@
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.7">
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.8">
     <server>ldap3.eionet.europa.eu</server>
     <rootDN>ou=Users,o=Eionet,l=Europe</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
@@ -302,7 +303,7 @@
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
   <systemMessage>&lt;h1&gt;Welcome to the Continuous Integration Testing site for European Environment Agency&lt;/h1&gt;&#xd;
 (EEA, www.eea.europa.eu)</systemMessage>
-  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter">
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.0">
     <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
   </markupFormatter>
   <jdks/>
@@ -346,7 +347,7 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
@@ -372,7 +373,7 @@
         <string>EUNIS</string>
         <string>RDFExport</string>
         <string>ROD</string>
-        <string>SDF Import</string>
+        <string>SDF_Import</string>
         <string>Sparql Client</string>
         <string>UNS</string>
         <string>WEBQ</string>
@@ -397,7 +398,7 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
@@ -455,7 +456,7 @@
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
       </leftPortlets>
       <rightPortlets>
-        <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet plugin="warnings@4.38">
+        <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet plugin="warnings@4.40">
           <id>dashboard_portlet_4</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
@@ -505,7 +506,7 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
@@ -553,6 +554,7 @@
             <string>eea.package-www</string>
             <string>eea.progressbar-www</string>
             <string>eea.soercontent-www</string>
+            <string>eea.tinymce-www</string>
             <string>Products.EEAEnquiry-www</string>
           </jobNames>
           <jobFilters/>
@@ -573,7 +575,7 @@
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
@@ -599,6 +601,7 @@
             <string>eea.package-plone4</string>
             <string>eea.progressbar-plone4</string>
             <string>eea.soercontent-plone4</string>
+            <string>eea.tinymce-plone4</string>
             <string>land.copernicus.content-plone4</string>
             <string>land.copernicus.theme-plone4</string>
             <string>Products.EEAEnquiry-plone4</string>
@@ -621,7 +624,7 @@
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
@@ -662,7 +665,7 @@
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
@@ -703,6 +706,8 @@
         <string>github-open-issues</string>
         <string>jenkins-up2date</string>
         <string>new-egg-versions-on-pypi</string>
+        <string>pdfdiff</string>
+        <string>pdfdiff-Fiche</string>
         <string>svn-backup</string>
         <string>unreleased-eggs</string>
       </jobNames>
@@ -724,7 +729,7 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>

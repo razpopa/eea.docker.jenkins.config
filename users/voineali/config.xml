@@ -287,14 +287,14 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
         <filenameSuffix>png</filenameSuffix>
       </avatarImage>
     </net.hurstfrost.jenkins.avatar.user.AvatarProperty>
-    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.13">
+    <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.14">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>551.0</score>
+      <score>578.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.9.4">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -345,7 +345,7 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
         <string>daviz.eionet.europa.eu</string>
       </favorites>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23">
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25">
       <nick>voineali</nick>
     </hudson.plugins.ircbot.IrcUserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">
@@ -382,7 +382,7 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.5"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
@@ -425,8 +425,14 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1397210324852</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
-      <emailAddress>alin.voinea@gmail.com</emailAddress>
+      <emailAddress>alin.voinea@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

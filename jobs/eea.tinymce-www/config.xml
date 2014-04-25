@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- Run EEA Design tests within Plone 4 EEA Buildout</description>
+  <description>- Run EEA TinyMCE tests within Plone 4 EEA Buildout</description>
   <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -10,58 +10,65 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
+      <projectUrl>http://github.com/eea/eea.tinymce/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.4">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.21"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.54">
-    <locations>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.design/trunk</remote>
-        <local>.</local>
-        <depthOption>infinity</depthOption>
-        <ignoreExternalsOption>false</ignoreExternalsOption>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-    </locations>
-    <browser class="hudson.plugins.trac.TracRepositoryBrowser" plugin="trac@1.13"/>
-    <excludedRegions></excludedRegions>
-    <includedRegions></includedRegions>
-    <excludedUsers></excludedUsers>
-    <excludedRevprop></excludedRevprop>
-    <excludedCommitMessages></excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
-    <ignoreDirPropChanges>false</ignoreDirPropChanges>
-    <filterChangelog>false</filterChangelog>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/eea/eea.tinymce.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <browser class="hudson.plugins.git.browser.GithubWeb">
+      <url>https://github.com/eea/eea.tinymce/</url>
+    </browser>
+    <submoduleCfg class="list"/>
+    <extensions/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>true</blockBuildWhenUpstreamBuilding>
   <triggers>
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.8">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.design</customWorkspace>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.tinymce</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.design
-</command>
+git checkout master
+git pull
+../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.tinymce</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-../../bin/report xml --include=*eea/design*
+../../bin/report xml --include=*eea/tinymce*
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 mkdir -p xmltestreport
-cp ../../parts/xmltestreport/testreports/*eea-design*.xml xmltestreport/
+cp ../../parts/xmltestreport/testreports/*eea-tinymce*.xml xmltestreport/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
@@ -97,11 +104,11 @@ cp ../../parts/xmltestreport/testreports/*eea-design*.xml xmltestreport/
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
       <thresholds plugin="analysis-core@1.54">
-        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll>0</unstableNewAll>
+        <unstableNewAll></unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
         <unstableNewLow></unstableNewLow>
@@ -132,20 +139,6 @@ cp ../../parts/xmltestreport/testreports/*eea-design*.xml xmltestreport/
     <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.design-plone4</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-    <hudson.plugins.logparser.LogParserPublisher plugin="log-parser@1.0.8">
-      <unstableOnWarning>false</unstableOnWarning>
-      <failBuildOnError>false</failBuildOnError>
-      <parsingRulesPath>/var/lib/jenkins/console/parser.rules</parsingRulesPath>
-    </hudson.plugins.logparser.LogParserPublisher>
     <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.3">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
@@ -294,9 +287,9 @@ cp ../../parts/xmltestreport/testreports/*eea-design*.xml xmltestreport/
             <string>jslint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>jslint</type>
-              <min>115</min>
-              <max>120</max>
-              <unstable>116</unstable>
+              <min>0</min>
+              <max>5</max>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -338,9 +331,9 @@ cp ../../parts/xmltestreport/testreports/*eea-design*.xml xmltestreport/
             <string>pylint</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pylint</type>
-              <min>3</min>
-              <max>7</max>
-              <unstable>3</unstable>
+              <min>10</min>
+              <max>999</max>
+              <unstable>1</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -383,7 +376,7 @@ cp ../../parts/xmltestreport/testreports/*eea-design*.xml xmltestreport/
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
-          <value>david.ichim@jabber.eaudeweb.ro</value>
+          <value>olimpiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -395,6 +388,15 @@ cp ../../parts/xmltestreport/testreports/*eea-design*.xml xmltestreport/
       <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.28"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>eea.tinymce-plone4</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.12.2">

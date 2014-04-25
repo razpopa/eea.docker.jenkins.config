@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>EEA Daviz build on a clean Plone 4 instance</description>
+  <description>Check if that exported pdf layout has changed and mark differences for Fiche content-type</description>
   <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>30</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -10,68 +10,60 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
-      <projectUrl>http://github.com/eea/eea.daviz/</projectUrl>
-    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.plugins.trac.TracProjectProperty plugin="trac@1.13">
+      <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
+    </hudson.plugins.trac.TracProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.0">
-    <configVersion>2</configVersion>
-    <userRemoteConfigs>
-      <hudson.plugins.git.UserRemoteConfig>
-        <name></name>
-        <refspec></refspec>
-        <url>https://github.com/collective/eea.daviz.git</url>
-      </hudson.plugins.git.UserRemoteConfig>
-    </userRemoteConfigs>
-    <branches>
-      <hudson.plugins.git.BranchSpec>
-        <name>master</name>
-      </hudson.plugins.git.BranchSpec>
-    </branches>
-    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <gitTool>Default</gitTool>
-    <browser class="hudson.plugins.git.browser.GithubWeb">
-      <url>https://github.com/collective/eea.daviz/</url>
-    </browser>
-    <submoduleCfg class="list"/>
-    <extensions>
-      <hudson.plugins.git.extensions.impl.PerBuildTag/>
-    </extensions>
-  </scm>
+  <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.8">
-      <spec></spec>
-    </com.cloudbees.jenkins.GitHubPushTrigger>
+    <hudson.triggers.TimerTrigger>
+      <spec>0 1 * * *</spec>
+    </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}/buildouts/plone4
-./install.sh
-bin/buildout</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cd ${WORKSPACE}/buildouts/plone4
-bin/test -v -vv -s eea.daviz</command>
+      <command>cd ${WORKSPACE}
+rm -rf parts/pdfdiffreport
+bin/pdfdiff -i http://www.eea.europa.eu/sandbox-jenkins/test-fiche/download.pdf?cache=${BUILD_NUMBER} -o http://www.eea.europa.eu/sandbox-jenkins/test-fiche-output.pdf -d ${WORKSPACE}/parts/pdfdiffreport -t 180 --no-cleanup-input
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
+    <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
+    </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>parts/pdfdiffreport/*.png</artifacts>
+      <latestOnly>false</latestOnly>
+      <allowEmptyArchive>false</allowEmptyArchive>
+    </hudson.tasks.ArtifactArchiver>
+    <org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder plugin="image-gallery@1.0">
+      <imageGalleries>
+        <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+          <title>PDF Differences</title>
+          <includes>parts/pdfdiffreport/diff-*.png</includes>
+          <imageWidth>300</imageWidth>
+          <markBuildAsUnstableIfNoArchivesFound>false</markBuildAsUnstableIfNoArchivesFound>
+        </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+        <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+          <title>PDF Output</title>
+          <includes>parts/pdfdiffreport/input-*.png</includes>
+          <imageWidth>300</imageWidth>
+          <markBuildAsUnstableIfNoArchivesFound>false</markBuildAsUnstableIfNoArchivesFound>
+        </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+      </imageGalleries>
+    </org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder>
     <hudson.tasks.Mailer plugin="mailer@1.8">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
@@ -81,9 +73,6 @@ bin/test -v -vv -s eea.daviz</command>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
           <value>alin@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
-          <value>zoltan@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -95,26 +84,16 @@ bin/test -v -vv -s eea.daviz</command>
       <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.28"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>eea.daviz-zope,eea.daviz-sync</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>30</timeoutMinutes>
       </strategy>
-      <operationList class="java.util.Arrays$ArrayList">
-        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
-          <hudson.plugins.build__timeout.operations.AbortOperation/>
-        </a>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.FailOperation/>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.11"/>
   </buildWrappers>
 </project>

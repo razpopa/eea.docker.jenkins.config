@@ -13,13 +13,13 @@
     <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
       <projectName>zope</projectName>
     </hudson.plugins.redmine.RedmineProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.21"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.54">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.2">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk</remote>
@@ -60,7 +60,7 @@ bin/buildout -c hudson.cfg</command>
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
-    <hudson.tasks.Mailer plugin="mailer@1.5">
+    <hudson.tasks.Mailer plugin="mailer@1.8">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
@@ -82,7 +82,7 @@ bin/buildout -c hudson.cfg</command>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
     <hudson.tasks.BuildTrigger>
-      <childProjects>eea.faceted.tool-www, eea.socialmedia-www, eea.google-www, eea.reports-www, eea.faceted.vocabularies-www, eea.jquery-www, eea.facetednavigation-www, eea.faceted.inheritance-www, eea.rdfmarshaller-www, eea.relations-www, eea.versions-www, eea.epub-www, Products.eeawebapplication-www, eea.alchemy-www, eea.bounce-www, eea.cache-www, eea.dataservice-www, eea.daviz-www, eea.design-www, eea.eggmonkey-www, eea.exhibit-www, eea.geotags-www, eea.indicators-www, eea.mediacentre-www, eea.pagedesign-www, eea.promotion-www, eea.signals-www, eea.sitestructurediff-www, eea.soer-www, eea.themecentre-www, eea.translations-www, eea.vocab-www, eea.workflow-www, Products.EEAContentTypes-www, Products.NavigationManager-www, valentine.linguaflow-www, eea.depiction-www, Products.EEAPloneAdmin-www, Products.EEATemplatesService-www, eea.tags-www, jenkins-up2date, eea.forms-www, Products.EEAEnquiry-www, eea.aoamap-www, eea.converter-www, eea.sparql-www, eea.googlecharts-www, unreleased-eggs, eea.app.visualization-www, eea.uberlisting-www, github-open-issues, eea.progressbar-www, eea.soercontent-www, eea.package-www, eea.elasticsearch-www, eea.annotator-www, eea.icons-www</childProjects>
+      <childProjects>eea.faceted.tool-www,eea.socialmedia-www,eea.google-www,eea.reports-www,eea.faceted.vocabularies-www,eea.jquery-www,eea.facetednavigation-www,eea.faceted.inheritance-www,eea.rdfmarshaller-www,eea.relations-www,eea.versions-www,eea.epub-www,Products.eeawebapplication-www,eea.alchemy-www,eea.bounce-www,eea.cache-www,eea.dataservice-www,eea.daviz-www,eea.design-www,eea.eggmonkey-www,eea.exhibit-www,eea.geotags-www,eea.indicators-www,eea.mediacentre-www,eea.pagedesign-www,eea.promotion-www,eea.signals-www,eea.sitestructurediff-www,eea.soer-www,eea.themecentre-www,eea.translations-www,eea.vocab-www,eea.workflow-www,Products.EEAContentTypes-www,Products.NavigationManager-www,valentine.linguaflow-www,eea.depiction-www,Products.EEAPloneAdmin-www,Products.EEATemplatesService-www,eea.tags-www,jenkins-up2date,eea.forms-www,Products.EEAEnquiry-www,eea.aoamap-www,eea.converter-www,eea.sparql-www,eea.googlecharts-www,unreleased-eggs,eea.app.visualization-www,eea.uberlisting-www,github-open-issues,eea.progressbar-www,eea.soercontent-www,eea.package-www,eea.elasticsearch-www,eea.annotator-www,eea.icons-www</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -92,12 +92,15 @@ bin/buildout -c hudson.cfg</command>
     </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.12.2">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>60</timeoutMinutes>
       </strategy>
-      <failBuild>false</failBuild>
-      <writingDescription>false</writingDescription>
+      <operationList class="java.util.Arrays$ArrayList">
+        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
+          <hudson.plugins.build__timeout.operations.AbortOperation/>
+        </a>
+      </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>
