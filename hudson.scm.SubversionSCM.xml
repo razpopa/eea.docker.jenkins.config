@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.scm.SubversionSCM_-DescriptorImpl plugin="subversion@2.2">
-  <generation>729</generation>
+  <generation>741</generation>
   <mayHaveLegacyPerJobCredentials>false</mayHaveLegacyPerJobCredentials>
   <workspaceFormat>100</workspaceFormat>
   <validateRemoteUpToVar>false</validateRemoteUpToVar>
-  <storeAuthToDisk>true</storeAuthToDisk>
+  <storeAuthToDisk>false</storeAuthToDisk>
 </hudson.scm.SubversionSCM_-DescriptorImpl>

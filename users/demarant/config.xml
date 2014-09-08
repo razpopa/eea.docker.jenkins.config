@@ -14,7 +14,7 @@
       <enabledColorBlindSupport>true</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>84.0</score>
+      <score>88.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
@@ -27,9 +27,6 @@
         </entry>
       </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
-      <emailAddress>demarinis@eea.europa.eu</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
@@ -97,5 +94,14 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7UrjZV1sIGwZ0ZQoZ15yE+eBZHULfrHBSI8rlDnOXTmT
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1405434454150</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+      <emailAddress>antonio.de.marinis@eea.europa.eu</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

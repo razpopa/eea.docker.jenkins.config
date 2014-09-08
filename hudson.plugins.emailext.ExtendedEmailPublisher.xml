@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.36">
-  <hudsonUrl>http://ci.eionet.europa.eu/</hudsonUrl>
+<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.37.2.2">
   <adminAddress>ci-no-reply@eionet.europa.eu</adminAddress>
   <smtpHost>localhost</smtpHost>
   <useSsl>false</useSsl>

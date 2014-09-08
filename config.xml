@@ -4,17 +4,18 @@
     <string>jenkins.security.RekeySecretAdminMonitor</string>
     <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>1.546</version>
+  <version>1.558</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Computer.Configure:baragdan</permission>
     <permission>hudson.model.Computer.Configure:dascalu</permission>
     <permission>hudson.model.Computer.Configure:demarant</permission>
     <permission>hudson.model.Computer.Configure:ghicaale</permission>
     <permission>hudson.model.Computer.Configure:ichimdav</permission>
     <permission>hudson.model.Computer.Configure:melisand</permission>
-    <permission>hudson.model.Computer.Configure:mironovi</permission>
+    <permission>hudson.model.Computer.Configure:nituacor</permission>
     <permission>hudson.model.Computer.Configure:pasoviul</permission>
     <permission>hudson.model.Computer.Configure:robaaoli</permission>
     <permission>hudson.model.Computer.Configure:roug</permission>
@@ -22,11 +23,12 @@
     <permission>hudson.model.Computer.Configure:tiberich</permission>
     <permission>hudson.model.Computer.Configure:voineali</permission>
     <permission>hudson.model.Computer.Create:dascalu</permission>
-    <permission>hudson.model.Computer.Create:mironovi</permission>
+    <permission>hudson.model.Computer.Create:nituacor</permission>
     <permission>hudson.model.Computer.Create:pasoviul</permission>
     <permission>hudson.model.Computer.Create:robaaoli</permission>
     <permission>hudson.model.Computer.Create:tiberich</permission>
     <permission>hudson.model.Computer.Create:voineali</permission>
+    <permission>hudson.model.Computer.Delete:baragdan</permission>
     <permission>hudson.model.Computer.Delete:batradav</permission>
     <permission>hudson.model.Computer.Delete:ciobabog</permission>
     <permission>hudson.model.Computer.Delete:dascalu</permission>
@@ -34,18 +36,20 @@
     <permission>hudson.model.Computer.Delete:ghicaale</permission>
     <permission>hudson.model.Computer.Delete:ichimdav</permission>
     <permission>hudson.model.Computer.Delete:melisand</permission>
-    <permission>hudson.model.Computer.Delete:mironovi</permission>
+    <permission>hudson.model.Computer.Delete:nituacor</permission>
     <permission>hudson.model.Computer.Delete:pasoviul</permission>
     <permission>hudson.model.Computer.Delete:robaaoli</permission>
     <permission>hudson.model.Computer.Delete:roug</permission>
     <permission>hudson.model.Computer.Delete:szabozo0</permission>
     <permission>hudson.model.Computer.Delete:tiberich</permission>
     <permission>hudson.model.Computer.Delete:voineali</permission>
+    <permission>hudson.model.Hudson.Administer:baragdan</permission>
     <permission>hudson.model.Hudson.Administer:dascalu</permission>
     <permission>hudson.model.Hudson.Administer:demarant</permission>
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>
     <permission>hudson.model.Hudson.Administer:ichimdav</permission>
     <permission>hudson.model.Hudson.Administer:melisand</permission>
+    <permission>hudson.model.Hudson.Administer:nituacor</permission>
     <permission>hudson.model.Hudson.Administer:pasoviul</permission>
     <permission>hudson.model.Hudson.Administer:robaaoli</permission>
     <permission>hudson.model.Hudson.Administer:roug</permission>
@@ -54,6 +58,7 @@
     <permission>hudson.model.Hudson.Administer:voineali</permission>
     <permission>hudson.model.Hudson.Read:altnyris</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Read:baragdan</permission>
     <permission>hudson.model.Hudson.Read:batradav</permission>
     <permission>hudson.model.Hudson.Read:ciobabog</permission>
     <permission>hudson.model.Hudson.Read:dascalu</permission>
@@ -63,8 +68,8 @@
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
     <permission>hudson.model.Hudson.Read:kasperen</permission>
     <permission>hudson.model.Hudson.Read:melisand</permission>
-    <permission>hudson.model.Hudson.Read:mironovi</permission>
     <permission>hudson.model.Hudson.Read:moregale</permission>
+    <permission>hudson.model.Hudson.Read:nituacor</permission>
     <permission>hudson.model.Hudson.Read:pasoviul</permission>
     <permission>hudson.model.Hudson.Read:robaaoli</permission>
     <permission>hudson.model.Hudson.Read:roug</permission>
@@ -77,6 +82,7 @@
     <permission>hudson.model.Hudson.RunScripts:tiberich</permission>
     <permission>hudson.model.Hudson.RunScripts:voineali</permission>
     <permission>hudson.model.Item.Build:altnyris</permission>
+    <permission>hudson.model.Item.Build:baragdan</permission>
     <permission>hudson.model.Item.Build:batradav</permission>
     <permission>hudson.model.Item.Build:ciobabog</permission>
     <permission>hudson.model.Item.Build:dascalu</permission>
@@ -86,8 +92,8 @@
     <permission>hudson.model.Item.Build:ichimdav</permission>
     <permission>hudson.model.Item.Build:kasperen</permission>
     <permission>hudson.model.Item.Build:melisand</permission>
-    <permission>hudson.model.Item.Build:mironovi</permission>
     <permission>hudson.model.Item.Build:moregale</permission>
+    <permission>hudson.model.Item.Build:nituacor</permission>
     <permission>hudson.model.Item.Build:pasoviul</permission>
     <permission>hudson.model.Item.Build:robaaoli</permission>
     <permission>hudson.model.Item.Build:roug</permission>
@@ -104,8 +110,8 @@
     <permission>hudson.model.Item.Configure:ichimdav</permission>
     <permission>hudson.model.Item.Configure:kasperen</permission>
     <permission>hudson.model.Item.Configure:melisand</permission>
-    <permission>hudson.model.Item.Configure:mironovi</permission>
     <permission>hudson.model.Item.Configure:moregale</permission>
+    <permission>hudson.model.Item.Configure:nituacor</permission>
     <permission>hudson.model.Item.Configure:pasoviul</permission>
     <permission>hudson.model.Item.Configure:robaaoli</permission>
     <permission>hudson.model.Item.Configure:roug</permission>
@@ -113,6 +119,7 @@
     <permission>hudson.model.Item.Configure:tiberich</permission>
     <permission>hudson.model.Item.Configure:voineali</permission>
     <permission>hudson.model.Item.Create:altnyris</permission>
+    <permission>hudson.model.Item.Create:baragdan</permission>
     <permission>hudson.model.Item.Create:batradav</permission>
     <permission>hudson.model.Item.Create:ciobabog</permission>
     <permission>hudson.model.Item.Create:dascalu</permission>
@@ -122,8 +129,8 @@
     <permission>hudson.model.Item.Create:ichimdav</permission>
     <permission>hudson.model.Item.Create:kasperen</permission>
     <permission>hudson.model.Item.Create:melisand</permission>
-    <permission>hudson.model.Item.Create:mironovi</permission>
     <permission>hudson.model.Item.Create:moregale</permission>
+    <permission>hudson.model.Item.Create:nituacor</permission>
     <permission>hudson.model.Item.Create:pasoviul</permission>
     <permission>hudson.model.Item.Create:robaaoli</permission>
     <permission>hudson.model.Item.Create:roug</permission>
@@ -131,6 +138,7 @@
     <permission>hudson.model.Item.Create:tiberich</permission>
     <permission>hudson.model.Item.Create:voineali</permission>
     <permission>hudson.model.Item.Delete:altnyris</permission>
+    <permission>hudson.model.Item.Delete:baragdan</permission>
     <permission>hudson.model.Item.Delete:batradav</permission>
     <permission>hudson.model.Item.Delete:ciobabog</permission>
     <permission>hudson.model.Item.Delete:dascalu</permission>
@@ -140,8 +148,8 @@
     <permission>hudson.model.Item.Delete:ichimdav</permission>
     <permission>hudson.model.Item.Delete:kasperen</permission>
     <permission>hudson.model.Item.Delete:melisand</permission>
-    <permission>hudson.model.Item.Delete:mironovi</permission>
     <permission>hudson.model.Item.Delete:moregale</permission>
+    <permission>hudson.model.Item.Delete:nituacor</permission>
     <permission>hudson.model.Item.Delete:pasoviul</permission>
     <permission>hudson.model.Item.Delete:robaaoli</permission>
     <permission>hudson.model.Item.Delete:roug</permission>
@@ -150,6 +158,7 @@
     <permission>hudson.model.Item.Delete:voineali</permission>
     <permission>hudson.model.Item.Read:altnyris</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
+    <permission>hudson.model.Item.Read:baragdan</permission>
     <permission>hudson.model.Item.Read:batradav</permission>
     <permission>hudson.model.Item.Read:ciobabog</permission>
     <permission>hudson.model.Item.Read:dascalu</permission>
@@ -159,8 +168,8 @@
     <permission>hudson.model.Item.Read:ichimdav</permission>
     <permission>hudson.model.Item.Read:kasperen</permission>
     <permission>hudson.model.Item.Read:melisand</permission>
-    <permission>hudson.model.Item.Read:mironovi</permission>
     <permission>hudson.model.Item.Read:moregale</permission>
+    <permission>hudson.model.Item.Read:nituacor</permission>
     <permission>hudson.model.Item.Read:pasoviul</permission>
     <permission>hudson.model.Item.Read:robaaoli</permission>
     <permission>hudson.model.Item.Read:roug</permission>
@@ -168,6 +177,7 @@
     <permission>hudson.model.Item.Read:tiberich</permission>
     <permission>hudson.model.Item.Read:voineali</permission>
     <permission>hudson.model.Item.Release:altnyris</permission>
+    <permission>hudson.model.Item.Release:baragdan</permission>
     <permission>hudson.model.Item.Release:batradav</permission>
     <permission>hudson.model.Item.Release:ciobabog</permission>
     <permission>hudson.model.Item.Release:dascalu</permission>
@@ -177,8 +187,8 @@
     <permission>hudson.model.Item.Release:ichimdav</permission>
     <permission>hudson.model.Item.Release:kasperen</permission>
     <permission>hudson.model.Item.Release:melisand</permission>
-    <permission>hudson.model.Item.Release:mironovi</permission>
     <permission>hudson.model.Item.Release:moregale</permission>
+    <permission>hudson.model.Item.Release:nituacor</permission>
     <permission>hudson.model.Item.Release:pasoviul</permission>
     <permission>hudson.model.Item.Release:robaaoli</permission>
     <permission>hudson.model.Item.Release:roug</permission>
@@ -186,6 +196,7 @@
     <permission>hudson.model.Item.Release:tiberich</permission>
     <permission>hudson.model.Item.Release:voineali</permission>
     <permission>hudson.model.Item.Workspace:altnyris</permission>
+    <permission>hudson.model.Item.Workspace:baragdan</permission>
     <permission>hudson.model.Item.Workspace:dascalu</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
@@ -193,8 +204,8 @@
     <permission>hudson.model.Item.Workspace:ichimdav</permission>
     <permission>hudson.model.Item.Workspace:kasperen</permission>
     <permission>hudson.model.Item.Workspace:melisand</permission>
-    <permission>hudson.model.Item.Workspace:mironovi</permission>
     <permission>hudson.model.Item.Workspace:moregale</permission>
+    <permission>hudson.model.Item.Workspace:nituacor</permission>
     <permission>hudson.model.Item.Workspace:pasoviul</permission>
     <permission>hudson.model.Item.Workspace:robaaoli</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
@@ -202,6 +213,7 @@
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
     <permission>hudson.model.Run.Delete:altnyris</permission>
+    <permission>hudson.model.Run.Delete:baragdan</permission>
     <permission>hudson.model.Run.Delete:batradav</permission>
     <permission>hudson.model.Run.Delete:ciobabog</permission>
     <permission>hudson.model.Run.Delete:dascalu</permission>
@@ -211,8 +223,8 @@
     <permission>hudson.model.Run.Delete:ichimdav</permission>
     <permission>hudson.model.Run.Delete:kasperen</permission>
     <permission>hudson.model.Run.Delete:melisand</permission>
-    <permission>hudson.model.Run.Delete:mironovi</permission>
     <permission>hudson.model.Run.Delete:moregale</permission>
+    <permission>hudson.model.Run.Delete:nituacor</permission>
     <permission>hudson.model.Run.Delete:pasoviul</permission>
     <permission>hudson.model.Run.Delete:robaaoli</permission>
     <permission>hudson.model.Run.Delete:roug</permission>
@@ -220,6 +232,7 @@
     <permission>hudson.model.Run.Delete:tiberich</permission>
     <permission>hudson.model.Run.Delete:voineali</permission>
     <permission>hudson.model.Run.Update:altnyris</permission>
+    <permission>hudson.model.Run.Update:baragdan</permission>
     <permission>hudson.model.Run.Update:batradav</permission>
     <permission>hudson.model.Run.Update:ciobabog</permission>
     <permission>hudson.model.Run.Update:dascalu</permission>
@@ -229,14 +242,15 @@
     <permission>hudson.model.Run.Update:ichimdav</permission>
     <permission>hudson.model.Run.Update:kasperen</permission>
     <permission>hudson.model.Run.Update:melisand</permission>
-    <permission>hudson.model.Run.Update:mironovi</permission>
     <permission>hudson.model.Run.Update:moregale</permission>
+    <permission>hudson.model.Run.Update:nituacor</permission>
     <permission>hudson.model.Run.Update:pasoviul</permission>
     <permission>hudson.model.Run.Update:robaaoli</permission>
     <permission>hudson.model.Run.Update:roug</permission>
     <permission>hudson.model.Run.Update:szabozo0</permission>
     <permission>hudson.model.Run.Update:tiberich</permission>
     <permission>hudson.model.Run.Update:voineali</permission>
+    <permission>hudson.model.View.Configure:baragdan</permission>
     <permission>hudson.model.View.Configure:batradav</permission>
     <permission>hudson.model.View.Configure:ciobabog</permission>
     <permission>hudson.model.View.Configure:dascalu</permission>
@@ -244,44 +258,47 @@
     <permission>hudson.model.View.Configure:ghicaale</permission>
     <permission>hudson.model.View.Configure:ichimdav</permission>
     <permission>hudson.model.View.Configure:melisand</permission>
-    <permission>hudson.model.View.Configure:mironovi</permission>
     <permission>hudson.model.View.Configure:moregale</permission>
+    <permission>hudson.model.View.Configure:nituacor</permission>
     <permission>hudson.model.View.Configure:pasoviul</permission>
     <permission>hudson.model.View.Configure:robaaoli</permission>
     <permission>hudson.model.View.Configure:roug</permission>
     <permission>hudson.model.View.Configure:szabozo0</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
     <permission>hudson.model.View.Configure:voineali</permission>
+    <permission>hudson.model.View.Create:baragdan</permission>
     <permission>hudson.model.View.Create:dascalu</permission>
     <permission>hudson.model.View.Create:demarant</permission>
     <permission>hudson.model.View.Create:ghicaale</permission>
     <permission>hudson.model.View.Create:ichimdav</permission>
     <permission>hudson.model.View.Create:melisand</permission>
-    <permission>hudson.model.View.Create:mironovi</permission>
+    <permission>hudson.model.View.Create:nituacor</permission>
     <permission>hudson.model.View.Create:pasoviul</permission>
     <permission>hudson.model.View.Create:robaaoli</permission>
     <permission>hudson.model.View.Create:roug</permission>
     <permission>hudson.model.View.Create:szabozo0</permission>
     <permission>hudson.model.View.Create:tiberich</permission>
     <permission>hudson.model.View.Create:voineali</permission>
+    <permission>hudson.model.View.Delete:baragdan</permission>
     <permission>hudson.model.View.Delete:dascalu</permission>
     <permission>hudson.model.View.Delete:demarant</permission>
     <permission>hudson.model.View.Delete:ghicaale</permission>
     <permission>hudson.model.View.Delete:ichimdav</permission>
     <permission>hudson.model.View.Delete:melisand</permission>
-    <permission>hudson.model.View.Delete:mironovi</permission>
+    <permission>hudson.model.View.Delete:nituacor</permission>
     <permission>hudson.model.View.Delete:pasoviul</permission>
     <permission>hudson.model.View.Delete:robaaoli</permission>
     <permission>hudson.model.View.Delete:roug</permission>
     <permission>hudson.model.View.Delete:szabozo0</permission>
     <permission>hudson.model.View.Delete:tiberich</permission>
     <permission>hudson.model.View.Delete:voineali</permission>
+    <permission>hudson.scm.SCM.Tag:baragdan</permission>
     <permission>hudson.scm.SCM.Tag:dascalu</permission>
     <permission>hudson.scm.SCM.Tag:demarant</permission>
     <permission>hudson.scm.SCM.Tag:ghicaale</permission>
     <permission>hudson.scm.SCM.Tag:ichimdav</permission>
     <permission>hudson.scm.SCM.Tag:melisand</permission>
-    <permission>hudson.scm.SCM.Tag:mironovi</permission>
+    <permission>hudson.scm.SCM.Tag:nituacor</permission>
     <permission>hudson.scm.SCM.Tag:pasoviul</permission>
     <permission>hudson.scm.SCM.Tag:robaaoli</permission>
     <permission>hudson.scm.SCM.Tag:roug</permission>
@@ -296,6 +313,8 @@
     <userSearchBase></userSearchBase>
     <userSearch>uid={0}</userSearch>
     <disableMailAddressResolver>false</disableMailAddressResolver>
+    <displayNameAttributeName>displayname</displayNameAttributeName>
+    <mailAddressAttributeName>mail</mailAddressAttributeName>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
@@ -328,6 +347,7 @@
         <string>www.eea.europa.eu-devel</string>
         <string>www.eea.europa.eu-hudson</string>
         <string>www.eea.europa.eu-pre-production</string>
+        <string>www.eea.europa.eu-pre-production-clean</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -365,6 +385,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>ACL</string>
         <string>ACLADMIN</string>
+        <string>CLIMATE-ADAPT</string>
         <string>CR-DAS</string>
         <string>CR3</string>
         <string>DATADICT</string>
@@ -549,9 +570,11 @@
             <string>eea.aoamap-www</string>
             <string>eea.app.visualization-www</string>
             <string>eea.converter-www</string>
+            <string>eea.downloads-www</string>
             <string>eea.elasticsearch-www</string>
             <string>eea.forms-www</string>
             <string>eea.package-www</string>
+            <string>eea.pdf-www</string>
             <string>eea.progressbar-www</string>
             <string>eea.soercontent-www</string>
             <string>eea.tinymce-www</string>
@@ -596,9 +619,11 @@
             <string>eea.aoamap-plone4</string>
             <string>eea.app.visualization-plone4</string>
             <string>eea.converter-plone4</string>
+            <string>eea.downloads-plone4</string>
             <string>eea.elasticsearch-plone4</string>
             <string>eea.forms-plone4</string>
             <string>eea.package-plone4</string>
+            <string>eea.pdf-plone4</string>
             <string>eea.progressbar-plone4</string>
             <string>eea.soercontent-plone4</string>
             <string>eea.tinymce-plone4</string>
@@ -691,12 +716,14 @@
         <string>eea.converter-sync</string>
         <string>eea.daviz-sync</string>
         <string>eea.depiction-sync</string>
+        <string>eea.downloads-sync</string>
         <string>eea.exhibit-sync</string>
         <string>eea.faceted.vocabularies-sync</string>
         <string>eea.facetednavigation-sync</string>
         <string>eea.forms-sync</string>
         <string>eea.googlecharts-sync</string>
         <string>eea.jquery-sync</string>
+        <string>eea.pdf-sync</string>
         <string>eea.progressbar-sync</string>
         <string>eea.relations-sync</string>
         <string>eea.sparql-sync</string>
@@ -735,6 +762,29 @@
         <hudson.views.BuildButtonColumn/>
       </columns>
       <includeRegex>.*-sync</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Reportek</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Reportek-docs</string>
+        <string>Reportek-tests</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
       <recurse>false</recurse>
     </listView>
   </views>

@@ -10,30 +10,33 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.4">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
+      <projectUrl>http://github.com/eea/eea.epub/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.21"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@1.54">
-    <locations>
-      <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.epub/trunk</remote>
-        <local>.</local>
-        <depthOption>infinity</depthOption>
-        <ignoreExternalsOption>false</ignoreExternalsOption>
-      </hudson.scm.SubversionSCM_-ModuleLocation>
-    </locations>
-    <browser class="hudson.plugins.trac.TracRepositoryBrowser" plugin="trac@1.13"/>
-    <excludedRegions></excludedRegions>
-    <includedRegions></includedRegions>
-    <excludedUsers></excludedUsers>
-    <excludedRevprop></excludedRevprop>
-    <excludedCommitMessages></excludedCommitMessages>
-    <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
-    <ignoreDirPropChanges>false</ignoreDirPropChanges>
-    <filterChangelog>false</filterChangelog>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/eea/eea.epub.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <browser class="hudson.plugins.git.browser.GithubWeb">
+      <url>https://github.com/eea/eea.epub</url>
+    </browser>
+    <submoduleCfg class="list"/>
+    <extensions/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -50,6 +53,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
+git checkout master
+git pull
 ../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.epub
 </command>
     </hudson.tasks.Shell>
@@ -87,7 +92,7 @@ cp ../../parts/xmltestreport/testreports/*eea.epub*.xml xmltestreport/
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.38">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.40">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>high</thresholdLimit>
@@ -96,7 +101,7 @@ cp ../../parts/xmltestreport/testreports/*eea.epub*.xml xmltestreport/
       <canRunOnFailed>true</canRunOnFailed>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.54">
+      <thresholds plugin="analysis-core@1.56">
         <unstableTotalAll>0</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -378,7 +383,7 @@ cp ../../parts/xmltestreport/testreports/*eea.epub*.xml xmltestreport/
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
-          <value>tiberiu@jabber.eaudeweb.ro</value>
+          <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -392,12 +397,13 @@ cp ../../parts/xmltestreport/testreports/*eea.epub*.xml xmltestreport/
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.12.2">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>20</timeoutMinutes>
       </strategy>
-      <failBuild>false</failBuild>
-      <writingDescription>false</writingDescription>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
+      </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>

@@ -35,14 +35,14 @@
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
-      <emailAddress>andrei.melis@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <jenkins.security.LastGrantedAuthoritiesProperty>
       <roles>
         <string>authenticated</string>
       </roles>
       <timestamp>1397712186454</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+      <emailAddress>andrei.melis@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

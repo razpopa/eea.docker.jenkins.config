@@ -10,27 +10,11 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.21"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.22">
-      <diskUsageWithoutBuilds>11689</diskUsageWithoutBuilds>
-      <slaveWorkspacesUsage class="concurrent-hash-map">
-        <entry>
-          <string></string>
-          <concurrent-hash-map>
-            <entry>
-              <string>/opt/hudson/buildouts/www.eea.europa.eu-hudson</string>
-              <long>3148128477</long>
-            </entry>
-          </concurrent-hash-map>
-        </entry>
-      </slaveWorkspacesUsage>
-    </hudson.plugins.disk__usage.DiskUsageProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -50,7 +34,7 @@ bin/zopepy bin/onjenkins.py</command>
     <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.tasks.Mailer plugin="mailer@1.5">
+    <hudson.tasks.Mailer plugin="mailer@1.8">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
@@ -59,9 +43,6 @@ bin/zopepy bin/onjenkins.py</command>
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
           <value>alin@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
-          <value>zoltan@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
@@ -75,13 +56,14 @@ bin/zopepy bin/onjenkins.py</command>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.12.2">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>5</timeoutMinutes>
       </strategy>
-      <failBuild>false</failBuild>
-      <writingDescription>false</writingDescription>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
+      </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.7"/>
+    <hudson.plugins.timestamper.TimestamperBuildWrapper plugin="timestamper@1.5.11"/>
   </buildWrappers>
 </project>

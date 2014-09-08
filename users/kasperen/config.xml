@@ -15,7 +15,7 @@
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>-6.0</score>
+      <score>-5.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
@@ -25,7 +25,7 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>lDRSaCOVv+sbQGnSBspRq6Y18yOPSCA0jBTNbbMZZPSaTo4YgslF9IL/1JVZ/wsc</apiToken>
+      <apiToken>DJRvUZuxIvaZWaRagDDDTAbRh/SrTyYsjoAFA0ClRnqaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
@@ -49,14 +49,14 @@
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
-      <emailAddress>enriko.kasper@gmail.com</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <jenkins.security.LastGrantedAuthoritiesProperty>
       <roles>
         <string>authenticated</string>
       </roles>
       <timestamp>1397464695105</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+      <emailAddress>enriko.kasper@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

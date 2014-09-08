@@ -18,9 +18,6 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
-      <emailAddress>tiberiu.ichim@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">
       <jid>tiberiu@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
@@ -39,11 +36,11 @@
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.9.4">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -56,5 +53,8 @@
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+      <emailAddress>tiberiu.ichim@eaudeweb.ro</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

@@ -3,9 +3,6 @@
   <fullName>Bogdan Ciobanu</fullName>
   <description>Software engineer @ Eau de Web, Romania</description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.4">
-      <emailAddress>bogdan.ciobanu@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>GHNOln:9e07f408d3d983b7015f202b277b0549724c78b6edda84219b3bc1f3ef558e04</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
@@ -27,23 +24,36 @@
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25">
       <jid>boghy@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.6">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
       <apiToken>ZxfY9qTehfHRewYF2z0anmpWC4NMxLC/lt/HOARQlv6aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.1"/>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.13">
+    <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.22"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.3.1">
-      <credentials/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+      </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+      <emailAddress>sboghy@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

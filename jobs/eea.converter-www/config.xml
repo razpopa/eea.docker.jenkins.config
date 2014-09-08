@@ -10,37 +10,19 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
       <projectUrl>http://github.com/eea/eea.converter/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.21"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.22">
-      <diskUsageWithoutBuilds>171933</diskUsageWithoutBuilds>
-      <slaveWorkspacesUsage class="concurrent-hash-map">
-        <entry>
-          <string></string>
-          <concurrent-hash-map>
-            <entry>
-              <string>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.converter</string>
-              <long>2011835</long>
-            </entry>
-          </concurrent-hash-map>
-        </entry>
-      </slaveWorkspacesUsage>
-    </hudson.plugins.disk__usage.DiskUsageProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@1.5.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <name></name>
-        <refspec></refspec>
         <url>https://github.com/collective/eea.converter.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -49,31 +31,14 @@
         <name>master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
-    <disableSubmodules>false</disableSubmodules>
-    <recursiveSubmodules>false</recursiveSubmodules>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <authorOrCommitter>false</authorOrCommitter>
-    <clean>false</clean>
-    <wipeOutWorkspace>false</wipeOutWorkspace>
-    <pruneBranches>false</pruneBranches>
-    <remotePoll>false</remotePoll>
-    <ignoreNotifyCommit>false</ignoreNotifyCommit>
-    <useShallowClone>false</useShallowClone>
-    <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
-    <gitTool>Default</gitTool>
     <browser class="hudson.plugins.git.browser.GithubWeb">
       <url>https://github.com/collective/eea.converter/</url>
     </browser>
     <submoduleCfg class="list"/>
-    <relativeTargetDir></relativeTargetDir>
-    <reference></reference>
-    <excludedRegions></excludedRegions>
-    <excludedUsers></excludedUsers>
-    <gitConfigName></gitConfigName>
-    <gitConfigEmail></gitConfigEmail>
-    <skipTag>false</skipTag>
-    <includedRegions></includedRegions>
-    <scmName></scmName>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.PerBuildTag/>
+    </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -129,7 +94,7 @@ cp ../../parts/xmltestreport/testreports/*eea-converter*.xml xmltestreport/
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.35">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.40">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>high</thresholdLimit>
@@ -138,7 +103,7 @@ cp ../../parts/xmltestreport/testreports/*eea-converter*.xml xmltestreport/
       <canRunOnFailed>true</canRunOnFailed>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.54">
+      <thresholds plugin="analysis-core@1.56">
         <unstableTotalAll>0</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -368,7 +333,7 @@ cp ../../parts/xmltestreport/testreports/*eea-converter*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>1</unstable>
+              <unstable>2</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -403,7 +368,7 @@ cp ../../parts/xmltestreport/testreports/*eea-converter*.xml xmltestreport/
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
     <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
-    <hudson.tasks.Mailer plugin="mailer@1.5">
+    <hudson.tasks.Mailer plugin="mailer@1.8">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
@@ -437,12 +402,13 @@ cp ../../parts/xmltestreport/testreports/*eea-converter*.xml xmltestreport/
     </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.12.2">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>20</timeoutMinutes>
       </strategy>
-      <failBuild>false</failBuild>
-      <writingDescription>false</writingDescription>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
+      </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>

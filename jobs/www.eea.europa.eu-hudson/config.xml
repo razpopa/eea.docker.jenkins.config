@@ -10,9 +10,6 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
@@ -23,7 +20,9 @@
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk</remote>
+        <credentialsId></credentialsId>
         <local>.</local>
+        <depthOption>infinity</depthOption>
         <ignoreExternalsOption>false</ignoreExternalsOption>
       </hudson.scm.SubversionSCM_-ModuleLocation>
     </locations>
@@ -43,7 +42,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>15 5 * * 1-5</spec>
+      <spec>45 5 * * 1-5</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -82,7 +81,7 @@ bin/buildout -c hudson.cfg</command>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
     <hudson.tasks.BuildTrigger>
-      <childProjects>eea.faceted.tool-www,eea.socialmedia-www,eea.google-www,eea.reports-www,eea.faceted.vocabularies-www,eea.jquery-www,eea.facetednavigation-www,eea.faceted.inheritance-www,eea.rdfmarshaller-www,eea.relations-www,eea.versions-www,eea.epub-www,Products.eeawebapplication-www,eea.alchemy-www,eea.bounce-www,eea.cache-www,eea.dataservice-www,eea.daviz-www,eea.design-www,eea.eggmonkey-www,eea.exhibit-www,eea.geotags-www,eea.indicators-www,eea.mediacentre-www,eea.pagedesign-www,eea.promotion-www,eea.signals-www,eea.sitestructurediff-www,eea.soer-www,eea.themecentre-www,eea.translations-www,eea.vocab-www,eea.workflow-www,Products.EEAContentTypes-www,Products.NavigationManager-www,valentine.linguaflow-www,eea.depiction-www,Products.EEAPloneAdmin-www,Products.EEATemplatesService-www,eea.tags-www,jenkins-up2date,eea.forms-www,Products.EEAEnquiry-www,eea.aoamap-www,eea.converter-www,eea.sparql-www,eea.googlecharts-www,unreleased-eggs,eea.app.visualization-www,eea.uberlisting-www,github-open-issues,eea.progressbar-www,eea.soercontent-www,eea.package-www,eea.elasticsearch-www,eea.annotator-www,eea.icons-www</childProjects>
+      <childProjects>eea.faceted.tool-www, eea.socialmedia-www, eea.google-www, eea.reports-www, eea.faceted.vocabularies-www, eea.jquery-www, eea.facetednavigation-www, eea.faceted.inheritance-www, eea.rdfmarshaller-www, eea.relations-www, eea.versions-www, eea.epub-www, Products.eeawebapplication-www, eea.alchemy-www, eea.bounce-www, eea.cache-www, eea.dataservice-www, eea.daviz-www, eea.design-www, eea.eggmonkey-www, eea.exhibit-www, eea.geotags-www, eea.indicators-www, eea.mediacentre-www, eea.pagedesign-www, eea.promotion-www, eea.signals-www, eea.sitestructurediff-www, eea.soer-www, eea.themecentre-www, eea.translations-www, eea.vocab-www, eea.workflow-www, Products.EEAContentTypes-www, Products.NavigationManager-www, valentine.linguaflow-www, eea.depiction-www, Products.EEAPloneAdmin-www, Products.EEATemplatesService-www, eea.tags-www, jenkins-up2date, eea.forms-www, Products.EEAEnquiry-www, eea.aoamap-www, eea.converter-www, eea.sparql-www, eea.googlecharts-www, unreleased-eggs, eea.app.visualization-www, eea.uberlisting-www, github-open-issues, eea.progressbar-www, eea.soercontent-www, eea.package-www, eea.elasticsearch-www, eea.annotator-www, eea.icons-www, eea.pdf-www, eea.downloads-www</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -96,10 +95,8 @@ bin/buildout -c hudson.cfg</command>
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>60</timeoutMinutes>
       </strategy>
-      <operationList class="java.util.Arrays$ArrayList">
-        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
-          <hudson.plugins.build__timeout.operations.AbortOperation/>
-        </a>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>

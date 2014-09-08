@@ -21,7 +21,7 @@
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
@@ -71,10 +71,9 @@ bin/pdfdiff -i http://www.eea.europa.eu/sandbox-jenkins/resource-efficiency-a-co
     </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
       <targets>
-        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.28">
-          <name>web3.0development@conference.jabber.eea.europa.eu</name>
-          <notificationOnly>false</notificationOnly>
-        </hudson.plugins.im.GroupChatIMMessageTarget>
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.28">
+          <value>alin@jabber.eaudeweb.ro</value>
+        </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>
       <notifyOnBuildStart>false</notifyOnBuildStart>
