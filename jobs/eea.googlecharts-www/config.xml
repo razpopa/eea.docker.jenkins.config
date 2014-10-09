@@ -288,7 +288,7 @@ cp ../../parts/xmltestreport/testreports/*eea-googlecharts*.xml xmltestreport/
               <type>jslint</type>
               <min>0</min>
               <max>5</max>
-              <unstable>5</unstable>
+              <unstable>2</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>

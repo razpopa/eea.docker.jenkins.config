@@ -45,8 +45,10 @@ bin/pdfdiff -i http://www.eea.europa.eu/sandbox-jenkins/resource-efficiency-a-co
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.tasks.ArtifactArchiver>
       <artifacts>parts/pdfdiffreport/*.png</artifacts>
-      <latestOnly>false</latestOnly>
       <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder plugin="image-gallery@1.0">
       <imageGalleries>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<jenkins.advancedqueue.PrioritySorterConfiguration plugin="PrioritySorter@2.6">
+<jenkins.advancedqueue.PrioritySorterConfiguration plugin="PrioritySorter@2.8">
   <legacyMode>true</legacyMode>
   <legacyMaxPriority>2147483647</legacyMaxPriority>
   <legacyMinPriority>-2147483648</legacyMinPriority>

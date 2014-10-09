@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.scm.SubversionSCM_-DescriptorImpl plugin="subversion@2.2">
+<hudson.scm.SubversionSCM_-DescriptorImpl plugin="subversion@2.4.3">
   <generation>741</generation>
   <mayHaveLegacyPerJobCredentials>false</mayHaveLegacyPerJobCredentials>
   <workspaceFormat>100</workspaceFormat>

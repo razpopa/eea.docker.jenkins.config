@@ -290,11 +290,11 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.14">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>764.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
+      <score>810.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -355,7 +355,7 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
     <hudson.model.MyViewsProperty>
       <primaryViewName>Alin Dashboard</primaryViewName>
       <views>
-        <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.9.2">
+        <hudson.plugins.view.dashboard.Dashboard plugin="dashboard-view@2.9.4">
           <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
           <name>Alin Dashboard</name>
           <filterExecutors>false</filterExecutors>
@@ -383,8 +383,8 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.6"/>
-            <hudson.plugins.CronViewColumn plugin="cron_column@1.003"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+            <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
           </columns>
@@ -399,6 +399,7 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
               <id>dashboard_portlet_22</id>
               <name>Unstable Jobs</name>
               <showOnlyFailedJobs>false</showOnlyFailedJobs>
+              <recurse>false</recurse>
             </hudson.plugins.view.dashboard.core.UnstableJobsPortlet>
           </leftPortlets>
           <rightPortlets/>
@@ -412,7 +413,7 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
         </hudson.plugins.view.dashboard.Dashboard>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
       <identifiers>
         <string>http://alin-voinea.myopenid.com/</string>
         <string>https://me.yahoo.com/a/nJrsqGp.rsJD6YgQNiahT5FRuY3DVeAHrg--</string>
@@ -432,7 +433,7 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
       </roles>
       <timestamp>1397210324852</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>alin.voinea@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>
