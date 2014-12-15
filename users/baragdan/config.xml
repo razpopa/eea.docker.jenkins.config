@@ -9,7 +9,7 @@
       <apiToken>uym48dzVL+MaSBAcZNe5Ora4zLsJ86jz9E8jB2DmD1+aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
@@ -28,7 +28,7 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.search.UserSearchProperty>
@@ -41,7 +41,7 @@
       </roles>
       <timestamp>1401714272437</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>daniel.baragan@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

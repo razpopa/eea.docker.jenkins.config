@@ -7,13 +7,13 @@
       <passwordHash>NtpNjw:e742552308d60de91b8476bb8f5f1ead8e5484bc4d770f9a2aa0f09d4ea88ef3</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>Y8nti2updnhJO3hJaa9HP9Ns/BaAZ+r70BQeb6Wobj6aTo4YgslF9IL/1JVZ/wsc</apiToken>
+      <apiToken>Uc8G2om2jtGcZfuV8EuiKblO4HdMzrgnGpgvhVtsKNuaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.14">
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
       <score>60.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
@@ -37,7 +37,7 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl>
@@ -47,7 +47,7 @@
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -66,7 +66,7 @@
       </roles>
       <timestamp>1400057939524</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>david.batranu@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

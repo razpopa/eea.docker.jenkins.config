@@ -10,9 +10,6 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.9.1">
       <projectUrl>http://github.com/eea/eea.cache/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -26,8 +23,6 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <name></name>
-        <refspec></refspec>
         <url>https://github.com/collective/eea.cache.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -37,7 +32,6 @@
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <gitTool>Default</gitTool>
     <browser class="hudson.plugins.git.browser.GithubWeb">
       <url>https://github.com/collective/eea.cache/</url>
     </browser>
@@ -110,11 +104,11 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
       <thresholds plugin="analysis-core@1.59">
-        <unstableTotalAll>0</unstableTotalAll>
+        <unstableTotalAll>4</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
         <unstableTotalLow></unstableTotalLow>
-        <unstableNewAll>0</unstableNewAll>
+        <unstableNewAll>4</unstableNewAll>
         <unstableNewHigh></unstableNewHigh>
         <unstableNewNormal></unstableNewNormal>
         <unstableNewLow></unstableNewLow>
@@ -168,7 +162,7 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/
         <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
           <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>80</int>
+            <int>8000000</int>
           </entry>
         </targets>
       </healthyTarget>
@@ -194,6 +188,7 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/
       <testResults>**/xmltestreport/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
+      <healthScaleFactor>1.0</healthScaleFactor>
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.violations.ViolationsPublisher plugin="violations@0.7.11">
       <config>
@@ -321,6 +316,17 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
+            <string>perlcritic</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>perlcritic</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
@@ -337,7 +343,7 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>1</unstable>
+              <unstable>3</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -401,10 +407,8 @@ cp ../../parts/xmltestreport/testreports/*eea-cache*.xml xmltestreport/
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>20</timeoutMinutes>
       </strategy>
-      <operationList class="java.util.Arrays$ArrayList">
-        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
-          <hudson.plugins.build__timeout.operations.AbortOperation/>
-        </a>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>

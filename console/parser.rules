@@ -11,6 +11,7 @@ error /No data to report/
 error /UNSTABLE/
 error /[Ff]ailure/
 error /[Aa]borted/
+error /CONFLICT/
 
 # Warnings
 warning /[Ww]arning/

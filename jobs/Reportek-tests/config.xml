@@ -10,13 +10,13 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.6">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -40,7 +40,7 @@
     <hudson.triggers.TimerTrigger>
       <spec>3 0 * * 0</spec>
     </hudson.triggers.TimerTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.8">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.9.1">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -50,6 +50,8 @@
       <command>if [ ! -d zopeInstance ]; then
  git clone https://github.com/eea/bdr.zopebuildout.git zopeInstance
  cd zopeInstance
+ git checkout cdr
+ git branch -u origin/cdr cdr
  curl -O http://downloads.buildout.org/2/bootstrap.py
  /usr/local/Python-2.7.3/bin/python2.7 bootstrap.py
  mkdir src
@@ -57,6 +59,7 @@
  sed -i -e&apos;s/\(effective-user = \)zope/\1edw/&apos; base.cfg
  cp secret.cfg.sample secret.cfg
  sed -i -e&apos;s/SENTRY_DSN =.*$/SENTRY_DSN =/&apos; secret.cfg
+ sed -i -e&apos;s/DOCS_PATH =.*$/DOCS_PATH =/&apos; secret.cfg
  ./bin/buildout -c devel.cfg
 else
  cd zopeInstance
@@ -65,15 +68,15 @@ else
  git stash pop
 fi
 
-
+./bin/buildout -c devel.cfg
 ./bin/test -s Products.Reportek</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.Mailer plugin="mailer@1.8">
-      <recipients>daniel.baragan@eaudeweb.ro cornel.nitu@eaudeweb.ro</recipients>
+    <hudson.tasks.Mailer plugin="mailer@1.11">
+      <recipients>reportek@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>true</sendToIndividuals>
+      <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
   </publishers>
   <buildWrappers/>

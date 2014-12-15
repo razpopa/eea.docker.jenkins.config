@@ -15,11 +15,11 @@
       </views>
     </hudson.model.MyViewsProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
       <score>0.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
@@ -37,10 +37,10 @@
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>disabled@eionet.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

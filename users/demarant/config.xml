@@ -13,11 +13,11 @@
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.14">
       <enabledColorBlindSupport>true</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
       <score>94.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -76,7 +76,7 @@
         </maps.hudson.plugin.xfpanel.XFPanelView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
       <identifiers>
         <string>https://www.google.com/accounts/o8/id?id=AItOawk_60NZaZ3kBvxJmVl7uvMq_aFohEBOf4E</string>
       </identifiers>
@@ -100,8 +100,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7UrjZV1sIGwZ0ZQoZ15yE+eBZHULfrHBSI8rlDnOXTmT
       </roles>
       <timestamp>1405434454150</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
-      <emailAddress>antonio.de.marinis@eea.europa.eu</emailAddress>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
+      <emailAddress>demarinis@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

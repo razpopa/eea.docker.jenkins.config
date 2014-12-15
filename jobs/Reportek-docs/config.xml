@@ -10,13 +10,13 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.6">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -40,32 +40,43 @@
     <hudson.triggers.TimerTrigger>
       <spec>4 0 * * 0</spec>
     </hudson.triggers.TimerTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.8">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.9.1">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.20">
+    <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.21">
       <pythonName>python2.7</pythonName>
       <home>reportek</home>
       <clear>true</clear>
-      <useDistribute>false</useDistribute>
       <systemSitePackages>false</systemSitePackages>
       <nature>shell</nature>
       <command>if [ ! -d sphinx ]; then
  git clone https://github.com/eea/bdr.zopebuildout.git sphinx
  cd sphinx
+ git checkout cdr
+ git branch -u origin/cdr cdr
  curl -O http://downloads.buildout.org/2/bootstrap.py
  $PYTHON_EXE bootstrap.py
+ mkdir src
+ ln -s ../../ src/Products.Reportek
+ sed -i -e&apos;s/\(effective-user = \)zope/\1edw/&apos; base.cfg
  cp secret.cfg.sample secret.cfg
+ sed -i -e&apos;s/SENTRY_DSN =.*$/SENTRY_DSN =/&apos; secret.cfg
  sed -i -e&apos;s/DOCS_PATH =.*$/DOCS_PATH =\/var\/local\/Reportek-docs-html/&apos; secret.cfg
- ./bin/buildout -c sphinx.cfg
+ ./bin/buildout -c devel.cfg
 else
- cd sphinx/src/Products.Reportek
+# we are in the dir of the project; that is the reportek source; if this script is running then this dir has just been updated
+# we move inside the instance dir; we pull the latest changes for the buildout dir; note that this was set to a certain branch by the &apos;create&apos; case of this if
+ cd sphinx
+# there are some changes we should protect (for instance user zope is edw)
+ git stash
  git pull
+ git stash pop
 fi
-</command>
+
+./bin/buildout -c sphinx.cfg</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
     <hudson.tasks.Shell>
@@ -79,10 +90,10 @@ fi
     <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.tasks.Mailer plugin="mailer@1.8">
+    <hudson.tasks.Mailer plugin="mailer@1.11">
       <recipients>reportek@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>true</sendToIndividuals>
+      <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
   </publishers>
   <buildWrappers/>

@@ -56,7 +56,7 @@
       <timestamp>1397464695105</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
-      <emailAddress>enriko.kasper@gmail.com</emailAddress>
+      <emailAddress>enriko@tripledev.ee</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

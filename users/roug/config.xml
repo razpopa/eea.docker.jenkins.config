@@ -19,11 +19,11 @@
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>SeGAff:7a55abf0d8cecc9ad193d7ac4e4030ec946ea913e0b67b509b3853ac9203845b</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
       <score>42.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
@@ -38,7 +38,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -57,7 +57,7 @@
       </roles>
       <timestamp>1397467217279</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>soren.roug@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>
