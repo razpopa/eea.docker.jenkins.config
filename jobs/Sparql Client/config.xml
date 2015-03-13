@@ -19,10 +19,10 @@
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.4.5">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.5">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Reportnet/sparql-client/trunk</remote>
@@ -72,14 +72,14 @@
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters>
-    <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.40">
+    <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.41">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[CHECKSTYLE] </pluginName>
       <thresholdLimit>normal</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -98,16 +98,17 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.checkstyle.CheckStyleReporter>
-    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.57">
+    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.59">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[FINDBUGS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -126,17 +127,18 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <isRankActivated>false</isRankActivated>
     </hudson.plugins.findbugs.FindBugsReporter>
-    <hudson.plugins.dry.DryReporter plugin="dry@2.40">
+    <hudson.plugins.dry.DryReporter plugin="dry@2.41">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[DRY] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -155,18 +157,19 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <highThreshold>50</highThreshold>
       <normalThreshold>25</normalThreshold>
     </hudson.plugins.dry.DryReporter>
-    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.43">
+    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.44">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[TASKS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -185,6 +188,7 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <pattern>**/*.java</pattern>
       <excludePattern></excludePattern>
@@ -381,16 +385,17 @@
     </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
   </reporters>
   <publishers>
-    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.41">
+    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.42">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <thresholdLimit>low</thresholdLimit>
       <pluginName>[ANALYSIS-COLLECTOR] </pluginName>
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -442,7 +447,6 @@
       </failingTarget>
       <sourceEncoding>UTF_8</sourceEncoding>
     </hudson.plugins.cobertura.CoberturaPublisher>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.20"/>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.39">
       <recipientList>soren.roug@eea.europa.eu, jaanus.heinlaid@gmail.com</recipientList>
       <configuredTriggers>

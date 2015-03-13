@@ -13,15 +13,11 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
-      <score>-5.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.34"/>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
       <passwordHash>DQUOxU:b3b158ef86c7f0397341e9420cbd717c1aa01fe5005fdd2757c39e75f936cd28</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
@@ -31,12 +27,10 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -55,7 +49,7 @@
       </roles>
       <timestamp>1397464695105</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
       <emailAddress>enriko@tripledev.ee</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

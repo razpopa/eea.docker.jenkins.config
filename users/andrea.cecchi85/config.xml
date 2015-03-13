@@ -9,14 +9,13 @@
       <apiToken>iP7OVOnuhFWljky1DOnCuZ3RsdKDz8osnU0VQeHpsZCaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.18">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.30"/>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.34"/>
     <hudson.model.MyViewsProperty>
       <views>
         <hudson.model.AllView>
@@ -34,8 +33,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.12">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
       <emailAddress>andrea.cecchi85@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

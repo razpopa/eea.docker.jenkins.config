@@ -21,18 +21,6 @@
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.34">
       <jid>tiberiu@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>387.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-      <scoreHistoryEntries class="linked-list">
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-10.0</score>
-          <accountableRuns>
-            <run>land.copernicus.content-plone4#3</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-      </scoreHistoryEntries>
-    </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
@@ -43,8 +31,6 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.26"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>

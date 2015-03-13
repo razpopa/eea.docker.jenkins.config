@@ -63,10 +63,6 @@ bin/www1-uptest</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
-      <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.21"/>
     <hudson.tasks.Mailer plugin="mailer@1.15">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>

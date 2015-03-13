@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@2.2">
+<maven2-moduleset plugin="maven-plugin@2.8">
   <actions/>
   <description>Content Registry version 2</description>
   <logRotator class="hudson.tasks.LogRotator">
@@ -13,9 +13,9 @@
     <hudson.plugins.trac.TracProjectProperty plugin="trac@1.13">
       <tracWebsite>https://svn.eionet.europa.eu/projects/Reportnet/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.2">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.5">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Reportnet/cr2/trunk</remote>
@@ -55,6 +55,7 @@
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
   <archivingDisabled>false</archivingDisabled>
   <siteArchivingDisabled>false</siteArchivingDisabled>
+  <fingerprintingDisabled>false</fingerprintingDisabled>
   <resolveDependencies>false</resolveDependencies>
   <processPlugins>false</processPlugins>
   <mavenValidationLevel>-1</mavenValidationLevel>
@@ -63,14 +64,14 @@
   <globalSettingConfigId></globalSettingConfigId>
   <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
   <reporters>
-    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.56">
+    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.59">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[FINDBUGS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.56">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -89,17 +90,18 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <isRankActivated>false</isRankActivated>
     </hudson.plugins.findbugs.FindBugsReporter>
-    <hudson.plugins.pmd.PmdReporter plugin="pmd@3.38">
+    <hudson.plugins.pmd.PmdReporter plugin="pmd@3.40">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[PMD] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.56">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -118,16 +120,17 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.pmd.PmdReporter>
-    <hudson.plugins.dry.DryReporter plugin="dry@2.40">
+    <hudson.plugins.dry.DryReporter plugin="dry@2.41">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[DRY] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.56">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -146,18 +149,19 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <highThreshold>50</highThreshold>
       <normalThreshold>25</normalThreshold>
     </hudson.plugins.dry.DryReporter>
-    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.39">
+    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.44">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[TASKS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.56">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -176,6 +180,7 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <pattern></pattern>
       <excludePattern></excludePattern>
@@ -183,6 +188,7 @@
       <normal></normal>
       <low></low>
       <ignoreCase>false</ignoreCase>
+      <asRegexp>false</asRegexp>
     </hudson.plugins.tasks.TasksReporter>
     <hudson.plugins.violations.hudson.maven.ViolationsMavenReporter plugin="violations@0.7.11">
       <config>
@@ -327,16 +333,17 @@
     </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
   </reporters>
   <publishers>
-    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.41">
+    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.42">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <thresholdLimit>low</thresholdLimit>
       <pluginName>[ANALYSIS-COLLECTOR] </pluginName>
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.56">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -367,9 +374,8 @@
     <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher plugin="dependencyanalyzer@0.6"/>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.37.2.2">
+    <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher plugin="dependencyanalyzer@0.7"/>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.39">
       <recipientList>soren.roug@eea.europa.eu, jaanus.heinlaid@gmail.com</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
@@ -377,10 +383,10 @@
             <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
-            <sendToDevelopers>true</sendToDevelopers>
-            <sendToRequester>false</sendToRequester>
-            <includeCulprits>false</includeCulprits>
-            <sendToRecipientList>true</sendToRecipientList>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.DevelopersRecipientProvider/>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
           </email>
@@ -398,6 +404,7 @@ See https://svn.eionet.europa.eu/projects/Reportnet/wiki/TechnicalDebt</defaultC
       <attachBuildLog>false</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
       <saveOutput>false</saveOutput>
+      <disabled>false</disabled>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
   <buildWrappers/>

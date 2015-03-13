@@ -9,14 +9,13 @@
       <apiToken>q1CB7lRH0kQm+Aw/btoPdF8GmY7uyy7F7EYyHKXVlD+aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.16.1">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.34"/>
     <hudson.model.MyViewsProperty>
       <views>
         <hudson.model.AllView>
@@ -28,18 +27,13 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
-      <score>6.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-    </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
       <emailAddress>vitalie.maldur@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
   </properties>

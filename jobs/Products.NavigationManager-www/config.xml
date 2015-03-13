@@ -13,13 +13,13 @@
     <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
       <projectName>zope</projectName>
     </hudson.plugins.redmine.RedmineProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.4.3">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.5">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/Products.NavigationManager/trunk</remote>
@@ -90,16 +90,17 @@ cp ../../parts/xmltestreport/testreports/*Products.NavigationManager*.xml xmltes
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.41">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.46">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>high</thresholdLimit>
       <pluginName>[WARNINGS] </pluginName>
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.59">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll>2</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -132,9 +133,6 @@ cp ../../parts/xmltestreport/testreports/*Products.NavigationManager*.xml xmltes
       </parserConfigurations>
       <consoleParsers/>
     </hudson.plugins.warnings.WarningsPublisher>
-    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
-      <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
     <hudson.tasks.BuildTrigger>
       <childProjects>Products.NavigationManager-plone4</childProjects>
       <threshold>
@@ -144,7 +142,7 @@ cp ../../parts/xmltestreport/testreports/*Products.NavigationManager*.xml xmltes
         <completeBuild>true</completeBuild>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.5">
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.7">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
       <failUnhealthy>false</failUnhealthy>
@@ -180,7 +178,7 @@ cp ../../parts/xmltestreport/testreports/*Products.NavigationManager*.xml xmltes
       </failingTarget>
       <sourceEncoding>ASCII</sourceEncoding>
     </hudson.plugins.cobertura.CoberturaPublisher>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.1">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.5">
       <testResults>**/xmltestreport/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
@@ -372,15 +370,14 @@ cp ../../parts/xmltestreport/testreports/*Products.NavigationManager*.xml xmltes
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.20"/>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
+    <hudson.tasks.Mailer plugin="mailer@1.15">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.34">
       <targets>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.30">
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.33">
           <value>alin@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
@@ -390,12 +387,12 @@ cp ../../parts/xmltestreport/testreports/*Products.NavigationManager*.xml xmltes
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.30"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.33"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>20</timeoutMinutes>
       </strategy>

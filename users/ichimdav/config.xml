@@ -18,76 +18,6 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>830.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-      <scoreHistoryEntries class="linked-list">
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-plone4#3067</run>
-            <run>eea.design-www#2684</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-www#2684</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-plone4#3066</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-plone4#3058</run>
-            <run>eea.design-www#2678</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-plone4#3057</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-www#2678</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.indicators-www#2294</run>
-            <run>eea.indicators-plone4#1877</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.indicators-www#2294</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.indicators-www#2292</run>
-            <run>eea.indicators-plone4#1874</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.indicators-www#2292</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-      </scoreHistoryEntries>
-    </hudson.plugins.cigame.UserScoreProperty>
     <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.34">
       <jid>david.ichim@jabber.eaudeweb.ro</jid>
     </hudson.plugins.jabber.user.JabberUserProperty>
@@ -101,8 +31,6 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.26"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>

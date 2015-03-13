@@ -13,9 +13,9 @@
     <hudson.plugins.trac.TracProjectProperty plugin="trac@1.13">
       <tracWebsite>http://svn.eionet.europa.eu/projects/Zope/</tracWebsite>
     </hudson.plugins.trac.TracProjectProperty>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.4.3">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.5">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.eggmonkey/buildouts/plone4</remote>
@@ -57,18 +57,14 @@ bin/test -v -vv -s eea.eggmonkey</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
-      <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
+    <hudson.tasks.Mailer plugin="mailer@1.15">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.20"/>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.34">
       <targets>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.30">
+        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.33">
           <value>tiberiu@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
@@ -78,12 +74,12 @@ bin/test -v -vv -s eea.eggmonkey</command>
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.30"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.33"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>30</timeoutMinutes>
       </strategy>

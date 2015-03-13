@@ -13,11 +13,11 @@
     <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
       <projectName>zope</projectName>
     </hudson.plugins.redmine.RedmineProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -38,22 +38,18 @@ bin/epydoc-all</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.JavadocArchiver plugin="javadoc@1.2">
+    <hudson.tasks.JavadocArchiver plugin="javadoc@1.3">
       <javadocDir>apidoc-eea</javadocDir>
       <keepAll>false</keepAll>
     </hudson.tasks.JavadocArchiver>
-    <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
-      <factGenerator/>
-    </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
+    <hudson.tasks.Mailer plugin="mailer@1.15">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.20"/>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.34">
       <targets>
-        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.30">
+        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.33">
           <name>web3.0development@conference.jabber.eea.europa.eu</name>
           <notificationOnly>false</notificationOnly>
         </hudson.plugins.im.GroupChatIMMessageTarget>
@@ -64,12 +60,12 @@ bin/epydoc-all</command>
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.30"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.33"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>60</timeoutMinutes>
       </strategy>
