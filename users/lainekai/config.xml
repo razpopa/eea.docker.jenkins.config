@@ -3,7 +3,6 @@
   <fullName>lainekai</fullName>
   <description>Kaido</description>
   <properties>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.5"/>
     <hudson.model.MyViewsProperty>
       <primaryViewName>All</primaryViewName>
       <views>
@@ -16,12 +15,12 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.30"/>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.20">
       <score>23.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
     </hudson.plugins.cigame.UserScoreProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.7">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
@@ -32,11 +31,11 @@
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.9.3">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -46,5 +45,17 @@
         </entry>
       </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.12">
+      <emailAddress>kaido.laine@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1424869237645</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>

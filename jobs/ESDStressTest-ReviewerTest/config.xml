@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.10">
+      <projectUrl>https://github.com/codesyntax/esd-stress-test/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>NUMOFTHREADS</name>
+          <description></description>
+          <defaultValue>1</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>LOOPCOUNT</name>
+          <description></description>
+          <defaultValue>1</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>RAMPUPPERIOD</name>
+          <description></description>
+          <defaultValue>1</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>SERVERNAME</name>
+          <description></description>
+          <defaultValue>esddemo.eea.europa.eu</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>USERNAME</name>
+          <description></description>
+          <defaultValue>USERNAME</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.PasswordParameterDefinition>
+          <name>PASSWORD</name>
+          <description></description>
+          <defaultValue>dOs4acnPpG1kcY3HAdRcpw4ANFvlTTSr/nIBlN27YtQ=</defaultValue>
+        </hudson.model.PasswordParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.5">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/codesyntax/esd-stress-test</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>python bootstrap.py
+./bin/buildout -vv
+./bin/reviewertest -JSERVERNAME=${SERVERNAME} -JUSERNAME=${USERNAME} -JPASSWORD=${PASSWORD} -JNUMOFTHREADS=${NUMOFTHREADS} -JLOOPCOUNT=${LOOPCOUNT} -JRAMPUPPERIOD=${RAMPUPPERIOD}</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.performance.PerformancePublisher plugin="performance@1.13">
+      <errorFailedThreshold>999</errorFailedThreshold>
+      <errorUnstableThreshold>999</errorUnstableThreshold>
+      <errorUnstableResponseTimeThreshold></errorUnstableResponseTimeThreshold>
+      <relativeFailedThresholdPositive>0.02</relativeFailedThresholdPositive>
+      <relativeFailedThresholdNegative>-0.02</relativeFailedThresholdNegative>
+      <relativeUnstableThresholdPositive>0.01</relativeUnstableThresholdPositive>
+      <relativeUnstableThresholdNegative>-0.01</relativeUnstableThresholdNegative>
+      <nthBuildNumber>0</nthBuildNumber>
+      <modeRelativeThresholds>false</modeRelativeThresholds>
+      <configType>ART</configType>
+      <modeOfThreshold>false</modeOfThreshold>
+      <compareBuildPrevious>true</compareBuildPrevious>
+      <xml></xml>
+      <modePerformancePerTestCase>true</modePerformancePerTestCase>
+      <parsers>
+        <hudson.plugins.performance.JMeterParser>
+          <glob>report_reviewertest.jtl</glob>
+        </hudson.plugins.performance.JMeterParser>
+      </parsers>
+      <modeThroughput>true</modeThroughput>
+    </hudson.plugins.performance.PerformancePublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

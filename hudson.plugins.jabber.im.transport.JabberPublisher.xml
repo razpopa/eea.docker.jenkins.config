@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.jabber.im.transport.JabberPublisherDescriptor plugin="jabber@1.25">
+<hudson.plugins.jabber.im.transport.JabberPublisherDescriptor plugin="jabber@1.34">
   <enabled>true</enabled>
   <port>5222</port>
   <hudsonNickname>hudson@jabber.eea.europa.eu</hudsonNickname>
   <hudsonPassword>Q2F0OTg3RG9n</hudsonPassword>
   <groupChatNickname>hudson</groupChatNickname>
   <exposePresence>true</exposePresence>
-  <enableSASL>false</enableSASL>
+  <acceptAllCerts>false</acceptAllCerts>
   <scrambledPasswords>true</scrambledPasswords>
   <defaultTargets>
-    <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.30">
+    <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.33">
       <name>web3.0development@conference.jabber.eea.europa.eu</name>
       <notificationOnly>true</notificationOnly>
     </hudson.plugins.im.GroupChatIMMessageTarget>

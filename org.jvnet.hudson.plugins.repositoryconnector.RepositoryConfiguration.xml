@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<org.jvnet.hudson.plugins.repositoryconnector.RepositoryConfiguration plugin="repository-connector@1.0.1">
+<org.jvnet.hudson.plugins.repositoryconnector.RepositoryConfiguration plugin="repository-connector@1.1.0">
   <repos>
     <entry>
       <string>central</string>

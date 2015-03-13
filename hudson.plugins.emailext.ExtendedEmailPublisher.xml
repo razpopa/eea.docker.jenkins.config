@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.38.2">
+<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.39">
   <defaultSuffix>@eea.europa.eu</defaultSuffix>
-  <adminAddress>ci-no-reply@eionet.europa.eu</adminAddress>
   <smtpHost>localhost</smtpHost>
   <useSsl>false</useSsl>
   <smtpPort>25</smtpPort>
+  <charset>UTF-8</charset>
   <defaultContentType>text/html</defaultContentType>
   <defaultSubject>$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!</defaultSubject>
   <defaultBody>&lt;html&gt;&#xd;
@@ -53,6 +53,7 @@ ${FAILED_TESTS, showStack=false, maxTests=10, onlyRegressions=false}&#xd;
 &lt;/body&gt;&#xd;
 &lt;/html&gt;</defaultBody>
   <defaultPresendScript></defaultPresendScript>
+  <defaultClasspath/>
   <maxAttachmentSize>-1</maxAttachmentSize>
   <recipientList></recipientList>
   <defaultReplyTo></defaultReplyTo>
@@ -61,5 +62,6 @@ ${FAILED_TESTS, showStack=false, maxTests=10, onlyRegressions=false}&#xd;
   <precedenceBulk>false</precedenceBulk>
   <debugMode>false</debugMode>
   <enableSecurity>false</enableSecurity>
+  <requireAdminForTemplateTesting>false</requireAdminForTemplateTesting>
   <enableWatching>false</enableWatching>
 </hudson.plugins.emailext.ExtendedEmailPublisherDescriptor>

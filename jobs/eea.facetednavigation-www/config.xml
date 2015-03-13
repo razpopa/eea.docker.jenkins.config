@@ -10,19 +10,16 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.redmine.RedmineProjectProperty plugin="redmine@0.15">
-      <projectName>zope</projectName>
-    </hudson.plugins.redmine.RedmineProjectProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.9.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.10">
       <projectUrl>http://github.com/collective/eea.facetednavigation/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.6">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -37,7 +34,6 @@
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <gitTool>Default</gitTool>
     <browser class="hudson.plugins.git.browser.GithubWeb">
       <url>https://github.com/collective/eea.facetednavigation.git/</url>
     </browser>
@@ -103,7 +99,7 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.41">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.44">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>high</thresholdLimit>
@@ -112,7 +108,7 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
       <canRunOnFailed>true</canRunOnFailed>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.59">
+      <thresholds plugin="analysis-core@1.65">
         <unstableTotalAll>0</unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -157,7 +153,7 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
         <completeBuild>true</completeBuild>
       </threshold>
     </hudson.tasks.BuildTrigger>
-    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.5">
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.6">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
       <failUnhealthy>false</failUnhealthy>
@@ -171,7 +167,7 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
         <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
           <entry>
             <hudson.plugins.cobertura.targets.CoverageMetric>LINE</hudson.plugins.cobertura.targets.CoverageMetric>
-            <int>80</int>
+            <int>8000000</int>
           </entry>
         </targets>
       </healthyTarget>
@@ -193,10 +189,10 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
       </failingTarget>
       <sourceEncoding>ASCII</sourceEncoding>
     </hudson.plugins.cobertura.CoberturaPublisher>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.1">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.3">
       <testResults>**/xmltestreport/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
-      <testDataPublishers/>
+      <healthScaleFactor>1.0</healthScaleFactor>
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.plugins.violations.ViolationsPublisher plugin="violations@0.7.11">
       <config>
@@ -324,6 +320,17 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
+            <string>perlcritic</string>
+            <hudson.plugins.violations.TypeConfig>
+              <type>perlcritic</type>
+              <min>10</min>
+              <max>999</max>
+              <unstable>999</unstable>
+              <usePattern>false</usePattern>
+              <pattern></pattern>
+            </hudson.plugins.violations.TypeConfig>
+          </entry>
+          <entry>
             <string>pmd</string>
             <hudson.plugins.violations.TypeConfig>
               <type>pmd</type>
@@ -340,7 +347,7 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
               <type>pylint</type>
               <min>10</min>
               <max>999</max>
-              <unstable>1</unstable>
+              <unstable>2</unstable>
               <usePattern>false</usePattern>
               <pattern>**/pylint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -375,12 +382,12 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
     <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.20"/>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
+    <hudson.tasks.Mailer plugin="mailer@1.12">
       <recipients>web30development@localhost eea-facetednavigation@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.30">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.30">
           <value>alin@jabber.eaudeweb.ro</value>
@@ -401,10 +408,8 @@ cp ../../parts/xmltestreport/testreports/*eea-facetednavigation*.xml xmltestrepo
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>20</timeoutMinutes>
       </strategy>
-      <operationList class="java.util.Arrays$ArrayList">
-        <a class="hudson.plugins.build_timeout.BuildTimeOutOperation-array">
-          <hudson.plugins.build__timeout.operations.AbortOperation/>
-        </a>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>

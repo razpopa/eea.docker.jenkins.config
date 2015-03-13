@@ -10,13 +10,13 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.6">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -40,7 +40,7 @@
     <hudson.triggers.TimerTrigger>
       <spec>3 0 * * 0</spec>
     </hudson.triggers.TimerTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.9.1">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.10">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -48,12 +48,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command>if [ ! -d zopeInstance ]; then
- git clone https://github.com/eea/bdr.zopebuildout.git zopeInstance
+ echo &quot;Doing initial setup&quot;
+ git clone https://github.com/eea/reportek.zopebuildout.git zopeInstance
  cd zopeInstance
- git checkout cdr
- git branch -u origin/cdr cdr
- curl -O http://downloads.buildout.org/2/bootstrap.py
- /usr/local/Python-2.7.3/bin/python2.7 bootstrap.py
+ #curl -O http://downloads.buildout.org/2/bootstrap.py
+ curl -O https://raw.githubusercontent.com/buildout/buildout/master/bootstrap/bootstrap.py
+ /usr/bin/python2.7 bootstrap.py --setuptools-version=7.0 --version=2.2.5
  mkdir src
  ln -s ../../ src/Products.Reportek
  sed -i -e&apos;s/\(effective-user = \)zope/\1edw/&apos; base.cfg
@@ -62,18 +62,20 @@
  sed -i -e&apos;s/DOCS_PATH =.*$/DOCS_PATH =/&apos; secret.cfg
  ./bin/buildout -c devel.cfg
 else
+ echo &quot;Refresh setup in existing deployment&quot;
  cd zopeInstance
  git stash
  git pull
  git stash pop
 fi
 
+
 ./bin/buildout -c devel.cfg
 ./bin/test -s Products.Reportek</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
+    <hudson.tasks.Mailer plugin="mailer@1.12">
       <recipients>reportek@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<matrix-project plugin="matrix-project@1.4">
+  <actions/>
+  <description>Check download.pdf for SOER 2015 Fiches: http://eea.europa.eu/soer-2015</description>
+  <displayName>[PDF] SOER Fiches</displayName>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>30</daysToKeep>
+    <numToKeep>-1</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>www.eea.europa.eu-pre-production, </upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <axes>
+    <hudson.matrix.TextAxis>
+      <name>server</name>
+      <values>
+        <string>www-devel.webdev.eea.europa.eu</string>
+        <string>www-pre-production.webdev.eea.europa.eu</string>
+        <string>www.eea.europa.eu</string>
+      </values>
+    </hudson.matrix.TextAxis>
+    <hudson.matrix.TextAxis>
+      <name>fiche</name>
+      <values>
+        <string>countries--arctic</string>
+        <string>countries-comparison--air</string>
+        <string>europe--air</string>
+        <string>global--demography</string>
+      </values>
+    </hudson.matrix.TextAxis>
+  </axes>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}
+rm -rf pdfdiffreport
+FICHE=`echo ${fiche} | sed &apos;s/\-\-/\//g&apos;`
+/opt/hudson/buildouts/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/$FICHE/download.pdf -o http://${server}/soer-2015/$FICHE/$FICHE.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 400 -e alin@eaudeweb.ro --no-cleanup-input
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>pdfdiffreport/*.png</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+    <org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder plugin="image-gallery@1.1">
+      <imageGalleries>
+        <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+          <title>PDF Differences</title>
+          <imageWidth>300</imageWidth>
+          <markBuildAsUnstableIfNoArchivesFound>false</markBuildAsUnstableIfNoArchivesFound>
+          <includes>pdfdiffreport/diff-*.png</includes>
+        </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+        <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+          <title>PDF Output</title>
+          <imageWidth>300</imageWidth>
+          <markBuildAsUnstableIfNoArchivesFound>true</markBuildAsUnstableIfNoArchivesFound>
+          <includes>pdfdiffreport/input-*.png</includes>
+        </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+      </imageGalleries>
+    </org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder>
+    <hudson.tasks.Mailer plugin="mailer@1.15">
+      <recipients>alin@eaudeweb.ro</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>false</sendToIndividuals>
+    </hudson.tasks.Mailer>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
+      <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
+        <timeoutMinutes>30</timeoutMinutes>
+      </strategy>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.FailOperation/>
+      </operationList>
+    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+  </buildWrappers>
+  <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
+    <runSequentially>false</runSequentially>
+  </executionStrategy>
+</matrix-project>

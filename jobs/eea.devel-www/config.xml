@@ -10,16 +10,16 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.9.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.10">
       <projectUrl>http://github.com/eea/eea.devel/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.6">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -47,7 +47,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>www.eea.europa.eu-hudson, </upstreamProjects>
+      <upstreamProjects>www.eea.europa.eu-hudson</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -103,7 +103,7 @@ cp ../../parts/xmltestreport/testreports/*eea-devel*.xml xmltestreport/
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.41">
+    <hudson.plugins.warnings.WarningsPublisher plugin="warnings@4.44">
       <healthy>0</healthy>
       <unHealthy>5</unHealthy>
       <thresholdLimit>high</thresholdLimit>
@@ -112,7 +112,7 @@ cp ../../parts/xmltestreport/testreports/*eea-devel*.xml xmltestreport/
       <canRunOnFailed>true</canRunOnFailed>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.59">
+      <thresholds plugin="analysis-core@1.65">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -148,7 +148,7 @@ cp ../../parts/xmltestreport/testreports/*eea-devel*.xml xmltestreport/
     <hudson.plugins.girls.CordellWalkerRecorder plugin="girls@1.0.0">
       <factGenerator/>
     </hudson.plugins.girls.CordellWalkerRecorder>
-    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.5">
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.6">
       <coberturaReportFile>coverage.xml</coberturaReportFile>
       <onlyStable>true</onlyStable>
       <failUnhealthy>false</failUnhealthy>
@@ -184,7 +184,7 @@ cp ../../parts/xmltestreport/testreports/*eea-devel*.xml xmltestreport/
       </failingTarget>
       <sourceEncoding>ASCII</sourceEncoding>
     </hudson.plugins.cobertura.CoberturaPublisher>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.1">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.3">
       <testResults>**/xmltestreport/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <testDataPublishers/>
@@ -377,12 +377,12 @@ cp ../../parts/xmltestreport/testreports/*eea-devel*.xml xmltestreport/
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
+    <hudson.tasks.Mailer plugin="mailer@1.12">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.30">
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.30">
           <value>alin@jabber.eaudeweb.ro</value>

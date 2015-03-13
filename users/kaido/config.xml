@@ -6,7 +6,7 @@
       <apiToken>n0gtn2yf8nUjun5Lbne5CmlaUFcJthlbMvcsOR3Oz/6aTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.9.4">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -19,8 +19,8 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.23"/>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.26"/>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.34"/>
     <hudson.model.MyViewsProperty>
       <views>
         <hudson.model.AllView>
@@ -32,22 +32,30 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
       <emailAddress>kaido@tripledev.ee</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>1.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
+      <score>2.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
+      <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>CR3#924</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+      </scoreHistoryEntries>
     </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl plugin="ircbot@2.25">
+<hudson.plugins.ircbot.IrcPublisher_-DescriptorImpl plugin="ircbot@2.26">
   <enabled>false</enabled>
   <port>194</port>
   <ssl>false</ssl>
@@ -8,6 +8,7 @@
   <sslTrustAllCertificates>false</sslTrustAllCertificates>
   <nick>jenkins-bot</nick>
   <socksPort>1080</socksPort>
+  <messageRate>500</messageRate>
   <scrambledPasswords>true</scrambledPasswords>
   <commandPrefix>!jenkins</commandPrefix>
   <useNotice>false</useNotice>

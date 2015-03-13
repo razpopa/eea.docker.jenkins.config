@@ -10,13 +10,13 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.8">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
     <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.6">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -40,7 +40,7 @@
     <hudson.triggers.TimerTrigger>
       <spec>4 0 * * 0</spec>
     </hudson.triggers.TimerTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.9.1">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.10">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -53,12 +53,12 @@
       <systemSitePackages>false</systemSitePackages>
       <nature>shell</nature>
       <command>if [ ! -d sphinx ]; then
- git clone https://github.com/eea/bdr.zopebuildout.git sphinx
+ echo &quot;Doing initial setup&quot;
+ git clone https://github.com/eea/reportek.zopebuildout.git sphinx
  cd sphinx
- git checkout cdr
- git branch -u origin/cdr cdr
- curl -O http://downloads.buildout.org/2/bootstrap.py
- $PYTHON_EXE bootstrap.py
+ #curl -O http://downloads.buildout.org/2/bootstrap.py
+ curl -O https://raw.githubusercontent.com/buildout/buildout/master/bootstrap/bootstrap.py
+ /usr/bin/python2.7 bootstrap.py --setuptools-version=7.0 --version=2.2.5
  mkdir src
  ln -s ../../ src/Products.Reportek
  sed -i -e&apos;s/\(effective-user = \)zope/\1edw/&apos; base.cfg
@@ -67,6 +67,7 @@
  sed -i -e&apos;s/DOCS_PATH =.*$/DOCS_PATH =\/var\/local\/Reportek-docs-html/&apos; secret.cfg
  ./bin/buildout -c devel.cfg
 else
+  echo &quot;Refresh setup in existing deployment&quot;
 # we are in the dir of the project; that is the reportek source; if this script is running then this dir has just been updated
 # we move inside the instance dir; we pull the latest changes for the buildout dir; note that this was set to a certain branch by the &apos;create&apos; case of this if
  cd sphinx
@@ -90,7 +91,7 @@ fi
     <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
+    <hudson.tasks.Mailer plugin="mailer@1.12">
       <recipients>reportek@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>-1</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
+      <priority>100</priority>
+    </hudson.queueSorter.PrioritySorterJobProperty>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/</customWorkspace>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>mkdir -p &quot;parts/jmeter/${JOB_NAME}&quot;
+cd &quot;${WORKSPACE}/parts/jmeter/${JOB_NAME}&quot;
+rm -rf *
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd &quot;${WORKSPACE}/parts/jmeter/${JOB_NAME}&quot;
+/usr/local/bin/jmeter.sh -n -t ${WORKSPACE}/tests/performance/main-sections.jmx
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.performance.PerformancePublisher plugin="performance@1.11">
+      <errorFailedThreshold>95</errorFailedThreshold>
+      <errorUnstableThreshold>90</errorUnstableThreshold>
+      <errorUnstableResponseTimeThreshold></errorUnstableResponseTimeThreshold>
+      <relativeFailedThresholdPositive>95.0</relativeFailedThresholdPositive>
+      <relativeFailedThresholdNegative>-95.0</relativeFailedThresholdNegative>
+      <relativeUnstableThresholdPositive>90.0</relativeUnstableThresholdPositive>
+      <relativeUnstableThresholdNegative>-90.0</relativeUnstableThresholdNegative>
+      <nthBuildNumber>0</nthBuildNumber>
+      <modeRelativeThresholds>false</modeRelativeThresholds>
+      <configType>ART</configType>
+      <modeOfThreshold>true</modeOfThreshold>
+      <compareBuildPrevious>true</compareBuildPrevious>
+      <xml></xml>
+      <modePerformancePerTestCase>true</modePerformancePerTestCase>
+      <parsers>
+        <hudson.plugins.performance.JMeterParser>
+          <glob>parts/jmeter/eea-main-sections/*.jtl</glob>
+        </hudson.plugins.performance.JMeterParser>
+      </parsers>
+      <modeThroughput>true</modeThroughput>
+    </hudson.plugins.performance.PerformancePublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

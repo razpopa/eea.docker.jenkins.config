@@ -6,14 +6,14 @@
       <apiToken>h5BFI0pkW4SBWq32qc7IfSR4tNM0EIivjusnfn09+jeaTo4YgslF9IL/1JVZ/wsc</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.25"/>
-    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.25"/>
+    <hudson.plugins.ircbot.IrcUserProperty plugin="ircbot@2.26"/>
+    <hudson.plugins.jabber.user.JabberUserProperty plugin="jabber@1.34"/>
     <hudson.model.MyViewsProperty>
       <views>
         <hudson.model.AllView>
@@ -25,19 +25,85 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@1.8">
+    <hudson.plugins.openid.OpenIdUserProperty plugin="openid@2.1.1">
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.8">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
       <emailAddress>olimpiu.rob@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.19">
-      <score>90.0</score>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
+      <score>177.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
+      <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>valentine.linguaflow-www#2021</run>
+            <run>valentine.linguaflow-plone4#1964</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>valentine.linguaflow-www#2021</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>valentine.linguaflow-plone4#1963</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.sparql-www#1506</run>
+            <run>eea.sparql-plone4#1415</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.sparql-www#1506</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.workflow-www#2077</run>
+            <run>eea.workflow-plone4#1898</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.workflow-www#2077</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>-10.0</score>
+          <accountableRuns>
+            <run>land.copernicus.content-plone4#3</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.versions-plone4#2223</run>
+            <run>eea.versions-www#2175</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.workflow-plone4#1897</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+      </scoreHistoryEntries>
     </hudson.plugins.cigame.UserScoreProperty>
     <hudson.model.PaneStatusProperties>
       <collapsed/>

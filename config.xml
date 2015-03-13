@@ -4,7 +4,7 @@
     <string>jenkins.security.RekeySecretAdminMonitor</string>
     <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>1.581</version>
+  <version>1.599</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -29,14 +29,10 @@
     <permission>hudson.model.Computer.Create:robaaoli</permission>
     <permission>hudson.model.Computer.Create:tiberich</permission>
     <permission>hudson.model.Computer.Create:voineali</permission>
-    <permission>hudson.model.Computer.Delete:baragdan</permission>
-    <permission>hudson.model.Computer.Delete:batradav</permission>
-    <permission>hudson.model.Computer.Delete:ciobabog</permission>
     <permission>hudson.model.Computer.Delete:dascalu</permission>
     <permission>hudson.model.Computer.Delete:demarant</permission>
     <permission>hudson.model.Computer.Delete:ghicaale</permission>
     <permission>hudson.model.Computer.Delete:ichimdav</permission>
-    <permission>hudson.model.Computer.Delete:malduvit</permission>
     <permission>hudson.model.Computer.Delete:melisand</permission>
     <permission>hudson.model.Computer.Delete:nituacor</permission>
     <permission>hudson.model.Computer.Delete:robaaoli</permission>
@@ -44,12 +40,10 @@
     <permission>hudson.model.Computer.Delete:szabozo0</permission>
     <permission>hudson.model.Computer.Delete:tiberich</permission>
     <permission>hudson.model.Computer.Delete:voineali</permission>
-    <permission>hudson.model.Hudson.Administer:baragdan</permission>
     <permission>hudson.model.Hudson.Administer:dascalu</permission>
     <permission>hudson.model.Hudson.Administer:demarant</permission>
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>
     <permission>hudson.model.Hudson.Administer:ichimdav</permission>
-    <permission>hudson.model.Hudson.Administer:malduvit</permission>
     <permission>hudson.model.Hudson.Administer:melisand</permission>
     <permission>hudson.model.Hudson.Administer:nituacor</permission>
     <permission>hudson.model.Hudson.Administer:robaaoli</permission>
@@ -68,6 +62,7 @@
     <permission>hudson.model.Hudson.Read:heinlja</permission>
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
     <permission>hudson.model.Hudson.Read:kasperen</permission>
+    <permission>hudson.model.Hudson.Read:larremik</permission>
     <permission>hudson.model.Hudson.Read:malduvit</permission>
     <permission>hudson.model.Hudson.Read:melisand</permission>
     <permission>hudson.model.Hudson.Read:moregale</permission>
@@ -75,12 +70,13 @@
     <permission>hudson.model.Hudson.Read:robaaoli</permission>
     <permission>hudson.model.Hudson.Read:roug</permission>
     <permission>hudson.model.Hudson.Read:szabozo0</permission>
+    <permission>hudson.model.Hudson.Read:thunbrol</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
     <permission>hudson.model.Hudson.RunScripts:dascalu</permission>
     <permission>hudson.model.Hudson.RunScripts:ichimdav</permission>
-    <permission>hudson.model.Hudson.RunScripts:malduvit</permission>
     <permission>hudson.model.Hudson.RunScripts:robaaoli</permission>
+    <permission>hudson.model.Hudson.RunScripts:thunbrol</permission>
     <permission>hudson.model.Hudson.RunScripts:tiberich</permission>
     <permission>hudson.model.Hudson.RunScripts:voineali</permission>
     <permission>hudson.model.Item.Build:altnyris</permission>
@@ -93,6 +89,7 @@
     <permission>hudson.model.Item.Build:heinlja</permission>
     <permission>hudson.model.Item.Build:ichimdav</permission>
     <permission>hudson.model.Item.Build:kasperen</permission>
+    <permission>hudson.model.Item.Build:larremik</permission>
     <permission>hudson.model.Item.Build:malduvit</permission>
     <permission>hudson.model.Item.Build:melisand</permission>
     <permission>hudson.model.Item.Build:moregale</permission>
@@ -100,6 +97,7 @@
     <permission>hudson.model.Item.Build:robaaoli</permission>
     <permission>hudson.model.Item.Build:roug</permission>
     <permission>hudson.model.Item.Build:szabozo0</permission>
+    <permission>hudson.model.Item.Build:thunbrol</permission>
     <permission>hudson.model.Item.Build:tiberich</permission>
     <permission>hudson.model.Item.Build:voineali</permission>
     <permission>hudson.model.Item.Configure:altnyris</permission>
@@ -111,6 +109,7 @@
     <permission>hudson.model.Item.Configure:heinlja</permission>
     <permission>hudson.model.Item.Configure:ichimdav</permission>
     <permission>hudson.model.Item.Configure:kasperen</permission>
+    <permission>hudson.model.Item.Configure:larremik</permission>
     <permission>hudson.model.Item.Configure:malduvit</permission>
     <permission>hudson.model.Item.Configure:melisand</permission>
     <permission>hudson.model.Item.Configure:moregale</permission>
@@ -118,6 +117,7 @@
     <permission>hudson.model.Item.Configure:robaaoli</permission>
     <permission>hudson.model.Item.Configure:roug</permission>
     <permission>hudson.model.Item.Configure:szabozo0</permission>
+    <permission>hudson.model.Item.Configure:thunbrol</permission>
     <permission>hudson.model.Item.Configure:tiberich</permission>
     <permission>hudson.model.Item.Configure:voineali</permission>
     <permission>hudson.model.Item.Create:altnyris</permission>
@@ -130,6 +130,7 @@
     <permission>hudson.model.Item.Create:heinlja</permission>
     <permission>hudson.model.Item.Create:ichimdav</permission>
     <permission>hudson.model.Item.Create:kasperen</permission>
+    <permission>hudson.model.Item.Create:larremik</permission>
     <permission>hudson.model.Item.Create:malduvit</permission>
     <permission>hudson.model.Item.Create:melisand</permission>
     <permission>hudson.model.Item.Create:moregale</permission>
@@ -169,6 +170,7 @@
     <permission>hudson.model.Item.Read:heinlja</permission>
     <permission>hudson.model.Item.Read:ichimdav</permission>
     <permission>hudson.model.Item.Read:kasperen</permission>
+    <permission>hudson.model.Item.Read:larremik</permission>
     <permission>hudson.model.Item.Read:malduvit</permission>
     <permission>hudson.model.Item.Read:melisand</permission>
     <permission>hudson.model.Item.Read:moregale</permission>
@@ -176,6 +178,7 @@
     <permission>hudson.model.Item.Read:robaaoli</permission>
     <permission>hudson.model.Item.Read:roug</permission>
     <permission>hudson.model.Item.Read:szabozo0</permission>
+    <permission>hudson.model.Item.Read:thunbrol</permission>
     <permission>hudson.model.Item.Read:tiberich</permission>
     <permission>hudson.model.Item.Read:voineali</permission>
     <permission>hudson.model.Item.Release:altnyris</permission>
@@ -188,6 +191,7 @@
     <permission>hudson.model.Item.Release:heinlja</permission>
     <permission>hudson.model.Item.Release:ichimdav</permission>
     <permission>hudson.model.Item.Release:kasperen</permission>
+    <permission>hudson.model.Item.Release:larremik</permission>
     <permission>hudson.model.Item.Release:malduvit</permission>
     <permission>hudson.model.Item.Release:melisand</permission>
     <permission>hudson.model.Item.Release:moregale</permission>
@@ -195,6 +199,7 @@
     <permission>hudson.model.Item.Release:robaaoli</permission>
     <permission>hudson.model.Item.Release:roug</permission>
     <permission>hudson.model.Item.Release:szabozo0</permission>
+    <permission>hudson.model.Item.Release:thunbrol</permission>
     <permission>hudson.model.Item.Release:tiberich</permission>
     <permission>hudson.model.Item.Release:voineali</permission>
     <permission>hudson.model.Item.Workspace:altnyris</permission>
@@ -205,6 +210,7 @@
     <permission>hudson.model.Item.Workspace:heinlja</permission>
     <permission>hudson.model.Item.Workspace:ichimdav</permission>
     <permission>hudson.model.Item.Workspace:kasperen</permission>
+    <permission>hudson.model.Item.Workspace:larremik</permission>
     <permission>hudson.model.Item.Workspace:malduvit</permission>
     <permission>hudson.model.Item.Workspace:melisand</permission>
     <permission>hudson.model.Item.Workspace:moregale</permission>
@@ -212,6 +218,7 @@
     <permission>hudson.model.Item.Workspace:robaaoli</permission>
     <permission>hudson.model.Item.Workspace:roug</permission>
     <permission>hudson.model.Item.Workspace:szabozo0</permission>
+    <permission>hudson.model.Item.Workspace:thunbrol</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
     <permission>hudson.model.Run.Delete:altnyris</permission>
@@ -231,6 +238,7 @@
     <permission>hudson.model.Run.Delete:robaaoli</permission>
     <permission>hudson.model.Run.Delete:roug</permission>
     <permission>hudson.model.Run.Delete:szabozo0</permission>
+    <permission>hudson.model.Run.Delete:thunbrol</permission>
     <permission>hudson.model.Run.Delete:tiberich</permission>
     <permission>hudson.model.Run.Delete:voineali</permission>
     <permission>hudson.model.Run.Update:altnyris</permission>
@@ -243,6 +251,7 @@
     <permission>hudson.model.Run.Update:heinlja</permission>
     <permission>hudson.model.Run.Update:ichimdav</permission>
     <permission>hudson.model.Run.Update:kasperen</permission>
+    <permission>hudson.model.Run.Update:larremik</permission>
     <permission>hudson.model.Run.Update:malduvit</permission>
     <permission>hudson.model.Run.Update:melisand</permission>
     <permission>hudson.model.Run.Update:moregale</permission>
@@ -250,6 +259,7 @@
     <permission>hudson.model.Run.Update:robaaoli</permission>
     <permission>hudson.model.Run.Update:roug</permission>
     <permission>hudson.model.Run.Update:szabozo0</permission>
+    <permission>hudson.model.Run.Update:thunbrol</permission>
     <permission>hudson.model.Run.Update:tiberich</permission>
     <permission>hudson.model.Run.Update:voineali</permission>
     <permission>hudson.model.View.Configure:baragdan</permission>
@@ -273,6 +283,7 @@
     <permission>hudson.model.View.Create:demarant</permission>
     <permission>hudson.model.View.Create:ghicaale</permission>
     <permission>hudson.model.View.Create:ichimdav</permission>
+    <permission>hudson.model.View.Create:larremik</permission>
     <permission>hudson.model.View.Create:malduvit</permission>
     <permission>hudson.model.View.Create:melisand</permission>
     <permission>hudson.model.View.Create:nituacor</permission>
@@ -299,6 +310,7 @@
     <permission>hudson.scm.SCM.Tag:demarant</permission>
     <permission>hudson.scm.SCM.Tag:ghicaale</permission>
     <permission>hudson.scm.SCM.Tag:ichimdav</permission>
+    <permission>hudson.scm.SCM.Tag:larremik</permission>
     <permission>hudson.scm.SCM.Tag:malduvit</permission>
     <permission>hudson.scm.SCM.Tag:melisand</permission>
     <permission>hudson.scm.SCM.Tag:nituacor</permission>
@@ -308,7 +320,7 @@
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.10.2">
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.11">
     <server>ldap3.eionet.europa.eu</server>
     <rootDN>ou=Users,o=Eionet,l=Europe</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
@@ -321,6 +333,8 @@
     <disableMailAddressResolver>false</disableMailAddressResolver>
     <displayNameAttributeName>displayname</displayNameAttributeName>
     <mailAddressAttributeName>mail</mailAddressAttributeName>
+    <userIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
+    <groupIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
@@ -328,7 +342,7 @@
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
   <systemMessage>&lt;h1&gt;Welcome to the Continuous Integration Testing site for European Environment Agency&lt;/h1&gt;&#xd;
 (EEA, www.eea.europa.eu)</systemMessage>
-  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.2">
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.3">
     <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
   </markupFormatter>
   <jdks/>
@@ -349,6 +363,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>community.eea.europa.eu</string>
         <string>daviz.eionet.europa.eu</string>
+        <string>eea.plonebuildout.CPB</string>
         <string>land.copernicus.eu</string>
         <string>www.eea.europa.eu-devel</string>
         <string>www.eea.europa.eu-hudson</string>
@@ -373,8 +388,9 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
@@ -390,17 +406,24 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>ACL</string>
+        <string>ACL 2</string>
+        <string>ACL3</string>
         <string>ACLADMIN</string>
         <string>CLIMATE-ADAPT</string>
-        <string>CR-DAS</string>
         <string>CR3</string>
         <string>DATADICT</string>
         <string>DocModule</string>
         <string>EionetDir</string>
+        <string>EionetDir 2.5</string>
         <string>Elasticsearch RDF River Plugin</string>
+        <string>EPRTR2</string>
         <string>EUNIS</string>
+        <string>HelpAdmin</string>
+        <string>HelpModule2</string>
         <string>RDFExport</string>
         <string>ROD</string>
+        <string>RPC2</string>
+        <string>RPC3</string>
         <string>SDF_Import</string>
         <string>Sparql Client</string>
         <string>UNS</string>
@@ -426,7 +449,7 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
@@ -453,6 +476,10 @@
         <string>eea.sparql-www</string>
         <string>eea.uberlisting-plone4</string>
         <string>eea.uberlisting-www</string>
+        <string>ESDStressTest-EditorTest</string>
+        <string>ESDStressTest-EIONETUserTest</string>
+        <string>ESDStressTest-LoginTest</string>
+        <string>ESDStressTest-ReviewerTest</string>
         <string>jenkins-up2date</string>
         <string>new-egg-versions-on-pypi</string>
         <string>Reportek-docs</string>
@@ -487,7 +514,7 @@
         </hudson.plugins.view.dashboard.builds.LatestBuilds>
       </leftPortlets>
       <rightPortlets>
-        <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet plugin="warnings@4.41">
+        <hudson.plugins.warnings.dashboard.WarningsPriorityGraphPortlet plugin="warnings@4.46">
           <id>dashboard_portlet_4</id>
           <name>Compiler warnings trend graph (priority distribution)</name>
           <width>500</width>
@@ -499,7 +526,7 @@
           <id>dashboard_portlet_5</id>
           <name>Test Statistics Chart</name>
         </hudson.plugins.view.dashboard.test.TestStatisticsChart>
-        <hudson.plugins.cobertura.dashboard.CoverageTablePortlet plugin="cobertura@1.9.5">
+        <hudson.plugins.cobertura.dashboard.CoverageTablePortlet plugin="cobertura@1.9.6">
           <id>dashboard_portlet_6</id>
           <name>Code Coverages</name>
         </hudson.plugins.cobertura.dashboard.CoverageTablePortlet>
@@ -537,8 +564,9 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
@@ -579,6 +607,7 @@
             <string>eea.annotator-www</string>
             <string>eea.aoamap-www</string>
             <string>eea.app.visualization-www</string>
+            <string>eea.controlpanel-www</string>
             <string>eea.converter-www</string>
             <string>eea.devel-www</string>
             <string>eea.downloads-www</string>
@@ -611,7 +640,7 @@
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
@@ -631,6 +660,7 @@
             <string>eea.annotator-plone4</string>
             <string>eea.aoamap-plone4</string>
             <string>eea.app.visualization-plone4</string>
+            <string>eea.controlpanel-plone4</string>
             <string>eea.converter-plone4</string>
             <string>eea.devel-plone4</string>
             <string>eea.downloads-plone4</string>
@@ -663,7 +693,7 @@
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
@@ -704,7 +734,7 @@
               <hideDays>0</hideDays>
             </com.robestone.hudson.compactcolumns.AllStatusesColumn>
             <hudson.views.LastDurationColumn/>
-            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+            <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
             <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
             <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
             <hudson.views.BuildButtonColumn/>
@@ -747,8 +777,6 @@
         <string>github-open-issues</string>
         <string>jenkins-up2date</string>
         <string>new-egg-versions-on-pypi</string>
-        <string>pdfdiff</string>
-        <string>pdfdiff-Fiche</string>
         <string>svn-backup</string>
         <string>unreleased-eggs</string>
       </jobNames>
@@ -770,8 +798,9 @@
           <hideDays>0</hideDays>
         </com.robestone.hudson.compactcolumns.AllStatusesColumn>
         <hudson.views.LastDurationColumn/>
-        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.9"/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
         <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
         <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
@@ -797,6 +826,117 @@
         <hudson.views.LastSuccessColumn/>
         <hudson.views.LastFailureColumn/>
         <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Performance</name>
+      <description>Performance benchmarks with jMeter</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>eea-main-sections</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.16"/>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.10">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>false</showDescription>
+          <showLastBuild>false</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.10">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>pdf</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>SOER-2015-Fiches-PDF</string>
+        <string>SOER-2015-Main-Sections-PDF</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.16"/>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.10">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>false</showDescription>
+          <showLastBuild>false</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.10">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>ePub</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[7]/jobNames/comparator"/>
+        <string>SOER-2015-Fiches-ePub</string>
+        <string>SOER-2015-Main-Sections-ePub</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.plugins.favorite.column.FavoriteColumn plugin="favorite@1.16"/>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <com.robestone.hudson.compactcolumns.JobNameColorColumn plugin="compact-columns@1.10">
+          <colorblindHint>nohint</colorblindHint>
+          <showColor>false</showColor>
+          <showDescription>false</showDescription>
+          <showLastBuild>false</showLastBuild>
+        </com.robestone.hudson.compactcolumns.JobNameColorColumn>
+        <com.robestone.hudson.compactcolumns.AllStatusesColumn plugin="compact-columns@1.10">
+          <colorblindHint>nohint</colorblindHint>
+          <timeAgoTypeString>DIFF</timeAgoTypeString>
+          <onlyShowLastStatus>false</onlyShowLastStatus>
+          <hideDays>0</hideDays>
+        </com.robestone.hudson.compactcolumns.AllStatusesColumn>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.nextexecutions.columns.NextExecutionColumn plugin="next-executions@1.0.10"/>
+        <hudson.plugins.CronViewColumn plugin="cron_column@1.4"/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+        <org.jenkins.ci.plugins.column.console.LastBuildColumn plugin="console-column-plugin@1.5"/>
         <hudson.views.BuildButtonColumn/>
       </columns>
       <recurse>false</recurse>

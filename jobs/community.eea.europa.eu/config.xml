@@ -10,13 +10,13 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.6">
+    <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.23"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.23"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
   </properties>
-  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.2">
+  <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.5">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/community.eea.europa.eu/trunk</remote>
@@ -42,7 +42,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>15 2,8,12 * * 1-5</spec>
+      <spec>H 2 * * 1-5</spec>
     </hudson.triggers.TimerTrigger>
     <hudson.triggers.SCMTrigger>
       <spec>@hourly</spec>
@@ -76,15 +76,15 @@ rm -f `find . -name setup.cfg`</command>
       <failBuildOnError>false</failBuildOnError>
       <parsingRulesPath>/var/lib/jenkins/console/parser.rules</parsingRulesPath>
     </hudson.plugins.logparser.LogParserPublisher>
-    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.19"/>
-    <hudson.tasks.Mailer plugin="mailer@1.8">
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.21"/>
+    <hudson.tasks.Mailer plugin="mailer@1.15">
       <recipients>web30development@localhost</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.25">
+    <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.34">
       <targets>
-        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.28">
+        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.33">
           <name>web3.0development@conference.jabber.eea.europa.eu</name>
           <notificationOnly>false</notificationOnly>
         </hudson.plugins.im.GroupChatIMMessageTarget>
@@ -95,12 +95,12 @@ rm -f `find . -name setup.cfg`</command>
       <notifyCulprits>false</notifyCulprits>
       <notifyFixers>false</notifyFixers>
       <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.28"/>
+      <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.33"/>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.13">
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
       <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
         <timeoutMinutes>60</timeoutMinutes>
       </strategy>
