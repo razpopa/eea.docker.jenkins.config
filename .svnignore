@@ -13,6 +13,7 @@ sounds
 *.jar
 *.key
 builds 
+configurations
 cobertura
 lastSuccessful
 scm-polling.log
@@ -22,3 +23,4 @@ lastStable
 workspace
 queue.xml.bak
 shiningpanda
+tmp
