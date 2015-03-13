@@ -3,14 +3,14 @@
   <fullBackupSchedule>@monthly</fullBackupSchedule>
   <diffBackupSchedule>@weekly</diffBackupSchedule>
   <backupPath>/opt/hudson/backup/jenkins</backupPath>
-  <nrMaxStoredFull>3</nrMaxStoredFull>
+  <nrMaxStoredFull>10</nrMaxStoredFull>
   <excludedFilesRegex></excludedFilesRegex>
   <waitForIdle>true</waitForIdle>
   <forceQuietModeTimeout>240</forceQuietModeTimeout>
   <cleanupDiff>true</cleanupDiff>
   <moveOldBackupsToZipFile>true</moveOldBackupsToZipFile>
-  <backupBuildResults>true</backupBuildResults>
-  <backupBuildArchive>true</backupBuildArchive>
+  <backupBuildResults>false</backupBuildResults>
+  <backupBuildArchive>false</backupBuildArchive>
   <backupUserContents>true</backupUserContents>
   <backupNextBuildNumber>true</backupNextBuildNumber>
   <backupBuildsToKeepOnly>false</backupBuildsToKeepOnly>
