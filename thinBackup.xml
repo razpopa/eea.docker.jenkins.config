@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <org.jvnet.hudson.plugins.thinbackup.ThinBackupPluginImpl plugin="thinBackup@1.7.4">
-  <fullBackupSchedule>@weekly</fullBackupSchedule>
-  <diffBackupSchedule></diffBackupSchedule>
+  <fullBackupSchedule>@monthly</fullBackupSchedule>
+  <diffBackupSchedule>@weekly</diffBackupSchedule>
   <backupPath>/opt/hudson/backup/jenkins</backupPath>
-  <nrMaxStoredFull>3</nrMaxStoredFull>
+  <nrMaxStoredFull>10</nrMaxStoredFull>
   <excludedFilesRegex></excludedFilesRegex>
   <waitForIdle>true</waitForIdle>
   <forceQuietModeTimeout>240</forceQuietModeTimeout>
@@ -12,6 +12,6 @@
   <backupBuildResults>false</backupBuildResults>
   <backupBuildArchive>false</backupBuildArchive>
   <backupUserContents>true</backupUserContents>
-  <backupNextBuildNumber>false</backupNextBuildNumber>
+  <backupNextBuildNumber>true</backupNextBuildNumber>
   <backupBuildsToKeepOnly>false</backupBuildsToKeepOnly>
 </org.jvnet.hudson.plugins.thinbackup.ThinBackupPluginImpl>

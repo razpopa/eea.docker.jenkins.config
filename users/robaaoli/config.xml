@@ -36,34 +36,9 @@
     </hudson.search.UserSearchProperty>
     <hudson.plugins.skype.user.SkypeUserProperty plugin="skype-notifier@1.1.0"/>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>127.0</score>
+      <score>134.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>www.eea.europa.eu-devel#4318</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>www.eea.europa.eu-pre-production#3765</run>
-            <run>www.eea.europa.eu-pre-production-clean#769</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>www.eea.europa.eu-pre-production#3765</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-10.0</score>
-          <accountableRuns>
-            <run>www.eea.europa.eu-pre-production#3764</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
@@ -101,6 +76,32 @@
           <score>1.0</score>
           <accountableRuns>
             <run>Products.NavigationManager-www#2078</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>Products.EEAPloneAdmin-www#2656</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>Products.EEATemplatesService-www#2075</run>
+            <run>Products.EEATemplatesService-plone4#2051</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>Products.EEATemplatesService-www#2075</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>Products.EEAContentTypes-www#2428</run>
+            <run>Products.EEAContentTypes-plone4#2052</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>

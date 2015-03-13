@@ -774,10 +774,10 @@
         <string>eea.tags-sync</string>
         <string>eea.uberlisting-sync</string>
         <string>eea.versions-sync</string>
-        <string>github-backup</string>
         <string>github-open-issues</string>
         <string>jenkins-up2date</string>
         <string>new-egg-versions-on-pypi</string>
+        <string>svn-backup</string>
         <string>unreleased-eggs</string>
       </jobNames>
       <jobFilters/>
