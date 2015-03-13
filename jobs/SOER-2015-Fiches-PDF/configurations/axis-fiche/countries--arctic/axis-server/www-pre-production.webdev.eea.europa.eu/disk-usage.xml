@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.disk__usage.ProjectDiskUsage plugin="disk-usage@0.25">
+  <diskUsageWithoutBuilds>10082</diskUsageWithoutBuilds>
+  <slaveWorkspacesUsage class="concurrent-hash-map">
+    <entry>
+      <string></string>
+      <concurrent-hash-map>
+        <entry>
+          <string>/var/lib/jenkins/jobs/SOER-2015-Fiches-PDF/workspace/fiche/countries--arctic/server/www-pre-production.webdev.eea.europa.eu</string>
+          <long>698988</long>
+        </entry>
+      </concurrent-hash-map>
+    </entry>
+  </slaveWorkspacesUsage>
+  <buildDiskUsage>
+    <hudson.plugins.disk__usage.DiskUsageBuildInformation>
+      <id>11</id>
+      <timestamp>1426144698884</timestamp>
+      <number>11</number>
+      <size>12152</size>
+    </hudson.plugins.disk__usage.DiskUsageBuildInformation>
+    <hudson.plugins.disk__usage.DiskUsageBuildInformation>
+      <id>13</id>
+      <timestamp>1426254653776</timestamp>
+      <number>13</number>
+      <size>529560</size>
+    </hudson.plugins.disk__usage.DiskUsageBuildInformation>
+    <hudson.plugins.disk__usage.DiskUsageBuildInformation>
+      <id>10</id>
+      <timestamp>1426036200980</timestamp>
+      <number>10</number>
+      <size>8022</size>
+    </hudson.plugins.disk__usage.DiskUsageBuildInformation>
+    <hudson.plugins.disk__usage.DiskUsageBuildInformation>
+      <id>12</id>
+      <timestamp>1426231157895</timestamp>
+      <number>12</number>
+      <size>9008</size>
+    </hudson.plugins.disk__usage.DiskUsageBuildInformation>
+  </buildDiskUsage>
+</hudson.plugins.disk__usage.ProjectDiskUsage>
