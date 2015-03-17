@@ -48,7 +48,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/eea.reports</customWorkspace>
+  <customWorkspace>/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/src/eea.reports</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}

@@ -2,9 +2,9 @@
 <org.jvnet.hudson.plugins.thinbackup.ThinBackupPluginImpl plugin="thinBackup@1.7.4">
   <fullBackupSchedule>@weekly</fullBackupSchedule>
   <diffBackupSchedule></diffBackupSchedule>
-  <backupPath>/opt/hudson/backup/jenkins</backupPath>
+  <backupPath>/var/jenkins_home/backup/jenkins</backupPath>
   <nrMaxStoredFull>3</nrMaxStoredFull>
-  <excludedFilesRegex></excludedFilesRegex>
+  <excludedFilesRegex>disk-usage.xml</excludedFilesRegex>
   <waitForIdle>true</waitForIdle>
   <forceQuietModeTimeout>240</forceQuietModeTimeout>
   <cleanupDiff>true</cleanupDiff>

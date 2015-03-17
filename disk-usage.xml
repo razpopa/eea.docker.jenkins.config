@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.disk__usage.DiskUsagePlugin plugin="disk-usage@0.22">
-  <diskUsageBuilds>1714289780</diskUsageBuilds>
-  <diskUsageJobsWithoutBuilds>61638480495</diskUsageJobsWithoutBuilds>
-  <diskUsageWorkspaces>71096511797</diskUsageWorkspaces>
-  <diskUsageLockedBuilds>0</diskUsageLockedBuilds>
-</hudson.plugins.disk__usage.DiskUsagePlugin>

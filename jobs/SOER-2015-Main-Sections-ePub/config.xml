@@ -57,7 +57,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 rm -rf epubdiffreport
-/opt/hudson/buildouts/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.epub -o http://${server}/soer-2015/${collection}/${collection}.epub -d ${WORKSPACE}/epubdiffreport -t 180 -a 400 -e alin@eaudeweb.ro --no-cleanup-input
+/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.epub -o http://${server}/soer-2015/${collection}/${collection}.epub -d ${WORKSPACE}/epubdiffreport -t 180 -a 400 -e alin@eaudeweb.ro --no-cleanup-input
 </command>
     </hudson.tasks.Shell>
   </builders>

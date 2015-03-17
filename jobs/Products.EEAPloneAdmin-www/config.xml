@@ -47,7 +47,7 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <customWorkspace>/opt/hudson/buildouts/www.eea.europa.eu-hudson/src/Products.EEAPloneAdmin</customWorkspace>
+  <customWorkspace>/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/src/Products.EEAPloneAdmin</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}

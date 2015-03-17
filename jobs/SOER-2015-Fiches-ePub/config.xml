@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<matrix-project plugin="matrix-project@1.4">
+<matrix-project plugin="matrix-project@1.4.1">
   <actions/>
   <description>Check download.epub for SOER 2015 Fiches: http://eea.europa.eu/soer-2015</description>
   <displayName>[ePub] SOER Fiches</displayName>
@@ -47,10 +47,10 @@
     <hudson.matrix.TextAxis>
       <name>fiche</name>
       <values>
-        <string>countries--arctic</string>
-        <string>countries-comparison--air</string>
-        <string>europe--air</string>
-        <string>global--demography</string>
+        <string>countries_arctic</string>
+        <string>countries-comparison_air</string>
+        <string>europe_air</string>
+        <string>global_demography</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>
@@ -58,8 +58,9 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 rm -rf epubdiffreport
-FICHE=`echo ${fiche} | sed &apos;s/\-\-/\//g&apos;`
-/opt/hudson/buildouts/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/$FICHE/download.epub -o http://${server}/soer-2015/$FICHE/$FICHE.epub -d ${WORKSPACE}/epubdiffreport -t 180 -a 400 -e alin@eaudeweb.ro --no-cleanup-input
+PARENT=`echo ${fiche} | cut -f1 -d _`
+FICHE=`echo ${fiche} | cut -f2 -d _`
+/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/$PARENT/$FICHE/download.epub -o http://${server}/soer-2015/$PARENT/$FICHE/$FICHE.epub -d ${WORKSPACE}/epubdiffreport -t 180 -a 5000 -e alin@eaudeweb.ro --no-cleanup-input
 </command>
     </hudson.tasks.Shell>
   </builders>

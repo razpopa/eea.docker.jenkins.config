@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<matrix-project plugin="matrix-project@1.4">
+<matrix-project plugin="matrix-project@1.4.1">
   <actions/>
   <description>Check download.pdf for SOER 2015 Main sections: http://eea.europa.eu/soer-2015</description>
   <displayName>[PDF] SOER Main Sections</displayName>
@@ -57,7 +57,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 rm -rf pdfdiffreport
-/opt/hudson/buildouts/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.pdf -o http://${server}/soer-2015/${collection}/${collection}.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 200 -e alin@eaudeweb.ro --no-cleanup-input
+/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.pdf -o http://${server}/soer-2015/${collection}/${collection}.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 5000 -e alin@eaudeweb.ro --no-cleanup-input
 </command>
     </hudson.tasks.Shell>
   </builders>
