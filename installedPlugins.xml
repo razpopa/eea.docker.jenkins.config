@@ -378,6 +378,10 @@
       <string>1.0.8</string>
     </entry>
     <entry>
+      <string>swarm</string>
+      <string>1.22</string>
+    </entry>
+    <entry>
       <string>nodejs</string>
       <string>0.2.1</string>
     </entry>

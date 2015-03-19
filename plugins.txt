@@ -92,6 +92,7 @@ script-security:1.13
 performance:1.13
 compact-columns:1.10
 log-parser:1.0.8
+swarm:1.22
 nodejs:0.2.1
 maven-info:0.2.0
 dry:2.41

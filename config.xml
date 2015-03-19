@@ -4,7 +4,7 @@
     <string>jenkins.security.RekeySecretAdminMonitor</string>
     <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>1.599</version>
+  <version>1.602</version>
   <numExecutors>0</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -55,6 +55,7 @@
     <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Hudson.Read:baragdan</permission>
     <permission>hudson.model.Hudson.Read:batradav</permission>
+    <permission>hudson.model.Hudson.Read:bergstho</permission>
     <permission>hudson.model.Hudson.Read:ciobabog</permission>
     <permission>hudson.model.Hudson.Read:dascalu</permission>
     <permission>hudson.model.Hudson.Read:demarant</permission>
@@ -73,6 +74,7 @@
     <permission>hudson.model.Hudson.Read:thunbrol</permission>
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
+    <permission>hudson.model.Hudson.RunScripts:bergstho</permission>
     <permission>hudson.model.Hudson.RunScripts:dascalu</permission>
     <permission>hudson.model.Hudson.RunScripts:ichimdav</permission>
     <permission>hudson.model.Hudson.RunScripts:robaaoli</permission>
@@ -82,6 +84,7 @@
     <permission>hudson.model.Item.Build:altnyris</permission>
     <permission>hudson.model.Item.Build:baragdan</permission>
     <permission>hudson.model.Item.Build:batradav</permission>
+    <permission>hudson.model.Item.Build:bergstho</permission>
     <permission>hudson.model.Item.Build:ciobabog</permission>
     <permission>hudson.model.Item.Build:dascalu</permission>
     <permission>hudson.model.Item.Build:demarant</permission>
@@ -102,6 +105,7 @@
     <permission>hudson.model.Item.Build:voineali</permission>
     <permission>hudson.model.Item.Configure:altnyris</permission>
     <permission>hudson.model.Item.Configure:batradav</permission>
+    <permission>hudson.model.Item.Configure:bergstho</permission>
     <permission>hudson.model.Item.Configure:ciobabog</permission>
     <permission>hudson.model.Item.Configure:dascalu</permission>
     <permission>hudson.model.Item.Configure:demarant</permission>
@@ -163,6 +167,7 @@
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:baragdan</permission>
     <permission>hudson.model.Item.Read:batradav</permission>
+    <permission>hudson.model.Item.Read:bergstho</permission>
     <permission>hudson.model.Item.Read:ciobabog</permission>
     <permission>hudson.model.Item.Read:dascalu</permission>
     <permission>hudson.model.Item.Read:demarant</permission>
@@ -184,6 +189,7 @@
     <permission>hudson.model.Item.Release:altnyris</permission>
     <permission>hudson.model.Item.Release:baragdan</permission>
     <permission>hudson.model.Item.Release:batradav</permission>
+    <permission>hudson.model.Item.Release:bergstho</permission>
     <permission>hudson.model.Item.Release:ciobabog</permission>
     <permission>hudson.model.Item.Release:dascalu</permission>
     <permission>hudson.model.Item.Release:demarant</permission>
@@ -204,6 +210,7 @@
     <permission>hudson.model.Item.Release:voineali</permission>
     <permission>hudson.model.Item.Workspace:altnyris</permission>
     <permission>hudson.model.Item.Workspace:baragdan</permission>
+    <permission>hudson.model.Item.Workspace:bergstho</permission>
     <permission>hudson.model.Item.Workspace:dascalu</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
@@ -224,6 +231,7 @@
     <permission>hudson.model.Run.Delete:altnyris</permission>
     <permission>hudson.model.Run.Delete:baragdan</permission>
     <permission>hudson.model.Run.Delete:batradav</permission>
+    <permission>hudson.model.Run.Delete:bergstho</permission>
     <permission>hudson.model.Run.Delete:ciobabog</permission>
     <permission>hudson.model.Run.Delete:dascalu</permission>
     <permission>hudson.model.Run.Delete:demarant</permission>
@@ -244,6 +252,7 @@
     <permission>hudson.model.Run.Update:altnyris</permission>
     <permission>hudson.model.Run.Update:baragdan</permission>
     <permission>hudson.model.Run.Update:batradav</permission>
+    <permission>hudson.model.Run.Update:bergstho</permission>
     <permission>hudson.model.Run.Update:ciobabog</permission>
     <permission>hudson.model.Run.Update:dascalu</permission>
     <permission>hudson.model.Run.Update:demarant</permission>
@@ -960,6 +969,9 @@
   <primaryView>Dashboard</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
   <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties/>
 </hudson>

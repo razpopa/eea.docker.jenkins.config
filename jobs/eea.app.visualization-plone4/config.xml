@@ -92,7 +92,7 @@ bin/test -v -vv -s eea.app.visualization</command>
       <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
     </hudson.plugins.jabber.im.transport.JabberPublisher>
     <hudson.tasks.BuildTrigger>
-      <childProjects>eea.app.visualization-zope,eea.app.visualization-sync</childProjects>
+      <childProjects>eav-zope,eea.app.visualization-sync</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
