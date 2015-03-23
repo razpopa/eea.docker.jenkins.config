@@ -81,11 +81,6 @@ FICHE=`echo ${fiche} | cut -f2 -d _`
         </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
       </imageGalleries>
     </org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder>
-    <hudson.tasks.Mailer plugin="mailer@1.15">
-      <recipients>alin@eaudeweb.ro</recipients>
-      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>false</sendToIndividuals>
-    </hudson.tasks.Mailer>
   </publishers>
   <buildWrappers>
     <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
