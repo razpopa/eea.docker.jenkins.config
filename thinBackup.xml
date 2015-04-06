@@ -10,7 +10,7 @@
   <cleanupDiff>true</cleanupDiff>
   <moveOldBackupsToZipFile>true</moveOldBackupsToZipFile>
   <backupBuildResults>false</backupBuildResults>
-  <backupBuildArchive>false</backupBuildArchive>
+  <backupBuildArchive>true</backupBuildArchive>
   <backupUserContents>true</backupUserContents>
   <backupNextBuildNumber>false</backupNextBuildNumber>
   <backupBuildsToKeepOnly>false</backupBuildsToKeepOnly>

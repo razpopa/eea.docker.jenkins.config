@@ -18,16 +18,16 @@
       <assignDescription>false</assignDescription>
       <descriptionTemplate></descriptionTemplate>
     </jenkins.plugins.maveninfo.config.MavenInfoJobConfig>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.10">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.11">
       <projectUrl>https://github.com/eea/eionet.acladmin/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
-    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.27"/>
-    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.24"/>
+    <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.25"/>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.1">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.5">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -58,7 +58,7 @@
     <groupId>eionet</groupId>
     <artifactId>acladmin</artifactId>
   </rootModule>
-  <goals>-Denv=default clean cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle javadoc:javadoc</goals>
+  <goals>-Denv=default clean install cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle javadoc:javadoc</goals>
   <mavenName>maven302</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -77,14 +77,14 @@
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters>
-    <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.40">
+    <hudson.plugins.checkstyle.CheckStyleReporter plugin="checkstyle@3.41">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[CHECKSTYLE] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -103,16 +103,17 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.checkstyle.CheckStyleReporter>
-    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.57">
+    <hudson.plugins.findbugs.FindBugsReporter plugin="findbugs@4.59">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[FINDBUGS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -131,19 +132,20 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <isRankActivated>false</isRankActivated>
       <excludePattern></excludePattern>
       <includePattern></includePattern>
     </hudson.plugins.findbugs.FindBugsReporter>
-    <hudson.plugins.pmd.PmdReporter plugin="pmd@3.39">
+    <hudson.plugins.pmd.PmdReporter plugin="pmd@3.40">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[PMD] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -162,16 +164,17 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
     </hudson.plugins.pmd.PmdReporter>
-    <hudson.plugins.dry.DryReporter plugin="dry@2.40">
+    <hudson.plugins.dry.DryReporter plugin="dry@2.41">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[DRY] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -190,18 +193,19 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <highThreshold>50</highThreshold>
       <normalThreshold>25</normalThreshold>
     </hudson.plugins.dry.DryReporter>
-    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.43">
+    <hudson.plugins.tasks.TasksReporter plugin="tasks@4.44">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <pluginName>[TASKS] </pluginName>
       <thresholdLimit>low</thresholdLimit>
       <canRunOnFailed>false</canRunOnFailed>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -220,6 +224,7 @@
         <failedNewLow></failedNewLow>
       </thresholds>
       <dontComputeNew>false</dontComputeNew>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <pattern></pattern>
       <excludePattern></excludePattern>
@@ -416,16 +421,17 @@
     </hudson.plugins.violations.hudson.maven.ViolationsMavenReporter>
   </reporters>
   <publishers>
-    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.41">
+    <hudson.plugins.analysis.collector.AnalysisPublisher plugin="analysis-collector@1.42">
       <healthy></healthy>
       <unHealthy></unHealthy>
       <thresholdLimit>low</thresholdLimit>
       <pluginName>[ANALYSIS-COLLECTOR] </pluginName>
       <defaultEncoding></defaultEncoding>
       <canRunOnFailed>true</canRunOnFailed>
+      <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <useDeltaValues>false</useDeltaValues>
-      <thresholds plugin="analysis-core@1.65">
+      <thresholds plugin="analysis-core@1.70">
         <unstableTotalAll></unstableTotalAll>
         <unstableTotalHigh></unstableTotalHigh>
         <unstableTotalNormal></unstableTotalNormal>
@@ -457,7 +463,7 @@
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher plugin="dependencyanalyzer@0.7"/>
-    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.6">
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.7">
       <coberturaReportFile>**/target/site/cobertura/coverage.xml</coberturaReportFile>
       <onlyStable>false</onlyStable>
       <failUnhealthy>false</failUnhealthy>
