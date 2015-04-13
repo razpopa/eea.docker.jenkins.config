@@ -55,8 +55,8 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
-    <groupId>eionet.rod</groupId>
-    <artifactId>webrod</artifactId>
+    <groupId>eionet</groupId>
+    <artifactId>rod</artifactId>
   </rootModule>
   <goals>-Denv=unittest clean install cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd javadoc:javadoc checkstyle:checkstyle</goals>
   <mavenName>maven302</mavenName>

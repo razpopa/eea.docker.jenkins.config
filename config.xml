@@ -429,30 +429,33 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>ACL</string>
+        <string>ACL 1.2</string>
         <string>ACL 2</string>
+        <string>ACL-MASTER</string>
         <string>ACL3</string>
         <string>ACLADMIN</string>
         <string>CLIMATE-ADAPT</string>
         <string>CR3</string>
         <string>DATADICT</string>
         <string>DocModule</string>
-        <string>EionetDir</string>
         <string>EionetDir 2.5</string>
+        <string>EionetDir-SNAPSHOT</string>
         <string>Elasticsearch RDF River Plugin</string>
         <string>EPRTR2</string>
         <string>EUNIS</string>
+        <string>HELP-MASTER</string>
         <string>HelpAdmin</string>
         <string>HelpModule2</string>
         <string>HelpModule3</string>
         <string>RDFExport</string>
         <string>ROD</string>
+        <string>RPC-MASTER</string>
         <string>RPC2</string>
         <string>RPC3</string>
         <string>SDF_Import</string>
         <string>Sparql Client</string>
         <string>UNS</string>
-        <string>WEBQ</string>
+        <string>WEBQ1</string>
         <string>WEBQ2</string>
         <string>XMLCONV</string>
       </jobNames>
@@ -489,7 +492,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[2]/jobNames/comparator"/>
-        <string>ACL</string>
+        <string>ACL 1.2</string>
         <string>DATADICT</string>
         <string>eea.googlecharts-plone4</string>
         <string>eea.googlecharts-www</string>

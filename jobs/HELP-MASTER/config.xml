@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <maven2-moduleset plugin="maven-plugin@2.8">
   <actions/>
-  <description>RPC client and server version 3.0</description>
+  <description>Master branch</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.plugins.maveninfo.config.MavenInfoJobConfig plugin="maven-info@0.2.0">
@@ -13,7 +13,7 @@
       <descriptionTemplate></descriptionTemplate>
     </jenkins.plugins.maveninfo.config.MavenInfoJobConfig>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.11">
-      <projectUrl>https://github.com/eea/eionet.rpc/</projectUrl>
+      <projectUrl>https://github.com/eea/eionet.help/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
@@ -25,12 +25,12 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/eea/eionet.rpc.git</url>
+        <url>https://github.com/eea/eionet.help.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>refs/tags/v3.0</name>
+        <name>*/master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -50,7 +50,7 @@
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
     <groupId>eionet</groupId>
-    <artifactId>rpc</artifactId>
+    <artifactId>help</artifactId>
   </rootModule>
   <goals>install</goals>
   <mavenName>maven302</mavenName>
