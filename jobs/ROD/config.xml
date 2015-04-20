@@ -18,6 +18,9 @@
       <assignDescription>false</assignDescription>
       <descriptionTemplate></descriptionTemplate>
     </jenkins.plugins.maveninfo.config.MavenInfoJobConfig>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.11">
+      <projectUrl>https://github.com/eea/eionet.rod/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
       <priority>100</priority>
     </hudson.queueSorter.PrioritySorterJobProperty>
@@ -33,7 +36,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>**</name>
+        <name>*/master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>

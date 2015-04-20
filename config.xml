@@ -438,8 +438,9 @@
         <string>CR3</string>
         <string>DATADICT</string>
         <string>DocModule</string>
+        <string>DocModule1.5</string>
         <string>EionetDir 2.5</string>
-        <string>EionetDir-SNAPSHOT</string>
+        <string>EionetDir-MASTER</string>
         <string>Elasticsearch RDF River Plugin</string>
         <string>EPRTR2</string>
         <string>EUNIS</string>
@@ -641,6 +642,7 @@
             <string>eea.downloads-www</string>
             <string>eea.elasticsearch-www</string>
             <string>eea.forms-www</string>
+            <string>eea.graylogger-www</string>
             <string>eea.package-www</string>
             <string>eea.pdf-www</string>
             <string>eea.progressbar-www</string>
@@ -694,6 +696,7 @@
             <string>eea.downloads-plone4</string>
             <string>eea.elasticsearch-plone4</string>
             <string>eea.forms-plone4</string>
+            <string>eea.graylogger-plone4</string>
             <string>eea.package-plone4</string>
             <string>eea.pdf-plone4</string>
             <string>eea.progressbar-plone4</string>
@@ -794,6 +797,7 @@
         <string>eea.facetednavigation-sync</string>
         <string>eea.forms-sync</string>
         <string>eea.googlecharts-sync</string>
+        <string>eea.graylogger-sync</string>
         <string>eea.jquery-sync</string>
         <string>eea.pdf-sync</string>
         <string>eea.progressbar-sync</string>
