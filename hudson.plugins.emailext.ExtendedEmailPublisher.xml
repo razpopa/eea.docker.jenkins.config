@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.39">
   <defaultSuffix>@eea.europa.eu</defaultSuffix>
-  <smtpHost>localhost</smtpHost>
+  <smtpHost>postfix</smtpHost>
   <useSsl>false</useSsl>
   <smtpPort>25</smtpPort>
   <charset>UTF-8</charset>

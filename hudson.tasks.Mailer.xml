@@ -2,7 +2,7 @@
 <hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.15">
   <hudsonUrl>http://ci.eionet.europa.eu/</hudsonUrl>
   <adminAddress>no-reply@eea.europa.eu</adminAddress>
-  <smtpHost>localhost</smtpHost>
+  <smtpHost>postfix</smtpHost>
   <useSsl>false</useSsl>
   <smtpPort>25</smtpPort>
   <charset>UTF-8</charset>

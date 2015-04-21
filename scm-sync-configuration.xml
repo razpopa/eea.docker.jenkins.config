@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.plugins.scm__sync__configuration.ScmSyncConfigurationPlugin version="1">
-  <scm class="hudson.plugins.scm_sync_configuration.scms.ScmSyncSubversionSCM"/>
-  <scmRepositoryUrl>scm:svn:https://svn.eionet.europa.eu/repositories/Zope/trunk/eea-hudson/</scmRepositoryUrl>
+  <scm class="hudson.plugins.scm_sync_configuration.scms.ScmSyncNoSCM"/>
   <noUserCommitMessage>false</noUserCommitMessage>
   <displayStatus>false</displayStatus>
   <commitMessagePattern>[message]</commitMessagePattern>

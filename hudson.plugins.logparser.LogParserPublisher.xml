@@ -3,7 +3,7 @@
   <parsingRulesGlobal>
     <hudson.plugins.logparser.ParserRuleFile>
       <name>Zope/Plone</name>
-      <path>/var/lib/jenkins/console/parser.rules</path>
+      <path>/var/jenkins_home/console/parser.rules</path>
     </hudson.plugins.logparser.ParserRuleFile>
   </parsingRulesGlobal>
 </hudson.plugins.logparser.LogParserPublisher_-DescriptorImpl>

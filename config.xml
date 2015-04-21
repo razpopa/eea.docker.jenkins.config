@@ -9,11 +9,13 @@
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Computer.Build:jenkins</permission>
     <permission>hudson.model.Computer.Configure:baragdan</permission>
     <permission>hudson.model.Computer.Configure:dascalu</permission>
     <permission>hudson.model.Computer.Configure:demarant</permission>
     <permission>hudson.model.Computer.Configure:ghicaale</permission>
     <permission>hudson.model.Computer.Configure:ichimdav</permission>
+    <permission>hudson.model.Computer.Configure:jenkins</permission>
     <permission>hudson.model.Computer.Configure:malduvit</permission>
     <permission>hudson.model.Computer.Configure:melisand</permission>
     <permission>hudson.model.Computer.Configure:nituacor</permission>
@@ -22,8 +24,10 @@
     <permission>hudson.model.Computer.Configure:szabozo0</permission>
     <permission>hudson.model.Computer.Configure:tiberich</permission>
     <permission>hudson.model.Computer.Configure:voineali</permission>
+    <permission>hudson.model.Computer.Connect:jenkins</permission>
     <permission>hudson.model.Computer.Create:dascalu</permission>
     <permission>hudson.model.Computer.Create:ichimdav</permission>
+    <permission>hudson.model.Computer.Create:jenkins</permission>
     <permission>hudson.model.Computer.Create:malduvit</permission>
     <permission>hudson.model.Computer.Create:nituacor</permission>
     <permission>hudson.model.Computer.Create:robaaoli</permission>
@@ -33,6 +37,7 @@
     <permission>hudson.model.Computer.Delete:demarant</permission>
     <permission>hudson.model.Computer.Delete:ghicaale</permission>
     <permission>hudson.model.Computer.Delete:ichimdav</permission>
+    <permission>hudson.model.Computer.Delete:jenkins</permission>
     <permission>hudson.model.Computer.Delete:melisand</permission>
     <permission>hudson.model.Computer.Delete:nituacor</permission>
     <permission>hudson.model.Computer.Delete:robaaoli</permission>
@@ -40,6 +45,7 @@
     <permission>hudson.model.Computer.Delete:szabozo0</permission>
     <permission>hudson.model.Computer.Delete:tiberich</permission>
     <permission>hudson.model.Computer.Delete:voineali</permission>
+    <permission>hudson.model.Computer.Disconnect:jenkins</permission>
     <permission>hudson.model.Hudson.Administer:dascalu</permission>
     <permission>hudson.model.Hudson.Administer:demarant</permission>
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>

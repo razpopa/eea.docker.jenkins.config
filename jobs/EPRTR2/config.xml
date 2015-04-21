@@ -18,7 +18,7 @@
       <assignDescription>false</assignDescription>
       <descriptionTemplate></descriptionTemplate>
     </jenkins.plugins.maveninfo.config.MavenInfoJobConfig>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.10">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.11">
       <projectUrl>https://github.com/eea/eprtr2/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
@@ -65,7 +65,7 @@
   <mavenName>maven302</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
-  <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <ignoreUpstremChanges>true</ignoreUpstremChanges>
   <archivingDisabled>false</archivingDisabled>
   <siteArchivingDisabled>false</siteArchivingDisabled>
   <fingerprintingDisabled>false</fingerprintingDisabled>
@@ -313,7 +313,16 @@
       <disabled>false</disabled>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
   </publishers>
-  <buildWrappers/>
+  <buildWrappers>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14.1">
+      <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
+        <timeoutSecondsString>180</timeoutSecondsString>
+      </strategy>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
+      </operationList>
+    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+  </buildWrappers>
   <prebuilders/>
   <postbuilders/>
   <runPostStepsIfResult>
