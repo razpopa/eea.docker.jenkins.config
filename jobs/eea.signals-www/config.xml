@@ -371,7 +371,7 @@ cp ../../parts/xmltestreport/testreports/*eea-signals*.xml xmltestreport/
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
     <hudson.tasks.Mailer plugin="mailer@1.15">
-      <recipients>web30development@localhost</recipients>
+      <recipients>eea-github@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>

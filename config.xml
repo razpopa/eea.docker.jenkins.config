@@ -4,7 +4,7 @@
     <string>jenkins.security.RekeySecretAdminMonitor</string>
     <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>1.602</version>
+  <version>1.596.2</version>
   <numExecutors>0</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -335,21 +335,13 @@
     <permission>hudson.scm.SCM.Tag:tiberich</permission>
     <permission>hudson.scm.SCM.Tag:voineali</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.11">
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.6">
     <server>ldap3.eionet.europa.eu</server>
     <rootDN>ou=Users,o=Eionet,l=Europe</rootDN>
     <inhibitInferRootDN>false</inhibitInferRootDN>
     <userSearchBase></userSearchBase>
     <userSearch>uid={0}</userSearch>
-    <groupMembershipStrategy class="jenkins.security.plugins.ldap.FromGroupSearchLDAPGroupMembershipStrategy">
-      <filter></filter>
-    </groupMembershipStrategy>
-    <managerPasswordSecret>mk6OGILJRfSC/9SVWf8LHA==</managerPasswordSecret>
     <disableMailAddressResolver>false</disableMailAddressResolver>
-    <displayNameAttributeName>displayname</displayNameAttributeName>
-    <mailAddressAttributeName>mail</mailAddressAttributeName>
-    <userIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
-    <groupIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
@@ -357,29 +349,14 @@
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
   <systemMessage>&lt;h1&gt;Welcome to the Continuous Integration Testing site for European Environment Agency&lt;/h1&gt;&#xd;
 (EEA, www.eea.europa.eu)</systemMessage>
-  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.3">
-    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.1">
+    <disableSyntaxHighlighting>true</disableSyntaxHighlighting>
   </markupFormatter>
   <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
   <clouds/>
-  <slaves>
-    <slave>
-      <name>whiteshark</name>
-      <description>This slave is on the same machie as jenkins master. To be removed after cloud migration.</description>
-      <remoteFS>/var/jenkins_home/worker</remoteFS>
-      <numExecutors>3</numExecutors>
-      <mode>NORMAL</mode>
-      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
-      <launcher class="hudson.slaves.CommandLauncher">
-        <agentCommand>/usr/bin/java -jar /var/jenkins_home/worker/slave.jar</agentCommand>
-      </launcher>
-      <label>whiteshark</label>
-      <nodeProperties/>
-      <userId>voineali</userId>
-    </slave>
-  </slaves>
+  <slaves/>
   <quietPeriod>5</quietPeriod>
   <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
   <views>
@@ -440,6 +417,7 @@
         <string>ACL-MASTER</string>
         <string>ACL3</string>
         <string>ACLADMIN</string>
+        <string>AQRSystem</string>
         <string>CLIMATE-ADAPT</string>
         <string>CR3</string>
         <string>DATADICT</string>
@@ -981,10 +959,10 @@
     </listView>
   </views>
   <primaryView>Dashboard</primaryView>
-  <slaveAgentPort>0</slaveAgentPort>
+  <slaveAgentPort>50000</slaveAgentPort>
   <label></label>
   <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
-    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+    <excludeClientIPFromCrumb>true</excludeClientIPFromCrumb>
   </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties/>

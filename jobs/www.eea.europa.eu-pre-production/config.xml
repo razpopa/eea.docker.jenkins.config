@@ -52,6 +52,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
+      <command>mkdir -p /var/jenkins_home/zodbfilestorage/plone4/
+mkdir -p /var/jenkins_home/sharedblobstorage/blobs/
+mkdir -p /var/jenkins_home/sharedblobstorage/downloads/pdf/
+mkdir -p /var/jenkins_home/sharedblobstorage/downloads/tmp/
+mkdir -p /var/jenkins_home/sharedblobstorage/eea.controlpanel</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 ./install.sh
 bin/buildout -c unicorn-jenkins.cfg</command>
@@ -62,8 +69,8 @@ bin/www1-uptest</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.Mailer plugin="mailer@1.15">
-      <recipients>web30development@localhost</recipients>
+    <hudson.tasks.Mailer plugin="mailer@1.11">
+      <recipients>eea-github@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>true</sendToIndividuals>
     </hudson.tasks.Mailer>

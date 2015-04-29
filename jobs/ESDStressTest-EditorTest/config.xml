@@ -4,7 +4,7 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.10">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.11">
       <projectUrl>https://github.com/codesyntax/esd-stress-test/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
@@ -23,11 +23,6 @@
           <defaultValue>1</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>RAMPUPPERIOD</name>
-          <description></description>
-          <defaultValue>1</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
           <name>SERVERNAME</name>
           <description></description>
           <defaultValue>esddemo.eea.europa.eu</defaultValue>
@@ -40,8 +35,13 @@
         <hudson.model.PasswordParameterDefinition>
           <name>PASSWORD</name>
           <description></description>
-          <defaultValue>dOs4acnPpG1kcY3HAdRcpw4ANFvlTTSr/nIBlN27YtQ=</defaultValue>
+          <defaultValue>XtSwwUmGIZQTfLYfMfETURB1bhGqcoErSn9fVm3E8f+MqZJ6iOhozRYrkqnRQPqzAN+4Y4EeiUmiYNHrBC7iyQ==</defaultValue>
         </hudson.model.PasswordParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>WAITINGTIME</name>
+          <description></description>
+          <defaultValue>1000</defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
@@ -73,7 +73,7 @@
     <hudson.tasks.Shell>
       <command>python bootstrap.py
 ./bin/buildout -vv
-./bin/editortest -JSERVERNAME=${SERVERNAME} -JUSERNAME=${USERNAME} -JPASSWORD=${PASSWORD} -JNUMOFTHREADS=${NUMOFTHREADS} -JLOOPCOUNT=${LOOPCOUNT} -JRAMPUPPERIOD=${RAMPUPPERIOD}</command>
+./bin/editortest -JSERVERNAME=${SERVERNAME} -JUSERNAME=${USERNAME} -JPASSWORD=${PASSWORD} -JNUMOFTHREADS=${NUMOFTHREADS} -JLOOPCOUNT=${LOOPCOUNT} -JWAITINGTIME=${WAITINGTIME}</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -90,76 +90,7 @@
       <configType>ART</configType>
       <modeOfThreshold>false</modeOfThreshold>
       <compareBuildPrevious>true</compareBuildPrevious>
-      <xmlfile>/var/lib/jenkins/jobs/ESDStressTest-EditorTest/builds/5/archive/dashBoard_report_editortest.xml</xmlfile>
-      <xmlDir>/var/lib/jenkins/jobs/ESDStressTest-EditorTest/builds/5/archive</xmlDir>
-      <xml>&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;results&gt;
-&lt;absoluteDefinition&gt;
-	&lt;unstable&gt;999&lt;/unstable&gt;
-	&lt;failed&gt;999&lt;/failed&gt;
-	&lt;calculated&gt;0.0&lt;/calculated&gt;
-&lt;/absoluteDefinition&gt;
-&lt;average&gt;
-	&lt;Add Observation&gt;
-		&lt;currentBuildAvg&gt;1472&lt;/currentBuildAvg&gt;
-	&lt;/Add Observation&gt;
-	&lt;Home&gt;
-		&lt;currentBuildAvg&gt;393&lt;/currentBuildAvg&gt;
-	&lt;/Home&gt;
-	&lt;Login&gt;
-		&lt;currentBuildAvg&gt;660&lt;/currentBuildAvg&gt;
-	&lt;/Login&gt;
-	&lt;My view&gt;
-		&lt;currentBuildAvg&gt;838&lt;/currentBuildAvg&gt;
-	&lt;/My view&gt;
-	&lt;Transaction Controller&gt;
-		&lt;currentBuildAvg&gt;4836&lt;/currentBuildAvg&gt;
-	&lt;/Transaction Controller&gt;
-	&lt;Visit Add Observation link&gt;
-		&lt;currentBuildAvg&gt;1467&lt;/currentBuildAvg&gt;
-	&lt;/Visit Add Observation link&gt;
-&lt;/average&gt;
-&lt;median&gt;
-	&lt;Add Observation&gt;
-		&lt;currentBuildMed&gt;1301&lt;/currentBuildMed&gt;
-	&lt;/Add Observation&gt;
-	&lt;Home&gt;
-		&lt;currentBuildMed&gt;158&lt;/currentBuildMed&gt;
-	&lt;/Home&gt;
-	&lt;Login&gt;
-		&lt;currentBuildMed&gt;470&lt;/currentBuildMed&gt;
-	&lt;/Login&gt;
-	&lt;My view&gt;
-		&lt;currentBuildMed&gt;647&lt;/currentBuildMed&gt;
-	&lt;/My view&gt;
-	&lt;Transaction Controller&gt;
-		&lt;currentBuildMed&gt;4715&lt;/currentBuildMed&gt;
-	&lt;/Transaction Controller&gt;
-	&lt;Visit Add Observation link&gt;
-		&lt;currentBuildMed&gt;1317&lt;/currentBuildMed&gt;
-	&lt;/Visit Add Observation link&gt;
-&lt;/median&gt;
-&lt;percentile&gt;
-	&lt;Add Observation&gt;
-		&lt;currentBuild90Line&gt;2627&lt;/currentBuild90Line&gt;
-	&lt;/Add Observation&gt;
-	&lt;Home&gt;
-		&lt;currentBuild90Line&gt;1139&lt;/currentBuild90Line&gt;
-	&lt;/Home&gt;
-	&lt;Login&gt;
-		&lt;currentBuild90Line&gt;1416&lt;/currentBuild90Line&gt;
-	&lt;/Login&gt;
-	&lt;My view&gt;
-		&lt;currentBuild90Line&gt;1699&lt;/currentBuild90Line&gt;
-	&lt;/My view&gt;
-	&lt;Transaction Controller&gt;
-		&lt;currentBuild90Line&gt;6855&lt;/currentBuild90Line&gt;
-	&lt;/Transaction Controller&gt;
-	&lt;Visit Add Observation link&gt;
-		&lt;currentBuild90Line&gt;2598&lt;/currentBuild90Line&gt;
-	&lt;/Visit Add Observation link&gt;
-&lt;/percentile&gt;
-&lt;/results&gt;</xml>
+      <xml></xml>
       <modePerformancePerTestCase>true</modePerformancePerTestCase>
       <parsers>
         <hudson.plugins.performance.JMeterParser>

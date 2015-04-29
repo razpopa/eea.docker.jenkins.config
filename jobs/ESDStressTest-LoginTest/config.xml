@@ -4,7 +4,7 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.10">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.11">
       <projectUrl>https://github.com/codesyntax/esd-stress-test/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@2.9">
@@ -23,11 +23,6 @@
           <defaultValue>1</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>RAMPUPPERIOD</name>
-          <description></description>
-          <defaultValue>1</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
           <name>SERVERNAME</name>
           <description></description>
           <defaultValue>esddemo.eea.europa.eu</defaultValue>
@@ -40,8 +35,13 @@
         <hudson.model.PasswordParameterDefinition>
           <name>PASSWORD</name>
           <description></description>
-          <defaultValue>dOs4acnPpG1kcY3HAdRcpw4ANFvlTTSr/nIBlN27YtQ=</defaultValue>
+          <defaultValue>XtSwwUmGIZQTfLYfMfETURB1bhGqcoErSn9fVm3E8f+MqZJ6iOhozRYrkqnRQPqzAN+4Y4EeiUmiYNHrBC7iyQ==</defaultValue>
         </hudson.model.PasswordParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>WAITINGTIME</name>
+          <description></description>
+          <defaultValue>1000</defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <de.pellepelster.jenkins.walldisplay.WallDisplayJobProperty plugin="jenkinswalldisplay@0.6.28"/>
@@ -73,7 +73,7 @@
     <hudson.tasks.Shell>
       <command>python bootstrap.py
 ./bin/buildout -vv
-./bin/logintest -JSERVERNAME=${SERVERNAME} -JUSERNAME=${USERNAME} -JPASSWORD=${PASSWORD} -JNUMOFTHREADS=${NUMOFTHREADS} -JLOOPCOUNT=${LOOPCOUNT} -JRAMPUPPERIOD=${RAMPUPPERIOD}</command>
+./bin/logintest -JSERVERNAME=${SERVERNAME} -JUSERNAME=${USERNAME} -JPASSWORD=${PASSWORD} -JNUMOFTHREADS=${NUMOFTHREADS} -JLOOPCOUNT=${LOOPCOUNT} -JWAITINGTIME=${WAITINGTIME}</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@2.8">
+<maven2-moduleset plugin="maven-plugin@2.9">
   <actions/>
   <description>Content Registry version 3&#xd;
 </description>
@@ -74,6 +74,7 @@
   <settingConfigId></settingConfigId>
   <globalSettingConfigId></globalSettingConfigId>
   <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters>
@@ -135,6 +136,8 @@
       <usePreviousBuildAsReference>false</usePreviousBuildAsReference>
       <useStableBuildAsReference>false</useStableBuildAsReference>
       <isRankActivated>false</isRankActivated>
+      <excludePattern></excludePattern>
+      <includePattern></includePattern>
     </hudson.plugins.findbugs.FindBugsReporter>
     <hudson.plugins.dry.DryReporter plugin="dry@2.41">
       <healthy></healthy>
@@ -432,7 +435,7 @@
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.39">
-      <recipientList>soren.roug@eea.europa.eu, jaanus.heinlaid@gmail.com</recipientList>
+      <recipientList>soren.roug@eea.europa.eu</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
           <email>

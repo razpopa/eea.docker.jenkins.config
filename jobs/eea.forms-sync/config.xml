@@ -49,7 +49,7 @@
       <command>cd ${WORKSPACE}
 wget -O git-sync https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk/tools/bash/git-sync.sh
 chmod u+x git-sync
-./git-sync https://github.com/collective/eea.forms.git
+./git-sync git@github.com:collective/eea.forms.git
 </command>
     </hudson.tasks.Shell>
   </builders>
@@ -57,9 +57,9 @@ chmod u+x git-sync
     <hudson.plugins.logparser.LogParserPublisher plugin="log-parser@1.0.8">
       <unstableOnWarning>true</unstableOnWarning>
       <failBuildOnError>true</failBuildOnError>
-      <parsingRulesPath>/var/lib/jenkins/console/parser.rules</parsingRulesPath>
+      <parsingRulesPath>/var/jenkins_home/console/parser.rules</parsingRulesPath>
     </hudson.plugins.logparser.LogParserPublisher>
-    <hudson.tasks.Mailer plugin="mailer@1.15">
+    <hudson.tasks.Mailer plugin="mailer@1.11">
       <recipients>eea-github@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>

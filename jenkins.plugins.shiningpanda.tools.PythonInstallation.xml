@@ -2,16 +2,6 @@
 <jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl plugin="shiningpanda@0.21">
   <installations>
     <jenkins.plugins.shiningpanda.tools.PythonInstallation>
-      <name>python2.4</name>
-      <home>/usr/bin/python2.4</home>
-      <properties/>
-    </jenkins.plugins.shiningpanda.tools.PythonInstallation>
-    <jenkins.plugins.shiningpanda.tools.PythonInstallation>
-      <name>python2.6</name>
-      <home>/usr/bin/python2.6</home>
-      <properties/>
-    </jenkins.plugins.shiningpanda.tools.PythonInstallation>
-    <jenkins.plugins.shiningpanda.tools.PythonInstallation>
       <name>python2.7</name>
       <home>/usr/bin/python2.7</home>
       <properties/>

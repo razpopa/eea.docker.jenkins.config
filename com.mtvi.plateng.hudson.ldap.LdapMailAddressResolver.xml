@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <com.mtvi.plateng.hudson.ldap.Configuration plugin="ldapemail@0.8">
-  <bindPassword>mk6OGILJRfSC/9SVWf8LHA==</bindPassword>
+  <bindPassword>0MF9WeKxNTjhApac9phagWVEgtkHw4lrkkNIYNcq+Ra4XprFLT9V2OAJba2a2dhY</bindPassword>
   <performSearch>false</performSearch>
 </com.mtvi.plateng.hudson.ldap.Configuration>

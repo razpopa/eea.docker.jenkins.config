@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.15">
+<hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.11">
   <hudsonUrl>http://ci.eionet.europa.eu/</hudsonUrl>
   <adminAddress>no-reply@eea.europa.eu</adminAddress>
   <smtpHost>postfix</smtpHost>
