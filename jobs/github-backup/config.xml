@@ -4,7 +4,7 @@
   <description>Backup jenkins config on github.com/eea/eea.docker.jenkins.config</description>
   <displayName>Backup on Github</displayName>
   <logRotator class="hudson.tasks.LogRotator">
-    <daysToKeep>30</daysToKeep>
+    <daysToKeep>7</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
@@ -32,12 +32,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}/tools/jenkins/
-./backup.py /var/lib/jenkins
+./backup.py /var/jenkins_home
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.Mailer plugin="mailer@1.15">
+    <hudson.tasks.Mailer plugin="mailer@1.11">
       <recipients>alin@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>

@@ -3,7 +3,7 @@
   <actions/>
   <description>- Run EEA AOAMap tests within Plone 4 EEA Buildout</description>
   <logRotator class="hudson.tasks.LogRotator">
-    <daysToKeep>30</daysToKeep>
+    <daysToKeep>7</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
@@ -60,6 +60,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
+git checkout master
+git pull
 ../../bin/coverage run ../../bin/xmltestreport -v -vv -s eea.aoamap
 </command>
     </hudson.tasks.Shell>
@@ -305,7 +307,7 @@ cp ../../parts/xmltestreport/testreports/*eea-aoamap*.xml xmltestreport/
               <type>jslint</type>
               <min>0</min>
               <max>5</max>
-              <unstable>323</unstable>
+              <unstable>324</unstable>
               <usePattern>false</usePattern>
               <pattern>**/jslint.log</pattern>
             </hudson.plugins.violations.TypeConfig>
@@ -392,9 +394,6 @@ cp ../../parts/xmltestreport/testreports/*eea-aoamap*.xml xmltestreport/
       <targets>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.33">
           <value>alin@jabber.eaudeweb.ro</value>
-        </hudson.plugins.im.DefaultIMMessageTarget>
-        <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.33">
-          <value>alexm@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
       <strategy>FAILURE_AND_FIXED</strategy>

@@ -4,7 +4,7 @@
   <description>Check if there is any open issue with github repositories&#xd;
 </description>
   <logRotator class="hudson.tasks.LogRotator">
-    <daysToKeep>30</daysToKeep>
+    <daysToKeep>7</daysToKeep>
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
