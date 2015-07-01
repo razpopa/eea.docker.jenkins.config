@@ -45,7 +45,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>www.eea.europa.eu-hudson, </upstreamProjects>
+      <upstreamProjects>www.eea.europa.eu-hudson</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -376,6 +376,7 @@ cp ../../parts/xmltestreport/testreports/*eea-tinymce*.xml xmltestreport/
         <encoding>default</encoding>
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.21"/>
     <hudson.tasks.Mailer plugin="mailer@1.11">
       <recipients>eea-github@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>

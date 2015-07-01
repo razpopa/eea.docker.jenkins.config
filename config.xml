@@ -57,7 +57,6 @@
     <permission>hudson.model.Hudson.Administer:szabozo0</permission>
     <permission>hudson.model.Hudson.Administer:tiberich</permission>
     <permission>hudson.model.Hudson.Administer:voineali</permission>
-    <permission>hudson.model.Hudson.Read:altnyris</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Hudson.Read:baragdan</permission>
     <permission>hudson.model.Hudson.Read:batradav</permission>
@@ -66,9 +65,7 @@
     <permission>hudson.model.Hudson.Read:dascalu</permission>
     <permission>hudson.model.Hudson.Read:demarant</permission>
     <permission>hudson.model.Hudson.Read:ghicaale</permission>
-    <permission>hudson.model.Hudson.Read:heinlja</permission>
     <permission>hudson.model.Hudson.Read:ichimdav</permission>
-    <permission>hudson.model.Hudson.Read:kasperen</permission>
     <permission>hudson.model.Hudson.Read:larremik</permission>
     <permission>hudson.model.Hudson.Read:malduvit</permission>
     <permission>hudson.model.Hudson.Read:melisand</permission>
@@ -87,7 +84,6 @@
     <permission>hudson.model.Hudson.RunScripts:thunbrol</permission>
     <permission>hudson.model.Hudson.RunScripts:tiberich</permission>
     <permission>hudson.model.Hudson.RunScripts:voineali</permission>
-    <permission>hudson.model.Item.Build:altnyris</permission>
     <permission>hudson.model.Item.Build:baragdan</permission>
     <permission>hudson.model.Item.Build:batradav</permission>
     <permission>hudson.model.Item.Build:bergstho</permission>
@@ -95,9 +91,7 @@
     <permission>hudson.model.Item.Build:dascalu</permission>
     <permission>hudson.model.Item.Build:demarant</permission>
     <permission>hudson.model.Item.Build:ghicaale</permission>
-    <permission>hudson.model.Item.Build:heinlja</permission>
     <permission>hudson.model.Item.Build:ichimdav</permission>
-    <permission>hudson.model.Item.Build:kasperen</permission>
     <permission>hudson.model.Item.Build:larremik</permission>
     <permission>hudson.model.Item.Build:malduvit</permission>
     <permission>hudson.model.Item.Build:melisand</permission>
@@ -109,16 +103,13 @@
     <permission>hudson.model.Item.Build:thunbrol</permission>
     <permission>hudson.model.Item.Build:tiberich</permission>
     <permission>hudson.model.Item.Build:voineali</permission>
-    <permission>hudson.model.Item.Configure:altnyris</permission>
     <permission>hudson.model.Item.Configure:batradav</permission>
     <permission>hudson.model.Item.Configure:bergstho</permission>
     <permission>hudson.model.Item.Configure:ciobabog</permission>
     <permission>hudson.model.Item.Configure:dascalu</permission>
     <permission>hudson.model.Item.Configure:demarant</permission>
     <permission>hudson.model.Item.Configure:ghicaale</permission>
-    <permission>hudson.model.Item.Configure:heinlja</permission>
     <permission>hudson.model.Item.Configure:ichimdav</permission>
-    <permission>hudson.model.Item.Configure:kasperen</permission>
     <permission>hudson.model.Item.Configure:larremik</permission>
     <permission>hudson.model.Item.Configure:malduvit</permission>
     <permission>hudson.model.Item.Configure:melisand</permission>
@@ -130,16 +121,13 @@
     <permission>hudson.model.Item.Configure:thunbrol</permission>
     <permission>hudson.model.Item.Configure:tiberich</permission>
     <permission>hudson.model.Item.Configure:voineali</permission>
-    <permission>hudson.model.Item.Create:altnyris</permission>
     <permission>hudson.model.Item.Create:baragdan</permission>
     <permission>hudson.model.Item.Create:batradav</permission>
     <permission>hudson.model.Item.Create:ciobabog</permission>
     <permission>hudson.model.Item.Create:dascalu</permission>
     <permission>hudson.model.Item.Create:demarant</permission>
     <permission>hudson.model.Item.Create:ghicaale</permission>
-    <permission>hudson.model.Item.Create:heinlja</permission>
     <permission>hudson.model.Item.Create:ichimdav</permission>
-    <permission>hudson.model.Item.Create:kasperen</permission>
     <permission>hudson.model.Item.Create:larremik</permission>
     <permission>hudson.model.Item.Create:malduvit</permission>
     <permission>hudson.model.Item.Create:melisand</permission>
@@ -150,16 +138,13 @@
     <permission>hudson.model.Item.Create:szabozo0</permission>
     <permission>hudson.model.Item.Create:tiberich</permission>
     <permission>hudson.model.Item.Create:voineali</permission>
-    <permission>hudson.model.Item.Delete:altnyris</permission>
     <permission>hudson.model.Item.Delete:baragdan</permission>
     <permission>hudson.model.Item.Delete:batradav</permission>
     <permission>hudson.model.Item.Delete:ciobabog</permission>
     <permission>hudson.model.Item.Delete:dascalu</permission>
     <permission>hudson.model.Item.Delete:demarant</permission>
     <permission>hudson.model.Item.Delete:ghicaale</permission>
-    <permission>hudson.model.Item.Delete:heinlja</permission>
     <permission>hudson.model.Item.Delete:ichimdav</permission>
-    <permission>hudson.model.Item.Delete:kasperen</permission>
     <permission>hudson.model.Item.Delete:malduvit</permission>
     <permission>hudson.model.Item.Delete:melisand</permission>
     <permission>hudson.model.Item.Delete:moregale</permission>
@@ -169,7 +154,6 @@
     <permission>hudson.model.Item.Delete:szabozo0</permission>
     <permission>hudson.model.Item.Delete:tiberich</permission>
     <permission>hudson.model.Item.Delete:voineali</permission>
-    <permission>hudson.model.Item.Read:altnyris</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:baragdan</permission>
     <permission>hudson.model.Item.Read:batradav</permission>
@@ -178,9 +162,7 @@
     <permission>hudson.model.Item.Read:dascalu</permission>
     <permission>hudson.model.Item.Read:demarant</permission>
     <permission>hudson.model.Item.Read:ghicaale</permission>
-    <permission>hudson.model.Item.Read:heinlja</permission>
     <permission>hudson.model.Item.Read:ichimdav</permission>
-    <permission>hudson.model.Item.Read:kasperen</permission>
     <permission>hudson.model.Item.Read:larremik</permission>
     <permission>hudson.model.Item.Read:malduvit</permission>
     <permission>hudson.model.Item.Read:melisand</permission>
@@ -192,7 +174,6 @@
     <permission>hudson.model.Item.Read:thunbrol</permission>
     <permission>hudson.model.Item.Read:tiberich</permission>
     <permission>hudson.model.Item.Read:voineali</permission>
-    <permission>hudson.model.Item.Release:altnyris</permission>
     <permission>hudson.model.Item.Release:baragdan</permission>
     <permission>hudson.model.Item.Release:batradav</permission>
     <permission>hudson.model.Item.Release:bergstho</permission>
@@ -200,9 +181,7 @@
     <permission>hudson.model.Item.Release:dascalu</permission>
     <permission>hudson.model.Item.Release:demarant</permission>
     <permission>hudson.model.Item.Release:ghicaale</permission>
-    <permission>hudson.model.Item.Release:heinlja</permission>
     <permission>hudson.model.Item.Release:ichimdav</permission>
-    <permission>hudson.model.Item.Release:kasperen</permission>
     <permission>hudson.model.Item.Release:larremik</permission>
     <permission>hudson.model.Item.Release:malduvit</permission>
     <permission>hudson.model.Item.Release:melisand</permission>
@@ -214,15 +193,12 @@
     <permission>hudson.model.Item.Release:thunbrol</permission>
     <permission>hudson.model.Item.Release:tiberich</permission>
     <permission>hudson.model.Item.Release:voineali</permission>
-    <permission>hudson.model.Item.Workspace:altnyris</permission>
     <permission>hudson.model.Item.Workspace:baragdan</permission>
     <permission>hudson.model.Item.Workspace:bergstho</permission>
     <permission>hudson.model.Item.Workspace:dascalu</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
     <permission>hudson.model.Item.Workspace:ghicaale</permission>
-    <permission>hudson.model.Item.Workspace:heinlja</permission>
     <permission>hudson.model.Item.Workspace:ichimdav</permission>
-    <permission>hudson.model.Item.Workspace:kasperen</permission>
     <permission>hudson.model.Item.Workspace:larremik</permission>
     <permission>hudson.model.Item.Workspace:malduvit</permission>
     <permission>hudson.model.Item.Workspace:melisand</permission>
@@ -234,7 +210,6 @@
     <permission>hudson.model.Item.Workspace:thunbrol</permission>
     <permission>hudson.model.Item.Workspace:tiberich</permission>
     <permission>hudson.model.Item.Workspace:voineali</permission>
-    <permission>hudson.model.Run.Delete:altnyris</permission>
     <permission>hudson.model.Run.Delete:baragdan</permission>
     <permission>hudson.model.Run.Delete:batradav</permission>
     <permission>hudson.model.Run.Delete:bergstho</permission>
@@ -242,9 +217,7 @@
     <permission>hudson.model.Run.Delete:dascalu</permission>
     <permission>hudson.model.Run.Delete:demarant</permission>
     <permission>hudson.model.Run.Delete:ghicaale</permission>
-    <permission>hudson.model.Run.Delete:heinlja</permission>
     <permission>hudson.model.Run.Delete:ichimdav</permission>
-    <permission>hudson.model.Run.Delete:kasperen</permission>
     <permission>hudson.model.Run.Delete:malduvit</permission>
     <permission>hudson.model.Run.Delete:melisand</permission>
     <permission>hudson.model.Run.Delete:moregale</permission>
@@ -255,7 +228,6 @@
     <permission>hudson.model.Run.Delete:thunbrol</permission>
     <permission>hudson.model.Run.Delete:tiberich</permission>
     <permission>hudson.model.Run.Delete:voineali</permission>
-    <permission>hudson.model.Run.Update:altnyris</permission>
     <permission>hudson.model.Run.Update:baragdan</permission>
     <permission>hudson.model.Run.Update:batradav</permission>
     <permission>hudson.model.Run.Update:bergstho</permission>
@@ -263,9 +235,7 @@
     <permission>hudson.model.Run.Update:dascalu</permission>
     <permission>hudson.model.Run.Update:demarant</permission>
     <permission>hudson.model.Run.Update:ghicaale</permission>
-    <permission>hudson.model.Run.Update:heinlja</permission>
     <permission>hudson.model.Run.Update:ichimdav</permission>
-    <permission>hudson.model.Run.Update:kasperen</permission>
     <permission>hudson.model.Run.Update:larremik</permission>
     <permission>hudson.model.Run.Update:malduvit</permission>
     <permission>hudson.model.Run.Update:melisand</permission>
@@ -372,10 +342,11 @@
         <string>daviz.eionet.europa.eu</string>
         <string>eea.plonebuildout.CPB</string>
         <string>land.copernicus.eu</string>
+        <string>www.eea.europa.eu-backend</string>
+        <string>www.eea.europa.eu-backend-fresh</string>
         <string>www.eea.europa.eu-devel</string>
+        <string>www.eea.europa.eu-frontend</string>
         <string>www.eea.europa.eu-hudson</string>
-        <string>www.eea.europa.eu-pre-production</string>
-        <string>www.eea.europa.eu-pre-production-clean</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -556,7 +527,6 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>EEA Plone 4 API Documentation</string>
         <string>EEA Sphinx Documentation</string>
       </jobNames>
       <jobFilters/>
@@ -772,6 +742,7 @@
         <string>eea.annotator-sync</string>
         <string>eea.app.visualization-sync</string>
         <string>eea.cache-sync</string>
+        <string>eea.controlpanel-sync</string>
         <string>eea.converter-sync</string>
         <string>eea.daviz-sync</string>
         <string>eea.depiction-sync</string>

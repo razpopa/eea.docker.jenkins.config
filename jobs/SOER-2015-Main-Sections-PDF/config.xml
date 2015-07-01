@@ -32,8 +32,6 @@
     <hudson.matrix.TextAxis>
       <name>server</name>
       <values>
-        <string>www-devel.webdev.eea.europa.eu</string>
-        <string>www-pre-production.webdev.eea.europa.eu</string>
         <string>www.eea.europa.eu</string>
       </values>
     </hudson.matrix.TextAxis>

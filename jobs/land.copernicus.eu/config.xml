@@ -64,7 +64,8 @@
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.Mailer plugin="mailer@1.15">
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.21"/>
+    <hudson.tasks.Mailer plugin="mailer@1.11">
       <recipients>olimpiu.rob@eaudeweb.ro</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>

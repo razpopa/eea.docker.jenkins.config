@@ -2,6 +2,7 @@
 <project>
   <actions/>
   <description>Run EEA Plone 4 Buildout with jenkins.cfg on SVN change.</description>
+  <displayName>www.eea.europa.eu-jenkins.cfg</displayName>
   <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>7</daysToKeep>
     <numToKeep>-1</numToKeep>
@@ -20,6 +21,7 @@
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
         <remote>https://svn.eionet.europa.eu/repositories/Zope/trunk/www.eea.europa.eu/trunk</remote>
+        <credentialsId></credentialsId>
         <local>.</local>
         <depthOption>infinity</depthOption>
         <ignoreExternalsOption>false</ignoreExternalsOption>
@@ -53,6 +55,7 @@ bin/buildout -c jenkins.cfg</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
+    <hudson.plugins.cigame.GamePublisher plugin="ci-game@1.21"/>
     <hudson.tasks.Mailer plugin="mailer@1.11">
       <recipients>eea-github@googlegroups.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>

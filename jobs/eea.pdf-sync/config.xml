@@ -89,6 +89,5 @@ chmod u+x git-sync
         <hudson.plugins.build__timeout.operations.AbortOperation/>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-    <org.flexthinker.hudson.FlashLog plugin="flashlog-plugin@1.0"/>
   </buildWrappers>
 </project>

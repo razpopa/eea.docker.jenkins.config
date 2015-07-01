@@ -78,12 +78,12 @@
       <string>1.16.1</string>
     </entry>
     <entry>
-      <string>dependencyanalyzer</string>
-      <string>0.7</string>
-    </entry>
-    <entry>
       <string>matrix-auth</string>
       <string>1.1</string>
+    </entry>
+    <entry>
+      <string>dependencyanalyzer</string>
+      <string>0.7</string>
     </entry>
     <entry>
       <string>git</string>
@@ -320,6 +320,10 @@
     <entry>
       <string>pam-auth</string>
       <string>1.1</string>
+    </entry>
+    <entry>
+      <string>ci-game</string>
+      <string>1.21</string>
     </entry>
     <entry>
       <string>gcal</string>
