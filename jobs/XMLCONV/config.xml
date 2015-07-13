@@ -61,7 +61,7 @@
     <groupId>eionet.gdem</groupId>
     <artifactId>xmlconv</artifactId>
   </rootModule>
-  <goals>-Denv=default clean cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle javadoc:javadoc</goals>
+  <goals>-Denv=default clean cobertura:cobertura install findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle javadoc:javadoc</goals>
   <mavenName>maven302</mavenName>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
@@ -465,6 +465,13 @@
     <hudson.plugins.chucknorris.CordellWalkerRecorder plugin="chucknorris@0.5">
       <factGenerator/>
     </hudson.plugins.chucknorris.CordellWalkerRecorder>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>target/xmlconv.war</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
     <hudson.plugins.dependencyanalyzer.DependencyAnalyzerPublisher plugin="dependencyanalyzer@0.7"/>
     <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.7">
       <coberturaReportFile>**/target/site/cobertura/coverage.xml</coberturaReportFile>

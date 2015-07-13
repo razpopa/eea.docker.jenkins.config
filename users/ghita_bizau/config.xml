@@ -36,5 +36,17 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>ghita_bizau@yahoo.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
+      <score>1.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+      <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>land.copernicus.eu#49</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+      </scoreHistoryEntries>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>
