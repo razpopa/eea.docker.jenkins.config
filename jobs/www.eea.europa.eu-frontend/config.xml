@@ -71,6 +71,7 @@ media-downloads-temp = ${WORKSPACE}/var/downloads/tmp
 eea-controlpanel-path = ${WORKSPACE}/var/eea.controlpanel
 file-storage = ${WORKSPACE}/var/filestorage/Data.fs
 blob-storage = ${WORKSPACE}/var/blobstorage
+async-file-storage = ${WORKSPACE}/var/filestorage/async.fs
 effective-user =
 
 [zeoserver]

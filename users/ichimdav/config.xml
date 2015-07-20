@@ -57,67 +57,67 @@
       <emailAddress>ichim.david@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>124.0</score>
+      <score>134.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#117</run>
+            <run>eea.design-www#132</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#115</run>
+            <run>eea.design-www#131</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#114</run>
+            <run>eea.design-www#129</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#113</run>
+            <run>eea.design-www#128</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#109</run>
+            <run>eea.design-www#126</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#108</run>
+            <run>eea.design-www#125</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#107</run>
+            <run>eea.design-www#124</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#104</run>
+            <run>eea.design-www#121</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>Products.EEAContentTypes-www#74</run>
+            <run>eea.design-www#120</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.design-www#100</run>
+            <run>eea.design-www#118</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>
