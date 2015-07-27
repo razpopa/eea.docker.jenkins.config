@@ -41,9 +41,27 @@
       <timestamp>1435743440621</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>59.0</score>
+      <score>60.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>Products.EEATemplatesService-www#60</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>-1.0</score>
+          <accountableRuns>
+            <run>eea.indicators-www#69</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.design-www#136</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
@@ -84,24 +102,6 @@
           <score>-1.0</score>
           <accountableRuns>
             <run>Products.EEATemplatesService-www#52</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>4.0</score>
-          <accountableRuns>
-            <run>eea.design-www#105</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-www#104</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.design-www#102</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>

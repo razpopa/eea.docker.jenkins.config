@@ -44,9 +44,45 @@
       <collapsed/>
     </hudson.model.PaneStatusProperties>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>-6.0</score>
+      <score>0.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.converter-www#61</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.pdf-www#64</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.soercontent-www#62</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.pdf-www#62</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.pdf-www#61</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.pdf-www#60</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
@@ -65,10 +101,6 @@
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
-          <accountableRuns/>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-10.0</score>
           <accountableRuns/>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>
