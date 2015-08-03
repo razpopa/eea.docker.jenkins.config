@@ -63,7 +63,7 @@ rm -f `find . -name setup.cfg`</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
-./bin/instance-uptest</command>
+./bin/uptest</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
