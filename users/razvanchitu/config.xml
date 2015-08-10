@@ -14,72 +14,75 @@
       <enabledColorBlindSupport>false</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>660.0</score>
+      <score>717.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
+          <score>-2.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-frontend#126</run>
-            <run>www.eea.europa.eu-backend-fresh#109</run>
+            <run>Products.EEAPloneAdmin-www#102</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-devel#172</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.themecentre-www#66</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-backend#128</run>
-            <run>www.eea.europa.eu-frontend#126</run>
+            <run>eea.indicators-www#82</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-frontend#126</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.workflow-www#66</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>Products.EEAPloneAdmin-www#99</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.vocab-www#62</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-devel#171</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.translations-www#64</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#81</run>
-            <run>eea.themecentre-www#65</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.sparql-www#73</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#81</run>
-            <run>eea.workflow-www#65</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.sitestructurediff-www#64</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.indicators-www#81</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.tags-www#63</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#81</run>
-            <run>eea.vocab-www#61</run>
+            <run>www.eea.europa.eu-hudson#82</run>
+            <run>eea.soercontent-www#73</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>

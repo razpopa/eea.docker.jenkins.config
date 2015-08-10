@@ -428,9 +428,21 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
       <emailAddress>alin.voinea@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>1436.0</score>
+      <score>1441.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>4.0</score>
+          <accountableRuns>
+            <run>Products.EEAPloneAdmin-www#105</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>Products.EEAPloneAdmin-www#104</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
@@ -484,20 +496,6 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
           <accountableRuns>
             <run>www.eea.europa.eu-hudson#81</run>
             <run>eea.tags-www#62</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>www.eea.europa.eu-hudson#81</run>
-            <run>eea.relations-www#63</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>www.eea.europa.eu-hudson#81</run>
-            <run>eea.soercontent-www#71</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>

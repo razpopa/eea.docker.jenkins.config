@@ -24,7 +24,7 @@
       <identifiers/>
     </hudson.plugins.openid.OpenIdUserProperty>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>ZxfY9qTehfHRewYF2z0anmpWC4NMxLC/lt/HOARQlv6aTo4YgslF9IL/1JVZ/wsc</apiToken>
+      <apiToken>k4fRW2xdPgkbpICdoldO+M0IQJyNaB/L+OVGsjwkgZ3/CN3VHdpErvAnsdINyITD0NoN7wELP/wOLgIUIaeQzcd1kdnB3KZvrrCCbZQgrLQ=</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
@@ -33,7 +33,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -46,8 +46,14 @@
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>bogdan.ciobanu@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1438680480495</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>

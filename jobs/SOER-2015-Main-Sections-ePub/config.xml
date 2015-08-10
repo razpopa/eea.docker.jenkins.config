@@ -48,7 +48,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 rm -rf epubdiffreport
-/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.epub -o http://${server}/soer-2015/${collection}/${collection}.epub -d ${WORKSPACE}/epubdiffreport -t 180 -a 400 -e alin@eaudeweb.ro --no-cleanup-input
+/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.epub -o http://${server}/soer-2015/${collection}/${collection}.epub -d ${WORKSPACE}/epubdiffreport -t 180 -a 400 -e alin@eaudeweb.ro --no-cleanup-input --no-cleanup-output
 </command>
     </hudson.tasks.Shell>
   </builders>
@@ -69,10 +69,16 @@ rm -rf epubdiffreport
           <includes>epubdiffreport/diff-*.png</includes>
         </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
         <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
-          <title>ePub Output</title>
+          <title>ePub Output (dynamic)</title>
           <imageWidth>300</imageWidth>
           <markBuildAsUnstableIfNoArchivesFound>true</markBuildAsUnstableIfNoArchivesFound>
           <includes>epubdiffreport/input-*.png</includes>
+        </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+        <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+          <title>ePub Input (static)</title>
+          <imageWidth>300</imageWidth>
+          <markBuildAsUnstableIfNoArchivesFound>true</markBuildAsUnstableIfNoArchivesFound>
+          <includes>epubdiffreport/output-*.png</includes>
         </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
       </imageGalleries>
     </org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder>

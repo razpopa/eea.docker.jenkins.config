@@ -48,7 +48,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 rm -rf pdfdiffreport
-/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.pdf -o http://${server}/soer-2015/${collection}/${collection}.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 5000 -e alin@eaudeweb.ro --no-cleanup-input
+/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/soer-2015/${collection}/download.pdf -o http://${server}/soer-2015/${collection}/${collection}.pdf-1 -d ${WORKSPACE}/pdfdiffreport -t 180 -a 5000 -e david.ichim@eaudeweb.ro --no-cleanup-input --no-cleanup-output
 </command>
     </hudson.tasks.Shell>
   </builders>
@@ -69,10 +69,16 @@ rm -rf pdfdiffreport
           <includes>pdfdiffreport/diff-*.png</includes>
         </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
         <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
-          <title>PDF Output</title>
+          <title>PDF Output (dynamic)</title>
           <imageWidth>300</imageWidth>
           <markBuildAsUnstableIfNoArchivesFound>true</markBuildAsUnstableIfNoArchivesFound>
           <includes>pdfdiffreport/input-*.png</includes>
+        </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+        <org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
+          <title>PDF input (static)</title>
+          <imageWidth>300</imageWidth>
+          <markBuildAsUnstableIfNoArchivesFound>true</markBuildAsUnstableIfNoArchivesFound>
+          <includes>pdfdiffreport/output-*.png</includes>
         </org.jenkinsci.plugins.imagegallery.imagegallery.ArchivedImagesGallery>
       </imageGalleries>
     </org.jenkinsci.plugins.imagegallery.ImageGalleryRecorder>

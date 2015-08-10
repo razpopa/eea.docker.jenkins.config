@@ -841,6 +841,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Indicators-PDF</string>
         <string>SOER-2015-Fiches-PDF</string>
         <string>SOER-2015-Main-Sections-PDF</string>
       </jobNames>
