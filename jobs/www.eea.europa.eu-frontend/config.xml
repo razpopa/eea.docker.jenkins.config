@@ -62,24 +62,13 @@ mkdir -p ${WORKSPACE}/var/blobstorage/tmp-buildout
 
 echo &quot;[buildout]
 extends = frontend.cfg
-zeo-address = 127.0.0.1:8902
 memcache-address = 127.0.0.1
-monitor-address = 127.0.0.1:8903
 saved_resources = ${WORKSPACE}/var/www-static-resources
 media-downloads-path = ${WORKSPACE}/var/downloads/pdf
 media-downloads-temp = ${WORKSPACE}/var/downloads/tmp
 eea-controlpanel-path = ${WORKSPACE}/var/eea.controlpanel
-file-storage = ${WORKSPACE}/var/filestorage/Data.fs
 blob-storage = ${WORKSPACE}/var/blobstorage
-async-file-storage = ${WORKSPACE}/var/filestorage/async.fs
 effective-user =
-
-[zeoserver]
-zeo-log-custom =
-    &lt;logfile&gt;
-        path ${WORKSPACE}/var/log/zeoserver.log
-        level INFO
-    &lt;/logfile&gt;
 
 &quot; &gt; frontend-test.cfg
 </command>

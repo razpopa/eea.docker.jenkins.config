@@ -428,6 +428,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[2]/jobNames/comparator"/>
         <string>ACL 1.2</string>
+        <string>Articles-PDF</string>
         <string>DATADICT</string>
         <string>eea.googlecharts-plone4</string>
         <string>eea.googlecharts-www</string>
@@ -445,6 +446,7 @@
         <string>ESDStressTest-ReviewerTest</string>
         <string>jenkins-up2date</string>
         <string>new-egg-versions-on-pypi</string>
+        <string>News-PDF</string>
         <string>Reportek-docs</string>
         <string>Reportek-tests</string>
         <string>Sparql Client</string>

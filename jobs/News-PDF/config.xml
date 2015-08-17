@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <matrix-project plugin="matrix-project@1.4.1">
   <actions/>
-  <description>Check download.pdf for Indicators</description>
+  <description>Check download.pdf for News</description>
   <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>-1</daysToKeep>
     <numToKeep>3</numToKeep>
@@ -35,11 +35,10 @@
       </values>
     </hudson.matrix.TextAxis>
     <hudson.matrix.TextAxis>
-      <name>indicator</name>
+      <name>news</name>
       <values>
-        <string>water-retention-3</string>
-        <string>emission-intensity-of-manufacturing-industries-1</string>
-        <string>sea-surface-temperature-1</string>
+        <string>green-week-stakeholders-put-nature</string>
+        <string>how-vulnerable-are-cities-to</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>
@@ -47,7 +46,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 rm -rf pdfdiffreport
-/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/data-and-maps/indicators/${indicator}/assessment/download.pdf -o http://${server}/sandbox/jenkins-tests/indicators/${indicator}.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 5000 -e bogdan.ciobanu@eaudeweb.ro --no-cleanup-input --no-cleanup-output
+/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/highlights/${news}/download.pdf -o http://${server}/sandbox/jenkins-tests/news/${news}.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 5000 -e bogdan.ciobanu@eaudeweb.ro --no-cleanup-input --no-cleanup-output
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -35,11 +35,9 @@
       </values>
     </hudson.matrix.TextAxis>
     <hudson.matrix.TextAxis>
-      <name>indicator</name>
+      <name>article</name>
       <values>
-        <string>water-retention-3</string>
-        <string>emission-intensity-of-manufacturing-industries-1</string>
-        <string>sea-surface-temperature-1</string>
+        <string>nature-policy-works-when-implemented-well</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>
@@ -47,7 +45,7 @@
     <hudson.tasks.Shell>
       <command>cd ${WORKSPACE}
 rm -rf pdfdiffreport
-/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/data-and-maps/indicators/${indicator}/assessment/download.pdf -o http://${server}/sandbox/jenkins-tests/indicators/${indicator}.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 5000 -e bogdan.ciobanu@eaudeweb.ro --no-cleanup-input --no-cleanup-output
+/var/jenkins_home/worker/workspace/www.eea.europa.eu-hudson/bin/pdfdiff -i http://${server}/articles/${article}/download.pdf -o http://${server}/sandbox/jenkins-tests/articles/${article}.pdf -d ${WORKSPACE}/pdfdiffreport -t 180 -a 5000 -e bogdan.ciobanu@eaudeweb.ro --no-cleanup-input --no-cleanup-output
 </command>
     </hudson.tasks.Shell>
   </builders>
