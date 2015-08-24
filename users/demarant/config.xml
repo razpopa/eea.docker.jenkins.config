@@ -7,13 +7,13 @@
       <passwordHash>wAUpox:0b8dfb4cda8c21b2a270a995534ac9793e9426e5ee96c0fe89edc40bbbb050c4</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>TB1ZfdqszchQd/+QJtl47ChSaMKkF6JnsGErUiio8jqaTo4YgslF9IL/1JVZ/wsc</apiToken>
+      <apiToken>iQC3MtEBSW1QkMyG24nZppKs7z1wsICzEqB+emJtnfFwHzwNSX02WEz2CPMezLg40NoN7wELP/wOLgIUIaeQzcd1kdnB3KZvrrCCbZQgrLQ=</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.greenballs.ColorBlindProperty plugin="greenballs@1.14">
       <enabledColorBlindSupport>true</enabledColorBlindSupport>
     </hudson.plugins.greenballs.ColorBlindProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -90,8 +90,20 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA7UrjZV1sIGwZ0ZQoZ15yE+eBZHULfrHBSI8rlDnOXTmT
       </roles>
       <timestamp>1405434454150</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>demarinis@eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
+      <score>1.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+      <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.indicators-www#94</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+      </scoreHistoryEntries>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>
