@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>g.bastien</fullName>
+  <fullName>razvan.popa82</fullName>
   <properties>
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>sG2LgRvhIXP75jDiWOeDzbDKE5uwa2m5b6pewAAS+qTHdZHZwdymb66wgm2UIKy0</apiToken>
+      <apiToken>ZiXD1S70akHj8/j1KKPWgPLHghWNAwNKuYWDW9TyUrDHdZHZwdymb66wgm2UIKy0</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.18">
@@ -34,23 +34,7 @@
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
-      <emailAddress>g.bastien@imio.be</emailAddress>
+      <emailAddress>razvan.popa82@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>-5.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-      <scoreHistoryEntries class="linked-list">
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-3.0</score>
-          <accountableRuns>
-            <run>eea.facetednavigation-www#91</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-2.0</score>
-          <accountableRuns/>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-      </scoreHistoryEntries>
-    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>

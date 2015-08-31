@@ -44,9 +44,15 @@
       <collapsed/>
     </hudson.model.PaneStatusProperties>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>1.0</score>
+      <score>-2.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>-3.0</score>
+          <accountableRuns>
+            <run>eea.facetednavigation-www#91</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>

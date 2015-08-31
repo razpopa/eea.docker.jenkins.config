@@ -87,6 +87,10 @@ rm -rf pdfdiffreport
     </hudson.tasks.Mailer>
     <hudson.plugins.jabber.im.transport.JabberPublisher plugin="jabber@1.34">
       <targets>
+        <hudson.plugins.im.GroupChatIMMessageTarget plugin="instant-messaging@1.33">
+          <name>web3.0development@conference.jabber.eea.europa.eu</name>
+          <notificationOnly>false</notificationOnly>
+        </hudson.plugins.im.GroupChatIMMessageTarget>
         <hudson.plugins.im.DefaultIMMessageTarget plugin="instant-messaging@1.33">
           <value>boghy@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
