@@ -1,17 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>razvan.chitu</fullName>
+  <fullName>chiridra</fullName>
   <properties>
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>AbGDMPMTun/TjJ0IpAGck116t7fKfhsdzFk0ob0oJQzHdZHZwdymb66wgm2UIKy0</apiToken>
+      <apiToken>+jfrZh4kPUOTLWcyxu6WD/jVk4HC0oR95R+ZhjzPmRrHdZHZwdymb66wgm2UIKy0</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
       <favorites/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
@@ -33,26 +34,11 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
-      <emailAddress>razvan.chitu@eaudeweb.ro</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>2.0</score>
-      <isNotParticipatingInGame>false</isNotParticipatingInGame>
-      <scoreHistoryEntries class="linked-list">
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.cache-www#91</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>1.0</score>
-          <accountableRuns>
-            <run>eea.cache-www#65</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-      </scoreHistoryEntries>
-    </hudson.plugins.cigame.UserScoreProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1441109167881</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>

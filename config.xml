@@ -10,6 +10,7 @@
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
     <permission>hudson.model.Computer.Build:jenkins</permission>
+    <permission>hudson.model.Computer.Configure:chiridra</permission>
     <permission>hudson.model.Computer.Configure:danielm</permission>
     <permission>hudson.model.Computer.Configure:dascalu</permission>
     <permission>hudson.model.Computer.Configure:demarant</permission>
@@ -26,6 +27,7 @@
     <permission>hudson.model.Computer.Configure:tiberich</permission>
     <permission>hudson.model.Computer.Configure:voineali</permission>
     <permission>hudson.model.Computer.Connect:jenkins</permission>
+    <permission>hudson.model.Computer.Create:chiridra</permission>
     <permission>hudson.model.Computer.Create:danielm</permission>
     <permission>hudson.model.Computer.Create:dascalu</permission>
     <permission>hudson.model.Computer.Create:ichimdav</permission>
@@ -36,6 +38,7 @@
     <permission>hudson.model.Computer.Create:robaaoli</permission>
     <permission>hudson.model.Computer.Create:tiberich</permission>
     <permission>hudson.model.Computer.Create:voineali</permission>
+    <permission>hudson.model.Computer.Delete:chiridra</permission>
     <permission>hudson.model.Computer.Delete:danielm</permission>
     <permission>hudson.model.Computer.Delete:dascalu</permission>
     <permission>hudson.model.Computer.Delete:demarant</permission>
@@ -53,6 +56,7 @@
     <permission>hudson.model.Computer.Delete:voineali</permission>
     <permission>hudson.model.Computer.Disconnect:jenkins</permission>
     <permission>hudson.model.Computer.Disconnect:lucas</permission>
+    <permission>hudson.model.Hudson.Administer:chiridra</permission>
     <permission>hudson.model.Hudson.Administer:dascalu</permission>
     <permission>hudson.model.Hudson.Administer:demarant</permission>
     <permission>hudson.model.Hudson.Administer:ghicaale</permission>
@@ -67,6 +71,7 @@
     <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Hudson.Read:batradav</permission>
     <permission>hudson.model.Hudson.Read:bergstho</permission>
+    <permission>hudson.model.Hudson.Read:chiridra</permission>
     <permission>hudson.model.Hudson.Read:ciobabog</permission>
     <permission>hudson.model.Hudson.Read:danielm</permission>
     <permission>hudson.model.Hudson.Read:dascalu</permission>
@@ -85,6 +90,7 @@
     <permission>hudson.model.Hudson.Read:tiberich</permission>
     <permission>hudson.model.Hudson.Read:voineali</permission>
     <permission>hudson.model.Hudson.RunScripts:bergstho</permission>
+    <permission>hudson.model.Hudson.RunScripts:chiridra</permission>
     <permission>hudson.model.Hudson.RunScripts:danielm</permission>
     <permission>hudson.model.Hudson.RunScripts:dascalu</permission>
     <permission>hudson.model.Hudson.RunScripts:ichimdav</permission>
@@ -96,6 +102,7 @@
     <permission>hudson.model.Hudson.RunScripts:voineali</permission>
     <permission>hudson.model.Item.Build:batradav</permission>
     <permission>hudson.model.Item.Build:bergstho</permission>
+    <permission>hudson.model.Item.Build:chiridra</permission>
     <permission>hudson.model.Item.Build:ciobabog</permission>
     <permission>hudson.model.Item.Build:danielm</permission>
     <permission>hudson.model.Item.Build:dascalu</permission>
@@ -115,6 +122,7 @@
     <permission>hudson.model.Item.Build:voineali</permission>
     <permission>hudson.model.Item.Configure:batradav</permission>
     <permission>hudson.model.Item.Configure:bergstho</permission>
+    <permission>hudson.model.Item.Configure:chiridra</permission>
     <permission>hudson.model.Item.Configure:ciobabog</permission>
     <permission>hudson.model.Item.Configure:danielm</permission>
     <permission>hudson.model.Item.Configure:dascalu</permission>
@@ -133,6 +141,7 @@
     <permission>hudson.model.Item.Configure:tiberich</permission>
     <permission>hudson.model.Item.Configure:voineali</permission>
     <permission>hudson.model.Item.Create:batradav</permission>
+    <permission>hudson.model.Item.Create:chiridra</permission>
     <permission>hudson.model.Item.Create:ciobabog</permission>
     <permission>hudson.model.Item.Create:danielm</permission>
     <permission>hudson.model.Item.Create:dascalu</permission>
@@ -150,6 +159,7 @@
     <permission>hudson.model.Item.Create:tiberich</permission>
     <permission>hudson.model.Item.Create:voineali</permission>
     <permission>hudson.model.Item.Delete:batradav</permission>
+    <permission>hudson.model.Item.Delete:chiridra</permission>
     <permission>hudson.model.Item.Delete:ciobabog</permission>
     <permission>hudson.model.Item.Delete:danielm</permission>
     <permission>hudson.model.Item.Delete:dascalu</permission>
@@ -168,6 +178,7 @@
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:batradav</permission>
     <permission>hudson.model.Item.Read:bergstho</permission>
+    <permission>hudson.model.Item.Read:chiridra</permission>
     <permission>hudson.model.Item.Read:ciobabog</permission>
     <permission>hudson.model.Item.Read:danielm</permission>
     <permission>hudson.model.Item.Read:dascalu</permission>
@@ -187,6 +198,7 @@
     <permission>hudson.model.Item.Read:voineali</permission>
     <permission>hudson.model.Item.Release:batradav</permission>
     <permission>hudson.model.Item.Release:bergstho</permission>
+    <permission>hudson.model.Item.Release:chiridra</permission>
     <permission>hudson.model.Item.Release:ciobabog</permission>
     <permission>hudson.model.Item.Release:danielm</permission>
     <permission>hudson.model.Item.Release:dascalu</permission>
@@ -205,6 +217,7 @@
     <permission>hudson.model.Item.Release:tiberich</permission>
     <permission>hudson.model.Item.Release:voineali</permission>
     <permission>hudson.model.Item.Workspace:bergstho</permission>
+    <permission>hudson.model.Item.Workspace:chiridra</permission>
     <permission>hudson.model.Item.Workspace:danielm</permission>
     <permission>hudson.model.Item.Workspace:dascalu</permission>
     <permission>hudson.model.Item.Workspace:demarant</permission>
@@ -223,6 +236,7 @@
     <permission>hudson.model.Item.Workspace:voineali</permission>
     <permission>hudson.model.Run.Delete:batradav</permission>
     <permission>hudson.model.Run.Delete:bergstho</permission>
+    <permission>hudson.model.Run.Delete:chiridra</permission>
     <permission>hudson.model.Run.Delete:ciobabog</permission>
     <permission>hudson.model.Run.Delete:danielm</permission>
     <permission>hudson.model.Run.Delete:dascalu</permission>
@@ -241,6 +255,7 @@
     <permission>hudson.model.Run.Delete:voineali</permission>
     <permission>hudson.model.Run.Update:batradav</permission>
     <permission>hudson.model.Run.Update:bergstho</permission>
+    <permission>hudson.model.Run.Update:chiridra</permission>
     <permission>hudson.model.Run.Update:ciobabog</permission>
     <permission>hudson.model.Run.Update:danielm</permission>
     <permission>hudson.model.Run.Update:dascalu</permission>
@@ -259,6 +274,7 @@
     <permission>hudson.model.Run.Update:tiberich</permission>
     <permission>hudson.model.Run.Update:voineali</permission>
     <permission>hudson.model.View.Configure:batradav</permission>
+    <permission>hudson.model.View.Configure:chiridra</permission>
     <permission>hudson.model.View.Configure:ciobabog</permission>
     <permission>hudson.model.View.Configure:danielm</permission>
     <permission>hudson.model.View.Configure:dascalu</permission>
@@ -274,6 +290,7 @@
     <permission>hudson.model.View.Configure:szabozo0</permission>
     <permission>hudson.model.View.Configure:tiberich</permission>
     <permission>hudson.model.View.Configure:voineali</permission>
+    <permission>hudson.model.View.Create:chiridra</permission>
     <permission>hudson.model.View.Create:danielm</permission>
     <permission>hudson.model.View.Create:dascalu</permission>
     <permission>hudson.model.View.Create:demarant</permission>
@@ -289,6 +306,7 @@
     <permission>hudson.model.View.Create:szabozo0</permission>
     <permission>hudson.model.View.Create:tiberich</permission>
     <permission>hudson.model.View.Create:voineali</permission>
+    <permission>hudson.model.View.Delete:chiridra</permission>
     <permission>hudson.model.View.Delete:danielm</permission>
     <permission>hudson.model.View.Delete:dascalu</permission>
     <permission>hudson.model.View.Delete:demarant</permission>
@@ -303,6 +321,7 @@
     <permission>hudson.model.View.Delete:szabozo0</permission>
     <permission>hudson.model.View.Delete:tiberich</permission>
     <permission>hudson.model.View.Delete:voineali</permission>
+    <permission>hudson.scm.SCM.Tag:chiridra</permission>
     <permission>hudson.scm.SCM.Tag:danielm</permission>
     <permission>hudson.scm.SCM.Tag:dascalu</permission>
     <permission>hudson.scm.SCM.Tag:demarant</permission>
@@ -881,7 +900,9 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Articles-PDF</string>
         <string>Indicators-PDF</string>
+        <string>News-PDF</string>
         <string>SOER-2015-Fiches-PDF</string>
         <string>SOER-2015-Main-Sections-PDF</string>
       </jobNames>

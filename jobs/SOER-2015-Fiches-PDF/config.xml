@@ -100,7 +100,7 @@ FICHE=`echo ${fiche} | cut -f2 -d _`
           <value>david.ichim@jabber.eaudeweb.ro</value>
         </hudson.plugins.im.DefaultIMMessageTarget>
       </targets>
-      <strategy>ALL</strategy>
+      <strategy>FAILURE_AND_FIXED</strategy>
       <notifyOnBuildStart>false</notifyOnBuildStart>
       <notifySuspects>false</notifySuspects>
       <notifyCulprits>false</notifyCulprits>

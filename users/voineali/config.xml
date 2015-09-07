@@ -428,72 +428,77 @@ fkzrPLYeg/kj9D8w2J4rCtFFtAAAAABJRU5ErkJggg==</imageBytes>
       <emailAddress>alin.voinea@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>1612.0</score>
+      <score>1659.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-10.0</score>
+          <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#92</run>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.themecentre-www#94</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-devel#196</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-10.0</score>
-          <accountableRuns>
-            <run>www.eea.europa.eu-frontend#151</run>
-            <run>www.eea.europa.eu-backend-fresh#131</run>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.workflow-www#91</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-backend#154</run>
-            <run>www.eea.europa.eu-frontend#151</run>
+            <run>eea.indicators-www#116</run>
+            <run>www.eea.europa.eu-hudson#106</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-frontend#151</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>2.0</score>
-          <accountableRuns>
-            <run>eea.pdf-www#94</run>
-          </accountableRuns>
-        </hudson.plugins.cigame.model.ScoreHistoryEntry>
-        <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-1.0</score>
-          <accountableRuns>
-            <run>eea.pdf-www#93</run>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.vocab-www#85</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#90</run>
-            <run>eea.themecentre-www#74</run>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.translations-www#87</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#90</run>
-            <run>eea.workflow-www#74</run>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.sitestructurediff-www#87</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.indicators-www#91</run>
-            <run>www.eea.europa.eu-hudson#90</run>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.sparql-www#98</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.tags-www#86</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.soercontent-www#99</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>www.eea.europa.eu-hudson#106</run>
+            <run>eea.promotion-www#88</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>

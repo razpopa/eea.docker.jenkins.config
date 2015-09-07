@@ -3,7 +3,7 @@
   <fullName>root</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>2PUCA6HiL8RoJRdKz4Gh7qpMGPkeVi/wUfeSUQMBKq+aTo4YgslF9IL/1JVZ/wsc</apiToken>
+      <apiToken>dAm5RcR0JLTn5hWa6lKDLq4YexoTt9BwRV2iYUKAOz8+rb/Nfko0l70nIXUNxM6G0NoN7wELP/wOLgIUIaeQzcd1kdnB3KZvrrCCbZQgrLQ=</apiToken>
     </jenkins.security.ApiTokenProperty>
     <net.hurstfrost.jenkins.avatar.user.AvatarProperty plugin="avatar@1.2"/>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@1.16">
@@ -27,7 +27,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.22">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -37,11 +37,23 @@
         </entry>
       </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.15">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.11">
       <emailAddress>root@unicorn.eea.europa.eu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
+    <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
+      <score>1.0</score>
+      <isNotParticipatingInGame>false</isNotParticipatingInGame>
+      <scoreHistoryEntries class="linked-list">
+        <hudson.plugins.cigame.model.ScoreHistoryEntry>
+          <score>1.0</score>
+          <accountableRuns>
+            <run>eea.alchemy-www#89</run>
+          </accountableRuns>
+        </hudson.plugins.cigame.model.ScoreHistoryEntry>
+      </scoreHistoryEntries>
+    </hudson.plugins.cigame.UserScoreProperty>
   </properties>
 </user>
