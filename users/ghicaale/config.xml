@@ -56,72 +56,75 @@
       <emailAddress>alec.ghica@eaudeweb.ro</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.cigame.UserScoreProperty plugin="ci-game@1.21">
-      <score>830.0</score>
+      <score>960.0</score>
       <isNotParticipatingInGame>false</isNotParticipatingInGame>
       <scoreHistoryEntries class="linked-list">
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
-          <score>-10.0</score>
+          <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-frontend#182</run>
-            <run>www.eea.europa.eu-backend-fresh#160</run>
+            <run>www.eea.europa.eu-frontend#195</run>
+            <run>www.eea.europa.eu-backend-fresh#171</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-backend#184</run>
-            <run>www.eea.europa.eu-frontend#182</run>
+            <run>www.eea.europa.eu-devel#239</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.googlecharts-www#107</run>
+            <run>www.eea.europa.eu-backend#196</run>
+            <run>www.eea.europa.eu-frontend#195</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-frontend#182</run>
+            <run>www.eea.europa.eu-frontend#195</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.pdf-www#113</run>
+            <run>www.eea.europa.eu-hudson#112</run>
+            <run>eea.themecentre-www#101</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-devel#228</run>
+            <run>www.eea.europa.eu-hudson#112</run>
+            <run>eea.workflow-www#98</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.daviz-www#101</run>
+            <run>eea.indicators-www#126</run>
+            <run>www.eea.europa.eu-hudson#112</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#106</run>
-            <run>eea.themecentre-www#94</run>
+            <run>www.eea.europa.eu-hudson#112</run>
+            <run>eea.vocab-www#90</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>www.eea.europa.eu-hudson#106</run>
-            <run>eea.workflow-www#91</run>
+            <run>www.eea.europa.eu-hudson#112</run>
+            <run>eea.translations-www#92</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
         <hudson.plugins.cigame.model.ScoreHistoryEntry>
           <score>1.0</score>
           <accountableRuns>
-            <run>eea.indicators-www#116</run>
-            <run>www.eea.europa.eu-hudson#106</run>
+            <run>www.eea.europa.eu-hudson#112</run>
+            <run>eea.sparql-www#103</run>
           </accountableRuns>
         </hudson.plugins.cigame.model.ScoreHistoryEntry>
       </scoreHistoryEntries>
